@@ -1,39 +1,96 @@
 fileFormatVersion: 2
 guid: 7322ccefd4bf723479dccd14b6de0c2f
-timeCreated: 1500707549
-licenseType: Free
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: PortalBegin1
-    21300002: PortalBegin2
-    21300004: PortalBegin3
-    21300006: PortalRunning1
-    21300008: PortalRunning2
-    21300010: PortalRunning3
-    21300012: PortalRunning4
-    21300014: BarrelOpen1
-    21300016: BarrelClose1
-    21300018: BarrelPiece1
-    21300020: BarrelPiece2
-    21300022: BarrelPiece3
-    21300024: BarrelPiece4
-    21300026: Table1
-    21300028: Chair1
-    21300030: Rock1
-    21300032: RockPiece1
-    21300034: RockPiece2
-    21300036: RockPiece3
-    21300038: RockPiece4
-    21300040: RockPiece5
-    21300042: RockPiece6
-    21300044: FurniturePiece1
-    21300046: FurniturePiece2
-    21300048: FurniturePiece3
-    21300050: FurniturePiece4
-    21300052: IronFence3
-    21300054: IronFence1
-    21300056: IronFence2
-  serializedVersion: 4
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: PortalBegin1
+  - first:
+      213: 21300002
+    second: PortalBegin2
+  - first:
+      213: 21300004
+    second: PortalBegin3
+  - first:
+      213: 21300006
+    second: PortalRunning1
+  - first:
+      213: 21300008
+    second: PortalRunning2
+  - first:
+      213: 21300010
+    second: PortalRunning3
+  - first:
+      213: 21300012
+    second: PortalRunning4
+  - first:
+      213: 21300014
+    second: BarrelOpen1
+  - first:
+      213: 21300016
+    second: BarrelClose1
+  - first:
+      213: 21300018
+    second: BarrelPiece1
+  - first:
+      213: 21300020
+    second: BarrelPiece2
+  - first:
+      213: 21300022
+    second: BarrelPiece3
+  - first:
+      213: 21300024
+    second: BarrelPiece4
+  - first:
+      213: 21300026
+    second: Table1
+  - first:
+      213: 21300028
+    second: Chair1
+  - first:
+      213: 21300030
+    second: Rock1
+  - first:
+      213: 21300032
+    second: RockPiece1
+  - first:
+      213: 21300034
+    second: RockPiece2
+  - first:
+      213: 21300036
+    second: RockPiece3
+  - first:
+      213: 21300038
+    second: RockPiece4
+  - first:
+      213: 21300040
+    second: RockPiece5
+  - first:
+      213: 21300042
+    second: RockPiece6
+  - first:
+      213: 21300044
+    second: FurniturePiece1
+  - first:
+      213: 21300046
+    second: FurniturePiece2
+  - first:
+      213: 21300048
+    second: FurniturePiece3
+  - first:
+      213: 21300050
+    second: FurniturePiece4
+  - first:
+      213: 21300052
+    second: IronFence3
+  - first:
+      213: 21300054
+    second: IronFence1
+  - first:
+      213: 21300056
+    second: IronFence2
+  externalObjects: {}
+  serializedVersion: 10
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -51,6 +108,8 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -61,7 +120,7 @@ TextureImporter:
     serializedVersion: 2
     filterMode: 0
     aniso: -1
-    mipBias: -1
+    mipBias: -100
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -73,33 +132,41 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
+  singleChannelComponent: 0
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
   platformSettings:
-  - buildTarget: DefaultTexturePlatform
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
     maxTextureSize: 512
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-  - buildTarget: Standalone
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
     maxTextureSize: 512
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -117,6 +184,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e8725689e40349240abe081e5048ea08
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: PortalBegin2
       rect:
@@ -131,6 +205,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: bb5ae5cb6e7f35248b41b39d12aaff67
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: PortalBegin3
       rect:
@@ -145,6 +226,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 7ab425be93a960c40be5b6f6cbce535f
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: PortalRunning1
       rect:
@@ -159,6 +247,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ac517d038a4677242977fade5e655b57
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: PortalRunning2
       rect:
@@ -173,6 +268,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 37019cb60d265214088223a7cea66a91
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: PortalRunning3
       rect:
@@ -187,6 +289,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 412d83ca6ff4f8649a75c1d3150004f5
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: PortalRunning4
       rect:
@@ -201,6 +310,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 6fe2fbe0eecc5194db16f9e71cfdea2d
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: BarrelOpen1
       rect:
@@ -210,11 +326,27 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: 7.6636715, y: -2.3867722}
+        - {x: 5.3509445, y: 0.11698151}
+        - {x: 5, y: 4}
+        - {x: 3, y: 7}
+        - {x: -2.1034565, y: 6.965515}
+        - {x: -4.62066, y: 3.758606}
+        - {x: -4.7240367, y: -5.965515}
+        - {x: -4, y: -8}
+        - {x: 8, y: -8}
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: 1
+      bones: []
+      spriteID: 63c63448fa0e1fc4e8b0cc46df786329
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: BarrelClose1
       rect:
@@ -224,11 +356,26 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -3, y: 8}
+        - {x: -4.7427826, y: 5.0502853}
+        - {x: -4.922205, y: -6.0200043}
+        - {x: -3.3999996, y: -8}
+        - {x: 3.0948029, y: -8}
+        - {x: 4.9439373, y: -5.8994217}
+        - {x: 5.094803, y: 4.5474014}
+        - {x: 3, y: 8}
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: 1
+      bones: []
+      spriteID: fd92645c7e2930f42a7dc994339aaf0c
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: BarrelPiece1
       rect:
@@ -238,11 +385,18 @@ TextureImporter:
         width: 5
         height: 5
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 6dab78abe37db3d42a9657846f61c183
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: BarrelPiece2
       rect:
@@ -252,11 +406,18 @@ TextureImporter:
         width: 8
         height: 4
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 16cebea99808ce34d88127d7a6c5f9a2
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: BarrelPiece3
       rect:
@@ -266,11 +427,18 @@ TextureImporter:
         width: 4
         height: 9
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 32299e5f2e6ca714298a7b94458058f3
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: BarrelPiece4
       rect:
@@ -280,11 +448,18 @@ TextureImporter:
         width: 3
         height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: cc944dd09103eaf41956e767f5d097db
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Table1
       rect:
@@ -294,11 +469,35 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: 1.0600052, y: -8}
+        - {x: 3.7799988, y: -7.9799957}
+        - {x: 3.7799911, y: -3.9199982}
+        - {x: 4.7680664, y: -4.6696777}
+        - {x: 6.8083878, y: -4.617096}
+        - {x: 6.876251, y: 0.9016342}
+        - {x: 7.6130066, y: 2.3246536}
+        - {x: 7.55484, y: 5.588394}
+        - {x: 5.0999985, y: 5.720001}
+        - {x: -3.6969223, y: 5.5348434}
+        - {x: -7.966614, y: 0.90748596}
+        - {x: -8, y: -8}
+        - {x: -5.279999, y: -8}
+        - {x: -4.540001, y: -4}
+        - {x: -2.5383835, y: -5.8224487}
+        - {x: -1.4361877, y: -4.337654}
+        - {x: 0.94000244, y: -4.019989}
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: 1
+      bones: []
+      spriteID: 980f336dd80e9784ab7dcf91d1cffc20
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Chair1
       rect:
@@ -308,11 +507,27 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: 6.2796097, y: -2.0817642}
+        - {x: 3.611824, y: 0.81186676}
+        - {x: 3.3598785, y: 5.3719406}
+        - {x: 1.491745, y: 7.5136414}
+        - {x: -2.6127167, y: 7.820015}
+        - {x: -3.8582306, y: 5.794075}
+        - {x: -4.2468796, y: -6.1523743}
+        - {x: -2.03656, y: -8}
+        - {x: 6.2476273, y: -8}
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: 1
+      bones: []
+      spriteID: 59114956b7b188642b082675e78f2b10
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Rock1
       rect:
@@ -322,11 +537,24 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: 1.9654312, y: 8}
+        - {x: -1.8662567, y: 8}
+        - {x: -5.428711, y: 0.18523598}
+        - {x: -4.7540054, y: -8}
+        - {x: 5.1179047, y: -8}
+        - {x: 5.6386414, y: -1.540163}
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: 1
+      bones: []
+      spriteID: 6954abd34ef20a442968a106f2e13f42
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RockPiece1
       rect:
@@ -336,11 +564,18 @@ TextureImporter:
         width: 4
         height: 4
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 1d1f9aa6185cfc24c8db8613898bdd93
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RockPiece2
       rect:
@@ -350,11 +585,18 @@ TextureImporter:
         width: 6
         height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 9b7b1001d6fe1234497773cdfd4908a5
+      internalID: 21300034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RockPiece3
       rect:
@@ -364,11 +606,18 @@ TextureImporter:
         width: 4
         height: 4
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: b52caa41f545da545baca16dabdcf951
+      internalID: 21300036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RockPiece4
       rect:
@@ -378,11 +627,18 @@ TextureImporter:
         width: 6
         height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: b3b49f83d42b8154492f23082d0c94de
+      internalID: 21300038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RockPiece5
       rect:
@@ -392,11 +648,18 @@ TextureImporter:
         width: 5
         height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 401051823ce72f34a9f803b4c5b0ea8f
+      internalID: 21300040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RockPiece6
       rect:
@@ -406,11 +669,18 @@ TextureImporter:
         width: 5
         height: 4
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 7f4e8bed9316659449af0676f7e2d9cf
+      internalID: 21300042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: FurniturePiece1
       rect:
@@ -420,11 +690,18 @@ TextureImporter:
         width: 5
         height: 5
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: f98004f25c970424bb42982424e4b69e
+      internalID: 21300044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: FurniturePiece2
       rect:
@@ -434,11 +711,18 @@ TextureImporter:
         width: 4
         height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 9d1bae1615e02914f90c68695e42d504
+      internalID: 21300046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: FurniturePiece3
       rect:
@@ -448,11 +732,18 @@ TextureImporter:
         width: 5
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 36ce2eab4e68f0b4799558897b953680
+      internalID: 21300048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: FurniturePiece4
       rect:
@@ -462,11 +753,18 @@ TextureImporter:
         width: 7
         height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 82f126c8a086bcd488b7b0a11f86dd37
+      internalID: 21300050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: IronFence3
       rect:
@@ -476,11 +774,18 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 7838bf5e17ba80b4abc80d9fe36c73c4
+      internalID: 21300052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: IronFence1
       rect:
@@ -490,11 +795,18 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: d0632bbf13a13fd4aa35abedb2a00553
+      internalID: 21300054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: IronFence2
       rect:
@@ -504,14 +816,31 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 29665165caae1f34ca68d1095af61e53
+      internalID: 21300056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
+    bones: []
+    spriteID: c866687bccda2a441b4121e0f9c433b3
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
   spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
