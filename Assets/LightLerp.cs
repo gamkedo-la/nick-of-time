@@ -14,8 +14,8 @@ public class LightLerp : MonoBehaviour
     {
 		l = gameObject.GetComponent<Light>();
 
-		color = l.color;
-		intensity = l.intensity;
+		//color = l.color;
+		//intensity = l.intensity;
     }
 	
     void Update()

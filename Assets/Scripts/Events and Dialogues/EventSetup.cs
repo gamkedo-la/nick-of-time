@@ -56,18 +56,26 @@ public class EventSetup : MonoBehaviour {
 			{
 				pl1.GetComponent<Animator>().enabled = false;
 				pl1.GetComponent<SpriteRenderer>().enabled = false;
-			
-				for(int i = 0; i < pl1.transform.childCount; i++)
-					pl1.transform.GetChild(i).gameObject.GetComponent<SpriteRenderer>().enabled = false;
+
+				for (int i = 0; i < pl1.transform.childCount; i++)
+				{
+					SpriteRenderer sprRend = pl1.transform.GetChild(i).gameObject.GetComponent<SpriteRenderer>();
+					if(sprRend != null)
+						sprRend.enabled = false;
+				}
 			}
 			
 			if(pl2)
 			{
 				pl2.GetComponent<Animator>().enabled = false;
 				pl2.GetComponent<SpriteRenderer>().enabled = false;
-			
-				for(int i = 0; i < pl2.transform.childCount; i++)
-					pl2.transform.GetChild(i).gameObject.GetComponent<SpriteRenderer>().enabled = false;
+
+				for (int i = 0; i < pl2.transform.childCount; i++)
+				{
+					SpriteRenderer sprRend = pl2.transform.GetChild(i).gameObject.GetComponent<SpriteRenderer>();
+					if (sprRend != null)
+						sprRend.enabled = false;
+				}
 			}
 		}
 	}
@@ -83,7 +91,7 @@ public class EventSetup : MonoBehaviour {
 			
 				if(pl1AfterPositions.GetLength(0) > 0 && pl1AfterPositions.GetLength(0) > pl1MoveTo)
 				{
-					pl1.transform.position = Vector3.Lerp( pl1.transform.position, pl1AfterPositions[pl1MoveTo].position, lerpPercent );
+					pl1.transform.position = Vector3.MoveTowards( pl1.transform.position, pl1AfterPositions[pl1MoveTo].position, lerpPercent );
 				
 					if(Vector3.Distance(pl1.transform.position, pl1AfterPositions[pl1MoveTo].position) <= lerpMinDistance)
 						pl1MoveTo++;
@@ -110,7 +118,7 @@ public class EventSetup : MonoBehaviour {
 			
 				if(pl2AfterPositions.GetLength(0) > 0 && pl2AfterPositions.GetLength(0) > pl2MoveTo)
 				{
-					pl2.transform.position = Vector3.Lerp( pl2.transform.position, pl2AfterPositions[pl2MoveTo].position, lerpPercent );
+					pl2.transform.position = Vector3.MoveTowards( pl2.transform.position, pl2AfterPositions[pl2MoveTo].position, lerpPercent );
 				
 					if(Vector3.Distance(pl2.transform.position, pl2AfterPositions[pl2MoveTo].position) <= lerpMinDistance)
 						pl2MoveTo++;
