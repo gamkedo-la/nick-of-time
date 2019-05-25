@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour
 
 			if (walkInput != Vector2.zero)
 			{
-				if (!animator.GetBool("isAttacking"))
+				if (!animator.GetBool("isAttacking") && !isDashing)
 				{
 					speed = walkSpeed;
 					animator.SetBool("isWalking", true);
@@ -125,8 +125,7 @@ public class PlayerController : MonoBehaviour
 			}
 			*/
 
-			//Roll
-			/*
+			//Dash
 			if (actionPoints >= dashActionDeplete
 				&& !isDashing
 				&& !animator.GetBool("isAttacking")
@@ -147,6 +146,7 @@ public class PlayerController : MonoBehaviour
 					aud.PlayOneShot(dashSound);
 			}
 
+			/*
 			if (animator.GetBool("isAttacking")
 				|| isDashing)
 			{
@@ -162,6 +162,7 @@ public class PlayerController : MonoBehaviour
 					}
 				}
 			}
+			*/
 
 			if (actionPoints < 1f)
 			{
@@ -175,7 +176,7 @@ public class PlayerController : MonoBehaviour
 			}
 
 			dashTimer -= Time.deltaTime;
-			*/
+			
 		}
 	}
 

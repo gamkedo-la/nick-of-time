@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LerpToTransform : MonoBehaviour { //Modified
-
+public class LerpToTransform : MonoBehaviour
+{
 	public float lerpPercent = 0.1f;
 	public Transform tr;
 	public Vector3 offset = new Vector3 (0f, 0f, -10.0f);
@@ -17,11 +17,13 @@ public class LerpToTransform : MonoBehaviour { //Modified
 	
 	private Transform trPrev;
 
-	void Start () {
+	void Start ()
+	{
 		
 	}
 
-	void Update () {
+	void Update ()
+	{
 		if(tr == null && trPrev == null && plTr == null)
 		{
 			enabled = false;
