@@ -1,31 +1,36 @@
-
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerActions : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
 	public float walkSpeed = 1f;
 	public float attackSpeed = 2f;
-	public float rollSpeed = 3f;
-	public float rollBoostFactor = 1f;
+	public float dashSpeed = 3f;
+	public float dashTime = 0.2f;
 
+	[Space]
 	public float regenerateActionPointsPerSec = 0.025f;
 
+	[Space]
 	public float attackActionDeplete = 0.4f;
-	public float rollActionDeplete = 0.25f;
+	public float dashActionDeplete = 0.25f;
 
+	[Space]
 	public string walkVerticalInput = "Vertical";
 	public string walkHorizontalInput = "Horizontal";
 	public string attackInput = "Fire1";
-	public string rollInput = "Jump";
+	public string dashInput = "Jump";
 
+	[Space]
 	public AudioClip attackSound;
-	public AudioClip rollSound;
+	public AudioClip dashSound;
 
 	[HideInInspector] public float actionPoints = 1f;
 
 	private float speed = 0f;
+	private bool isDashing = false;
+	private float dashTimer = 0f;
 
 	private Rigidbody2D rigidbody;
 	private Animator animator;
@@ -34,12 +39,12 @@ public class PlayerActions : MonoBehaviour
 
 	private AudioSource aud = null;
 
-	private GameObject shingObject;
+	//private GameObject shingObject;
 
 	private Vector2 walkInput = Vector2.zero;
 
-	void Start()
-	{
+	private void Start()
+    {
 		rigidbody = GetComponent<Rigidbody2D>();
 		animator = GetComponent<Animator>();
 		sprRenderer = GetComponent<SpriteRenderer>();
@@ -48,12 +53,10 @@ public class PlayerActions : MonoBehaviour
 		aud = GetComponent<AudioSource>();
 		if (aud == null)
 			aud = FindObjectOfType<AudioSource>();
-
-		shingObject = transform.GetChild(1).GetChild(0).gameObject;
 	}
-
-	void Update()
-	{
+	
+    private void Update()
+    {
 		if (Time.timeScale > 0f)
 		{
 			walkInput = new Vector2(Input.GetAxisRaw(walkHorizontalInput), Input.GetAxisRaw(walkVerticalInput));
@@ -62,31 +65,44 @@ public class PlayerActions : MonoBehaviour
 			{
 				if (!animator.GetBool("isAttacking"))
 				{
-					if (walkInput.x < 0) sprRenderer.flipX = true;
-					else sprRenderer.flipX = false;
+					speed = walkSpeed;
+					animator.SetBool("isWalking", true);
 
-					if (!animator.GetBool("isRolling"))
+					if (walkInput.y < 0)
 					{
-						animator.SetBool("isWalking", true);
-						speed = walkSpeed;
+						animator.SetInteger("direction", 2);
 					}
+					else if (walkInput.y > 0)
+					{
+						animator.SetInteger("direction", 0);
+					}
+					else if (walkInput.x != 0)
+					{
+						animator.SetInteger("direction", 1);
+					}
+					
+					if (walkInput.x > 0) sprRenderer.flipX = true;
+					else sprRenderer.flipX = false;
 				}
 			}
 			else
 			{
+				speed = 0f;
 				animator.SetBool("isWalking", false);
 			}
 
+			/*
 			//Attack
 			if (actionPoints >= attackActionDeplete
 				&& !animator.GetBool("isAttacking")
-				&& !animator.GetBool("isRolling")
+				&& !isDashing
 				&& Input.GetButtonDown(attackInput))
 			{
 				animator.SetBool("isAttacking", true);
 				animator.SetBool("isWalking", false);
 				speed = attackSpeed;
 
+				
 				shingObject.GetComponent<Animator>().SetBool("isAttacking", true);
 				//shingObject.GetComponent<SpriteRenderer>().flipX = sprRenderer.flipX;
 
@@ -100,43 +116,49 @@ public class PlayerActions : MonoBehaviour
 					shingObject.transform.position = transform.position + new Vector3(-0.16f, 0f, 0f);
 					shingObject.transform.localScale = new Vector3(-1f, 1f, 1f);
 				}
+				
 
 				actionPoints -= attackActionDeplete;
 
 				if (aud != null && TogglesValues.sound)
 					aud.PlayOneShot(attackSound);
 			}
+			*/
 
 			//Roll
-			if (actionPoints >= rollActionDeplete
-				&& !animator.GetBool("isRolling")
+			/*
+			if (actionPoints >= dashActionDeplete
+				&& !isDashing
 				&& !animator.GetBool("isAttacking")
-				&& Input.GetButtonDown(rollInput)
+				&& Input.GetButtonDown(dashInput)
 				&& hitCheck.knockback == Vector2.zero)
 			{
-				animator.SetBool("isRolling", true);
+				isDashing = true;
+				dashTimer = dashTime;
+				speed = dashSpeed;
+
 				animator.SetBool("isWalking", false);
-				//speed = rollSpeed;
+
 				gameObject.layer = 10;
 
-				actionPoints -= rollActionDeplete;
+				actionPoints -= dashActionDeplete;
 
 				if (aud != null && TogglesValues.sound)
-					aud.PlayOneShot(rollSound);
+					aud.PlayOneShot(dashSound);
 			}
 
 			if (animator.GetBool("isAttacking")
-				|| animator.GetBool("isRolling"))
+				|| isDashing)
 			{
 				if (walkInput == Vector2.zero)
 				{
 					if (sprRenderer.flipX)
 					{
-						walkInput.x = -1f;
+						walkInput.x = 1f;
 					}
 					else
 					{
-						walkInput.x = 1f;
+						walkInput.x = -1f;
 					}
 				}
 			}
@@ -146,12 +168,14 @@ public class PlayerActions : MonoBehaviour
 				actionPoints += regenerateActionPointsPerSec * Time.deltaTime;
 			}
 
-			if (animator.GetBool("isRolling")
-				&& speed < rollSpeed)
+			if (isDashing && dashTimer <= 0f)
 			{
-				speed += Time.deltaTime * rollBoostFactor;
+				isDashing = false;
+				speed = walkSpeed;
 			}
 
+			dashTimer -= Time.deltaTime;
+			*/
 		}
 	}
 
@@ -159,14 +183,14 @@ public class PlayerActions : MonoBehaviour
 	{
 		if (hitCheck.hp > 0f)
 		{
-			rigidbody.MovePosition(new Vector2(rigidbody.transform.position.x, rigidbody.transform.position.y) + (walkInput * speed * Time.deltaTime) + ((sprRenderer.flipX == true ? 1f : -1f) * hitCheck.knockback * Time.deltaTime));
+			rigidbody.MovePosition(new Vector2(rigidbody.transform.position.x, rigidbody.transform.position.y) + (walkInput * speed * Time.deltaTime) + ((sprRenderer.flipX == true ? -1f : 1f) * hitCheck.knockback * Time.deltaTime));
 		}
 		else
 		{
-			rigidbody.MovePosition(new Vector2(rigidbody.transform.position.x, rigidbody.transform.position.y) + ((sprRenderer.flipX == true ? 1f : -1f) * hitCheck.knockback * Time.deltaTime));
+			rigidbody.MovePosition(new Vector2(rigidbody.transform.position.x, rigidbody.transform.position.y) + ((sprRenderer.flipX == true ? -1f : 1f) * hitCheck.knockback * Time.deltaTime));
 
 			stopAttacking();
-			stopRolling();
+			stopDashing();
 			gameObject.layer = 10;
 		}
 
@@ -180,12 +204,12 @@ public class PlayerActions : MonoBehaviour
 	{
 		animator.SetBool("isAttacking", false);
 
-		shingObject.GetComponent<Animator>().SetBool("isAttacking", false);
+		//shingObject.GetComponent<Animator>().SetBool("isAttacking", false);
 	}
 
-	public void stopRolling()
+	public void stopDashing()
 	{
-		animator.SetBool("isRolling", false);
+		dashTimer = 0f;
 
 		gameObject.layer = 8;
 	}

@@ -27,7 +27,7 @@ public class BarUpdater : MonoBehaviour {
 				if(infoObject.GetComponent<HitCheck>().hp <= 0f)
 					barProgress = 0f;
 				else
-					barProgress = (infoObject.GetComponent<PlayerActions>().actionPoints + (-0.63f * (infoObject.GetComponent<PlayerActions>().actionPoints - 1f)));
+					barProgress = (infoObject.GetComponent<PlayerController>().actionPoints + (-0.63f * (infoObject.GetComponent<PlayerController>().actionPoints - 1f)));
 			}
 		}
 	}

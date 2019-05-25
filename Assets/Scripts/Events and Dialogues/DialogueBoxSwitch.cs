@@ -58,15 +58,15 @@ public class DialogueBoxSwitch : MonoBehaviour {
 		{
 			sprRenderer.enabled = false;
 			
-			if(pl1) pl1.GetComponent<PlayerActions>().enabled = true;
-			if(pl2) pl2.GetComponent<PlayerActions>().enabled = true;
+			if(pl1) pl1.GetComponent<PlayerController>().enabled = true;
+			if(pl2) pl2.GetComponent<PlayerController>().enabled = true;
 		}
 		else if(!sprRenderer.enabled)
 		{
 			sprRenderer.enabled = true;
 			
-			if(pl1) pl1.GetComponent<PlayerActions>().enabled = false;
-			if(pl2) pl2.GetComponent<PlayerActions>().enabled = false;
+			if(pl1) pl1.GetComponent<PlayerController>().enabled = false;
+			if(pl2) pl2.GetComponent<PlayerController>().enabled = false;
 			
 			checkForDialogueStringTags(dialogueSequence.dialogues[dialogueSequence.dialogueNo]);
 		}

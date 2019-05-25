@@ -1,6 +1,6 @@
 // Unity built-in shader source. Copyright (c) 2016 Unity Technologies. MIT license (see license.txt)
 
-Shader "Custom/LightSpriteForPlayer2"
+Shader "Custom/LightSpriteForPlayer"
 {
     Properties
     {
@@ -57,17 +57,11 @@ Shader "Custom/LightSpriteForPlayer2"
         {
             fixed4 c = SampleSpriteTexture (IN.uv_MainTex) * IN.color;
 
-            if (c.g >= 0.9 && c.b >= 0.9 && c.r < 0.9)
+            if(c.g >= 0.9 && c.b >= 0.9 && c.r < 0.9)
             {
               c.g = 0;
               c.b = 0;
               c.r = 1;
-            }
-            else if(c.r > 0.7 && c.g < 0.5 && c.b < 0.5)
-            {
-              float temp = c.g;
-              c.g = c.r - 0.15;
-              c.r = temp;
             }
 
             o.Albedo = c.rgb * c.a;
