@@ -1,6 +1,6 @@
 // Unity built-in shader source. Copyright (c) 2016 Unity Technologies. MIT license (see license.txt)
 
-Shader "Custom/LightSpriteForPlayer"
+Shader "Custom/LightSpriteForNPC"
 {
   Properties
   {
@@ -76,17 +76,10 @@ Shader "Custom/LightSpriteForPlayer"
                   if (neighbours > 0 && neighbours < 5)
                   {
                       c.a = 0.5;
-                      c.r = 0.5;
-                      c.g = 0;
-                      c.b = 0;
+                      c.r = 0;
+                      c.g = 0.5;
+                      c.b = 0.5;
                   }
-              }
-
-              if (c.g >= 0.9 && c.b >= 0.9 && c.r < 0.9)
-              {
-                c.g = 0;
-                c.b = 0;
-                c.r = 1;
               }
 
               o.Albedo = c.rgb * c.a;

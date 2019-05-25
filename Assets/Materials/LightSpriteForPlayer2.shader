@@ -53,9 +53,34 @@ Shader "Custom/LightSpriteForPlayer2"
             o.color = v.color * _Color * _RendererColor;
         }
 
+        float4 _MainTex_TexelSize;
+
         void surf (Input IN, inout SurfaceOutput o)
         {
             fixed4 c = SampleSpriteTexture (IN.uv_MainTex) * IN.color;
+
+            if (c.a < 0.1)
+            {
+              fixed4 cUp = SampleSpriteTexture(float2(IN.uv_MainTex.x, IN.uv_MainTex.y - _MainTex_TexelSize.y)) * IN.color;
+              fixed4 cDown = SampleSpriteTexture(float2(IN.uv_MainTex.x, IN.uv_MainTex.y + _MainTex_TexelSize.y)) * IN.color;
+              fixed4 cLeft = SampleSpriteTexture(float2(IN.uv_MainTex.x - _MainTex_TexelSize.x, IN.uv_MainTex.y)) * IN.color;
+              fixed4 cRight = SampleSpriteTexture(float2(IN.uv_MainTex.x + _MainTex_TexelSize.x, IN.uv_MainTex.y)) * IN.color;
+
+              int neighbours = 0;
+
+              if (cUp.a > 0.5) neighbours++;
+              if (cDown.a > 0.5) neighbours++;
+              if (cLeft.a > 0.5) neighbours++;
+              if (cRight.a > 0.5) neighbours++;
+
+              if (neighbours > 0 && neighbours < 5)
+              {
+                c.a = 0.5;
+                c.r = 0;
+                c.g = 0.5;
+                c.b = 0;
+              }
+            }
 
             if (c.g >= 0.9 && c.b >= 0.9 && c.r < 0.9)
             {
@@ -72,6 +97,11 @@ Shader "Custom/LightSpriteForPlayer2"
 
             o.Albedo = c.rgb * c.a;
             o.Alpha = c.a;
+
+            if (c.a == 0.5)
+            {
+              o.Emission = c.rgb;
+            }
         }
         ENDCG
     }

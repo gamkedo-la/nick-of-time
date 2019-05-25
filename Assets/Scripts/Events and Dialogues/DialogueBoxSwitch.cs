@@ -85,7 +85,7 @@ public class DialogueBoxSwitch : MonoBehaviour {
 	
 	public void checkForDialogueStringTags(string text)
 	{
-		//0 for Dagger
+			//0 for Dagger
 			if(text.Contains("<color=#00ff00>Dagger"))
 			{
 				if(pl1) pl1.transform.GetChild(1).gameObject.GetComponent<WeaponPossession>().weaponID = 0;
