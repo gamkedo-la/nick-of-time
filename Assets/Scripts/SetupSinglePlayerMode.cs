@@ -10,7 +10,7 @@ public class SetupSinglePlayerMode : MonoBehaviour {
 	}
 	
 	void Update () {
-		if(SceneManager.GetActiveScene().name == "Play"
+		if(SceneManager.GetActiveScene().name == "Story1"
 		|| SceneManager.GetActiveScene().name == "Arena")
 			setup();
 	}
@@ -32,8 +32,10 @@ public class SetupSinglePlayerMode : MonoBehaviour {
 		
 		for(int i = 0; i < players.GetLength(0); i++)
 		{
-			if(players[i].name != "Player (1)")
+			if (players[i].name != "Player1" && players[i].transform.parent.name != "Players1")
+			{
 				Destroy(players[i]);
+			}
 		}
 		
 		Destroy(gameObject);
