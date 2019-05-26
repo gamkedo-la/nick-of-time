@@ -33,6 +33,7 @@ public class HitCheck : MonoBehaviour {
 		if(isHit)
 		{
 			hp -= hpDamage;
+            Debug.Log("current HP is " + hp);
 			
 			knockback = new Vector2(knockbackValue, 0f);
 			knockbackSlowDown = Mathf.Abs(knockbackSlowDown);

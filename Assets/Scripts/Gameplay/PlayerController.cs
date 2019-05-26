@@ -175,7 +175,7 @@ public class PlayerController : MonoBehaviour
 				speed = walkSpeed;
 			}
 
-			dashTimer -= Time.deltaTime;
+			dashTimer -= Time.deltaTime;          
 			
 		}
 	}
