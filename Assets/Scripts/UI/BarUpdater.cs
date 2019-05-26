@@ -11,6 +11,7 @@ public class BarUpdater : MonoBehaviour {
 
     private HitCheck hitCheck;
     private PlayerController playerController;
+    private ObjectShake objectShake;
 
     private float hitPoints;
     private float actionPoints;
@@ -24,6 +25,7 @@ public class BarUpdater : MonoBehaviour {
         barFill = GetComponent<Image>();
         hitCheck = infoObject.GetComponent<HitCheck>();
         playerController = infoObject.GetComponent<PlayerController>();
+        objectShake = GetComponent<ObjectShake>();
     }
 	
 	void Update () {
@@ -35,7 +37,9 @@ public class BarUpdater : MonoBehaviour {
 			{                
                 //barProgress = (hitPoints + (-0.63f * (hitPoints - 1f)));
                  Debug.Log("HIT POINTS " + hitPoints);
-                barFill.fillAmount = hitPoints;               
+                barFill.fillAmount = hitPoints;
+                StartCoroutine (objectShake.Shake(0.4f, 0.4f));
+                
 			}
 			else if(forAction)
 			{                
