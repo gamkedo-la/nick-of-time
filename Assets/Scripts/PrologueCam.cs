@@ -6,14 +6,15 @@ using UnityEngine.SceneManagement;
 public class PrologueCam : MonoBehaviour {
 	
 	public GameObject madClocks;
-	
 	public GameObject title;
-	
 	public GameObject singlePlay_setup;
 	
+	[Space]
 	public AudioClip clip1;
 	public AudioClip clip2;
+	public AudioClip door;
 	
+	[Space]
 	public string sceneName = "Play";
 	
 	private AudioSource aud;
@@ -56,7 +57,7 @@ public class PrologueCam : MonoBehaviour {
 	public void playAudioClip1()
 	{
 		if(TogglesValues.music && clip1 != null)
-			aud.PlayOneShot(clip1);
+			aud.PlayOneShot(clip1, 0.3f);
 	}
 	
 	public void playAudioClip2()
@@ -64,7 +65,13 @@ public class PrologueCam : MonoBehaviour {
 		if(TogglesValues.music && clip2 != null)
 			aud.PlayOneShot(clip2);
 	}
-	
+
+	public void playDoorSound()
+	{
+		if (TogglesValues.sound && door != null)
+			aud.PlayOneShot(door, 0.5f);
+	}
+
 	public void stopAudioClip()
 	{
 		aud.Stop();
