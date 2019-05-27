@@ -38,7 +38,7 @@ public class BarUpdater : MonoBehaviour {
                 //barProgress = (hitPoints + (-0.63f * (hitPoints - 1f)));
                  Debug.Log("HIT POINTS " + hitPoints);
                 barFill.fillAmount = hitPoints;
-                StartCoroutine (objectShake.Shake(0.4f, 0.4f));
+                //StartCoroutine (objectShake.Shake(0.4f, 0.4f));
                 
 			}
 			else if(forAction)
