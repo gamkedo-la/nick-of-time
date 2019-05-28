@@ -2,43 +2,40 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-
 public class ObjectShake : MonoBehaviour
 {
+	private RectTransform rectTransform;
+	private Vector2 originalPosition;
+	
+	private void Awake()
+	{
+		rectTransform = GetComponent<RectTransform>();
+		UpdateFixedPosition();
+	}
 
-    private RectTransform rectTransform;
+	public void UpdateFixedPosition()
+	{
+		originalPosition = transform.localPosition;
+	}
 
-   
+	public IEnumerator Shake(float magnitude, float duration)
+	{
+		float elapsed = 0.0f;
 
-    private void Awake()
-    {
-        rectTransform = GetComponent<RectTransform>();
-    }
+		while (elapsed < duration)
+		{
+			float x = Random.Range(-1f, 1f) * magnitude;
+			float y = Random.Range(-1f, 1f) * magnitude;
 
-    public IEnumerator Shake(float magnitude, float duration)
-    {       
-            
-            Vector2 originalPosition = transform.localPosition;
+			transform.localPosition = new Vector2(x, y);
 
-            float elapsed = 0.0f;
+			elapsed += Time.deltaTime;
 
+			yield return null;
+		}
 
-            while (elapsed < duration)
-            {
-                float x = Random.Range(-1f, 1f) * magnitude;
-                float y = Random.Range(-1f, 1f) * magnitude;
-
-                transform.localPosition = new Vector2(x, y);
-
-                // transform.localPosition = new Vector2(x, y);
-
-                elapsed += Time.deltaTime;
-
-                yield return null;
-            }
-
-            transform.localPosition = originalPosition;
-    }
+		transform.localPosition = originalPosition;
+	}
 }
 
 

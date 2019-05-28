@@ -173,6 +173,7 @@ public class PlayerController : MonoBehaviour
 			{
 				isDashing = false;
 				speed = walkSpeed;
+				gameObject.layer = 8;
 			}
 
 			dashTimer -= Time.deltaTime;          
@@ -192,7 +193,6 @@ public class PlayerController : MonoBehaviour
 
 			stopAttacking();
 			stopDashing();
-			gameObject.layer = 10;
 		}
 
 		if (Mathf.Abs(hitCheck.knockback.x) > Mathf.Abs(hitCheck.knockbackSlowDown))
