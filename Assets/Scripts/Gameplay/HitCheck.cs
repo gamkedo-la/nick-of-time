@@ -40,8 +40,8 @@ public class HitCheck : MonoBehaviour {
 			hp -= hpDamage;
             Debug.Log("current HP is " + hp);
 
-            StartCoroutine(HPBarJointCamera.GetComponent<ObjectShake>().Shake(10f, 0.2f));
-            StartCoroutine(HPBarSoloCamera.GetComponent<ObjectShake>().Shake(10f, 0.2f));
+            StartCoroutine(HPBarJointCamera.GetComponent<ObjectShake>().Shake(10f, 0.2f));//Shakes HP Bar on Hit
+            StartCoroutine(HPBarSoloCamera.GetComponent<ObjectShake>().Shake(10f, 0.2f));//Shakes HP Bar on Hit
 
             knockback = new Vector2(knockbackValue, 0f);
 			knockbackSlowDown = Mathf.Abs(knockbackSlowDown);

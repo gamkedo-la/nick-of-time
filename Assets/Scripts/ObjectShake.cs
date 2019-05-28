@@ -8,8 +8,7 @@ public class ObjectShake : MonoBehaviour
 
     private RectTransform rectTransform;
 
-    [SerializeField]
-    private GameObject objectToShake;
+   
 
     private void Awake()
     {
@@ -19,7 +18,7 @@ public class ObjectShake : MonoBehaviour
     public IEnumerator Shake(float magnitude, float duration)
     {       
             
-            Vector2 originalPosition = objectToShake.transform.localPosition;
+            Vector2 originalPosition = transform.localPosition;
 
             float elapsed = 0.0f;
 
@@ -29,7 +28,7 @@ public class ObjectShake : MonoBehaviour
                 float x = Random.Range(-1f, 1f) * magnitude;
                 float y = Random.Range(-1f, 1f) * magnitude;
 
-                objectToShake.transform.localPosition = new Vector2(x, y);
+                transform.localPosition = new Vector2(x, y);
 
                 // transform.localPosition = new Vector2(x, y);
 
@@ -38,7 +37,7 @@ public class ObjectShake : MonoBehaviour
                 yield return null;
             }
 
-            objectToShake.transform.localPosition = originalPosition;
+            transform.localPosition = originalPosition;
     }
 }
 
