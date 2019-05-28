@@ -23,13 +23,15 @@ public class HitCheck : MonoBehaviour {
 	
 	private AudioSource aud = null;
 
-    private ObjectShake objectShake;
+    [SerializeField]
+    private GameObject HPBarJointCamera;
+    [SerializeField]
+    private GameObject HPBarSoloCamera;
 	
 	void Start () {
 		aud = GetComponent<AudioSource>();
 		if(aud == null)
-			aud = FindObjectOfType<AudioSource>();
-        objectShake = GetComponent<ObjectShake>();
+			aud = FindObjectOfType<AudioSource>();     
     }
 	
 	void Update () {
@@ -38,7 +40,8 @@ public class HitCheck : MonoBehaviour {
 			hp -= hpDamage;
             Debug.Log("current HP is " + hp);
 
-            StartCoroutine(objectShake.Shake(10f, 0.2f));
+            StartCoroutine(HPBarJointCamera.GetComponent<ObjectShake>().Shake(10f, 0.2f));
+            StartCoroutine(HPBarSoloCamera.GetComponent<ObjectShake>().Shake(10f, 0.2f));
 
             knockback = new Vector2(knockbackValue, 0f);
 			knockbackSlowDown = Mathf.Abs(knockbackSlowDown);

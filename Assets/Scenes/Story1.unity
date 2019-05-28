@@ -336,21 +336,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1148393954167941651}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &74160664
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 74160656}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 414c560f28729a44e995422b73adcef9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectsToShake:
-  - {fileID: 921642540}
-  - {fileID: 814955669}
 --- !u!1 &83369951
 GameObject:
   m_ObjectHideFlags: 0
@@ -10960,6 +10945,16 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1148393954563092481, guid: f34ad73bca23e694585b0119f5a1682a,
+        type: 3}
+      propertyPath: HPBarJointCamera
+      value: 
+      objectReference: {fileID: 2041136124}
+    - target: {fileID: 1148393954563092481, guid: f34ad73bca23e694585b0119f5a1682a,
+        type: 3}
+      propertyPath: HPBarSoloCamera
+      value: 
+      objectReference: {fileID: 1764954182}
     m_RemovedComponents:
     - {fileID: 1148393954563092480, guid: f34ad73bca23e694585b0119f5a1682a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f34ad73bca23e694585b0119f5a1682a, type: 3}
@@ -13729,6 +13724,8 @@ MonoBehaviour:
   deathSound: {fileID: 8300000, guid: 07a0b43fe673b9442a331a9ba53c1bbe, type: 3}
   hp: 1
   knockback: {x: 0, y: 0}
+  HPBarJointCamera: {fileID: 0}
+  HPBarSoloCamera: {fileID: 0}
 --- !u!82 &697478002
 AudioSource:
   m_ObjectHideFlags: 0
@@ -14324,6 +14321,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8479785458191863461}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &814955671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 814955669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414c560f28729a44e995422b73adcef9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToShake: {fileID: 814955669}
 --- !u!1 &822858418
 GameObject:
   m_ObjectHideFlags: 0
@@ -15767,6 +15777,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8479785458191863461}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &921642542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 921642540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414c560f28729a44e995422b73adcef9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToShake: {fileID: 921642540}
 --- !u!1 &931135616
 GameObject:
   m_ObjectHideFlags: 0
@@ -22630,6 +22653,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1764954182 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4090669852092979830, guid: ed0fc656d5f7d0840ba8795c183865a3,
+    type: 3}
+  m_PrefabInstance: {fileID: 8479785458191863461}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1774786136
 GameObject:
   m_ObjectHideFlags: 0
@@ -47513,6 +47542,8 @@ MonoBehaviour:
   deathSound: {fileID: 8300000, guid: 07a0b43fe673b9442a331a9ba53c1bbe, type: 3}
   hp: 1
   knockback: {x: 0, y: 0}
+  HPBarJointCamera: {fileID: 0}
+  HPBarSoloCamera: {fileID: 0}
 --- !u!114 &2012583765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47888,6 +47919,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pieces:
   - {fileID: 1580847455321010, guid: 2d8da81083ca09b4abade2d65dc3c732, type: 3}
+--- !u!1 &2041136124 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3476863582865131016, guid: ed0fc656d5f7d0840ba8795c183865a3,
+    type: 3}
+  m_PrefabInstance: {fileID: 8479785458191863461}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2060834664
 GameObject:
   m_ObjectHideFlags: 0
@@ -48619,6 +48656,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1148393954563092481, guid: f34ad73bca23e694585b0119f5a1682a,
+        type: 3}
+      propertyPath: HPBarJointCamera
+      value: 
+      objectReference: {fileID: 921642540}
+    - target: {fileID: 1148393954563092481, guid: f34ad73bca23e694585b0119f5a1682a,
+        type: 3}
+      propertyPath: HPBarSoloCamera
+      value: 
+      objectReference: {fileID: 814955669}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f34ad73bca23e694585b0119f5a1682a, type: 3}
 --- !u!4 &1148393954167941652 stripped
