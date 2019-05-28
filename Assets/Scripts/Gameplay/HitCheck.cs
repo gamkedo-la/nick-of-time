@@ -22,20 +22,25 @@ public class HitCheck : MonoBehaviour {
 	private bool hitLeft = false;
 	
 	private AudioSource aud = null;
+
+    private ObjectShake objectShake;
 	
 	void Start () {
 		aud = GetComponent<AudioSource>();
 		if(aud == null)
 			aud = FindObjectOfType<AudioSource>();
-	}
+        objectShake = GetComponent<ObjectShake>();
+    }
 	
 	void Update () {
 		if(isHit)
 		{
 			hp -= hpDamage;
             Debug.Log("current HP is " + hp);
-			
-			knockback = new Vector2(knockbackValue, 0f);
+
+            StartCoroutine(objectShake.Shake(10f, 0.2f));
+
+            knockback = new Vector2(knockbackValue, 0f);
 			knockbackSlowDown = Mathf.Abs(knockbackSlowDown);
 			if(hitLeft)
 			{
