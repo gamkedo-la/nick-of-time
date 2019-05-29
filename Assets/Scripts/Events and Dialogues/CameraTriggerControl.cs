@@ -42,14 +42,12 @@ public class CameraTriggerControl : MonoBehaviour
 	}
 	
 	//To set the transform follow back to Player after getting out of the trigger zone
-	/*
 	void OnTriggerExit2D(Collider2D coll)
 	{
-		if(coll.gameObject.CompareTag("Player"))
+		if (coll.gameObject.CompareTag(objectTag) && (coll.gameObject.name == "null" || coll.gameObject.name == objectName))
 		{
-			Camera.main.GetComponent<LerpToTransform>().tr = coll.gameObject.transform;
+			//Camera.main.GetComponent<LerpToTransform>().tr = coll.gameObject.transform;
 			triggered = false;
 		}
 	}
-	*/
 }

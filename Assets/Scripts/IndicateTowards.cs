@@ -47,38 +47,41 @@ public class IndicateTowards : MonoBehaviour
 	
     void Update()
     {
-		Vector3 pos = transform.position;
-		Vector3 target = objectToIndicate.transform.position;
+		if (objectToIndicate != null)
+		{
+			Vector3 pos = transform.position;
+			Vector3 target = objectToIndicate.transform.position;
 
-		Vector2 sub = pos - target;
-		float angle = Mathf.Atan2(sub.y, sub.x);
+			Vector2 sub = pos - target;
+			float angle = Mathf.Atan2(sub.y, sub.x);
 
-		pos = target;
+			pos = target;
 
-		/*
-		if (pos.x < transform.parent.transform.position.x + (rectangleConfinement.x * cam.orthographicSize))
-			pos.x = transform.parent.transform.position.x + (rectangleConfinement.x * cam.orthographicSize);
-		if (pos.y < transform.parent.transform.position.y + (rectangleConfinement.y * cam.orthographicSize))
-			pos.y = transform.parent.transform.position.y + (rectangleConfinement.y * cam.orthographicSize);
-		if (pos.x > transform.parent.transform.position.x + (rectangleConfinement.z * cam.orthographicSize))
-			pos.x = transform.parent.transform.position.x + (rectangleConfinement.z * cam.orthographicSize);
-		if (pos.y > transform.parent.transform.position.y + (rectangleConfinement.w * cam.orthographicSize))
-			pos.y = transform.parent.transform.position.y + (rectangleConfinement.w * cam.orthographicSize);
-			*/
+			/*
+			if (pos.x < transform.parent.transform.position.x + (rectangleConfinement.x * cam.orthographicSize))
+				pos.x = transform.parent.transform.position.x + (rectangleConfinement.x * cam.orthographicSize);
+			if (pos.y < transform.parent.transform.position.y + (rectangleConfinement.y * cam.orthographicSize))
+				pos.y = transform.parent.transform.position.y + (rectangleConfinement.y * cam.orthographicSize);
+			if (pos.x > transform.parent.transform.position.x + (rectangleConfinement.z * cam.orthographicSize))
+				pos.x = transform.parent.transform.position.x + (rectangleConfinement.z * cam.orthographicSize);
+			if (pos.y > transform.parent.transform.position.y + (rectangleConfinement.w * cam.orthographicSize))
+				pos.y = transform.parent.transform.position.y + (rectangleConfinement.w * cam.orthographicSize);
+				*/
 
-		if(cam.orthographicSize * ratio > 0f)
-			bottomLeft.transform.parent.localScale = new Vector2(cam.orthographicSize * ratio, cam.orthographicSize * ratio);
+			if (cam.orthographicSize * ratio > 0f)
+				bottomLeft.transform.parent.localScale = new Vector2(cam.orthographicSize * ratio, cam.orthographicSize * ratio);
 
-		if (pos.x < bottomLeft.position.x)
-			pos.x = bottomLeft.position.x;
-		if (pos.y < bottomLeft.position.y)
-			pos.y = bottomLeft.position.y;
-		if (pos.x > topRight.position.x)
-			pos.x = topRight.position.x;
-		if (pos.y > topRight.position.y)
-			pos.y = topRight.position.y;
-			
-		transform.rotation = Quaternion.Euler(0f, 0f, (angle * Mathf.Rad2Deg) + angleOffset);
-		transform.position = pos;
+			if (pos.x < bottomLeft.position.x)
+				pos.x = bottomLeft.position.x;
+			if (pos.y < bottomLeft.position.y)
+				pos.y = bottomLeft.position.y;
+			if (pos.x > topRight.position.x)
+				pos.x = topRight.position.x;
+			if (pos.y > topRight.position.y)
+				pos.y = topRight.position.y;
+
+			transform.rotation = Quaternion.Euler(0f, 0f, (angle * Mathf.Rad2Deg) + angleOffset);
+			transform.position = pos;
+		}
     }
 }
