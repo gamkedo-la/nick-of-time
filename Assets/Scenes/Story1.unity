@@ -14841,21 +14841,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8479785458191863461}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &814955671
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 814955669}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 414c560f28729a44e995422b73adcef9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  keepShaking: 0
-  delay: 0.01
-  intensity: 1
 --- !u!1 &819258075
 GameObject:
   m_ObjectHideFlags: 0
@@ -16402,21 +16387,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8479785458191863461}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &921642542
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 921642540}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 414c560f28729a44e995422b73adcef9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  keepShaking: 0
-  delay: 0.01
-  intensity: 1
 --- !u!1 &931135616
 GameObject:
   m_ObjectHideFlags: 0
@@ -24060,21 +24030,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8479785458191863461}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1764954184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1764954182}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 414c560f28729a44e995422b73adcef9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  keepShaking: 0
-  delay: 0.01
-  intensity: 1
 --- !u!1 &1774786136
 GameObject:
   m_ObjectHideFlags: 0
@@ -49347,21 +49302,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8479785458191863461}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2041136126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2041136124}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 414c560f28729a44e995422b73adcef9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  keepShaking: 0
-  delay: 0.01
-  intensity: 1
 --- !u!1 &2060834664
 GameObject:
   m_ObjectHideFlags: 0
@@ -49773,7 +49713,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1616501955257506, guid: 86be8d2626eaec54c8f011aabed58061, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4148914089871124, guid: 86be8d2626eaec54c8f011aabed58061, type: 3}
       propertyPath: m_LocalPosition.x

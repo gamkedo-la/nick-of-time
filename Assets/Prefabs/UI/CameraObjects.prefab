@@ -483,7 +483,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 414c560f28729a44e995422b73adcef9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToShake: {fileID: 0}
+  keepShaking: 0
+  delay: 0.01
+  intensity: 1
 --- !u!1 &942524113957382022
 GameObject:
   m_ObjectHideFlags: 0
@@ -661,7 +663,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 414c560f28729a44e995422b73adcef9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToShake: {fileID: 0}
+  keepShaking: 0
+  delay: 0.01
+  intensity: 1
 --- !u!1 &1917835401964112236
 GameObject:
   m_ObjectHideFlags: 0
@@ -904,9 +908,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1007470798566565446}
   - component: {fileID: 5241654684262283954}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: EnemiesIndicatorParent
-  m_TagString: Untagged
+  m_TagString: InCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -942,9 +946,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b6902245ff24e94b9aee8feb6260ceb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  indicatorPrefab: {fileID: 0}
-  bottomLeft: {fileID: 0}
-  topRight: {fileID: 0}
+  delay: 3
+  indicatorPrefab: {fileID: 2495910575934130000, guid: 0cb6eba77cfe402409d705b5b4f59011,
+    type: 3}
+  cam: {fileID: 8479785458525007867}
+  bottomLeft: {fileID: 5923680853621793460}
+  topRight: {fileID: 5263833878359200722}
 --- !u!1 &2563298641862494289
 GameObject:
   m_ObjectHideFlags: 0
@@ -1376,6 +1383,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1015695333193033481}
+  - component: {fileID: 921642542}
   m_Layer: 13
   m_Name: HPBar 1
   m_TagString: Untagged
@@ -1404,6 +1412,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &921642542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3089922027826430290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414c560f28729a44e995422b73adcef9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keepShaking: 0
+  delay: 0.01
+  intensity: 1
 --- !u!1 &3177708434876652089
 GameObject:
   m_ObjectHideFlags: 0
@@ -1534,6 +1557,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6151486075851999534}
+  - component: {fileID: 2041136126}
   m_Layer: 13
   m_Name: HPBar 2
   m_TagString: Untagged
@@ -1562,6 +1586,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2041136126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3476863582865131016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414c560f28729a44e995422b73adcef9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keepShaking: 0
+  delay: 0.01
+  intensity: 1
 --- !u!1 &3647015986670558948
 GameObject:
   m_ObjectHideFlags: 0
@@ -1655,6 +1694,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3660849777518714757}
+  - component: {fileID: 1764954184}
   m_Layer: 12
   m_Name: HPBar 2In
   m_TagString: Untagged
@@ -1683,6 +1723,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1764954184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4090669852092979830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414c560f28729a44e995422b73adcef9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keepShaking: 0
+  delay: 0.01
+  intensity: 1
 --- !u!1 &4131678305329548234
 GameObject:
   m_ObjectHideFlags: 0
@@ -1787,7 +1842,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 414c560f28729a44e995422b73adcef9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToShake: {fileID: 0}
+  keepShaking: 0
+  delay: 0.01
+  intensity: 1
 --- !u!114 &1083199480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1800,7 +1857,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 414c560f28729a44e995422b73adcef9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToShake: {fileID: 0}
+  keepShaking: 0
+  delay: 0.01
+  intensity: 1
 --- !u!1 &4175554464007734561
 GameObject:
   m_ObjectHideFlags: 0
@@ -1993,6 +2052,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6738559280798237521}
+  - component: {fileID: 814955671}
   m_Layer: 11
   m_Name: HPBar 1In
   m_TagString: Untagged
@@ -2021,6 +2081,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &814955671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5120493042176789759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414c560f28729a44e995422b73adcef9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keepShaking: 0
+  delay: 0.01
+  intensity: 1
 --- !u!1 &5212421089536371893
 GameObject:
   m_ObjectHideFlags: 0
@@ -2249,7 +2324,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 414c560f28729a44e995422b73adcef9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToShake: {fileID: 0}
+  keepShaking: 0
+  delay: 0.01
+  intensity: 1
 --- !u!1 &5872310493145009033
 GameObject:
   m_ObjectHideFlags: 0
@@ -2427,7 +2504,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 414c560f28729a44e995422b73adcef9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToShake: {fileID: 0}
+  keepShaking: 0
+  delay: 0.01
+  intensity: 1
 --- !u!1 &6370304961681569572
 GameObject:
   m_ObjectHideFlags: 0
@@ -2785,7 +2864,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 414c560f28729a44e995422b73adcef9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToShake: {fileID: 0}
+  keepShaking: 0
+  delay: 0.01
+  intensity: 1
 --- !u!1 &7934632533992058840
 GameObject:
   m_ObjectHideFlags: 0
@@ -2889,7 +2970,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 414c560f28729a44e995422b73adcef9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToShake: {fileID: 0}
+  keepShaking: 0
+  delay: 0.01
+  intensity: 1
 --- !u!1 &8372083256031813164
 GameObject:
   m_ObjectHideFlags: 0
@@ -2902,7 +2985,7 @@ GameObject:
   - component: {fileID: 8381511584084521005}
   m_Layer: 11
   m_Name: EnemiesIndicatorParent
-  m_TagString: Untagged
+  m_TagString: InCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2938,9 +3021,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b6902245ff24e94b9aee8feb6260ceb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  indicatorPrefab: {fileID: 0}
-  bottomLeft: {fileID: 0}
-  topRight: {fileID: 0}
+  delay: 3
+  indicatorPrefab: {fileID: 2495910575934130000, guid: 0cb6eba77cfe402409d705b5b4f59011,
+    type: 3}
+  cam: {fileID: 8479785458082677512}
+  bottomLeft: {fileID: 3903158386005824194}
+  topRight: {fileID: 1585679474394519253}
 --- !u!1 &8479785457038440006
 GameObject:
   m_ObjectHideFlags: 0

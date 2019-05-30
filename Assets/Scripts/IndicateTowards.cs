@@ -13,11 +13,10 @@ public class IndicateTowards : MonoBehaviour
 	};
 
 	[SerializeField] private IndicateToEntity type = IndicateToEntity.Player2;
-	[SerializeField] private Camera cam;
-
-	//[SerializeField] private Vector4 rectangleConfinement;
-	[SerializeField] private Transform bottomLeft;
-	[SerializeField] private Transform topRight;
+	public Camera cam;
+	
+	public Transform bottomLeft;
+	public Transform topRight;
 	[SerializeField] private float ratio;
 
 	[SerializeField] private bool setAngle = true;
