@@ -37,8 +37,10 @@ public class WeaponPossession : MonoBehaviour {
 		transform.parent.localScale = sc;
 		*/
 
+		/*
 		Vector3 pos = transform.parent.localPosition;
 		pos.x = playerRenderer.flipX == true ? offsetX : 0f;
 		transform.parent.localPosition = pos;
+		*/
 	}
 }

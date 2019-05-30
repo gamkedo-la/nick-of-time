@@ -11254,7 +11254,7 @@ PrefabInstance:
     - target: {fileID: 3329497469656580619, guid: f34ad73bca23e694585b0119f5a1682a,
         type: 3}
       propertyPath: dashSpeed
-      value: 6.5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3329497469656580619, guid: f34ad73bca23e694585b0119f5a1682a,
         type: 3}
@@ -11264,7 +11264,12 @@ PrefabInstance:
     - target: {fileID: 3329497469656580619, guid: f34ad73bca23e694585b0119f5a1682a,
         type: 3}
       propertyPath: attackSpeed
-      value: 2.5
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3329497469656580619, guid: f34ad73bca23e694585b0119f5a1682a,
+        type: 3}
+      propertyPath: attackSpeedTime
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 2579037237340339661, guid: f34ad73bca23e694585b0119f5a1682a,
         type: 3}
@@ -50106,6 +50111,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3329497469656580619, guid: f34ad73bca23e694585b0119f5a1682a,
+        type: 3}
+      propertyPath: attackSpeedTime
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3329497469656580619, guid: f34ad73bca23e694585b0119f5a1682a,
+        type: 3}
+      propertyPath: attackSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1148393954563092481, guid: f34ad73bca23e694585b0119f5a1682a,
         type: 3}

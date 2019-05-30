@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
 	public float walkSpeed = 1f;
 	public float attackSpeed = 2f;
+	public float attackSpeedTime = 0.1f;
 	public float dashSpeed = 3f;
 	public float dashTime = 0.2f;
 
@@ -31,6 +32,7 @@ public class PlayerController : MonoBehaviour
 	private float speed = 0f;
 	private bool isDashing = false;
 	private float dashTimer = 0f;
+	private float attackSpeedTimer = 0f;
 
 	private Rigidbody2D rigidbody;
 	private Animator animator;
@@ -44,7 +46,7 @@ public class PlayerController : MonoBehaviour
 	private Vector2 walkInput = Vector2.zero;
 
 	private void Start()
-    {
+	{
 		rigidbody = GetComponent<Rigidbody2D>();
 		animator = GetComponent<Animator>();
 		sprRenderer = GetComponent<SpriteRenderer>();
@@ -54,16 +56,16 @@ public class PlayerController : MonoBehaviour
 		if (aud == null)
 			aud = FindObjectOfType<AudioSource>();
 	}
-	
-    private void Update()
-    {
+
+	private void Update()
+	{
 		if (Time.timeScale > 0f)
 		{
-			walkInput = new Vector2(Input.GetAxisRaw(walkHorizontalInput), Input.GetAxisRaw(walkVerticalInput));
-
-			if (walkInput != Vector2.zero)
+			if (!animator.GetBool("isAttacking") && !isDashing)
 			{
-				if (!animator.GetBool("isAttacking") && !isDashing)
+				walkInput = new Vector2(Input.GetAxisRaw(walkHorizontalInput), Input.GetAxisRaw(walkVerticalInput));
+
+				if (walkInput != Vector2.zero)
 				{
 					speed = walkSpeed;
 					animator.SetBool("isWalking", true);
@@ -76,22 +78,25 @@ public class PlayerController : MonoBehaviour
 					{
 						animator.SetInteger("direction", 0);
 					}
-					else if (walkInput.x != 0)
+					else if (walkInput.x > 0)
 					{
 						animator.SetInteger("direction", 1);
 					}
-					
+					else if (walkInput.x < 0)
+					{
+						animator.SetInteger("direction", 3);
+					}
+
 					if (walkInput.x > 0) sprRenderer.flipX = true;
 					else sprRenderer.flipX = false;
 				}
-			}
-			else
-			{
-				speed = 0f;
-				animator.SetBool("isWalking", false);
+				else
+				{
+					speed = 0f;
+					animator.SetBool("isWalking", false);
+				}
 			}
 
-			/*
 			//Attack
 			if (actionPoints >= attackActionDeplete
 				&& !animator.GetBool("isAttacking")
@@ -99,13 +104,41 @@ public class PlayerController : MonoBehaviour
 				&& Input.GetButtonDown(attackInput))
 			{
 				animator.SetBool("isAttacking", true);
-				animator.SetBool("isWalking", false);
+
 				speed = attackSpeed;
 
-				
-				shingObject.GetComponent<Animator>().SetBool("isAttacking", true);
-				//shingObject.GetComponent<SpriteRenderer>().flipX = sprRenderer.flipX;
+				if (animator.GetBool("isWalking"))
+					attackSpeedTimer = attackSpeedTime;
+				else
+				{
+					int dir = animator.GetInteger("direction");
+					if (dir == 0)
+					{
+						walkInput.x = 0;
+						walkInput.y = 1;
+					}
+					else if (dir == 1)
+					{
+						walkInput.x = 1;
+						walkInput.y = 0;
+					}
+					else if (dir == 2)
+					{
+						walkInput.x = 0;
+						walkInput.y = -1;
+					}
+					else if (dir == 3)
+					{
+						walkInput.x = -1;
+						walkInput.y = 0;
+					}
+					attackSpeedTimer = attackSpeedTime / 2f;
+				}
 
+
+				//shingObject.GetComponent<Animator>().SetBool("isAttacking", true);
+				////shingObject.GetComponent<SpriteRenderer>().flipX = sprRenderer.flipX;
+				/*
 				if (!sprRenderer.flipX)
 				{
 					shingObject.transform.position = transform.position + new Vector3(0.16f, 0f, 0f);
@@ -116,14 +149,14 @@ public class PlayerController : MonoBehaviour
 					shingObject.transform.position = transform.position + new Vector3(-0.16f, 0f, 0f);
 					shingObject.transform.localScale = new Vector3(-1f, 1f, 1f);
 				}
-				
+				*/
+
 
 				actionPoints -= attackActionDeplete;
 
 				if (aud != null && TogglesValues.sound)
 					aud.PlayOneShot(attackSound);
 			}
-			*/
 
 			//Dash
 			if (actionPoints >= dashActionDeplete
@@ -175,9 +208,15 @@ public class PlayerController : MonoBehaviour
 				speed = walkSpeed;
 				gameObject.layer = 8;
 			}
-
-			dashTimer -= Time.deltaTime;          
 			
+			if (animator.GetBool("isAttacking") && attackSpeedTimer <= 0f)
+			{
+				speed = 0f;
+			}
+
+			attackSpeedTimer -= Time.deltaTime;
+			dashTimer -= Time.deltaTime;
+
 		}
 	}
 
@@ -204,6 +243,8 @@ public class PlayerController : MonoBehaviour
 	public void stopAttacking()
 	{
 		animator.SetBool("isAttacking", false);
+
+		attackSpeedTimer = 0f;
 
 		//shingObject.GetComponent<Animator>().SetBool("isAttacking", false);
 	}
