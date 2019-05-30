@@ -285,9 +285,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 1.25
-  attackSpeed: 5
+  attackSpeed: 4
+  attackSpeedTime: 0.1
   dashSpeed: 7
   dashTime: 0.1
+  dashFXObject: {fileID: 2643976167619289179, guid: d16b468af7e8e1a49a14edc85440334d,
+    type: 3}
   regenerateActionPointsPerSec: 0.3
   attackActionDeplete: 0.4
   dashActionDeplete: 0.2

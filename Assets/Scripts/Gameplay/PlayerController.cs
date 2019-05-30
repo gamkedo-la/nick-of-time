@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
 	public float attackSpeedTime = 0.1f;
 	public float dashSpeed = 3f;
 	public float dashTime = 0.2f;
+	public GameObject dashFXObject;
 
 	[Space]
 	public float regenerateActionPointsPerSec = 0.025f;
@@ -207,6 +208,25 @@ public class PlayerController : MonoBehaviour
 				isDashing = false;
 				speed = walkSpeed;
 				gameObject.layer = 8;
+			}
+			else if (dashTimer > 0f)
+			{
+				GameObject ghostSpriteFX = Instantiate(dashFXObject, transform.position, Quaternion.Euler(0f,0f,0f));
+
+				SpriteRenderer GSFX_sprRend = ghostSpriteFX.GetComponent<SpriteRenderer>();
+
+				GSFX_sprRend.sprite = sprRenderer.sprite;
+
+				if (name == "Player1")
+				{
+					GSFX_sprRend.color = Color.red;
+					GSFX_sprRend.material.color = Color.red;
+				}
+				else
+				{
+					GSFX_sprRend.color = Color.green;
+					GSFX_sprRend.material.color = Color.green;
+				}
 			}
 			
 			if (animator.GetBool("isAttacking") && attackSpeedTimer <= 0f)
