@@ -6,6 +6,7 @@ public class GenerateEnemyIndicators : MonoBehaviour
 {
 	public float delay = 2f;
 
+	public IndicateTowards.IndicateToEntity type = IndicateTowards.IndicateToEntity.Enemy_Player1;
 	public GameObject indicatorPrefab;
 
 	[SerializeField] private Camera cam;
@@ -27,7 +28,7 @@ public class GenerateEnemyIndicators : MonoBehaviour
 		if (timer <= 0f)
 		{
 			for (int i = 0; i < gameObject.transform.childCount; i++)
-				Destroy(gameObject.transform.GetChild(i));
+				Destroy(gameObject.transform.GetChild(i).gameObject);
 
 			GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
 
@@ -38,6 +39,7 @@ public class GenerateEnemyIndicators : MonoBehaviour
 					GameObject indicator = Instantiate(indicatorPrefab, gameObject.transform);
 					indicator.layer = gameObject.layer;
 					IndicateTowards indTow = indicator.GetComponent<IndicateTowards>();
+					indTow.type = type;
 					indTow.objectToIndicate = e;
 					indTow.cam = cam;
 					indTow.bottomLeft = bottomLeft;

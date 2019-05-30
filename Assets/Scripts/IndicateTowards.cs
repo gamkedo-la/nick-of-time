@@ -8,11 +8,12 @@ public class IndicateTowards : MonoBehaviour
 	{
 		Player1,
 		Player2,
-		Enemy,
+		Enemy_Player1,
+		Enemy_Player2,
 		NPC
 	};
 
-	[SerializeField] private IndicateToEntity type = IndicateToEntity.Player2;
+	public IndicateToEntity type = IndicateToEntity.Player2;
 	public Camera cam;
 	
 	public Transform bottomLeft;
@@ -27,17 +28,28 @@ public class IndicateTowards : MonoBehaviour
 	private Vector3 bottomLeftPrevPos;
 	private Vector3 topRightPrevPos;
 
+	private GameObject player1;
+	private GameObject player2;
+
     void Start()
     {
-		if (type == IndicateToEntity.Player1)
+		GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+
+		if (players != null)
 		{
-			GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-			objectToIndicate = players[0].name == "Player1" ? players[0] : players[1];
+			player1 = players[0].name == "Player1" ? players[0] : players[1];
+
+			if (players.Length > 1)
+				player2 = players[0].name == "Player2" ? players[0] : players[1];
+
+			if (type == IndicateToEntity.Player1)
+				objectToIndicate = player1;
+			else if (type == IndicateToEntity.Player2)
+				objectToIndicate = player2;
 		}
-		else if (type == IndicateToEntity.Player2)
+		else
 		{
-			GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-			objectToIndicate = players[0].name == "Player2" ? players[0] : players[1];
+			Destroy(gameObject);
 		}
 
 		bottomLeftPrevPos = bottomLeft.transform.position;
@@ -81,6 +93,23 @@ public class IndicateTowards : MonoBehaviour
 
 			transform.rotation = Quaternion.Euler(0f, 0f, (angle * Mathf.Rad2Deg) + angleOffset);
 			transform.position = pos;
+			
+			if (type == IndicateToEntity.Enemy_Player1 && player1 != null)
+			{
+				SpriteRenderer sprRend = gameObject.GetComponent<SpriteRenderer>();
+
+				Color col = sprRend.color;
+				col.a = 1f - (Vector2.Distance(target, player1.transform.position) / 2.5f);
+				sprRend.color = col;
+			}
+			else if (type == IndicateToEntity.Enemy_Player2 && player2 != null)
+			{
+				SpriteRenderer sprRend = gameObject.GetComponent<SpriteRenderer>();
+
+				Color col = sprRend.color;
+				col.a = 1f - (Vector2.Distance(target, player2.transform.position) / 2.5f);
+				sprRend.color = col;
+			}
 		}
     }
 }

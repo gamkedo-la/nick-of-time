@@ -946,7 +946,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b6902245ff24e94b9aee8feb6260ceb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 3
+  delay: 2.5
+  type: 3
   indicatorPrefab: {fileID: 2495910575934130000, guid: 0cb6eba77cfe402409d705b5b4f59011,
     type: 3}
   cam: {fileID: 8479785458525007867}
@@ -3021,7 +3022,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b6902245ff24e94b9aee8feb6260ceb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 3
+  delay: 2.5
+  type: 2
   indicatorPrefab: {fileID: 2495910575934130000, guid: 0cb6eba77cfe402409d705b5b4f59011,
     type: 3}
   cam: {fileID: 8479785458082677512}
