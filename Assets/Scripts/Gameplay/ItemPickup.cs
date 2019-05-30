@@ -14,8 +14,12 @@ public class ItemPickup : Interactable
     void PickUp() {
         Debug.Log("Picking up " + item.name);
         //Add to inventory
-        Inventory.instance.Add(item);
-        Destroy(gameObject);
+        bool wasPickedUp = Inventory.instance.Add(item);
+
+        if (wasPickedUp)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
