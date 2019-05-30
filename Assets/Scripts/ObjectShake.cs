@@ -4,13 +4,32 @@ using UnityEngine.UI;
 
 public class ObjectShake : MonoBehaviour
 {
-	private RectTransform rectTransform;
+	public bool keepShaking = false;
+	public float delay = 0.01f;
+	public float intensity = 1f;
+
+	private float timer = 0f;
 	private Vector2 originalPosition;
-	
+
 	private void Awake()
 	{
-		rectTransform = GetComponent<RectTransform>();
 		UpdateFixedPosition();
+	}
+
+	public void Update()
+	{
+		if (keepShaking)
+		{
+			if (timer <= 0f)
+			{
+				transform.localPosition = originalPosition;
+				Shake(intensity);
+
+				timer = delay;
+			}
+
+			timer -= Time.deltaTime;
+		}
 	}
 
 	public void UpdateFixedPosition()
@@ -24,10 +43,7 @@ public class ObjectShake : MonoBehaviour
 
 		while (elapsed < duration)
 		{
-			float x = Random.Range(-1f, 1f) * magnitude;
-			float y = Random.Range(-1f, 1f) * magnitude;
-
-			transform.localPosition = new Vector2(x, y);
+			Shake(magnitude);
 
 			elapsed += Time.deltaTime;
 
@@ -35,6 +51,14 @@ public class ObjectShake : MonoBehaviour
 		}
 
 		transform.localPosition = originalPosition;
+	}
+
+	private void Shake(float magnitude)
+	{
+		float x = Random.Range(-1f, 1f) * magnitude;
+		float y = Random.Range(-1f, 1f) * magnitude;
+
+		transform.localPosition = new Vector2(x, y);
 	}
 }
 
