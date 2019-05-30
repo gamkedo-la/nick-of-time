@@ -1,34 +1,50 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class BarUpdater : MonoBehaviour {
 	
 	public GameObject infoObject;
-	
-	public bool forHp = true;
+
+    private Image barFill;
+
+
+    private HitCheck hitCheck;
+    private PlayerController playerController;
+    private ObjectShake objectShake;
+
+    private float hitPoints;
+    private float actionPoints;
+
+    public bool forHp = true;
 	public bool forAction = false;
 
 	private float barProgress = 0f;
 	
-	void Start () {
-		
-	}
+	void Awake () {
+        barFill = GetComponent<Image>();
+        hitCheck = infoObject.GetComponent<HitCheck>();
+        playerController = infoObject.GetComponent<PlayerController>();        
+    }
 	
 	void Update () {
 		if(infoObject != null)
 		{
-			if(forHp)
-			{
-				barProgress = (infoObject.GetComponent<HitCheck>().hp + (-0.63f * (infoObject.GetComponent<HitCheck>().hp - 1f)));
+            hitPoints = hitCheck.hp;
+            actionPoints = playerController.actionPoints;
+            if (forHp)
+			{                
+                //barProgress = (hitPoints + (-0.63f * (hitPoints - 1f)));                 
+                barFill.fillAmount = hitPoints;             
 			}
 			else if(forAction)
-			{
-				if(infoObject.GetComponent<HitCheck>().hp <= 0f)
+			{                
+				if(hitPoints <= 0f)
 					barProgress = 0f;
 				else
-					barProgress = (infoObject.GetComponent<PlayerActions>().actionPoints + (-0.63f * (infoObject.GetComponent<PlayerActions>().actionPoints - 1f)));
-			}
+					//barProgress = (actionPoints + (-0.63f * (actionPoints - 1f)));
+                    barFill.fillAmount = actionPoints;
+            }
 		}
 	}
 }

@@ -22,19 +22,28 @@ public class HitCheck : MonoBehaviour {
 	private bool hitLeft = false;
 	
 	private AudioSource aud = null;
+
+    [SerializeField]
+    private GameObject HPBarJointCamera;
+    [SerializeField]
+    private GameObject HPBarSoloCamera;
 	
 	void Start () {
 		aud = GetComponent<AudioSource>();
 		if(aud == null)
-			aud = FindObjectOfType<AudioSource>();
-	}
+			aud = FindObjectOfType<AudioSource>();     
+    }
 	
 	void Update () {
 		if(isHit)
 		{
 			hp -= hpDamage;
-			
-			knockback = new Vector2(knockbackValue, 0f);
+            Debug.Log("current HP is " + hp);
+
+            StartCoroutine(HPBarJointCamera.GetComponent<ObjectShake>().Shake(10f, 0.2f));//Shakes HP Bar on Hit
+            StartCoroutine(HPBarSoloCamera.GetComponent<ObjectShake>().Shake(10f, 0.2f));//Shakes HP Bar on Hit
+
+            knockback = new Vector2(knockbackValue, 0f);
 			knockbackSlowDown = Mathf.Abs(knockbackSlowDown);
 			if(hitLeft)
 			{

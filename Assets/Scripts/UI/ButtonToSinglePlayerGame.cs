@@ -30,13 +30,13 @@ public class ButtonToSinglePlayerGame : MonoBehaviour {
 			}
 			
 			GameManager.singleGame = true;
-			
-			if(TogglesValues.story)
+
+			if (TogglesValues.story)
 				SceneManager.LoadScene("Prologue");
 			else
 			{
-				SceneManager.LoadScene("Arena");
 				Instantiate(setup);
+				SceneManager.LoadScene("Arena");
 			}
 		}
 		

@@ -58,15 +58,15 @@ public class DialogueBoxSwitch : MonoBehaviour {
 		{
 			sprRenderer.enabled = false;
 			
-			if(pl1) pl1.GetComponent<PlayerActions>().enabled = true;
-			if(pl2) pl2.GetComponent<PlayerActions>().enabled = true;
+			if(pl1) pl1.GetComponent<PlayerController>().enabled = true;
+			if(pl2) pl2.GetComponent<PlayerController>().enabled = true;
 		}
 		else if(!sprRenderer.enabled)
 		{
 			sprRenderer.enabled = true;
 			
-			if(pl1) pl1.GetComponent<PlayerActions>().enabled = false;
-			if(pl2) pl2.GetComponent<PlayerActions>().enabled = false;
+			if(pl1) pl1.GetComponent<PlayerController>().enabled = false;
+			if(pl2) pl2.GetComponent<PlayerController>().enabled = false;
 			
 			checkForDialogueStringTags(dialogueSequence.dialogues[dialogueSequence.dialogueNo]);
 		}
@@ -85,11 +85,11 @@ public class DialogueBoxSwitch : MonoBehaviour {
 	
 	public void checkForDialogueStringTags(string text)
 	{
-		//0 for Dagger
+			//0 for Dagger
 			if(text.Contains("<color=#00ff00>Dagger"))
 			{
-				if(pl1) pl1.transform.GetChild(1).gameObject.GetComponent<WeaponPossession>().weaponID = 0;
-				if(pl2) pl2.transform.GetChild(1).gameObject.GetComponent<WeaponPossession>().weaponID = 0;
+				if(pl1) pl1.transform.GetChild(3).GetChild(0).GetChild(0).gameObject.GetComponent<WeaponPossession>().weaponID = 0;
+				if(pl2) pl2.transform.GetChild(3).GetChild(0).GetChild(0).gameObject.GetComponent<WeaponPossession>().weaponID = 0;
 			}
 			
 			//Player 1 text color is #ff6666

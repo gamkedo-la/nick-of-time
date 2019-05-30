@@ -289,11 +289,11 @@ public class EnemyAI : MonoBehaviour {
 	void FixedUpdate () {
 		if(hitCheck.hp > 0f)
 		{
-			rigidbody.MovePosition( new Vector2( rigidbody.transform.position.x, rigidbody.transform.position.y ) + (walkInput * speed * Time.deltaTime) + (hitCheck.knockback * Time.deltaTime) );
+			rigidbody.MovePosition( new Vector2( rigidbody.transform.position.x, rigidbody.transform.position.y ) + (walkInput * speed * Time.deltaTime) + ((sprRenderer.flipX == true ? 1f : -1f) * hitCheck.knockback * Time.deltaTime));
 		}
 		else
 		{
-			rigidbody.MovePosition( new Vector2( rigidbody.transform.position.x, rigidbody.transform.position.y ) + (hitCheck.knockback * Time.deltaTime) );
+			rigidbody.MovePosition( new Vector2( rigidbody.transform.position.x, rigidbody.transform.position.y ) + ((sprRenderer.flipX == true ? 1f : -1f) * hitCheck.knockback * Time.deltaTime));
 			
 			stopAttacking();
 			stopRolling();
