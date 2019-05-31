@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 61229640216841944}
   - component: {fileID: 50403725564746040}
   - component: {fileID: 114952716396288224}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: BarrelPiece2 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1015711829527984}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0001, y: -0.06, z: 10}
+  m_LocalPosition: {x: 0.0001, y: -0.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4789762294448674}
@@ -144,6 +144,8 @@ MonoBehaviour:
   minDestroyDelay: 3
   maxDestroyDelay: 6
   physicsDelay: 0.25
+  doDestroy: 0
+  containBreakable: 0
   minVelocity: {x: -2, y: 0.5}
   maxVelocity: {x: 2, y: 0.75}
 --- !u!1 &1266093238295352
@@ -159,7 +161,7 @@ GameObject:
   - component: {fileID: 61791526350222822}
   - component: {fileID: 50990023852805726}
   - component: {fileID: 114935790930849522}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: BarrelPiece4 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,7 +176,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1266093238295352}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0138, y: 0.0156, z: 10}
+  m_LocalPosition: {x: 0.0138, y: 0.0156, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4789762294448674}
@@ -290,6 +292,8 @@ MonoBehaviour:
   minDestroyDelay: 3
   maxDestroyDelay: 6
   physicsDelay: 0.25
+  doDestroy: 0
+  containBreakable: 0
   minVelocity: {x: -2, y: 0.5}
   maxVelocity: {x: 2, y: 0.75}
 --- !u!1 &1542482705431602
@@ -305,7 +309,7 @@ GameObject:
   - component: {fileID: 61299356020976348}
   - component: {fileID: 50184361719533800}
   - component: {fileID: 114577466737192632}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: BarrelPiece1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -320,7 +324,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1542482705431602}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0256, y: -0.0534, z: 10}
+  m_LocalPosition: {x: 0.0256, y: -0.0534, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4789762294448674}
@@ -436,6 +440,8 @@ MonoBehaviour:
   minDestroyDelay: 3
   maxDestroyDelay: 6
   physicsDelay: 0.25
+  doDestroy: 0
+  containBreakable: 0
   minVelocity: {x: -2, y: 0.5}
   maxVelocity: {x: 2, y: 0.75}
 --- !u!1 &1547218443072868
@@ -451,7 +457,7 @@ GameObject:
   - component: {fileID: 61290316593358796}
   - component: {fileID: 50644362389626462}
   - component: {fileID: 114112648027796164}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: BarrelPiece3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -466,7 +472,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1547218443072868}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.01, y: -0.0244, z: 10}
+  m_LocalPosition: {x: -0.01, y: -0.0244, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4789762294448674}
@@ -582,6 +588,8 @@ MonoBehaviour:
   minDestroyDelay: 3
   maxDestroyDelay: 6
   physicsDelay: 0.25
+  doDestroy: 0
+  containBreakable: 0
   minVelocity: {x: -2, y: 0.5}
   maxVelocity: {x: 2, y: 0.75}
 --- !u!1 &1580847455321010
@@ -593,7 +601,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4789762294448674}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: BarrelPiecesGroup1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -635,7 +643,7 @@ GameObject:
   - component: {fileID: 61699008859861828}
   - component: {fileID: 50692006594664686}
   - component: {fileID: 114607456428174660}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: BarrelPiece4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -650,7 +658,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1664720124556554}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0341, y: -0.0391, z: 10}
+  m_LocalPosition: {x: -0.0341, y: -0.0391, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4789762294448674}
@@ -766,6 +774,8 @@ MonoBehaviour:
   minDestroyDelay: 3
   maxDestroyDelay: 6
   physicsDelay: 0.25
+  doDestroy: 0
+  containBreakable: 0
   minVelocity: {x: -2, y: 0.5}
   maxVelocity: {x: 2, y: 0.75}
 --- !u!1 &1666113587169578
@@ -781,7 +791,7 @@ GameObject:
   - component: {fileID: 61710489220959446}
   - component: {fileID: 50207502970272418}
   - component: {fileID: 114876282706589912}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: BarrelPiece4 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -796,7 +806,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1666113587169578}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0357, y: -0.0367, z: 10}
+  m_LocalPosition: {x: 0.0357, y: -0.0367, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4789762294448674}
@@ -912,6 +922,8 @@ MonoBehaviour:
   minDestroyDelay: 3
   maxDestroyDelay: 6
   physicsDelay: 0.25
+  doDestroy: 0
+  containBreakable: 0
   minVelocity: {x: -2, y: 0.5}
   maxVelocity: {x: 2, y: 0.75}
 --- !u!1 &1684195238708380
@@ -927,7 +939,7 @@ GameObject:
   - component: {fileID: 114786024322086884}
   - component: {fileID: 61332335080039022}
   - component: {fileID: 50686557551570848}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: BarrelPiece1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -942,7 +954,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1684195238708380}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0239, y: 0.0355, z: 10}
+  m_LocalPosition: {x: -0.0239, y: 0.0355, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4789762294448674}
@@ -1011,6 +1023,8 @@ MonoBehaviour:
   minDestroyDelay: 3
   maxDestroyDelay: 6
   physicsDelay: 0.25
+  doDestroy: 0
+  containBreakable: 0
   minVelocity: {x: -2, y: 0.5}
   maxVelocity: {x: 2, y: 0.75}
 --- !u!61 &61332335080039022
@@ -1073,7 +1087,7 @@ GameObject:
   - component: {fileID: 61981313140758310}
   - component: {fileID: 50045473507568460}
   - component: {fileID: 114053965288778816}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: BarrelPiece2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1088,7 +1102,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1928053261683222}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0004, y: 0.0001, z: 10}
+  m_LocalPosition: {x: -0.0004, y: 0.0001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4789762294448674}
@@ -1204,5 +1218,7 @@ MonoBehaviour:
   minDestroyDelay: 3
   maxDestroyDelay: 6
   physicsDelay: 0.25
+  doDestroy: 0
+  containBreakable: 0
   minVelocity: {x: -2, y: 0.5}
   maxVelocity: {x: 2, y: 0.75}

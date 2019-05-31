@@ -111,6 +111,7 @@ GameObject:
   - component: {fileID: 3191805668559791428}
   - component: {fileID: 6088905809437796953}
   - component: {fileID: 3796769541159118458}
+  - component: {fileID: 70388338}
   m_Layer: 0
   m_Name: book (1)
   m_TagString: Untagged
@@ -196,6 +197,7 @@ MonoBehaviour:
   maxDestroyDelay: 6
   physicsDelay: 0.25
   doDestroy: 0
+  containBreakable: 0
   minVelocity: {x: -2, y: 0.5}
   maxVelocity: {x: 2, y: 0.75}
 --- !u!50 &6088905809437796953
@@ -245,6 +247,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.01, y: 0.01}
   m_EdgeRadius: 0
+--- !u!114 &70388338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3191805668559791449}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f2deddebebb2ce439f30aa95521b899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doDestroy: 0
+  enablePiecesParticles: 0
+  pieces:
+  - {fileID: 183959485626508399, guid: 3acfa2985955c98468425fe00ad9c41d, type: 3}
 --- !u!1 &3191805669158122168
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,6 +276,7 @@ GameObject:
   - component: {fileID: 3191805669158122171}
   - component: {fileID: 2957632786971057947}
   - component: {fileID: 3931136723110561}
+  - component: {fileID: 1505543115}
   m_Layer: 0
   m_Name: book (2)
   m_TagString: Untagged
@@ -343,6 +362,7 @@ MonoBehaviour:
   maxDestroyDelay: 6
   physicsDelay: 0.25
   doDestroy: 0
+  containBreakable: 0
   minVelocity: {x: -2, y: 0.5}
   maxVelocity: {x: 2, y: 0.75}
 --- !u!50 &2957632786971057947
@@ -392,6 +412,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.01, y: 0.01}
   m_EdgeRadius: 0
+--- !u!114 &1505543115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3191805669158122168}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f2deddebebb2ce439f30aa95521b899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doDestroy: 0
+  enablePiecesParticles: 0
+  pieces:
+  - {fileID: 183959485626508399, guid: 3acfa2985955c98468425fe00ad9c41d, type: 3}
 --- !u!1 &3191805669587896581
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,6 +441,7 @@ GameObject:
   - component: {fileID: 3191805669587896576}
   - component: {fileID: 7782492132079614346}
   - component: {fileID: 8830727336805183023}
+  - component: {fileID: 1788540001}
   m_Layer: 0
   m_Name: book
   m_TagString: Untagged
@@ -490,6 +527,7 @@ MonoBehaviour:
   maxDestroyDelay: 6
   physicsDelay: 0.25
   doDestroy: 0
+  containBreakable: 0
   minVelocity: {x: -2, y: 0.5}
   maxVelocity: {x: 2, y: 0.75}
 --- !u!50 &7782492132079614346
@@ -539,3 +577,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.01, y: 0.01}
   m_EdgeRadius: 0
+--- !u!114 &1788540001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3191805669587896581}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f2deddebebb2ce439f30aa95521b899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doDestroy: 0
+  enablePiecesParticles: 0
+  pieces:
+  - {fileID: 183959485626508399, guid: 3acfa2985955c98468425fe00ad9c41d, type: 3}

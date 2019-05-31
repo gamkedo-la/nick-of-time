@@ -110,6 +110,7 @@ GameObject:
   - component: {fileID: 3696183574744977965}
   - component: {fileID: 821256024872754414}
   - component: {fileID: 5816268403769560377}
+  - component: {fileID: 56992386}
   m_Layer: 0
   m_Name: book
   m_TagString: Untagged
@@ -195,6 +196,7 @@ MonoBehaviour:
   maxDestroyDelay: 6
   physicsDelay: 0.25
   doDestroy: 0
+  containBreakable: 0
   minVelocity: {x: -2, y: 0.5}
   maxVelocity: {x: 2, y: 0.75}
 --- !u!50 &821256024872754414
@@ -244,6 +246,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.01, y: 0.01}
   m_EdgeRadius: 0
+--- !u!114 &56992386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3696183574744977960}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f2deddebebb2ce439f30aa95521b899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doDestroy: 0
+  enablePiecesParticles: 0
+  pieces:
+  - {fileID: 183959485626508399, guid: 3acfa2985955c98468425fe00ad9c41d, type: 3}
 --- !u!1 &3696183575403899227
 GameObject:
   m_ObjectHideFlags: 0
@@ -257,6 +275,7 @@ GameObject:
   - component: {fileID: 3696183575403899224}
   - component: {fileID: 7995271064199200831}
   - component: {fileID: 5110315899523637640}
+  - component: {fileID: 1505084883}
   m_Layer: 0
   m_Name: book (1)
   m_TagString: Untagged
@@ -342,6 +361,7 @@ MonoBehaviour:
   maxDestroyDelay: 6
   physicsDelay: 0.25
   doDestroy: 0
+  containBreakable: 0
   minVelocity: {x: -2, y: 0.5}
   maxVelocity: {x: 2, y: 0.75}
 --- !u!50 &7995271064199200831
@@ -391,3 +411,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.01, y: 0.01}
   m_EdgeRadius: 0
+--- !u!114 &1505084883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3696183575403899227}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f2deddebebb2ce439f30aa95521b899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doDestroy: 0
+  enablePiecesParticles: 0
+  pieces:
+  - {fileID: 183959485626508399, guid: 3acfa2985955c98468425fe00ad9c41d, type: 3}

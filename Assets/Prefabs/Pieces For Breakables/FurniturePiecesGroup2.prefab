@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 114016039207242646}
   - component: {fileID: 61601538933562324}
   - component: {fileID: 50853043613170896}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: FurniturePiece2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,6 +97,8 @@ MonoBehaviour:
   minDestroyDelay: 3
   maxDestroyDelay: 6
   physicsDelay: 0.25
+  doDestroy: 0
+  containBreakable: 0
   minVelocity: {x: -2, y: 0.5}
   maxVelocity: {x: 2, y: 0.75}
 --- !u!61 &61601538933562324
@@ -159,7 +161,7 @@ GameObject:
   - component: {fileID: 114522237348351782}
   - component: {fileID: 61453784030466440}
   - component: {fileID: 50977219891835558}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: FurniturePiece3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -243,6 +245,8 @@ MonoBehaviour:
   minDestroyDelay: 3
   maxDestroyDelay: 6
   physicsDelay: 0.25
+  doDestroy: 0
+  containBreakable: 0
   minVelocity: {x: -2, y: 0.5}
   maxVelocity: {x: 2, y: 0.75}
 --- !u!61 &61453784030466440
@@ -305,7 +309,7 @@ GameObject:
   - component: {fileID: 114357135622940802}
   - component: {fileID: 61245483247475620}
   - component: {fileID: 50822262837073860}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: FurniturePiece1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -389,6 +393,8 @@ MonoBehaviour:
   minDestroyDelay: 3
   maxDestroyDelay: 6
   physicsDelay: 0.25
+  doDestroy: 0
+  containBreakable: 0
   minVelocity: {x: -2, y: 0.5}
   maxVelocity: {x: 2, y: 0.75}
 --- !u!61 &61245483247475620
@@ -447,7 +453,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4867496334692988}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: FurniturePiecesGroup2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -489,7 +495,7 @@ GameObject:
   - component: {fileID: 114956127520012744}
   - component: {fileID: 61221293430926216}
   - component: {fileID: 50259193813469396}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: FurniturePiece2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -573,6 +579,8 @@ MonoBehaviour:
   minDestroyDelay: 3
   maxDestroyDelay: 6
   physicsDelay: 0.25
+  doDestroy: 0
+  containBreakable: 0
   minVelocity: {x: -2, y: 0.5}
   maxVelocity: {x: 2, y: 0.75}
 --- !u!61 &61221293430926216
@@ -635,7 +643,7 @@ GameObject:
   - component: {fileID: 114096653828292516}
   - component: {fileID: 61460440610021216}
   - component: {fileID: 50834448154766572}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: FurniturePiece1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -719,6 +727,8 @@ MonoBehaviour:
   minDestroyDelay: 3
   maxDestroyDelay: 6
   physicsDelay: 0.25
+  doDestroy: 0
+  containBreakable: 0
   minVelocity: {x: -2, y: 0.5}
   maxVelocity: {x: 2, y: 0.75}
 --- !u!61 &61460440610021216
@@ -781,7 +791,7 @@ GameObject:
   - component: {fileID: 114311480411083608}
   - component: {fileID: 61310473703282556}
   - component: {fileID: 50773977725056056}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: FurniturePiece3 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -865,6 +875,8 @@ MonoBehaviour:
   minDestroyDelay: 3
   maxDestroyDelay: 6
   physicsDelay: 0.25
+  doDestroy: 0
+  containBreakable: 0
   minVelocity: {x: -2, y: 0.5}
   maxVelocity: {x: 2, y: 0.75}
 --- !u!61 &61310473703282556
@@ -927,7 +939,7 @@ GameObject:
   - component: {fileID: 114226392959428154}
   - component: {fileID: 61375591932521798}
   - component: {fileID: 50075328960345026}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: FurniturePiece4 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1011,6 +1023,8 @@ MonoBehaviour:
   minDestroyDelay: 3
   maxDestroyDelay: 6
   physicsDelay: 0.25
+  doDestroy: 0
+  containBreakable: 0
   minVelocity: {x: -2, y: 0.5}
   maxVelocity: {x: 2, y: 0.75}
 --- !u!61 &61375591932521798
@@ -1073,7 +1087,7 @@ GameObject:
   - component: {fileID: 114974068531243750}
   - component: {fileID: 61583793429781244}
   - component: {fileID: 50160324633900914}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: FurniturePiece4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1157,6 +1171,8 @@ MonoBehaviour:
   minDestroyDelay: 3
   maxDestroyDelay: 6
   physicsDelay: 0.25
+  doDestroy: 0
+  containBreakable: 0
   minVelocity: {x: -2, y: 0.5}
   maxVelocity: {x: 2, y: 0.75}
 --- !u!61 &61583793429781244

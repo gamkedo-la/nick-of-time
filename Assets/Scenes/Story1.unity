@@ -699,6 +699,7 @@ GameObject:
   - component: {fileID: 158199224}
   - component: {fileID: 158199226}
   - component: {fileID: 158199227}
+  - component: {fileID: 158199228}
   m_Layer: 0
   m_Name: paper (15)
   m_TagString: Untagged
@@ -815,6 +816,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &158199228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158199223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59701a62ab54d71448c18f0584a4e977, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minDestroyDelay: 10
+  maxDestroyDelay: 20
+  physicsDelay: 0.1
+  doDestroy: 0
+  containBreakable: 0
+  minVelocity: {x: 0, y: 0}
+  maxVelocity: {x: 0, y: 0}
 --- !u!1 &161993342
 GameObject:
   m_ObjectHideFlags: 0
@@ -12338,6 +12358,7 @@ GameObject:
   - component: {fileID: 577330674}
   - component: {fileID: 577330676}
   - component: {fileID: 577330677}
+  - component: {fileID: 577330678}
   m_Layer: 0
   m_Name: paper (10)
   m_TagString: Untagged
@@ -12454,6 +12475,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &577330678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577330673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59701a62ab54d71448c18f0584a4e977, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minDestroyDelay: 10
+  maxDestroyDelay: 20
+  physicsDelay: 0.1
+  doDestroy: 0
+  containBreakable: 0
+  minVelocity: {x: 0, y: 0}
+  maxVelocity: {x: 0, y: 0}
 --- !u!1 &585894048
 GameObject:
   m_ObjectHideFlags: 0
@@ -12557,6 +12597,7 @@ GameObject:
   - component: {fileID: 598282899}
   - component: {fileID: 598282901}
   - component: {fileID: 598282902}
+  - component: {fileID: 598282903}
   m_Layer: 0
   m_Name: paper (4)
   m_TagString: Untagged
@@ -12673,6 +12714,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &598282903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598282898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59701a62ab54d71448c18f0584a4e977, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minDestroyDelay: 10
+  maxDestroyDelay: 20
+  physicsDelay: 0.1
+  doDestroy: 0
+  containBreakable: 0
+  minVelocity: {x: 0, y: 0}
+  maxVelocity: {x: 0, y: 0}
 --- !u!1 &601286972
 GameObject:
   m_ObjectHideFlags: 0
@@ -15330,6 +15390,7 @@ GameObject:
   - component: {fileID: 827116214}
   - component: {fileID: 827116216}
   - component: {fileID: 827116217}
+  - component: {fileID: 827116218}
   m_Layer: 0
   m_Name: paper
   m_TagString: Untagged
@@ -15446,6 +15507,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &827116218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827116213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59701a62ab54d71448c18f0584a4e977, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minDestroyDelay: 10
+  maxDestroyDelay: 20
+  physicsDelay: 0.1
+  doDestroy: 0
+  containBreakable: 0
+  minVelocity: {x: 0, y: 0}
+  maxVelocity: {x: 0, y: 0}
 --- !u!1 &842020135
 GameObject:
   m_ObjectHideFlags: 0
@@ -15875,6 +15955,7 @@ GameObject:
   - component: {fileID: 892590468}
   - component: {fileID: 892590470}
   - component: {fileID: 892590471}
+  - component: {fileID: 892590472}
   m_Layer: 0
   m_Name: paper (20)
   m_TagString: Untagged
@@ -15991,6 +16072,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &892590472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892590467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59701a62ab54d71448c18f0584a4e977, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minDestroyDelay: 10
+  maxDestroyDelay: 20
+  physicsDelay: 0.1
+  doDestroy: 0
+  containBreakable: 0
+  minVelocity: {x: 0, y: 0}
+  maxVelocity: {x: 0, y: 0}
 --- !u!1 &904949344
 GameObject:
   m_ObjectHideFlags: 0
@@ -16690,6 +16790,7 @@ GameObject:
   - component: {fileID: 931135617}
   - component: {fileID: 931135619}
   - component: {fileID: 931135620}
+  - component: {fileID: 931135621}
   m_Layer: 0
   m_Name: paper (22)
   m_TagString: Untagged
@@ -16806,6 +16907,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &931135621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 931135616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59701a62ab54d71448c18f0584a4e977, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minDestroyDelay: 10
+  maxDestroyDelay: 20
+  physicsDelay: 0.1
+  doDestroy: 0
+  containBreakable: 0
+  minVelocity: {x: 0, y: 0}
+  maxVelocity: {x: 0, y: 0}
 --- !u!1 &933883096
 GameObject:
   m_ObjectHideFlags: 0
@@ -16818,6 +16938,7 @@ GameObject:
   - component: {fileID: 933883097}
   - component: {fileID: 933883099}
   - component: {fileID: 933883100}
+  - component: {fileID: 933883101}
   m_Layer: 0
   m_Name: paper (13)
   m_TagString: Untagged
@@ -16934,6 +17055,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &933883101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 933883096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59701a62ab54d71448c18f0584a4e977, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minDestroyDelay: 10
+  maxDestroyDelay: 20
+  physicsDelay: 0.1
+  doDestroy: 0
+  containBreakable: 0
+  minVelocity: {x: 0, y: 0}
+  maxVelocity: {x: 0, y: 0}
 --- !u!1 &960907773
 GameObject:
   m_ObjectHideFlags: 0
@@ -18215,6 +18355,7 @@ GameObject:
   - component: {fileID: 1153801713}
   - component: {fileID: 1153801715}
   - component: {fileID: 1153801716}
+  - component: {fileID: 1153801717}
   m_Layer: 0
   m_Name: paper (8)
   m_TagString: Untagged
@@ -18331,6 +18472,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1153801717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1153801712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59701a62ab54d71448c18f0584a4e977, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minDestroyDelay: 10
+  maxDestroyDelay: 20
+  physicsDelay: 0.1
+  doDestroy: 0
+  containBreakable: 0
+  minVelocity: {x: 0, y: 0}
+  maxVelocity: {x: 0, y: 0}
 --- !u!1 &1232839104
 GameObject:
   m_ObjectHideFlags: 0
@@ -19162,6 +19322,7 @@ GameObject:
   - component: {fileID: 1319461579}
   - component: {fileID: 1319461581}
   - component: {fileID: 1319461582}
+  - component: {fileID: 1319461583}
   m_Layer: 0
   m_Name: paper (18)
   m_TagString: Untagged
@@ -19278,6 +19439,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1319461583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319461578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59701a62ab54d71448c18f0584a4e977, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minDestroyDelay: 10
+  maxDestroyDelay: 20
+  physicsDelay: 0.1
+  doDestroy: 0
+  containBreakable: 0
+  minVelocity: {x: 0, y: 0}
+  maxVelocity: {x: 0, y: 0}
 --- !u!1 &1324566999
 GameObject:
   m_ObjectHideFlags: 0
@@ -20011,6 +20191,7 @@ GameObject:
   - component: {fileID: 1380392353}
   - component: {fileID: 1380392355}
   - component: {fileID: 1380392356}
+  - component: {fileID: 1380392357}
   m_Layer: 0
   m_Name: paper (17)
   m_TagString: Untagged
@@ -20127,6 +20308,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1380392357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1380392352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59701a62ab54d71448c18f0584a4e977, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minDestroyDelay: 10
+  maxDestroyDelay: 20
+  physicsDelay: 0.1
+  doDestroy: 0
+  containBreakable: 0
+  minVelocity: {x: 0, y: 0}
+  maxVelocity: {x: 0, y: 0}
 --- !u!1 &1385892176
 GameObject:
   m_ObjectHideFlags: 0
@@ -20139,6 +20339,7 @@ GameObject:
   - component: {fileID: 1385892177}
   - component: {fileID: 1385892179}
   - component: {fileID: 1385892180}
+  - component: {fileID: 1385892181}
   m_Layer: 0
   m_Name: paper (23)
   m_TagString: Untagged
@@ -20255,6 +20456,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1385892181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1385892176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59701a62ab54d71448c18f0584a4e977, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minDestroyDelay: 10
+  maxDestroyDelay: 20
+  physicsDelay: 0.1
+  doDestroy: 0
+  containBreakable: 0
+  minVelocity: {x: 0, y: 0}
+  maxVelocity: {x: 0, y: 0}
 --- !u!1 &1404250461
 GameObject:
   m_ObjectHideFlags: 0
@@ -20518,6 +20738,7 @@ GameObject:
   - component: {fileID: 1477349870}
   - component: {fileID: 1477349872}
   - component: {fileID: 1477349873}
+  - component: {fileID: 1477349874}
   m_Layer: 0
   m_Name: paper (16)
   m_TagString: Untagged
@@ -20634,6 +20855,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1477349874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1477349869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59701a62ab54d71448c18f0584a4e977, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minDestroyDelay: 10
+  maxDestroyDelay: 20
+  physicsDelay: 0.1
+  doDestroy: 0
+  containBreakable: 0
+  minVelocity: {x: 0, y: 0}
+  maxVelocity: {x: 0, y: 0}
 --- !u!1 &1480224938
 GameObject:
   m_ObjectHideFlags: 0
@@ -20791,6 +21031,7 @@ GameObject:
   - component: {fileID: 1490552906}
   - component: {fileID: 1490552908}
   - component: {fileID: 1490552909}
+  - component: {fileID: 1490552910}
   m_Layer: 0
   m_Name: paper (14)
   m_TagString: Untagged
@@ -20907,6 +21148,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1490552910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1490552905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59701a62ab54d71448c18f0584a4e977, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minDestroyDelay: 10
+  maxDestroyDelay: 20
+  physicsDelay: 0.1
+  doDestroy: 0
+  containBreakable: 0
+  minVelocity: {x: 0, y: 0}
+  maxVelocity: {x: 0, y: 0}
 --- !u!1 &1491078386
 GameObject:
   m_ObjectHideFlags: 0
@@ -21350,6 +21610,7 @@ GameObject:
   - component: {fileID: 1521741304}
   - component: {fileID: 1521741306}
   - component: {fileID: 1521741307}
+  - component: {fileID: 1521741308}
   m_Layer: 0
   m_Name: paper (5)
   m_TagString: Untagged
@@ -21466,6 +21727,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1521741308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521741303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59701a62ab54d71448c18f0584a4e977, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minDestroyDelay: 10
+  maxDestroyDelay: 20
+  physicsDelay: 0.1
+  doDestroy: 0
+  containBreakable: 0
+  minVelocity: {x: 0, y: 0}
+  maxVelocity: {x: 0, y: 0}
 --- !u!1 &1522159012
 GameObject:
   m_ObjectHideFlags: 0
@@ -21478,6 +21758,7 @@ GameObject:
   - component: {fileID: 1522159013}
   - component: {fileID: 1522159015}
   - component: {fileID: 1522159016}
+  - component: {fileID: 1522159017}
   m_Layer: 0
   m_Name: paper (3)
   m_TagString: Untagged
@@ -21594,6 +21875,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1522159017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522159012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59701a62ab54d71448c18f0584a4e977, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minDestroyDelay: 10
+  maxDestroyDelay: 20
+  physicsDelay: 0.1
+  doDestroy: 0
+  containBreakable: 0
+  minVelocity: {x: 0, y: 0}
+  maxVelocity: {x: 0, y: 0}
 --- !u!1 &1541597668
 GameObject:
   m_ObjectHideFlags: 0
@@ -22543,6 +22843,7 @@ GameObject:
   - component: {fileID: 1670902446}
   - component: {fileID: 1670902448}
   - component: {fileID: 1670902449}
+  - component: {fileID: 1670902450}
   m_Layer: 0
   m_Name: paper (11)
   m_TagString: Untagged
@@ -22659,6 +22960,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1670902450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1670902445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59701a62ab54d71448c18f0584a4e977, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minDestroyDelay: 10
+  maxDestroyDelay: 20
+  physicsDelay: 0.1
+  doDestroy: 0
+  containBreakable: 0
+  minVelocity: {x: 0, y: 0}
+  maxVelocity: {x: 0, y: 0}
 --- !u!1 &1678579046
 GameObject:
   m_ObjectHideFlags: 0
@@ -23773,6 +24093,7 @@ GameObject:
   - component: {fileID: 1704719252}
   - component: {fileID: 1704719254}
   - component: {fileID: 1704719255}
+  - component: {fileID: 1704719256}
   m_Layer: 0
   m_Name: paper (19)
   m_TagString: Untagged
@@ -23889,6 +24210,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1704719256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1704719251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59701a62ab54d71448c18f0584a4e977, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minDestroyDelay: 10
+  maxDestroyDelay: 20
+  physicsDelay: 0.1
+  doDestroy: 0
+  containBreakable: 0
+  minVelocity: {x: 0, y: 0}
+  maxVelocity: {x: 0, y: 0}
 --- !u!1 &1704768761
 GameObject:
   m_ObjectHideFlags: 0
@@ -24419,6 +24759,7 @@ GameObject:
   - component: {fileID: 1726295257}
   - component: {fileID: 1726295259}
   - component: {fileID: 1726295260}
+  - component: {fileID: 1726295261}
   m_Layer: 0
   m_Name: paper (9)
   m_TagString: Untagged
@@ -24535,6 +24876,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1726295261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726295256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59701a62ab54d71448c18f0584a4e977, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minDestroyDelay: 10
+  maxDestroyDelay: 20
+  physicsDelay: 0.1
+  doDestroy: 0
+  containBreakable: 0
+  minVelocity: {x: 0, y: 0}
+  maxVelocity: {x: 0, y: 0}
 --- !u!1 &1727201868
 GameObject:
   m_ObjectHideFlags: 0
@@ -24547,6 +24907,7 @@ GameObject:
   - component: {fileID: 1727201869}
   - component: {fileID: 1727201871}
   - component: {fileID: 1727201872}
+  - component: {fileID: 1727201873}
   m_Layer: 0
   m_Name: paper (2)
   m_TagString: Untagged
@@ -24663,6 +25024,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1727201873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1727201868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59701a62ab54d71448c18f0584a4e977, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minDestroyDelay: 10
+  maxDestroyDelay: 20
+  physicsDelay: 0.1
+  doDestroy: 0
+  containBreakable: 0
+  minVelocity: {x: 0, y: 0}
+  maxVelocity: {x: 0, y: 0}
 --- !u!1 &1730839651
 GameObject:
   m_ObjectHideFlags: 0
@@ -42339,6 +42719,7 @@ GameObject:
   - component: {fileID: 1816673256}
   - component: {fileID: 1816673258}
   - component: {fileID: 1816673259}
+  - component: {fileID: 1816673260}
   m_Layer: 0
   m_Name: paper (7)
   m_TagString: Untagged
@@ -42455,6 +42836,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1816673260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816673255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59701a62ab54d71448c18f0584a4e977, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minDestroyDelay: 10
+  maxDestroyDelay: 20
+  physicsDelay: 0.1
+  doDestroy: 0
+  containBreakable: 0
+  minVelocity: {x: 0, y: 0}
+  maxVelocity: {x: 0, y: 0}
 --- !u!1 &1842104687 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6120125199286335738, guid: a48c7af11866b0a4fafc5cf925d87b5c,
@@ -42769,6 +43169,7 @@ GameObject:
   - component: {fileID: 1862881123}
   - component: {fileID: 1862881125}
   - component: {fileID: 1862881126}
+  - component: {fileID: 1862881127}
   m_Layer: 0
   m_Name: paper (21)
   m_TagString: Untagged
@@ -42885,6 +43286,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1862881127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862881122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59701a62ab54d71448c18f0584a4e977, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minDestroyDelay: 10
+  maxDestroyDelay: 20
+  physicsDelay: 0.1
+  doDestroy: 0
+  containBreakable: 0
+  minVelocity: {x: 0, y: 0}
+  maxVelocity: {x: 0, y: 0}
 --- !u!1 &1865544579
 GameObject:
   m_ObjectHideFlags: 0
@@ -42897,6 +43317,7 @@ GameObject:
   - component: {fileID: 1865544580}
   - component: {fileID: 1865544582}
   - component: {fileID: 1865544583}
+  - component: {fileID: 1865544584}
   m_Layer: 0
   m_Name: paper (1)
   m_TagString: Untagged
@@ -43013,6 +43434,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1865544584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865544579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59701a62ab54d71448c18f0584a4e977, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minDestroyDelay: 10
+  maxDestroyDelay: 20
+  physicsDelay: 0.1
+  doDestroy: 0
+  containBreakable: 0
+  minVelocity: {x: 0, y: 0}
+  maxVelocity: {x: 0, y: 0}
 --- !u!4 &1875574732 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1167263677046998769, guid: 47fc17e7ba01dfa4ca48c88ab81f0cc8,
@@ -43031,6 +43471,7 @@ GameObject:
   - component: {fileID: 1886898208}
   - component: {fileID: 1886898210}
   - component: {fileID: 1886898211}
+  - component: {fileID: 1886898212}
   m_Layer: 0
   m_Name: paper (12)
   m_TagString: Untagged
@@ -43147,6 +43588,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1886898212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1886898207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59701a62ab54d71448c18f0584a4e977, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minDestroyDelay: 10
+  maxDestroyDelay: 20
+  physicsDelay: 0.1
+  doDestroy: 0
+  containBreakable: 0
+  minVelocity: {x: 0, y: 0}
+  maxVelocity: {x: 0, y: 0}
 --- !u!1 &1890605805
 GameObject:
   m_ObjectHideFlags: 0
@@ -49927,6 +50387,7 @@ GameObject:
   - component: {fileID: 1988735049}
   - component: {fileID: 1988735051}
   - component: {fileID: 1988735052}
+  - component: {fileID: 1988735053}
   m_Layer: 0
   m_Name: paper (6)
   m_TagString: Untagged
@@ -50043,6 +50504,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1988735053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1988735048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59701a62ab54d71448c18f0584a4e977, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minDestroyDelay: 10
+  maxDestroyDelay: 20
+  physicsDelay: 0.1
+  doDestroy: 0
+  containBreakable: 0
+  minVelocity: {x: 0, y: 0}
+  maxVelocity: {x: 0, y: 0}
 --- !u!1 &1996760044
 GameObject:
   m_ObjectHideFlags: 0

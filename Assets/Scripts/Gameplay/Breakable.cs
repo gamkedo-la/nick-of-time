@@ -64,6 +64,7 @@ public class Breakable : MonoBehaviour {
 						pp.enabled = true;
 
 					gameObject.transform.GetChild(i).GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+					gameObject.transform.GetChild(i).GetComponent<Collider2D>().enabled = true;
 				}
 			}
 

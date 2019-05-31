@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PiecesParticle : MonoBehaviour {
-	
+public class PiecesParticle : MonoBehaviour
+{
 	public float minDestroyDelay = 10f;
 	public float maxDestroyDelay = 20f;
 	public float physicsDelay = 0.5f;
 	public bool doDestroy = true;
+	public bool containBreakable = false;
 	
 	public Vector2 minVelocity = new Vector2(-1f, -0.1f);
 	public Vector2 maxVelocity = new Vector2(1f, -1f);
@@ -16,6 +17,9 @@ public class PiecesParticle : MonoBehaviour {
 	
 	private BoxCollider2D collider;
 	private Rigidbody2D rigidbody;
+	
+	private bool done = false;
+	private bool triggered = false;
 
 	void Setup ()
 	{
@@ -24,6 +28,8 @@ public class PiecesParticle : MonoBehaviour {
 		rigidbody.velocity = new Vector2(
 			Random.Range(minVelocity.x, maxVelocity.x),
 			Random.Range(minVelocity.y, maxVelocity.y));
+
+		done = false;
 	}
 
 	private void Start()
@@ -44,23 +50,52 @@ public class PiecesParticle : MonoBehaviour {
 
 	void Update ()
 	{
-		if(physicsDelay <= 0f)
+		if (!done)
 		{
-			collider.enabled = false;
-			rigidbody.gravityScale = 0f;
+			if (physicsDelay <= 0f)
+			{
+				//collider.isTrigger = true;
+				rigidbody.gravityScale = 0f;
+				rigidbody.velocity = Vector2.zero;
+				rigidbody.angularVelocity = 0f;
+			}
+
+			if (destroyDelay <= 0f)
+			{
+				if (doDestroy)
+					Destroy(gameObject);
+				else
+				{
+					done = true;
+
+					if (containBreakable)
+						gameObject.GetComponent<Breakable>().enabled = true;
+				}
+			}
+
+			physicsDelay -= Time.deltaTime;
+			destroyDelay -= Time.deltaTime;
+		}
+		else if(!triggered)
+		{
 			rigidbody.velocity = Vector2.zero;
 			rigidbody.angularVelocity = 0f;
 		}
-		
-		if(destroyDelay <= 0f)
+	}
+
+	public void OnTriggerEnter2D(Collider2D collision)
+	{
+		if (done)
 		{
-			if (doDestroy)
-				Destroy(gameObject);
-			else
-				enabled = false;
+			triggered = true;
 		}
-		
-		physicsDelay -= Time.deltaTime;
-		destroyDelay -= Time.deltaTime;
+	}
+	
+	public void OnTriggerExit2D(Collider2D collision)
+	{
+		if (done)
+		{
+			triggered = false;
+		}
 	}
 }

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8091064849067010446}
   - component: {fileID: 7855812848247473659}
   - component: {fileID: 6352425492960965362}
+  - component: {fileID: 1752061904}
   m_Layer: 0
   m_Name: book (1)
   m_TagString: Untagged
@@ -98,6 +99,7 @@ MonoBehaviour:
   maxDestroyDelay: 6
   physicsDelay: 0.25
   doDestroy: 0
+  containBreakable: 0
   minVelocity: {x: -2, y: 0.5}
   maxVelocity: {x: 2, y: 0.75}
 --- !u!50 &7855812848247473659
@@ -147,6 +149,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.01, y: 0.01}
   m_EdgeRadius: 0
+--- !u!114 &1752061904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8091064849067010483}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f2deddebebb2ce439f30aa95521b899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doDestroy: 0
+  enablePiecesParticles: 0
+  pieces:
+  - {fileID: 183959485626508399, guid: 3acfa2985955c98468425fe00ad9c41d, type: 3}
 --- !u!1 &8091064849157341716
 GameObject:
   m_ObjectHideFlags: 0
@@ -160,6 +178,7 @@ GameObject:
   - component: {fileID: 8091064849157341715}
   - component: {fileID: 3635295247080939564}
   - component: {fileID: 6878719952299156260}
+  - component: {fileID: 1219746119}
   m_Layer: 0
   m_Name: book (3)
   m_TagString: Untagged
@@ -245,6 +264,7 @@ MonoBehaviour:
   maxDestroyDelay: 6
   physicsDelay: 0.25
   doDestroy: 0
+  containBreakable: 0
   minVelocity: {x: -2, y: 0.5}
   maxVelocity: {x: 2, y: 0.75}
 --- !u!50 &3635295247080939564
@@ -294,6 +314,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.01, y: 0.01}
   m_EdgeRadius: 0
+--- !u!114 &1219746119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8091064849157341716}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f2deddebebb2ce439f30aa95521b899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doDestroy: 0
+  enablePiecesParticles: 0
+  pieces:
+  - {fileID: 183959485626508399, guid: 3acfa2985955c98468425fe00ad9c41d, type: 3}
 --- !u!1 &8091064849325107352
 GameObject:
   m_ObjectHideFlags: 0
@@ -307,6 +343,7 @@ GameObject:
   - component: {fileID: 8091064849325107351}
   - component: {fileID: 6251639511674421929}
   - component: {fileID: 5499036777146580115}
+  - component: {fileID: 364376934}
   m_Layer: 0
   m_Name: book
   m_TagString: Untagged
@@ -392,6 +429,7 @@ MonoBehaviour:
   maxDestroyDelay: 6
   physicsDelay: 0.25
   doDestroy: 0
+  containBreakable: 0
   minVelocity: {x: -2, y: 0.5}
   maxVelocity: {x: 2, y: 0.75}
 --- !u!50 &6251639511674421929
@@ -441,6 +479,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.01, y: 0.01}
   m_EdgeRadius: 0
+--- !u!114 &364376934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8091064849325107352}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f2deddebebb2ce439f30aa95521b899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doDestroy: 0
+  enablePiecesParticles: 0
+  pieces:
+  - {fileID: 183959485626508399, guid: 3acfa2985955c98468425fe00ad9c41d, type: 3}
 --- !u!1 &8091064849858436969
 GameObject:
   m_ObjectHideFlags: 0
@@ -454,6 +508,7 @@ GameObject:
   - component: {fileID: 8091064849858436964}
   - component: {fileID: 2698573852192124755}
   - component: {fileID: 183712315958238278}
+  - component: {fileID: 1944584220}
   m_Layer: 0
   m_Name: book (2)
   m_TagString: Untagged
@@ -539,6 +594,7 @@ MonoBehaviour:
   maxDestroyDelay: 6
   physicsDelay: 0.25
   doDestroy: 0
+  containBreakable: 0
   minVelocity: {x: -2, y: 0.5}
   maxVelocity: {x: 2, y: 0.75}
 --- !u!50 &2698573852192124755
@@ -588,6 +644,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.01, y: 0.01}
   m_EdgeRadius: 0
+--- !u!114 &1944584220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8091064849858436969}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f2deddebebb2ce439f30aa95521b899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doDestroy: 0
+  enablePiecesParticles: 0
+  pieces:
+  - {fileID: 183959485626508399, guid: 3acfa2985955c98468425fe00ad9c41d, type: 3}
 --- !u!1 &8091064849925654806
 GameObject:
   m_ObjectHideFlags: 0
