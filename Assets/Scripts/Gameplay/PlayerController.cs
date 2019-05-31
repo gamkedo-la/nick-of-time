@@ -209,7 +209,7 @@ public class PlayerController : MonoBehaviour
 				speed = walkSpeed;
 				gameObject.layer = 8;
 			}
-			else if (dashTimer > 0f)
+			else if (dashTimer > 0f || (attackSpeedTimer > 0f && attackSpeedTimer < attackSpeedTime/3f))
 			{
 				GameObject ghostSpriteFX = Instantiate(dashFXObject, transform.position, Quaternion.Euler(0f,0f,0f));
 

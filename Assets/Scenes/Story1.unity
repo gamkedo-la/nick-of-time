@@ -506,7 +506,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponID: -1
   weapons:
-  - {fileID: 21300034, guid: ad02ccbc559f4fe4e9dce5a7080dab05, type: 3}
+  - sprite: {fileID: 0}
+    colliderSize: {x: 0, y: 0}
   offsetX: 0.1
 --- !u!212 &116775436
 SpriteRenderer:
@@ -15805,7 +15806,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponID: -1
   weapons:
-  - {fileID: 21300034, guid: ad02ccbc559f4fe4e9dce5a7080dab05, type: 3}
+  - sprite: {fileID: 0}
+    colliderSize: {x: 0, y: 0}
   offsetX: 0.1
 --- !u!212 &882846901
 SpriteRenderer:
@@ -18645,7 +18647,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1259825578
 Transform:
   m_ObjectHideFlags: 0
@@ -51859,7 +51861,7 @@ PrefabInstance:
     - target: {fileID: 1427261468021252249, guid: ee0d3e81a27598e4e94f9878bf98685d,
         type: 3}
       propertyPath: m_WasSpriteAssigned
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee0d3e81a27598e4e94f9878bf98685d, type: 3}
@@ -52441,12 +52443,12 @@ PrefabInstance:
     - target: {fileID: 8091064849925654807, guid: 5068cfa05fe9c104484d9c0f127e5915,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.665345
+      value: 1.54
       objectReference: {fileID: 0}
     - target: {fileID: 8091064849925654807, guid: 5068cfa05fe9c104484d9c0f127e5915,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.419942
+      value: -9.89
       objectReference: {fileID: 0}
     - target: {fileID: 8091064849925654807, guid: 5068cfa05fe9c104484d9c0f127e5915,
         type: 3}

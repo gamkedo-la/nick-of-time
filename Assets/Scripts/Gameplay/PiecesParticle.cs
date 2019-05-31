@@ -33,7 +33,15 @@ public class PiecesParticle : MonoBehaviour {
 
 		Setup();
 	}
-	
+
+	private void OnEnable()
+	{
+		collider = GetComponent<BoxCollider2D>();
+		rigidbody = GetComponent<Rigidbody2D>();
+
+		Setup();
+	}
+
 	void Update ()
 	{
 		if(physicsDelay <= 0f)
@@ -47,14 +55,9 @@ public class PiecesParticle : MonoBehaviour {
 		if(destroyDelay <= 0f)
 		{
 			if (doDestroy)
-			{
 				Destroy(gameObject);
-			}
 			else
-			{
-				Setup();
 				enabled = false;
-			}
 		}
 		
 		physicsDelay -= Time.deltaTime;

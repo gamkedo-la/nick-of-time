@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HitCheck : MonoBehaviour {
-	
+public class HitCheck : MonoBehaviour
+{
 	public float hpDamage = 0.04f;
 	public string[] hitTags;
 	public float knockbackValue = 0.48f;
@@ -28,20 +28,25 @@ public class HitCheck : MonoBehaviour {
     [SerializeField]
     private GameObject HPBarSoloCamera;
 	
-	void Start () {
+	void Start ()
+	{
 		aud = GetComponent<AudioSource>();
 		if(aud == null)
 			aud = FindObjectOfType<AudioSource>();     
     }
 	
-	void Update () {
+	void Update ()
+	{
 		if(isHit)
 		{
 			hp -= hpDamage;
-            Debug.Log("current HP is " + hp);
+			//Debug.Log("current HP is " + hp);
 
-            StartCoroutine(HPBarJointCamera.GetComponent<ObjectShake>().Shake(10f, 0.2f));//Shakes HP Bar on Hit
-            StartCoroutine(HPBarSoloCamera.GetComponent<ObjectShake>().Shake(10f, 0.2f));//Shakes HP Bar on Hit
+			if (HPBarSoloCamera != null)
+			{
+				StartCoroutine(HPBarJointCamera.GetComponent<ObjectShake>().Shake(10f, 0.2f)); //Shakes HP Bar on Hit
+				StartCoroutine(HPBarSoloCamera.GetComponent<ObjectShake>().Shake(10f, 0.2f)); //Shakes HP Bar on Hit
+			}
 
             knockback = new Vector2(knockbackValue, 0f);
 			knockbackSlowDown = Mathf.Abs(knockbackSlowDown);
@@ -79,11 +84,12 @@ public class HitCheck : MonoBehaviour {
 		for(int i = 0; i < hitTags.GetLength(0); i++)
 		{
 			if(coll.gameObject.CompareTag(hitTags[i])
-				&& coll.gameObject.GetComponent<Animator>().GetBool("isAttacking")
+				&& coll.gameObject.transform.parent.parent.parent.GetComponent<Animator>().GetBool("isAttacking")
 				&& !gameObject.GetComponent<Animator>().GetBool("isRolling"))
 			{
 				isHit = true;
 				hitLeft = coll.gameObject.GetComponent<SpriteRenderer>().flipX;
+				break;
 			}
 		}
 	}

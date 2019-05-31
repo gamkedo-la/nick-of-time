@@ -56,7 +56,7 @@ public class EnemyAI : MonoBehaviour {
 		if(aud == null)
 			aud = FindObjectOfType<AudioSource>();
 		
-		shingObject = transform.GetChild(1).gameObject;
+		shingObject = transform.GetChild(0).GetChild(1).GetChild(0).gameObject;
 		
 		actionTimer = Random.Range(actionMinDelay, actionMaxDelay);
 	}
