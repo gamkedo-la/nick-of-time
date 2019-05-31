@@ -94,7 +94,12 @@ public class AreaTriggerManager : MonoBehaviour
 				{
 					foreach (var obj in t.objectToActivate)
 						if (obj.obj != null)
+						{
+							if (obj.obj.GetComponent<DisableAfterDelay>())
+								Destroy(obj.obj.GetComponent<DisableAfterDelay>());
+
 							obj.obj.SetActive(true);
+						}
 
 					t.isObjectsActivationDone = true;
 
@@ -119,7 +124,12 @@ public class AreaTriggerManager : MonoBehaviour
 					if (obj.obj != null)
 					{
 						if (obj.disableAfterLeaving)
+						{
+							if (obj.obj.GetComponent<DisableAfterDelay>())
+								Destroy(obj.obj.GetComponent<DisableAfterDelay>());
+
 							obj.obj.SetActive(true);
+						}
 					}
 				}
 			}
@@ -130,7 +140,9 @@ public class AreaTriggerManager : MonoBehaviour
 					if (obj.obj != null)
 					{
 						if (obj.disableAfterLeaving)
-							obj.obj.SetActive(false);
+							if(obj.obj.activeSelf && obj.obj.GetComponent<DisableAfterDelay>() == null)
+								obj.obj.AddComponent<DisableAfterDelay>().delay = 0.6f;
+								//obj.obj.SetActive(false);
 					}
 				}
 			}

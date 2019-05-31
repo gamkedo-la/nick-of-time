@@ -37,6 +37,8 @@ public class CameraTriggerControl : MonoBehaviour
 			cam.GetComponent<LerpToCamSize>().size = size;
 			moodAmbianceLerper.color = ambientColor;
 			moodAmbianceLerper.intensity = ambientIntensity;
+			moodAmbianceLerper.gameObject.transform.position = new Vector3( gameObject.transform.position.x, gameObject.transform.position.y, moodAmbianceLerper.gameObject.transform.position.z);
+
 			triggered = true;
 		}
 	}
