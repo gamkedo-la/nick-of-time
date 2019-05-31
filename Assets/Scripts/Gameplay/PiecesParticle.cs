@@ -7,6 +7,7 @@ public class PiecesParticle : MonoBehaviour {
 	public float minDestroyDelay = 10f;
 	public float maxDestroyDelay = 20f;
 	public float physicsDelay = 0.5f;
+	public bool doDestroy = true;
 	
 	public Vector2 minVelocity = new Vector2(-1f, -0.1f);
 	public Vector2 maxVelocity = new Vector2(1f, -1f);
@@ -16,18 +17,25 @@ public class PiecesParticle : MonoBehaviour {
 	private BoxCollider2D collider;
 	private Rigidbody2D rigidbody;
 
-	void Start () {
-		collider = GetComponent<BoxCollider2D>();
-		rigidbody = GetComponent<Rigidbody2D>();
-		
+	void Setup ()
+	{
 		destroyDelay = Random.Range(minDestroyDelay, maxDestroyDelay);
 		
 		rigidbody.velocity = new Vector2(
 			Random.Range(minVelocity.x, maxVelocity.x),
 			Random.Range(minVelocity.y, maxVelocity.y));
 	}
+
+	private void Start()
+	{
+		collider = GetComponent<BoxCollider2D>();
+		rigidbody = GetComponent<Rigidbody2D>();
+
+		Setup();
+	}
 	
-	void Update () {
+	void Update ()
+	{
 		if(physicsDelay <= 0f)
 		{
 			collider.enabled = false;
@@ -38,7 +46,15 @@ public class PiecesParticle : MonoBehaviour {
 		
 		if(destroyDelay <= 0f)
 		{
-			Destroy(gameObject);
+			if (doDestroy)
+			{
+				Destroy(gameObject);
+			}
+			else
+			{
+				Setup();
+				enabled = false;
+			}
 		}
 		
 		physicsDelay -= Time.deltaTime;
