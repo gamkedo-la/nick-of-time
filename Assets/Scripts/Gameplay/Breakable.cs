@@ -31,6 +31,9 @@ public class Breakable : MonoBehaviour {
 
 					if(pp != null)
 						pp.enabled = true;
+
+					gameObject.transform.GetChild(i).GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+					gameObject.transform.GetChild(i).GetComponent<Collider2D>().enabled = true;
 				}
 			}
 
@@ -59,6 +62,8 @@ public class Breakable : MonoBehaviour {
 
 					if (pp != null)
 						pp.enabled = true;
+
+					gameObject.transform.GetChild(i).GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
 				}
 			}
 
