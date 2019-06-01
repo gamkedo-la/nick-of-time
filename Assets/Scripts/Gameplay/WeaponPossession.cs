@@ -25,6 +25,7 @@ public class WeaponPossession : MonoBehaviour {
 	private SpriteRenderer playerRenderer;
 	
 	//0 = Dagger
+	//1 = Katana
 
 	void Start ()
 	{
