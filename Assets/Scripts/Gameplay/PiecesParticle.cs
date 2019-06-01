@@ -9,22 +9,22 @@ public class PiecesParticle : MonoBehaviour
 	public float physicsDelay = 0.5f;
 	public bool doDestroy = true;
 	public bool containBreakable = false;
-	
+
 	public Vector2 minVelocity = new Vector2(-1f, -0.1f);
 	public Vector2 maxVelocity = new Vector2(1f, -1f);
-	
+
 	private float destroyDelay;
-	
+
 	private BoxCollider2D collider;
 	private Rigidbody2D rigidbody;
-	
+
 	private bool done = false;
 	private bool triggered = false;
 
-	void Setup ()
+	void Setup()
 	{
 		destroyDelay = Random.Range(minDestroyDelay, maxDestroyDelay);
-		
+
 		rigidbody.velocity = new Vector2(
 			Random.Range(minVelocity.x, maxVelocity.x),
 			Random.Range(minVelocity.y, maxVelocity.y));
@@ -48,7 +48,7 @@ public class PiecesParticle : MonoBehaviour
 		Setup();
 	}
 
-	void Update ()
+	void Update()
 	{
 		if (!done)
 		{
@@ -76,7 +76,7 @@ public class PiecesParticle : MonoBehaviour
 			physicsDelay -= Time.deltaTime;
 			destroyDelay -= Time.deltaTime;
 		}
-		else if(!triggered)
+		else if (!triggered)
 		{
 			rigidbody.velocity = Vector2.zero;
 			rigidbody.angularVelocity = 0f;
@@ -90,7 +90,7 @@ public class PiecesParticle : MonoBehaviour
 			triggered = true;
 		}
 	}
-	
+
 	public void OnTriggerExit2D(Collider2D collision)
 	{
 		if (done)

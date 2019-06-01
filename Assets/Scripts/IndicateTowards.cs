@@ -37,10 +37,13 @@ public class IndicateTowards : MonoBehaviour
 
 		if (players != null)
 		{
-			player1 = players[0].name == "Player1" ? players[0] : players[1];
-
 			if (players.Length > 1)
+			{
+				player2 = players[0].name == "Player1" ? players[0] : players[1];
 				player2 = players[0].name == "Player2" ? players[0] : players[1];
+			}
+			else
+				player1 = players[0];
 
 			if (type == IndicateToEntity.Player1)
 				objectToIndicate = player1;
