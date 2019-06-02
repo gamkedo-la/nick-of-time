@@ -44,8 +44,8 @@ Light:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 2
   m_Range: 2
-  m_SpotAngle: 20
-  m_InnerSpotAngle: 2
+  m_SpotAngle: 25
+  m_InnerSpotAngle: 1
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -87,7 +87,7 @@ Light:
   m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: -3.348353e-16, z: 8.18e-43, w: -4.4105577e-16}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -102,6 +102,7 @@ GameObject:
   - component: {fileID: 8520000503650666269}
   - component: {fileID: 8520000503650666268}
   - component: {fileID: 8520000503650666271}
+  - component: {fileID: 8520000503437544936}
   m_Layer: 0
   m_Name: FireTorch
   m_TagString: Untagged
@@ -141,7 +142,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -162,7 +163,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 5
   m_Sprite: {fileID: 164020339732123076, guid: 86af6eccffc0dbf44981249bcf7fcfea, type: 3}
-  m_Color: {r: 1, g: 1, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -191,6 +192,28 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8520000503437544936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8520000503650666270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f131a1a5b869aef49bba4703a78d43c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highLightColor: {r: 1, g: 1, b: 1, a: 1}
+  highLightIntensity: 2
+  highLightRange: 2
+  highLightSpotAngle: 25
+  midLightColor: {r: 1, g: 1, b: 0.6862745, a: 1}
+  midLightIntensity: 9
+  midLightRange: 1.5
+  midLightSpotAngle: 150
+  lowLightColor: {r: 0.6698113, g: 0, b: 0.40188703, a: 1}
+  holderLightColor: {r: 0.5882353, g: 0.3529412, b: 0.3529412, a: 1}
 --- !u!1 &8520000503664625655
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,10 +303,10 @@ Light:
   m_Enabled: 1
   serializedVersion: 9
   m_Type: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 4
-  m_Range: 2
-  m_SpotAngle: 125
+  m_Color: {r: 1, g: 1, b: 0.6862745, a: 1}
+  m_Intensity: 9
+  m_Range: 1.5
+  m_SpotAngle: 150
   m_InnerSpotAngle: 1
   m_CookieSize: 10
   m_Shadows:
@@ -326,7 +349,7 @@ Light:
   m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 6.489658e-36, z: 1.4e-44, w: 2.3510647e-38}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
