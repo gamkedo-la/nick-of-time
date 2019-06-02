@@ -477,6 +477,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   space: 32
   items: []
+--- !u!114 &74160665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 74160656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f373e5e0fafa88e468a25b08d625f49a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &83369951
 GameObject:
   m_ObjectHideFlags: 0
@@ -645,7 +657,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponID: -1
   weapons:
-  - {fileID: 21300034, guid: ad02ccbc559f4fe4e9dce5a7080dab05, type: 3}
+  - sprite: {fileID: 0}
+    position: {x: 0, y: 0}
+    colliderSize: {x: 0, y: 0}
   offsetX: 0.1
 --- !u!212 &116775436
 SpriteRenderer:
@@ -16488,7 +16502,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponID: -1
   weapons:
-  - {fileID: 21300034, guid: ad02ccbc559f4fe4e9dce5a7080dab05, type: 3}
+  - sprite: {fileID: 0}
+    position: {x: 0, y: 0}
+    colliderSize: {x: 0, y: 0}
   offsetX: 0.1
 --- !u!212 &882846901
 SpriteRenderer:
@@ -17994,6 +18010,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemsParent: {fileID: 1184305221}
+  inventoryUI: {fileID: 1304249830}
 --- !u!1 &1008176697
 GameObject:
   m_ObjectHideFlags: 0
@@ -27050,9 +27067,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31d630b3077365a47a12b8990e99a3e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  swap: 0
+  blackAtStart: 1
   color: {r: 0.7843138, g: 0.5882353, b: 0.74509805, a: 1}
   intensity: 0.5
   factor: 0.05
+  disable: 0
 --- !u!1 &1791850832
 GameObject:
   m_ObjectHideFlags: 0
