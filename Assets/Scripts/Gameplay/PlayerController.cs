@@ -103,7 +103,7 @@ public class PlayerController : MonoBehaviour
 				&& !animator.GetBool("isAttacking")
 				&& !isDashing
 				&& Input.GetButtonDown(attackInput))
-			{
+			{                
 				animator.SetBool("isAttacking", true);
 
 				speed = attackSpeed;

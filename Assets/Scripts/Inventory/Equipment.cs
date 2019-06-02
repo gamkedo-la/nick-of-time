@@ -7,6 +7,8 @@ public class Equipment : Item
 
     public int damageModifier;
 
+    public int weaponID;
+
     public override void Use()
     {
         base.Use();

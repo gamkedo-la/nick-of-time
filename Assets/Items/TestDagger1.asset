@@ -17,3 +17,4 @@ MonoBehaviour:
   isDefaultItem: 0
   equipSlot: 0
   damageModifier: 1
+  weaponID: 0

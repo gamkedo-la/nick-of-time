@@ -6,11 +6,15 @@ public class EquipmentManager : MonoBehaviour
 {
     public static EquipmentManager instance;
 
+    public GameObject Player;
+    private WeaponPossession weaponPossession;
+
     Inventory inventory;
 
     private void Awake()
     {
         instance = this;
+        weaponPossession = Player.GetComponentInChildren<WeaponPossession>();
     }
 
     Equipment[] currentEquipment;
@@ -41,7 +45,7 @@ public class EquipmentManager : MonoBehaviour
         {
             onEquipmentChanged.Invoke(newItem, oldItem);
         }
-
+        weaponPossession.weaponID = newItem.weaponID;
         currentEquipment[slotIndex] = newItem;
     }
 

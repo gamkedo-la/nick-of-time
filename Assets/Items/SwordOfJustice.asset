@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a157b68f2ca7be44fba84edfeed413f1, type: 3}
   m_Name: SwordOfJustice
   m_EditorClassIdentifier: 
-  name: Sword of Justice
-  icon: {fileID: 21300028, guid: 2c20e7eb2a77fc343b5b9cf8ad5e4267, type: 3}
+  name: Katana
+  icon: {fileID: 21300000, guid: 5049fee2dbaa7954a888d2f4088d905d, type: 3}
   isDefaultItem: 0
   equipSlot: 0
   damageModifier: 2
+  weaponID: 1
