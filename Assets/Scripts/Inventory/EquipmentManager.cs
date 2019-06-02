@@ -71,6 +71,7 @@ public class EquipmentManager : MonoBehaviour
         {
             Unequip(i);
         }
+        weaponPossession.weaponID = -1;
     }
 
     private void Update()
