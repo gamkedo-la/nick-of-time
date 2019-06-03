@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EquipmentManager : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class EquipmentManager : MonoBehaviour
 
     public GameObject Player;
     private WeaponPossession weaponPossession;
+
+    public Image primaryEquipmentSlot;
 
     Inventory inventory;
 
@@ -47,6 +50,7 @@ public class EquipmentManager : MonoBehaviour
         }
         weaponPossession.weaponID = newItem.weaponID;
         currentEquipment[slotIndex] = newItem;
+        primaryEquipmentSlot.sprite = currentEquipment[slotIndex].icon;
     }
 
     public void Unequip(int slotIndex)
