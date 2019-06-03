@@ -72394,6 +72394,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -1.6959996
       objectReference: {fileID: 0}
+    - target: {fileID: 8479785458059321904, guid: ed0fc656d5f7d0840ba8795c183865a3,
+        type: 3}
+      propertyPath: file
+      value: Assets/Dialogues/Story2_Single.txt
+      objectReference: {fileID: 0}
+    - target: {fileID: 8479785458915248941, guid: ed0fc656d5f7d0840ba8795c183865a3,
+        type: 3}
+      propertyPath: file
+      value: Assets/Dialogues/Story2_Double.txt
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed0fc656d5f7d0840ba8795c183865a3, type: 3}
 --- !u!1001 &8520000503437544934

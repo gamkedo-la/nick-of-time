@@ -2,16 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System.IO;
 
-public class DialogueSequence : MonoBehaviour {
-	
-	public bool nextDialogue = false;
-	public int dialogueNo = 0;
+public class DialogueSequence : MonoBehaviour
+{
+	public string file;
 
-	[TextArea(1, 2)]
-	public string[] dialogues;
-	
+	[HideInInspector] public bool nextDialogue = false;
+	[HideInInspector] public int dialogueNo = 0;
+
+	[HideInInspector] public string[] dialogues;
+
 	public float delay = 0f;
+
 	private float timer = 0f;
 	
 	private TextMeshPro text;
@@ -19,11 +22,36 @@ public class DialogueSequence : MonoBehaviour {
 	
 	private int prevDialogueNo = -1;
 
+	private int totalDialogues = -1;
+	
+	private StreamReader reader = null;
+	private string line = " "; // assigned to allow first line to be read below
+	
 	void Start () {
 		text = GetComponent<TextMeshPro>();
 
 		if (text == null)
 			textCanvas = GetComponent<TextMeshProUGUI>();
+
+		reader = new StreamReader(file);
+
+		int dialogueIndex = 0;
+		while (line != null)
+		{
+			line = reader.ReadLine();
+			if (totalDialogues <= -1)
+			{
+				totalDialogues = System.Convert.ToInt32(line);
+				dialogues = new string[totalDialogues];
+			}
+			else if(line != null)
+			{
+				dialogues[dialogueIndex++] = line;
+			}
+		}
+
+		reader.Dispose();
+		reader.Close();
 	}
 	
 	void Update () {

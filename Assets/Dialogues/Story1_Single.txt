@@ -1,0 +1,46 @@
+45
+<color=#ff6666>Player 1</color><br>What was that just now?
+<color=#ff6666>Player 1</color><br>Those creepy clocks really scared the hell out of me!
+<color=#ff6666>Player 1</color><br>Where am I?
+<color=#ff6666>Player 1</color><br>...<i>sigh</i>
+<color=#ff6666>Player 1</color><br>I have to find out what is going on.
+ 
+<color=#ffff00>Old man</color><br>Oho ho... A visitor!
+<color=#ff6666>Player 1</color><br>Hey old man! Can you tell the way to get outta here?
+<color=#ffff00>Old man</color><br>You are young and filled with energy. We would become a good family.
+<color=#ff6666>Player 1</color><br>Where is the exit?
+<color=#ffff00>Old man</color><br>Hohoho! There is no exit.
+<color=#ff6666>Player 1</color><br>Huh?
+<color=#ffff00>Old man</color><br>I also entered it like you and then, I am stuck to this place for years.
+<color=#ffff00>Old man</color><br>The only way to go is up ahead. You see that gate.
+<color=#ff6666>Player 1</color><br>Just OPEN IT!
+<color=#ffff00>Old Man</color><br>You will regret going ahead. There is nothing ahead but...
+<color=#ffff00>Old Man</color><br><color=#ff0000>DEATH!</color>
+<color=#ff6666>Player 1</color><br>I have no problem with that... I will figure things out. Now, open it!
+ 
+Received <color=#00ff00>Dagger</color>
+<color=#ffff00>Old Man</color><br>Be careful.
+ 
+<color=#ffff00>???</color><br>Ahhh.... Somebody HELP!!!
+<color=#ff6666>Player 1</color><br>What was that?
+<color=#ffff00>???</color><br>HELP ME!!! Someone... ANYONE!
+<color=#ff6666>Player 1</color><br>...
+ 
+<color=#ff6666>Player 1</color><br>It looks like these teleporting killers are gone!
+<color=#ff6666>Player 1</color><br>Buddy... Owee, <i>buggy</i>... You asked for help?
+<color=#ffbb01>Nick</color><br>I am not <i>buddy</i> or <i>buggy</i>, my name is Nick. Yeah, I was calling for help.
+<color=#ff6666>Player 1</color><br>Oh yeah. Nick. You know, you can stop jumpin' around now. No need to panic.
+<color=#ffbb00>Nick</color><br>I am not panicking. I am exercising to become strong.
+<color=#ff6666>Player 1</color><br>How long have you been stuck here? Hopefully, not in years.
+<color=#ffbb02>Nick</color><br>Yesterday... <i>sniff</i>
+<color=#ffbb04>Nick</color><br>Please help me get out of here.
+<color=#ff6666>Player 1</color><br>Oh you can bet on that! We will get out of here...
+<color=#ff6666>Player 1</color><br>It seems odd to see people stuck here. Why is that?
+<color=#ffbb00>Nick</color><br>Curiosity
+<color=#ff6666>Player 1</color><br>Hey look! Something is shining at the corner...
+<color=#ff6666>Player 1</color><br>Hmm..... A portal!
+<color=#ff6666>Player 1</color><br>Hey Nick! Come with me...
+<color=#ffbb00>Nick</color><br>573, 574... Ahhh, you go ahead... I will come after finishing my exercise.
+<color=#ff6666>Player 1</color><br>Crazy determination... even here. Huh!
+<color=#ffbb01>Nick</color><br>...
+ 

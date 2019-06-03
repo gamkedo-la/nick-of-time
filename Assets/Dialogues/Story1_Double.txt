@@ -1,0 +1,46 @@
+45
+<color=#ff6666>Player 1</color><br>What was that just now?
+<color=#6666ff>Player 2</color><br>I did remember those clocks whirling around me.
+<color=#ff6666>Player 1</color><br>Yeah, clocks... Where are we now?
+<color=#6666ff>Player 2</color><br>I suggest you, stop talking in questions and find us a way out.
+<color=#ff6666>Player 1</color><br>...
+ 
+<color=#ffff00>Old man</color><br>Oho ho... Visitors!
+<color=#ff6666>Player 1</color><br>Hey old man! Can you tell us the way to get outta here?
+<color=#ffff00>Old man</color><br>You two are young and filled with energy. We would become a good family.
+<color=#6666ff>Player 2</color><br>Thanks but we are in hurry. So please tell us where is the exit?
+<color=#ffff00>Old man</color><br>Hohoho! There is no exit.
+<color=#ff6666>Player 1</color><br>Huh?
+<color=#ffff00>Old man</color><br>I also entered it like you guys and then, I am stuck to this place for years.
+<color=#ffff00>Old man</color><br>The only way to go is up ahead. You see that gate.
+<color=#6666ff>Player 2</color><br>Can you please open it for us?
+<color=#ffff00>Old Man</color><br>You will regret going ahead. There is nothing ahead but...
+<color=#ffff00>Old Man</color><br><color=#ff0000>DEATH!</color>
+<color=#ff6666>Player 1</color><br>I have no problem with that... We will figure things out. Now, open the gate!
+ 
+Received <color=#00ff00>Daggers</color>
+<color=#ffff00>Old Man</color><br>Be careful.
+ 
+<color=#ffff00>???</color><br>Ahhh.... Somebody HELP!!!
+<color=#ff6666>Player 1</color><br>What was that?
+<color=#ffff00>???</color><br>HELP ME!!! Someone... ANYONE!
+<color=#6666ff>Player 2</color><br>Looks like someone is in trouble. Lets go!
+ 
+<color=#ff6666>Player 1</color><br>It looks like these mud monsters are gone!
+<color=#6666ff>Player 2</color><br>Hey buddy! Are you the one calling for help?
+<color=#ffbb01>Nick</color><br>I am not <i>buddy</i>, my name is Nick. Yeah, I was the one, calling for help.
+<color=#ff6666>Player 1</color><br>Oh yeah. Nick. You know, you can stop jumpin' around now. No need to panic.
+<color=#ffbb00>Nick</color><br>I am not panicking. I am exercising to become strong.
+<color=#6666ff>Player 2</color><br>Are you also trapped inside here? I mean ofcourse... but how long?
+<color=#ffbb02>Nick</color><br>Yesterday... <i>sniff</i>
+<color=#ffbb04>Nick</color><br>Please help me get out of here.
+<color=#ff6666>Player 1</color><br>Oh you can bet on that! We will all get out of here...
+<color=#6666ff>Player 2</color><br>I don't understand it. Why you people are just stuck here?
+<color=#ffbb00>Nick</color><br>Curiosity
+<color=#ff6666>Player 1</color><br>Hey look! Something is shining at the corner...
+<color=#6666ff>Player 2</color><br>It seems like a portal.
+<color=#ff6666>Player 1</color><br>Hey Nick! Come with us...
+<color=#ffbb00>Nick</color><br>573, 574... Ahhh, you guys go... I will come after finishing my exercise.
+<color=#6666ff>Player 2</color><br>Wow, such determination even in a place like this.
+<color=#ffbb01>Nick</color><br>...
+ 

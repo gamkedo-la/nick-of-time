@@ -57,7 +57,7 @@ public class DialogueBoxSwitch : MonoBehaviour
 	void Update()
 	{
 
-		if (dialogueText.text == "")
+		if (dialogueText.text == " " || dialogueText.text == "")
 		{
 			sprRenderer.enabled = false;
 

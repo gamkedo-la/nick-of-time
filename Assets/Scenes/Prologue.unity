@@ -2660,6 +2660,20 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1167740246}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1167740248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1167740247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d882287d8adcee847b72b240f9d6ffdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prologueCam: {fileID: 1321272800}
+  delay: 0.9
 --- !u!1 &1202804234
 GameObject:
   m_ObjectHideFlags: 0
@@ -5053,6 +5067,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d7be37f2b1f84c488b26a1445379a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  file: Assets\Dialogues\Prologue.txt
   nextDialogue: 0
   dialogueNo: -1
   dialogues:

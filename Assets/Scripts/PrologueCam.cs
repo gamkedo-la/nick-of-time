@@ -56,33 +56,36 @@ public class PrologueCam : MonoBehaviour {
 	
 	public void playAudioClip1()
 	{
-		if(TogglesValues.music && clip1 != null)
+		if(aud != null && TogglesValues.music && clip1 != null)
 			aud.PlayOneShot(clip1, 0.3f);
 	}
 	
 	public void playAudioClip2()
 	{
-		if(TogglesValues.music && clip2 != null)
+		if(aud != null && TogglesValues.music && clip2 != null)
 			aud.PlayOneShot(clip2);
 	}
 
 	public void playDoorSound()
 	{
-		if (TogglesValues.sound && door != null)
+		if (aud != null && TogglesValues.sound && door != null)
 			aud.PlayOneShot(door, 0.5f);
 	}
 
 	public void stopAudioClip()
 	{
-		aud.Stop();
+		if(aud != null)
+			aud.Stop();
 	}
 	
 	public void volumeTo(float vol)
 	{
-		aud.volume = vol;
+		if(aud != null)
+			aud.volume = vol;
 	}
 	
-	public void finishPrologue() {
+	public void finishPrologue()
+	{
 		SceneManager.LoadScene(sceneName);
 		
 		if(GameManager.singleGame)
