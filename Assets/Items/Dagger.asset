@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a157b68f2ca7be44fba84edfeed413f1, type: 3}
-  m_Name: TestDagger1
+  m_Name: Dagger
   m_EditorClassIdentifier: 
   name: New Item
   icon: {fileID: 21300000, guid: 7808ced47403a1444bf4ac3b7b07d8e2, type: 3}
