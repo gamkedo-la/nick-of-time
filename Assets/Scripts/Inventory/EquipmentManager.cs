@@ -112,6 +112,8 @@ public class EquipmentManager : MonoBehaviour
         {
             Unequip(i);
         }
+
+        //TODO: Clean up the following
         weaponPossession.weaponID = -1;
         primaryWeaponSlot.sprite = null;
         primaryWeaponSlot.enabled = false;
@@ -119,6 +121,12 @@ public class EquipmentManager : MonoBehaviour
         secondaryWeaponSlot.sprite = null;
         secondaryWeaponSlot.enabled = false;
         secondaryWeaponSlotName.text = "Empty";
+        primaryPotionSlot.sprite = null;
+        primaryPotionSlot.enabled = false;
+        primaryPotionSlotName.text = "Empty";
+        secondaryPotionSlot.sprite = null;
+        secondaryPotionSlot.enabled = false;
+        secondaryPotionSlotName.text = "Empty";
     }
 
     private void Update()
