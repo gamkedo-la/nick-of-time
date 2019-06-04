@@ -137,11 +137,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1988994433431656287}
     m_Modifications:
-    - target: {fileID: 5948506881872251340, guid: 93024d15787c913428fdfcde691d6313,
-        type: 3}
-      propertyPath: m_Name
-      value: Door
-      objectReference: {fileID: 0}
     - target: {fileID: 5948506881872251341, guid: 93024d15787c913428fdfcde691d6313,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -197,10 +192,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5948506881872251340, guid: 93024d15787c913428fdfcde691d6313,
+        type: 3}
+      propertyPath: m_Name
+      value: Door
+      objectReference: {fileID: 0}
     - target: {fileID: 83061856, guid: 93024d15787c913428fdfcde691d6313, type: 3}
       propertyPath: isOpen
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5948506881872251379, guid: 93024d15787c913428fdfcde691d6313,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93024d15787c913428fdfcde691d6313, type: 3}
 --- !u!1 &4515748337245628863 stripped
