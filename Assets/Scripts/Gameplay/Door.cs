@@ -30,6 +30,5 @@ public class Door : MonoBehaviour
     void OpenDoor()
     {
         isOpen = true;
-        //Debug.LogWarning("Done Unlocking, opening door...");
     }
 }
