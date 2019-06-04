@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class AreaTriggerManager : MonoBehaviour
 {
@@ -31,6 +32,9 @@ public class AreaTriggerManager : MonoBehaviour
 
 		[Space]
 		public GameObject enemySpawnObject = null;
+
+		[Space]
+		public Tilemap minimapTilemap;
 
 		[HideInInspector] public float triggerTimer = 0f;
 		[HideInInspector] public bool isObjectsActivationDone = false;
@@ -85,8 +89,15 @@ public class AreaTriggerManager : MonoBehaviour
 			}
 
 			int triggerCount = 0;
+
 			triggerCount += camTriggerCont1[ti].triggered ? 1 : 0;
+			if (triggerCount == 1) t.minimapTilemap.color = Color.red;
+
 			triggerCount += camTriggerCont2[ti].triggered ? 1 : 0;
+			if (triggerCount == 1 && t.minimapTilemap.color != Color.red) t.minimapTilemap.color = Color.green;
+
+			if (triggerCount >= 2) t.minimapTilemap.color = Color.yellow;
+			else if (triggerCount <= 0) t.minimapTilemap.color = Color.gray;
 
 			if (!t.isObjectsActivationDone && (!t.checkEnemies || !areThereEnemies))
 			{
