@@ -62,8 +62,11 @@ public class PrologueCam : MonoBehaviour {
 	
 	public void playAudioClip2()
 	{
-		if(aud != null && TogglesValues.music && clip2 != null)
+		if (aud != null && TogglesValues.music && clip2 != null)
+		{
 			aud.PlayOneShot(clip2);
+			aud.pitch = 1.385f;
+		}
 	}
 
 	public void playDoorSound()
@@ -86,6 +89,10 @@ public class PrologueCam : MonoBehaviour {
 	
 	public void finishPrologue()
 	{
+		stopAudioClip();
+		volumeTo(1f);
+		aud.pitch = 1f;
+
 		SceneManager.LoadScene(sceneName);
 		
 		if(GameManager.singleGame)
