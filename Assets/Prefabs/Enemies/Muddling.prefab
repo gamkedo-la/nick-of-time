@@ -12,9 +12,8 @@ GameObject:
   - component: {fileID: 212934151125677660}
   - component: {fileID: 95754821962735592}
   - component: {fileID: 58818171642985770}
-  - component: {fileID: 58042949838969056}
   m_Layer: 9
-  m_Name: AttackShing
+  m_Name: AttackArea
   m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1164165663827878}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.16, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8613132322566193606}
@@ -114,25 +113,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.01, y: 0.01}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.035
---- !u!58 &58042949838969056
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1164165663827878}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.05, y: 0.01}
-  serializedVersion: 2
-  m_Radius: 0.02
+  m_Radius: 0.16
 --- !u!1 &1171110530013928
 GameObject:
   m_ObjectHideFlags: 0
@@ -159,7 +142,7 @@ Transform:
   m_GameObject: {fileID: 1171110530013928}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.08, z: 0}
-  m_LocalScale: {x: 1.5, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4499392473970819499}
   m_RootOrder: 0
@@ -288,7 +271,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 7
   m_Sprite: {fileID: 186106002789868962, guid: 2be1fcf9d4689164383975977436ef5c, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8000001, g: 0.5764706, b: 0.27450982, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -490,16 +473,12 @@ MonoBehaviour:
   targetObjects: []
   walkSpeed: 0.5
   walkMaxDistance: 3.84
-  walkTime: 1.5
+  walkTime: 2
   walkMinDelay: 0.3
   walkMaxDelay: 0.6
-  attackSpeed: 1
-  attackMaxDistance: 0.56
-  rollSpeed: 2.5
-  rollTendency: 0.0125
-  rollMaxDistance: 1.28
+  attackSpeed: 0.25
+  attackMaxDistance: 0.24
   attackSound: {fileID: 8300000, guid: 32ed1d859f4d34a41a11b51400612384, type: 3}
-  rollSound: {fileID: 8300000, guid: f8a4e4e3090eccc478baddaf7213dd10, type: 3}
   actionMinDelay: 1
   actionMaxDelay: 1.5
 --- !u!1 &3838839362319790625

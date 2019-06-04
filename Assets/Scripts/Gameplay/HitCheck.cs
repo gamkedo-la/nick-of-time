@@ -88,7 +88,7 @@ public class HitCheck : MonoBehaviour
 				&& !gameObject.GetComponent<Animator>().GetBool("isRolling"))
 			{
 				isHit = true;
-				hitLeft = coll.gameObject.GetComponent<SpriteRenderer>().flipX;
+				hitLeft = gameObject.transform.position.x < coll.gameObject.transform.position.x;// coll.gameObject.GetComponent<SpriteRenderer>().flipX;
 				break;
 			}
 		}

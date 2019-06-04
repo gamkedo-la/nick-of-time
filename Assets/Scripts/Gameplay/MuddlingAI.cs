@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyAI : MonoBehaviour {
+public class MuddlingAI : MonoBehaviour {
 	
 	public GameObject[] targetObjects = null;
 	
@@ -12,15 +12,10 @@ public class EnemyAI : MonoBehaviour {
 	public float walkMinDelay = 0f;
 	public float walkMaxDelay = 0f;
 	
-	public float attackSpeed = 2f;
+	public float attackSpeed = 0.5f;
 	public float attackMaxDistance = 0.48f;
 	
-	public float rollSpeed = 3f;
-	public float rollTendency = 0.05f;
-	public float rollMaxDistance = 1.12f;
-	
 	public AudioClip attackSound;
-	public AudioClip rollSound;
 	
 	public float actionMinDelay = 1f;
 	public float actionMaxDelay = 1.25f;
@@ -40,7 +35,7 @@ public class EnemyAI : MonoBehaviour {
 	
 	private AudioSource aud = null;
 	
-	private GameObject shingObject;
+	private GameObject attackAreaObject;
 	
 	private Vector2 walkInput = Vector2.zero;
 
@@ -56,7 +51,7 @@ public class EnemyAI : MonoBehaviour {
 		if(aud == null)
 			aud = FindObjectOfType<AudioSource>();
 		
-		shingObject = transform.GetChild(0).GetChild(1).GetChild(0).gameObject;
+		attackAreaObject = transform.GetChild(0).GetChild(1).GetChild(0).gameObject;
 		
 		actionTimer = Random.Range(actionMinDelay, actionMaxDelay);
 	}
@@ -93,7 +88,6 @@ public class EnemyAI : MonoBehaviour {
 			
 			//Determining walkInput
 			if(!animator.GetBool("isAttacking")
-				&& !animator.GetBool("isRolling")
 				&& Vector2.Distance(
 					new Vector2( targetObjects[targetIndex].transform.position.x, targetObjects[targetIndex].transform.position.y ),
 					new Vector2( rigidbody.transform.position.x, rigidbody.transform.position.y )
@@ -127,87 +121,87 @@ public class EnemyAI : MonoBehaviour {
 					walkTimer = Random.Range(walkMinDelay, walkMaxDelay);
 				}
 			}
-			//Random walk when player is not under the minimal walk distance
-			/*else if(walkTimer <= 0f)
+
+			//Commented code for Random walk when Player is not under the Minimal Walk distance
 			{
-				if(walkRandomizer < 1f)
+				/*else if(walkTimer <= 0f)
 				{
-					walkInput.x = -1f;
-					if(!animator.GetBool("isAttacking") )
-						sprRenderer.flipX = true;
-				}
-				else if(walkRandomizer < 2f)
-				{
-					walkInput.y = -1f;
-				}
-				else if(walkRandomizer < 3f)
-				{
-					walkInput.x = 1f;
-					if(!animator.GetBool("isAttacking") )
-						sprRenderer.flipX = false;
-				}
-				else if(walkRandomizer < 4f)
-				{
-					walkInput.y = 1f;
-				}
-				if(walkRandomizer < 5f)
-				{
-					walkInput.x = -1f;
-					if(!animator.GetBool("isAttacking") )
-						sprRenderer.flipX = true;
-					walkInput.y = -1f;
-				}
-				else if(walkRandomizer < 6f)
-				{
-					walkInput.x = 1f;
-					if(!animator.GetBool("isAttacking") )
-						sprRenderer.flipX = false;
-					walkInput.y = -1f;
-				}
-				else if(walkRandomizer < 7f)
-				{
-					walkInput.x = 1f;
-					if(!animator.GetBool("isAttacking") )
-						sprRenderer.flipX = false;
-					walkInput.y = 1f;
-				}
-				else if(walkRandomizer < 8f)
-				{
-					walkInput.x = -1f;
-					if(!animator.GetBool("isAttacking") )
-						sprRenderer.flipX = true;
-					walkInput.y = 1f;
-				}
-				
-				if(walkTimer <= -walkTime) 
-				{
-					walkTimer = Random.Range(walkMinDelay, walkMaxDelay);
-					
-					if(walkCollided)
+					if(walkRandomizer < 1f)
 					{
-						if(walkRandomizer >= 7f)
-							walkRandomizer -= 1f;
-						else if(walkRandomizer <= 1f)
-							walkRandomizer += 1f;
+						walkInput.x = -1f;
+						if(!animator.GetBool("isAttacking") )
+							sprRenderer.flipX = true;
+					}
+					else if(walkRandomizer < 2f)
+					{
+						walkInput.y = -1f;
+					}
+					else if(walkRandomizer < 3f)
+					{
+						walkInput.x = 1f;
+						if(!animator.GetBool("isAttacking") )
+							sprRenderer.flipX = false;
+					}
+					else if(walkRandomizer < 4f)
+					{
+						walkInput.y = 1f;
+					}
+					if(walkRandomizer < 5f)
+					{
+						walkInput.x = -1f;
+						if(!animator.GetBool("isAttacking") )
+							sprRenderer.flipX = true;
+						walkInput.y = -1f;
+					}
+					else if(walkRandomizer < 6f)
+					{
+						walkInput.x = 1f;
+						if(!animator.GetBool("isAttacking") )
+							sprRenderer.flipX = false;
+						walkInput.y = -1f;
+					}
+					else if(walkRandomizer < 7f)
+					{
+						walkInput.x = 1f;
+						if(!animator.GetBool("isAttacking") )
+							sprRenderer.flipX = false;
+						walkInput.y = 1f;
+					}
+					else if(walkRandomizer < 8f)
+					{
+						walkInput.x = -1f;
+						if(!animator.GetBool("isAttacking") )
+							sprRenderer.flipX = true;
+						walkInput.y = 1f;
+					}
+
+					if(walkTimer <= -walkTime) 
+					{
+						walkTimer = Random.Range(walkMinDelay, walkMaxDelay);
+
+						if(walkCollided)
+						{
+							if(walkRandomizer >= 7f)
+								walkRandomizer -= 1f;
+							else if(walkRandomizer <= 1f)
+								walkRandomizer += 1f;
+							else
+								walkRandomizer += Random.Range(0f, 2f) - 1f;
+
+							walkCollided = false;
+						}
 						else
-							walkRandomizer += Random.Range(0f, 2f) - 1f;
-						
-						walkCollided = false;
+						{
+							walkRandomizer = Random.Range(0f, 8f);
+						}
 					}
-					else
-					{
-						walkRandomizer = Random.Range(0f, 8f);
-					}
-				}
-			}*/
+				}*/
+			}
 		
 			if(walkInput != Vector2.zero)
 			{
-				//if(!animator.GetBool("isRolling"))
-				//{
-					animator.SetBool("isWalking", true);
-					speed = walkSpeed;
-				//}
+				animator.SetBool("isWalking", true);
+				speed = walkSpeed;
 			}
 			else
 			{
@@ -218,7 +212,6 @@ public class EnemyAI : MonoBehaviour {
 			{
 				//Determining whether to attack or not
 				if(!animator.GetBool("isAttacking")
-					&& !animator.GetBool("isRolling")
 					&& targetObjects[targetIndex].GetComponent<HitCheck>().hp > 0f					
 					&& Vector2.Distance(
 					new Vector2( targetObjects[targetIndex].transform.position.x, targetObjects[targetIndex].transform.position.y ),
@@ -229,57 +222,13 @@ public class EnemyAI : MonoBehaviour {
 					animator.SetBool("isWalking", false);
 					speed = attackSpeed;
 			
-					shingObject.GetComponent<Animator>().SetBool("isAttacking", true);
-					shingObject.GetComponent<SpriteRenderer>().flipX = sprRenderer.flipX;
+					attackAreaObject.GetComponent<Animator>().SetBool("isAttacking", true);
 			
-					if(!sprRenderer.flipX)
-					{
-							shingObject.transform.position = transform.position + new Vector3(0.32f, 0f, 0f);
-					}
-					else
-					{
-							shingObject.transform.position = transform.position + new Vector3(-0.32f, 0f, 0f);
-					}
-					
 					if(aud != null && TogglesValues.sound)
 						aud.PlayOneShot(attackSound);
 				}
-			
-				//Determining whether to roll or not
-				if(!animator.GetBool("isRolling")
-					&& !animator.GetBool("isAttacking")
-					&& Random.Range(0f, 1f) <= rollTendency
-					&& Vector2.Distance(
-					new Vector2( targetObjects[targetIndex].transform.position.x, targetObjects[targetIndex].transform.position.y ),
-					new Vector2( rigidbody.transform.position.x, rigidbody.transform.position.y )
-					) <= rollMaxDistance
-					&& hitCheck.knockback == Vector2.zero)
-				{
-					animator.SetBool("isRolling", true);
-					animator.SetBool("isWalking", false);
-					speed = rollSpeed;
-					gameObject.layer = 10;
-					
-					if(aud != null && TogglesValues.sound)
-						aud.PlayOneShot(rollSound);
-				}
 			}
-		
-			if(animator.GetBool("isAttacking") || animator.GetBool("isRolling"))
-			{
-				if(walkInput == Vector2.zero)
-				{
-					if(sprRenderer.flipX)
-					{
-						walkInput.x = -1f;
-					}
-					else
-					{
-						walkInput.x = 1f;
-					}
-				}
-			}
-		
+
 			actionTimer -= Time.deltaTime;
 			walkTimer -= Time.deltaTime;
 		
@@ -296,7 +245,6 @@ public class EnemyAI : MonoBehaviour {
 			rigidbody.MovePosition( new Vector2( rigidbody.transform.position.x, rigidbody.transform.position.y ) + ((sprRenderer.flipX == true ? 1f : -1f) * hitCheck.knockback * Time.deltaTime));
 			
 			stopAttacking();
-			stopRolling();
 			gameObject.layer = 10;
 		}
 		
@@ -310,21 +258,20 @@ public class EnemyAI : MonoBehaviour {
 	{
 		walkCollided = true;
 	}
+
+	public void completeSpawn()
+	{
+		animator.SetBool("isSpawned", true);
+
+		gameObject.layer = 10;
+	}
 	
 	public void stopAttacking() {
 		animator.SetBool("isAttacking", false);
 		
-		shingObject.GetComponent<Animator>().SetBool("isAttacking", false);
+		attackAreaObject.GetComponent<Animator>().SetBool("isAttacking", false);
 		
 		actionTimer = Random.Range(actionMinDelay, actionMaxDelay);
-	}
-	
-	public void stopRolling() {
-		animator.SetBool("isRolling", false);
-		
-		actionTimer = Random.Range(actionMinDelay, actionMaxDelay);
-		
-		gameObject.layer = 9;
 	}
 }
 
