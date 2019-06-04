@@ -11,11 +11,16 @@ public class EquipmentManager : MonoBehaviour
     public GameObject Player;
     private WeaponPossession weaponPossession;
 
-    public Image primaryEquipmentSlot;
-    public Image secondaryEquipmentSlot;
+    public Image primaryWeaponSlot;
+    public Image secondaryWeaponSlot;
+    public Image primaryPotionSlot;
+    public Image secondaryPotionSlot;
 
-    public TextMeshProUGUI primarySlotName;
-    public TextMeshProUGUI secondarySlotName;
+    public TextMeshProUGUI primaryWeaponSlotName;
+    public TextMeshProUGUI secondaryWeaponSlotName;
+    public TextMeshProUGUI primaryPotionSlotName;
+    public TextMeshProUGUI secondaryPotionSlotName;
+
 
     Inventory inventory;
 
@@ -23,8 +28,8 @@ public class EquipmentManager : MonoBehaviour
     {
         instance = this;
         weaponPossession = Player.GetComponentInChildren<WeaponPossession>();
-        primaryEquipmentSlot.enabled = false;
-        secondaryEquipmentSlot.enabled = false;
+        primaryWeaponSlot.enabled = false;
+        secondaryWeaponSlot.enabled = false;
     }
 
     Equipment[] currentEquipment;
@@ -60,16 +65,28 @@ public class EquipmentManager : MonoBehaviour
 
         if(slotIndex == 0 )
         {
-            primaryEquipmentSlot.enabled = true;
-            primaryEquipmentSlot.sprite = currentEquipment[slotIndex].icon;
-            primarySlotName.text = currentEquipment[slotIndex].name;
+            primaryWeaponSlot.enabled = true;
+            primaryWeaponSlot.sprite = currentEquipment[slotIndex].icon;
+            primaryWeaponSlotName.text = currentEquipment[slotIndex].name;
         }
 
         if(slotIndex == 1)
         {
-            secondaryEquipmentSlot.enabled = true;
-            secondaryEquipmentSlot.sprite = currentEquipment[slotIndex].icon;
-            secondarySlotName.text = currentEquipment[slotIndex].name;
+            secondaryWeaponSlot.enabled = true;
+            secondaryWeaponSlot.sprite = currentEquipment[slotIndex].icon;
+            secondaryWeaponSlotName.text = currentEquipment[slotIndex].name;
+        }
+        if (slotIndex == 2)
+        {
+            primaryPotionSlot.enabled = true;
+            primaryPotionSlot.sprite = currentEquipment[slotIndex].icon;
+            primaryPotionSlotName.text = currentEquipment[slotIndex].name;
+        }
+        if (slotIndex == 3)
+        {
+            secondaryPotionSlot.enabled = true;
+            secondaryPotionSlot.sprite = currentEquipment[slotIndex].icon;
+            secondaryPotionSlotName.text = currentEquipment[slotIndex].name;
         }
     }
 
@@ -96,12 +113,12 @@ public class EquipmentManager : MonoBehaviour
             Unequip(i);
         }
         weaponPossession.weaponID = -1;
-        primaryEquipmentSlot.sprite = null;
-        primaryEquipmentSlot.enabled = false;
-        primarySlotName.text = "Empty";
-        secondaryEquipmentSlot.sprite = null;
-        secondaryEquipmentSlot.enabled = false;
-        secondarySlotName.text = "Empty";
+        primaryWeaponSlot.sprite = null;
+        primaryWeaponSlot.enabled = false;
+        primaryWeaponSlotName.text = "Empty";
+        secondaryWeaponSlot.sprite = null;
+        secondaryWeaponSlot.enabled = false;
+        secondaryWeaponSlotName.text = "Empty";
     }
 
     private void Update()
