@@ -506,7 +506,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponID: -1
   weapons:
-  - {fileID: 21300034, guid: ad02ccbc559f4fe4e9dce5a7080dab05, type: 3}
+  - sprite: {fileID: 0}
+    position: {x: 0, y: 0}
+    colliderSize: {x: 0, y: 0}
   offsetX: 0.1
 --- !u!212 &116775436
 SpriteRenderer:
@@ -10848,6 +10850,7 @@ MonoBehaviour:
     - obj: {fileID: 631907478}
       disableAfterLeaving: 1
     enemySpawnObject: {fileID: 0}
+    minimapTilemap: {fileID: 0}
     triggerTimer: 0
     isObjectsActivationDone: 0
     isEnemySpawnDone: 0
@@ -10860,6 +10863,7 @@ MonoBehaviour:
     - obj: {fileID: 819258075}
       disableAfterLeaving: 1
     enemySpawnObject: {fileID: 0}
+    minimapTilemap: {fileID: 0}
     triggerTimer: 0
     isObjectsActivationDone: 0
     isEnemySpawnDone: 0
@@ -10874,6 +10878,7 @@ MonoBehaviour:
     - obj: {fileID: 173072867}
       disableAfterLeaving: 0
     enemySpawnObject: {fileID: 0}
+    minimapTilemap: {fileID: 0}
     triggerTimer: 0
     isObjectsActivationDone: 0
     isEnemySpawnDone: 0
@@ -10886,6 +10891,7 @@ MonoBehaviour:
     - obj: {fileID: 842020135}
       disableAfterLeaving: 1
     enemySpawnObject: {fileID: 0}
+    minimapTilemap: {fileID: 0}
     triggerTimer: 0
     isObjectsActivationDone: 0
     isEnemySpawnDone: 0
@@ -10900,6 +10906,7 @@ MonoBehaviour:
     - obj: {fileID: 1495102725}
       disableAfterLeaving: 0
     enemySpawnObject: {fileID: 0}
+    minimapTilemap: {fileID: 0}
     triggerTimer: 0
     isObjectsActivationDone: 0
     isEnemySpawnDone: 0
@@ -10913,6 +10920,7 @@ MonoBehaviour:
       disableAfterLeaving: 1
     enemySpawnObject: {fileID: 1896489951412202, guid: 5be2b70a812d64a41ae96ac91778a708,
       type: 3}
+    minimapTilemap: {fileID: 0}
     triggerTimer: 0
     isObjectsActivationDone: 0
     isEnemySpawnDone: 0
@@ -10926,6 +10934,7 @@ MonoBehaviour:
       disableAfterLeaving: 1
     enemySpawnObject: {fileID: 1896489951412202, guid: 5be2b70a812d64a41ae96ac91778a708,
       type: 3}
+    minimapTilemap: {fileID: 0}
     triggerTimer: 0
     isObjectsActivationDone: 0
     isEnemySpawnDone: 0
@@ -10938,6 +10947,7 @@ MonoBehaviour:
     - obj: {fileID: 854807316}
       disableAfterLeaving: 1
     enemySpawnObject: {fileID: 0}
+    minimapTilemap: {fileID: 0}
     triggerTimer: 0
     isObjectsActivationDone: 0
     isEnemySpawnDone: 0
@@ -10953,6 +10963,7 @@ MonoBehaviour:
       disableAfterLeaving: 1
     enemySpawnObject: {fileID: 1896489951412202, guid: 5be2b70a812d64a41ae96ac91778a708,
       type: 3}
+    minimapTilemap: {fileID: 0}
     triggerTimer: 0
     isObjectsActivationDone: 0
     isEnemySpawnDone: 0
@@ -10965,6 +10976,7 @@ MonoBehaviour:
     - obj: {fileID: 137510486}
       disableAfterLeaving: 1
     enemySpawnObject: {fileID: 0}
+    minimapTilemap: {fileID: 0}
     triggerTimer: 0
     isObjectsActivationDone: 0
     isEnemySpawnDone: 0
@@ -10978,6 +10990,7 @@ MonoBehaviour:
       disableAfterLeaving: 1
     enemySpawnObject: {fileID: 1896489951412202, guid: 5be2b70a812d64a41ae96ac91778a708,
       type: 3}
+    minimapTilemap: {fileID: 0}
     triggerTimer: 0
     isObjectsActivationDone: 0
     isEnemySpawnDone: 0
@@ -10991,6 +11004,7 @@ MonoBehaviour:
       disableAfterLeaving: 1
     enemySpawnObject: {fileID: 1896489951412202, guid: 5be2b70a812d64a41ae96ac91778a708,
       type: 3}
+    minimapTilemap: {fileID: 0}
     triggerTimer: 0
     isObjectsActivationDone: 0
     isEnemySpawnDone: 0
@@ -11003,6 +11017,7 @@ MonoBehaviour:
     - obj: {fileID: 1251883687}
       disableAfterLeaving: 1
     enemySpawnObject: {fileID: 0}
+    minimapTilemap: {fileID: 0}
     triggerTimer: 0
     isObjectsActivationDone: 0
     isEnemySpawnDone: 0
@@ -15613,7 +15628,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponID: -1
   weapons:
-  - {fileID: 21300034, guid: ad02ccbc559f4fe4e9dce5a7080dab05, type: 3}
+  - sprite: {fileID: 0}
+    position: {x: 0, y: 0}
+    colliderSize: {x: 0, y: 0}
   offsetX: 0.1
 --- !u!212 &882846901
 SpriteRenderer:
@@ -24429,9 +24446,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31d630b3077365a47a12b8990e99a3e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  swap: 0
+  blackAtStart: 1
   color: {r: 0.7843138, g: 0.5882353, b: 0.74509805, a: 1}
   intensity: 0.5
   factor: 0.05
+  disable: 0
 --- !u!1 &1791850832
 GameObject:
   m_ObjectHideFlags: 0

@@ -23,7 +23,13 @@ public class Door : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        doorAnimator.SetBool("Open", isOpen);
         lockAnimator.SetBool("Locked", isLocked);
+        doorAnimator.SetBool("Open", isOpen);
+    }
+
+    void OpenDoor()
+    {
+        isOpen = true;
+        //Debug.LogWarning("Done Unlocking, opening door...");
     }
 }
