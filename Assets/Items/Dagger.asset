@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a157b68f2ca7be44fba84edfeed413f1, type: 3}
   m_Name: Dagger
   m_EditorClassIdentifier: 
-  name: New Item
+  name: Dagger
   icon: {fileID: 21300000, guid: 7808ced47403a1444bf4ac3b7b07d8e2, type: 3}
   isDefaultItem: 0
-  equipSlot: 0
+  equipSlot: 1
   damageModifier: 1
   weaponID: 0

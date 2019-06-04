@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class EquipmentManager : MonoBehaviour
 {
@@ -11,6 +12,10 @@ public class EquipmentManager : MonoBehaviour
     private WeaponPossession weaponPossession;
 
     public Image primaryEquipmentSlot;
+    public Image secondaryEquipmentSlot;
+
+    public TextMeshProUGUI primarySlotName;
+    public TextMeshProUGUI secondarySlotName;
 
     Inventory inventory;
 
@@ -18,6 +23,8 @@ public class EquipmentManager : MonoBehaviour
     {
         instance = this;
         weaponPossession = Player.GetComponentInChildren<WeaponPossession>();
+        primaryEquipmentSlot.enabled = false;
+        secondaryEquipmentSlot.enabled = false;
     }
 
     Equipment[] currentEquipment;
@@ -50,7 +57,20 @@ public class EquipmentManager : MonoBehaviour
         }
         weaponPossession.weaponID = newItem.weaponID;
         currentEquipment[slotIndex] = newItem;
-        primaryEquipmentSlot.sprite = currentEquipment[slotIndex].icon;
+
+        if(slotIndex == 0 )
+        {
+            primaryEquipmentSlot.enabled = true;
+            primaryEquipmentSlot.sprite = currentEquipment[slotIndex].icon;
+            primarySlotName.text = currentEquipment[slotIndex].name;
+        }
+
+        if(slotIndex == 1)
+        {
+            secondaryEquipmentSlot.enabled = true;
+            secondaryEquipmentSlot.sprite = currentEquipment[slotIndex].icon;
+            secondarySlotName.text = currentEquipment[slotIndex].name;
+        }
     }
 
     public void Unequip(int slotIndex)
@@ -76,6 +96,12 @@ public class EquipmentManager : MonoBehaviour
             Unequip(i);
         }
         weaponPossession.weaponID = -1;
+        primaryEquipmentSlot.sprite = null;
+        primaryEquipmentSlot.enabled = false;
+        primarySlotName.text = "Empty";
+        secondaryEquipmentSlot.sprite = null;
+        secondaryEquipmentSlot.enabled = false;
+        secondarySlotName.text = "Empty";
     }
 
     private void Update()
