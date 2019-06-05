@@ -33,14 +33,14 @@ public class FloatingTextService : MonoBehaviour
 	/// </summary>
 	/// <param name="position">In-game world start position.</param>
 	/// <param name="text">Text to display.</param>
-	/// <param name="color">Text color.</param>
+	/// <param name="tintColor">Text color.</param>
 	/// <param name="speedMultiplier"></param>
 	/// <param name="size">Scale of the text object.</param>
-	public void ShowFloatingTextStandard( Vector3 position, string text, Color color, float speedMultiplier = 1.0f, float scale = 1.0f )
+	public void ShowFloatingTextStandard( Vector3 position, string text, Color tintColor, float speedMultiplier = 1.0f, float scale = 1.0f )
 	{
 		GameObject go = Instantiate( floatingTextStandard, position, Quaternion.identity );
 
 		FloatingText ft = go.GetComponent<FloatingText>( );
-		ft.SetPrameters( text, color, speedMultiplier, scale );
+		ft.SetPrameters( text, tintColor, speedMultiplier, scale );
 	}
 }

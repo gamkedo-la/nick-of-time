@@ -50,11 +50,11 @@ public class FloatingText : MonoBehaviour
 			Destroy( gameObject );
 	}
 
-	public void SetPrameters ( string message, Color color, float speedMultiplier, float scale )
+	public void SetPrameters ( string message, Color tintColor, float speedMultiplier, float scale )
 	{
 		multiplier = speedMultiplier;
 		text.text = message;
-		text.color *= color;
+		text.color *= tintColor;
 
 		transform.localScale = Vector3.one * scale;
 
