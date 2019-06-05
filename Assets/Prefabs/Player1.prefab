@@ -701,11 +701,13 @@ MonoBehaviour:
   weaponID: -1
   weapons:
   - sprite: {fileID: 21300000, guid: 7808ced47403a1444bf4ac3b7b07d8e2, type: 3}
-    position: {x: -0.07439995, y: -0.04500008}
+    position: {x: -0.0744, y: -0.045}
+    colliderOffset: {x: 0, y: 0}
     colliderSize: {x: 0.07, y: 0.05}
   - sprite: {fileID: 21300000, guid: 5049fee2dbaa7954a888d2f4088d905d, type: 3}
-    position: {x: -0.11, y: -0.04460001}
-    colliderSize: {x: 0.18, y: 0.07}
+    position: {x: -0.0744, y: -0.045}
+    colliderOffset: {x: 0, y: 0}
+    colliderSize: {x: 0.22, y: 0.07}
   offsetX: 0.06
 --- !u!61 &5660807818573569359
 BoxCollider2D:
@@ -731,5 +733,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.03, y: 0.03}
+  m_Size: {x: 0.1, y: 0.1}
   m_EdgeRadius: 0

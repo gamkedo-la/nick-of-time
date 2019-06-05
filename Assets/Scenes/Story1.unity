@@ -529,6 +529,7 @@ MonoBehaviour:
   weapons:
   - sprite: {fileID: 0}
     position: {x: 0, y: 0}
+    colliderOffset: {x: 0, y: 0}
     colliderSize: {x: 0, y: 0}
   offsetX: 0.1
 --- !u!212 &116775436
@@ -16492,6 +16493,7 @@ MonoBehaviour:
   weapons:
   - sprite: {fileID: 0}
     position: {x: 0, y: 0}
+    colliderOffset: {x: 0, y: 0}
     colliderSize: {x: 0, y: 0}
   offsetX: 0.1
 --- !u!212 &882846901

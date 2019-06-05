@@ -11,6 +11,7 @@ public class WeaponPossession : MonoBehaviour {
 	{
 		public Sprite sprite;
 		public Vector2 position;
+		public Vector2 colliderOffset;
 		public Vector2 colliderSize;
 	}
 	
@@ -41,17 +42,22 @@ public class WeaponPossession : MonoBehaviour {
 			if (weaponID <= -1)
 			{
 				sprRenderer.sprite = null;
+				collider.offset = new Vector2(-0.075f, -0.045f);
 				collider.size = new Vector2(0.05f, 0.05f);
 				transform.localPosition = Vector2.zero;
 			}
 			else
 			{
 				sprRenderer.sprite = weapons[weaponID].sprite;
+				collider.offset = weapons[weaponID].colliderOffset;
 				collider.size = weapons[weaponID].colliderSize;
 				transform.localPosition = weapons[weaponID].position;
 			}
 			
 			prevWeaponID = weaponID;
 		}
+
+		//if (sprRenderer.flipX) collider.offset = new Vector2(Mathf.Abs(collider.offset.x), collider.offset.y);
+		//else collider.offset = new Vector2(-Mathf.Abs(collider.offset.x), collider.offset.y);
 	}
 }
