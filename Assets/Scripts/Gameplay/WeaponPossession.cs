@@ -42,9 +42,9 @@ public class WeaponPossession : MonoBehaviour {
 			if (weaponID <= -1)
 			{
 				sprRenderer.sprite = null;
-				collider.offset = new Vector2(-0.075f, -0.045f);
-				collider.size = new Vector2(0.05f, 0.05f);
-				transform.localPosition = Vector2.zero;
+				collider.offset = Vector2.zero;
+				collider.size = new Vector2(0.03f, 0.03f);
+				transform.localPosition = new Vector2(-0.0744f, -0.045f);
 			}
 			else
 			{

@@ -9764,6 +9764,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2643976167619289179, guid: d16b468af7e8e1a49a14edc85440334d,
         type: 3}
+    - target: {fileID: 3329497469656580619, guid: f34ad73bca23e694585b0119f5a1682a,
+        type: 3}
+      propertyPath: pushInput
+      value: Push2
+      objectReference: {fileID: 0}
     - target: {fileID: 2579037237340339661, guid: f34ad73bca23e694585b0119f5a1682a,
         type: 3}
       propertyPath: m_Sprite

@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
 	public string walkHorizontalInput = "Horizontal";
 	public string attackInput = "Fire1";
 	public string dashInput = "Jump";
+	public string pushInput = "Push1";
 
 	[Space]
 	public AudioClip attackSound;
@@ -62,7 +63,7 @@ public class PlayerController : MonoBehaviour
 	{
 		if (Time.timeScale > 0f)
 		{
-			if (!animator.GetBool("isAttacking") && !isDashing)
+			if (!animator.GetBool("isAttacking") && !isDashing && !animator.GetBool("isPushing"))
 			{
 				walkInput = new Vector2(Input.GetAxisRaw(walkHorizontalInput), Input.GetAxisRaw(walkVerticalInput));
 
@@ -101,6 +102,7 @@ public class PlayerController : MonoBehaviour
 			//Attack
 			if (actionPoints >= attackActionDeplete
 				&& !animator.GetBool("isAttacking")
+				&& !animator.GetBool("isPushing")
 				&& !isDashing
 				&& Input.GetButtonDown(attackInput))
 			{                
@@ -163,6 +165,7 @@ public class PlayerController : MonoBehaviour
 			if (actionPoints >= dashActionDeplete
 				&& !isDashing
 				&& !animator.GetBool("isAttacking")
+				&& !animator.GetBool("isPushing")
 				&& Input.GetButtonDown(dashInput)
 				&& hitCheck.knockback == Vector2.zero)
 			{
@@ -197,6 +200,15 @@ public class PlayerController : MonoBehaviour
 				}
 			}
 			*/
+
+			//Push
+			if (!animator.GetBool("isAttacking")
+			&& !isDashing
+			&& Input.GetButtonDown(pushInput))
+			{
+				animator.SetBool("isPushing", true);
+				speed = 0f;
+			}
 
 			if (actionPoints < 1f)
 			{
@@ -240,6 +252,50 @@ public class PlayerController : MonoBehaviour
 		}
 	}
 
+	private void pushOnCollision(Collision2D collision)
+	{
+		if (animator.GetBool("isPushing") == true)
+		{
+			Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
+			if (rb != null)
+			{
+				Vector2 force = Vector2.zero;
+				int dir = animator.GetInteger("direction");
+				if (dir == 0)
+				{
+					force.x = 0;
+					force.y = 500;
+				}
+				else if (dir == 1)
+				{
+					force.x = 500;
+					force.y = 0;
+				}
+				else if (dir == 2)
+				{
+					force.x = 0;
+					force.y = -500;
+				}
+				else if (dir == 3)
+				{
+					force.x = -500;
+					force.y = 0;
+				}
+				rb.AddForce(force, ForceMode2D.Impulse);
+			}
+		}
+	}
+
+	private void OnCollisionEnter2D(Collision2D collision)
+	{
+		pushOnCollision(collision);
+	}
+
+	private void OnCollisionStay2D(Collision2D collision)
+	{
+		pushOnCollision(collision);
+	}
+
 	void FixedUpdate()
 	{
 		if (hitCheck.hp > 0f)
@@ -252,6 +308,7 @@ public class PlayerController : MonoBehaviour
 
 			stopAttacking();
 			stopDashing();
+			stopPushing();
 		}
 
 		if (Mathf.Abs(hitCheck.knockback.x) > Mathf.Abs(hitCheck.knockbackSlowDown))
@@ -274,5 +331,10 @@ public class PlayerController : MonoBehaviour
 		dashTimer = 0f;
 
 		gameObject.layer = 8;
+	}
+
+	public void stopPushing()
+	{
+		animator.SetBool("isPushing", false);
 	}
 }
