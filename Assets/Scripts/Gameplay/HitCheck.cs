@@ -8,33 +8,33 @@ public class HitCheck : MonoBehaviour
 	public string[] hitTags;
 	public float knockbackValue = 0.48f;
 	public float knockbackSlowDown = 0.001f;
-	
+
 	public float regenerateHpUpto = 0f;
 	public float regenerateHpPerSecond = 0.0025f;
-	
+
 	public AudioClip damageSound;
 	public AudioClip deathSound;
-	
+
 	[HideInInspector] public float hp = 1f;
 	[HideInInspector] public Vector2 knockback = Vector2.zero;
-	
+
 	private bool isHit = false;
 	private bool hitLeft = false;
-	
+
 	private AudioSource aud = null;
 
     [SerializeField]
     private GameObject HPBarJointCamera;
     [SerializeField]
     private GameObject HPBarSoloCamera;
-	
+
 	void Start ()
 	{
 		aud = GetComponent<AudioSource>();
 		if(aud == null)
-			aud = FindObjectOfType<AudioSource>();     
+			aud = FindObjectOfType<AudioSource>();
     }
-	
+
 	void Update ()
 	{
 		if(isHit)
@@ -55,13 +55,15 @@ public class HitCheck : MonoBehaviour
 				knockback = new Vector2(-knockbackValue, 0f);
 				knockbackSlowDown = -knockbackSlowDown;
 			}
-			
+
 			isHit = false;
-			
+
 			if(aud != null && TogglesValues.sound)
 				aud.PlayOneShot(damageSound);
+
+			FloatingTextService.Instance.ShowFloatingTextStandard( transform.position, hpDamage.ToString( ), Color.red );
 		}
-		
+
 		if(hp <= 0f)
 		{
 			if(!GetComponent<Animator>().GetBool("isDying") && aud != null && TogglesValues.sound)
@@ -69,16 +71,16 @@ public class HitCheck : MonoBehaviour
 				aud.clip = deathSound;
 				aud.PlayDelayed(0.5f);
 			}
-			
+
 			GetComponent<Animator>().SetBool("isDying", true);
 		}
 		else if(hp < regenerateHpUpto)
 		{
 			hp += regenerateHpPerSecond * Time.deltaTime;
 		}
-		
+
 	}
-	
+
 	void OnTriggerStay2D( Collider2D coll )
 	{
 		for(int i = 0; i < hitTags.GetLength(0); i++)
@@ -93,7 +95,7 @@ public class HitCheck : MonoBehaviour
 			}
 		}
 	}
-	
+
 	public void die()
 	{
 		Destroy(gameObject);
