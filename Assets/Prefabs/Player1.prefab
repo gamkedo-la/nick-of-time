@@ -291,13 +291,16 @@ MonoBehaviour:
   dashTime: 0.1
   dashFXObject: {fileID: 2643976167619289179, guid: d16b468af7e8e1a49a14edc85440334d,
     type: 3}
-  regenerateActionPointsPerSec: 0.3
-  attackActionDeplete: 0.4
-  dashActionDeplete: 0.2
+  pushForce: 500
+  regenerateActionPointsPerSec: 0.2
+  attackActionDeplete: 0.25
+  dashActionDeplete: 0.1
+  pushActionDeplete: 0.025
   walkVerticalInput: Vertical1
   walkHorizontalInput: Horizontal1
   attackInput: Fire1
   dashInput: Dash1
+  pushInput: Push1
   attackSound: {fileID: 8300000, guid: 32ed1d859f4d34a41a11b51400612384, type: 3}
   dashSound: {fileID: 8300000, guid: f8a4e4e3090eccc478baddaf7213dd10, type: 3}
   actionPoints: 1

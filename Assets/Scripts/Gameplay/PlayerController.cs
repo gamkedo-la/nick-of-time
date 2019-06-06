@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
 	public float dashSpeed = 3f;
 	public float dashTime = 0.2f;
 	public GameObject dashFXObject;
+	public float pushForce = 500f;
 
 	[Space]
 	public float regenerateActionPointsPerSec = 0.025f;
@@ -17,6 +18,7 @@ public class PlayerController : MonoBehaviour
 	[Space]
 	public float attackActionDeplete = 0.4f;
 	public float dashActionDeplete = 0.25f;
+	public float pushActionDeplete = 0.1f;
 
 	[Space]
 	public string walkVerticalInput = "Vertical";
@@ -264,21 +266,21 @@ public class PlayerController : MonoBehaviour
 				if (dir == 0)
 				{
 					force.x = 0;
-					force.y = 500;
+					force.y = pushForce;
 				}
 				else if (dir == 1)
 				{
-					force.x = 500;
+					force.x = pushForce;
 					force.y = 0;
 				}
 				else if (dir == 2)
 				{
 					force.x = 0;
-					force.y = -500;
+					force.y = -pushForce;
 				}
 				else if (dir == 3)
 				{
-					force.x = -500;
+					force.x = -pushForce;
 					force.y = 0;
 				}
 				rb.AddForce(force, ForceMode2D.Impulse);
