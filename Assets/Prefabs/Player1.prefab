@@ -303,6 +303,7 @@ MonoBehaviour:
   dashInput: Dash1
   pushInput: Push1
   throwInput: Throw1
+  weaponPossession: {fileID: 1148393954167941654}
   attackSound: {fileID: 8300000, guid: 32ed1d859f4d34a41a11b51400612384, type: 3}
   dashSound: {fileID: 8300000, guid: f8a4e4e3090eccc478baddaf7213dd10, type: 3}
   actionPoints: 1

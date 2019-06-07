@@ -30,9 +30,12 @@ public class PlayerController : MonoBehaviour
 	public string throwInput = "Throw1";
 
 	[Space]
+	public WeaponPossession weaponPossession;
+
+	[Space]
 	public AudioClip attackSound;
 	public AudioClip dashSound;
-
+	
 	[HideInInspector] public float actionPoints = 1f;
 
 	private float speed = 0f;
@@ -46,9 +49,7 @@ public class PlayerController : MonoBehaviour
 	private HitCheck hitCheck;
 
 	private AudioSource aud = null;
-
-	//private GameObject shingObject;
-
+	
 	private Vector2 walkInput = Vector2.zero;
 
 	private void Start()
@@ -142,24 +143,7 @@ public class PlayerController : MonoBehaviour
 					}
 					attackSpeedTimer = attackSpeedTime / 2f;
 				}
-
-
-				//shingObject.GetComponent<Animator>().SetBool("isAttacking", true);
-				////shingObject.GetComponent<SpriteRenderer>().flipX = sprRenderer.flipX;
-				/*
-				if (!sprRenderer.flipX)
-				{
-					shingObject.transform.position = transform.position + new Vector3(0.16f, 0f, 0f);
-					shingObject.transform.localScale = new Vector3(1f, 1f, 1f);
-				}
-				else
-				{
-					shingObject.transform.position = transform.position + new Vector3(-0.16f, 0f, 0f);
-					shingObject.transform.localScale = new Vector3(-1f, 1f, 1f);
-				}
-				*/
-
-
+				
 				actionPoints -= attackActionDeplete;
 
 				if (aud != null && TogglesValues.sound)
@@ -350,8 +334,6 @@ public class PlayerController : MonoBehaviour
 		animator.SetBool("isAttacking", false);
 
 		attackSpeedTimer = 0f;
-
-		//shingObject.GetComponent<Animator>().SetBool("isAttacking", false);
 	}
 
 	public void stopDashing()
@@ -371,5 +353,10 @@ public class PlayerController : MonoBehaviour
 		animator.SetBool("isThrowing", false);
 
 		attackSpeedTimer = 0f;
+	}
+
+	public void throwWeapon()
+	{
+		weaponPossession.weaponID = -1;
 	}
 }
