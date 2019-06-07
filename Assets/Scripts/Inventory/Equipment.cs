@@ -5,15 +5,17 @@ public class Equipment : Item
 {
     public EquipmentSlot equipSlot;
 
+    public EquipmentManager equipmentManager;
+
     public int damageModifier;
 
     public int weaponID;
 
     public override void Use()
     {
-        base.Use();
-        EquipmentManager.instance.Equip(this);
-        RemoveFromInventory();
+        base.Use();             
+        equipmentManager.Equip(this);
+        equipmentManager.inventory.Remove(this);
     }
 }
 

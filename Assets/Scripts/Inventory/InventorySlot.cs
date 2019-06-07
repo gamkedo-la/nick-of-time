@@ -8,11 +8,16 @@ public class InventorySlot : MonoBehaviour
     public Button removeButton;
     public TextMeshProUGUI textMeshPro;
 
-    Item item;
+    public GameObject associatedPlayer;
 
+    private Inventory inventory;
+
+    Item item;
+    
     private void Awake()
     {
         textMeshPro.text = "Empty";
+        inventory = associatedPlayer.GetComponent<Inventory>();
     }
 
     public void AddItem(Item newItem)
@@ -34,14 +39,14 @@ public class InventorySlot : MonoBehaviour
 
     public void OnRemoveButton()
     {
-        Inventory.instance.Remove(item);
+        inventory.Remove(item);
     }
 
     public void UseItem()
     {
         if(item != null)
         {
-            item.Use();
+            item.Use();            
         }
     }
 }

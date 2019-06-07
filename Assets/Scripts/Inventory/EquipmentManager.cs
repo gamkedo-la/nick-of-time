@@ -6,10 +6,14 @@ using TMPro;
 
 public class EquipmentManager : MonoBehaviour
 {
-    public static EquipmentManager instance;
+    //public static EquipmentManager instance;
 
     public GameObject Player;
+    public GameObject inventoryUI;
     private WeaponPossession weaponPossession;
+
+    
+    public Inventory inventory;
 
     public Image primaryWeaponSlot;
     public Image secondaryWeaponSlot;
@@ -22,11 +26,11 @@ public class EquipmentManager : MonoBehaviour
     public TextMeshProUGUI secondaryPotionSlotName;
 
 
-    Inventory inventory;
+   
 
     private void Awake()
     {
-        instance = this;
+        //instance = this;
         weaponPossession = Player.GetComponentInChildren<WeaponPossession>();
         primaryWeaponSlot.enabled = false;
         secondaryWeaponSlot.enabled = false;
@@ -41,11 +45,12 @@ public class EquipmentManager : MonoBehaviour
     {
         int numberOfSlots = System.Enum.GetNames(typeof(EquipmentSlot)).Length;
         currentEquipment = new Equipment[numberOfSlots];
-        inventory = Inventory.instance;
+        inventory = GetComponent<Inventory>();
     }
 
     public void Equip(Equipment newItem) 
     {
+        newItem.equipmentManager = this;
         int slotIndex = (int)newItem.equipSlot;
 
         Equipment oldItem = null;

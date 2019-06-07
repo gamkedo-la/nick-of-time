@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
+    /*
 # region Singleton
 
     public static Inventory instance;
@@ -12,12 +13,12 @@ public class Inventory : MonoBehaviour
     {
         instance = this;
     }
-    #endregion
+    #endregion*/
 
     public delegate void OnItemChanged();
     public OnItemChanged onItemChangedCallback;
 
-    public int space = 32;
+    public int space = 8;
 
     public List<Item> items = new List<Item>();
 
