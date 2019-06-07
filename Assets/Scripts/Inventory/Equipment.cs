@@ -3,9 +3,7 @@
 [CreateAssetMenu(fileName ="New Equipment", menuName = "Inventory/Equipment")]
 public class Equipment : Item
 {
-    public EquipmentSlot equipSlot;
-
-    public EquipmentManager equipmentManager;
+    public EquipmentSlot equipSlot;    
 
     public int damageModifier;
 

@@ -26,7 +26,7 @@ public class InventorySlot : MonoBehaviour
         icon.sprite = item.icon;
         icon.enabled = true;
         removeButton.interactable = true;
-        textMeshPro.text = item.name;
+        textMeshPro.text = item.name;        
     }
 
     public void ClearSlot() {

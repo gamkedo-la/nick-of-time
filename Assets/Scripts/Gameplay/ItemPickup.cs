@@ -24,7 +24,7 @@ public class ItemPickup : Interactable
         }
     }
 
-    public void OnTriggerEnter2D(Collider2D collider)
+    private void OnTriggerEnter2D(Collider2D collider)
     {
         inventory = collider.GetComponent<Inventory>();
         Debug.Log("collider belongs to " + collider.name);

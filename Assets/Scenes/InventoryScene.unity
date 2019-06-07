@@ -426,20 +426,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   space: 8
   items: []
---- !u!114 &74160664
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 74160656}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f8ab9cbf63038e44881bc3855687174, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  space: 8
-  items: []
 --- !u!114 &74160665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8944,6 +8930,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 0.3
   item: {fileID: 11400000, guid: 32caf8c624487694fbb02f53cd68622b, type: 2}
+  inventory: {fileID: 0}
 --- !u!58 &199160626
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -10897,7 +10884,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -411.59998, y: 8.6}
+  m_AnchoredPosition: {x: 424, y: 8.6}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &338825749
@@ -12368,7 +12355,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -417.62, y: -0.0000072122}
+  m_AnchoredPosition: {x: 417.97998, y: -0.0000072122}
   m_SizeDelta: {x: 213.82, y: 388.68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &460660349
@@ -21327,6 +21314,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 0.3
   item: {fileID: 11400000, guid: fedbad0a19f7ab54b9630dcad3200f17, type: 2}
+  inventory: {fileID: 0}
 --- !u!58 &1127975374
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -22325,7 +22313,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -411.6, y: -72.38}
+  m_AnchoredPosition: {x: 423.99997, y: -72.38}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &1300635490 stripped
@@ -26364,6 +26352,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 0.3
   item: {fileID: 11400000, guid: a93dad75d96df43459418d1c6d314428, type: 2}
+  inventory: {fileID: 0}
 --- !u!58 &1652581524
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -28889,6 +28878,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 0.3
   item: {fileID: 11400000, guid: b4a8857f5e7b59148850ddbc01e1fea6, type: 2}
+  inventory: {fileID: 0}
 --- !u!58 &1738663137
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -29293,6 +29283,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 0.3
   item: {fileID: 11400000, guid: 94c86b10df067f74686e77010e2bf681, type: 2}
+  inventory: {fileID: 0}
 --- !u!58 &1760583905
 CircleCollider2D:
   m_ObjectHideFlags: 0

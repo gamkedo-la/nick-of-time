@@ -7,6 +7,8 @@ public class Item : ScriptableObject
     public Sprite icon = null;
     public bool isDefaultItem = false;
 
+    public EquipmentManager equipmentManager;
+
     public virtual void Use()
     {
         //Use the item

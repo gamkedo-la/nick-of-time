@@ -33,6 +33,7 @@ public class Inventory : MonoBehaviour
             }
 
             items.Add(item);
+            item.equipmentManager = GetComponent<EquipmentManager>();
             if(onItemChangedCallback != null)
             {
                 onItemChangedCallback.Invoke();
