@@ -326,6 +326,43 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 464441686}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &53627063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53627062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f373e5e0fafa88e468a25b08d625f49a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 53627062}
+  inventoryUI: {fileID: 460660347}
+  inventory: {fileID: 0}
+  primaryWeaponSlot: {fileID: 1336079587}
+  secondaryWeaponSlot: {fileID: 875715321}
+  primaryPotionSlot: {fileID: 1879798061}
+  secondaryPotionSlot: {fileID: 917188701}
+  primaryWeaponSlotName: {fileID: 752594075}
+  secondaryWeaponSlotName: {fileID: 727518129}
+  primaryPotionSlotName: {fileID: 1771454472}
+  secondaryPotionSlotName: {fileID: 532843968}
+--- !u!114 &53627064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53627062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f8ab9cbf63038e44881bc3855687174, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  space: 8
+  items: []
 --- !u!1 &58329200
 GameObject:
   m_ObjectHideFlags: 0
@@ -11120,6 +11157,11 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2583242442991177272, guid: 484d22ec11521bc4094c7846c30c281a,
+        type: 3}
+      propertyPath: associatedPlayer
+      value: 
+      objectReference: {fileID: 53627062}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 484d22ec11521bc4094c7846c30c281a, type: 3}
 --- !u!224 &339360687 stripped
@@ -11937,6 +11979,11 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2583242442991177272, guid: 484d22ec11521bc4094c7846c30c281a,
+        type: 3}
+      propertyPath: associatedPlayer
+      value: 
+      objectReference: {fileID: 53627062}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 484d22ec11521bc4094c7846c30c281a, type: 3}
 --- !u!224 &435705915 stripped
@@ -12330,6 +12377,7 @@ GameObject:
   m_Component:
   - component: {fileID: 460660348}
   - component: {fileID: 460660349}
+  - component: {fileID: 460660350}
   m_Layer: 5
   m_Name: Inventory Player 2
   m_TagString: Untagged
@@ -12366,6 +12414,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 460660347}
   m_CullTransparentMesh: 0
+--- !u!114 &460660350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 460660347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a61a86c9cfbe0a4083ef3aeb4e713e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemsParent: {fileID: 601710991}
+  inventoryUI: {fileID: 460660347}
+  associatedPlayer: {fileID: 53627062}
 --- !u!1001 &464441686
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15466,6 +15529,11 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2583242442991177272, guid: 484d22ec11521bc4094c7846c30c281a,
+        type: 3}
+      propertyPath: associatedPlayer
+      value: 
+      objectReference: {fileID: 53627062}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 484d22ec11521bc4094c7846c30c281a, type: 3}
 --- !u!224 &626602036 stripped
@@ -18251,6 +18319,11 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2583242442991177272, guid: 484d22ec11521bc4094c7846c30c281a,
+        type: 3}
+      propertyPath: associatedPlayer
+      value: 
+      objectReference: {fileID: 53627062}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 484d22ec11521bc4094c7846c30c281a, type: 3}
 --- !u!224 &874789445 stripped
@@ -19976,6 +20049,11 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2583242442991177272, guid: 484d22ec11521bc4094c7846c30c281a,
+        type: 3}
+      propertyPath: associatedPlayer
+      value: 
+      objectReference: {fileID: 53627062}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 484d22ec11521bc4094c7846c30c281a, type: 3}
 --- !u!224 &977704583 stripped
@@ -47026,6 +47104,11 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2583242442991177272, guid: 484d22ec11521bc4094c7846c30c281a,
+        type: 3}
+      propertyPath: associatedPlayer
+      value: 
+      objectReference: {fileID: 53627062}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 484d22ec11521bc4094c7846c30c281a, type: 3}
 --- !u!224 &1807409586 stripped
@@ -54629,6 +54712,11 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2583242442991177272, guid: 484d22ec11521bc4094c7846c30c281a,
+        type: 3}
+      propertyPath: associatedPlayer
+      value: 
+      objectReference: {fileID: 53627062}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 484d22ec11521bc4094c7846c30c281a, type: 3}
 --- !u!224 &1969413899 stripped
@@ -56093,6 +56181,11 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2583242442991177272, guid: 484d22ec11521bc4094c7846c30c281a,
+        type: 3}
+      propertyPath: associatedPlayer
+      value: 
+      objectReference: {fileID: 53627062}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 484d22ec11521bc4094c7846c30c281a, type: 3}
 --- !u!224 &2066617094 stripped
