@@ -9782,12 +9782,17 @@ PrefabInstance:
     - target: {fileID: 3329497469656580619, guid: f34ad73bca23e694585b0119f5a1682a,
         type: 3}
       propertyPath: pushActionDeplete
-      value: 0.025
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 3329497469656580619, guid: f34ad73bca23e694585b0119f5a1682a,
         type: 3}
       propertyPath: regenerateActionPointsPerSec
       value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3329497469656580619, guid: f34ad73bca23e694585b0119f5a1682a,
+        type: 3}
+      propertyPath: throwInput
+      value: Throw2
       objectReference: {fileID: 0}
     - target: {fileID: 2579037237340339661, guid: f34ad73bca23e694585b0119f5a1682a,
         type: 3}
@@ -10116,7 +10121,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 100
+  m_Mass: 50
   m_LinearDrag: 50
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -12047,7 +12052,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 100
+  m_Mass: 50
   m_LinearDrag: 50
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -12302,7 +12307,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 100
+  m_Mass: 50
   m_LinearDrag: 50
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -19986,7 +19991,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 100
+  m_Mass: 50
   m_LinearDrag: 50
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -57365,7 +57370,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 100
+  m_Mass: 50
   m_LinearDrag: 50
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -66463,16 +66468,6 @@ PrefabInstance:
     - target: {fileID: 1148393954563092509, guid: f34ad73bca23e694585b0119f5a1682a,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1148393954563092510, guid: f34ad73bca23e694585b0119f5a1682a,
-        type: 3}
-      propertyPath: m_FlipX
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8663847312133633213, guid: f34ad73bca23e694585b0119f5a1682a,
-        type: 3}
-      propertyPath: m_FlipX
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1148393954563092481, guid: f34ad73bca23e694585b0119f5a1682a,

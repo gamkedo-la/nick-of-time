@@ -295,12 +295,14 @@ MonoBehaviour:
   regenerateActionPointsPerSec: 0.2
   attackActionDeplete: 0.25
   dashActionDeplete: 0.1
-  pushActionDeplete: 0.025
+  pushActionDeplete: 0.05
+  throwActionDeplete: 0.1
   walkVerticalInput: Vertical1
   walkHorizontalInput: Horizontal1
   attackInput: Fire1
   dashInput: Dash1
   pushInput: Push1
+  throwInput: Throw1
   attackSound: {fileID: 8300000, guid: 32ed1d859f4d34a41a11b51400612384, type: 3}
   dashSound: {fileID: 8300000, guid: f8a4e4e3090eccc478baddaf7213dd10, type: 3}
   actionPoints: 1

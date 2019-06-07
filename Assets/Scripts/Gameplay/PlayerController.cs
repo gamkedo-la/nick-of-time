@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
 	public float attackActionDeplete = 0.4f;
 	public float dashActionDeplete = 0.25f;
 	public float pushActionDeplete = 0.1f;
+	public float throwActionDeplete = 0.1f;
 
 	[Space]
 	public string walkVerticalInput = "Vertical";
@@ -26,6 +27,7 @@ public class PlayerController : MonoBehaviour
 	public string attackInput = "Fire1";
 	public string dashInput = "Jump";
 	public string pushInput = "Push1";
+	public string throwInput = "Throw1";
 
 	[Space]
 	public AudioClip attackSound;
@@ -65,7 +67,7 @@ public class PlayerController : MonoBehaviour
 	{
 		if (Time.timeScale > 0f)
 		{
-			if (!animator.GetBool("isAttacking") && !isDashing && !animator.GetBool("isPushing"))
+			if (!animator.GetBool("isAttacking") && !animator.GetBool("isPushing") && !animator.GetBool("isThrowing") && !isDashing)
 			{
 				walkInput = new Vector2(Input.GetAxisRaw(walkHorizontalInput), Input.GetAxisRaw(walkVerticalInput));
 
@@ -105,6 +107,7 @@ public class PlayerController : MonoBehaviour
 			if (actionPoints >= attackActionDeplete
 				&& !animator.GetBool("isAttacking")
 				&& !animator.GetBool("isPushing")
+				&& !animator.GetBool("isThrowing")
 				&& !isDashing
 				&& Input.GetButtonDown(attackInput))
 			{                
@@ -168,6 +171,7 @@ public class PlayerController : MonoBehaviour
 				&& !isDashing
 				&& !animator.GetBool("isAttacking")
 				&& !animator.GetBool("isPushing")
+				&& !animator.GetBool("isThrowing")
 				&& Input.GetButtonDown(dashInput)
 				&& hitCheck.knockback == Vector2.zero)
 			{
@@ -204,12 +208,31 @@ public class PlayerController : MonoBehaviour
 			*/
 
 			//Push
-			if (!animator.GetBool("isAttacking")
+			if(!animator.GetBool("isPushing")
+			&& !animator.GetBool("isAttacking")
+			&& !animator.GetBool("isThrowing")
 			&& !isDashing
 			&& Input.GetButtonDown(pushInput))
 			{
 				animator.SetBool("isPushing", true);
 				speed = 0f;
+
+				actionPoints -= pushActionDeplete;
+			}
+
+			//Throw
+			if(!animator.GetBool("isThrowing")
+			&& !animator.GetBool("isAttacking")
+			&& !animator.GetBool("isPushing")
+			&& !isDashing
+			&& Input.GetButtonDown(throwInput))
+			{
+				animator.SetBool("isThrowing", true);
+				speed = attackSpeed;
+
+				attackSpeedTimer = attackSpeedTime / 2f;
+
+				actionPoints -= throwActionDeplete;
 			}
 
 			if (actionPoints < 1f)
@@ -243,7 +266,7 @@ public class PlayerController : MonoBehaviour
 				}
 			}
 			
-			if (animator.GetBool("isAttacking") && attackSpeedTimer <= 0f)
+			if ((animator.GetBool("isAttacking") || animator.GetBool("isThrowing")) && attackSpeedTimer <= 0f)
 			{
 				speed = 0f;
 			}
@@ -256,7 +279,7 @@ public class PlayerController : MonoBehaviour
 
 	private void pushOnCollision(Collision2D collision)
 	{
-		if (animator.GetBool("isPushing") == true)
+		if (animator.GetBool("isPushing") == true && collision.gameObject.isStatic == false)
 		{
 			Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
 			if (rb != null)
@@ -285,6 +308,8 @@ public class PlayerController : MonoBehaviour
 				}
 				rb.AddForce(force, ForceMode2D.Impulse);
 			}
+
+			collision.gameObject.AddComponent<PushedObject>();
 		}
 	}
 
@@ -311,6 +336,7 @@ public class PlayerController : MonoBehaviour
 			stopAttacking();
 			stopDashing();
 			stopPushing();
+			stopThrowing();
 		}
 
 		if (Mathf.Abs(hitCheck.knockback.x) > Mathf.Abs(hitCheck.knockbackSlowDown))
@@ -338,5 +364,12 @@ public class PlayerController : MonoBehaviour
 	public void stopPushing()
 	{
 		animator.SetBool("isPushing", false);
+	}
+
+	public void stopThrowing()
+	{
+		animator.SetBool("isThrowing", false);
+
+		attackSpeedTimer = 0f;
 	}
 }
