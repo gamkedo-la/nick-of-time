@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
 	public float dashTime = 0.2f;
 	public GameObject dashFXObject;
 	public float pushForce = 500f;
+	public float throwSpeed = 2f;
 
 	[Space]
 	public float regenerateActionPointsPerSec = 0.025f;
@@ -355,8 +356,78 @@ public class PlayerController : MonoBehaviour
 		attackSpeedTimer = 0f;
 	}
 
+	public Vector3 GetAbsolutePosition(GameObject go)
+	{
+		Vector3 position = Vector3.zero;
+
+		Transform p = go.transform.parent;
+		while (p != null)
+		{
+			position += p.position;
+			p = p.transform.parent;
+		}
+
+		position += go.transform.position;
+
+		return position;
+	}
+
+	public Quaternion GetAbsoluteRotation(GameObject go)
+	{
+		Quaternion rotation = Quaternion.identity;
+
+		Transform p = go.transform.parent;
+		while (p != null)
+		{
+			rotation = Quaternion.Euler(0f, 0f, rotation.eulerAngles.z + p.rotation.eulerAngles.z);
+			p = p.transform.parent;
+		}
+
+		rotation = Quaternion.Euler(0f, 0f, rotation.eulerAngles.z + go.transform.rotation.eulerAngles.z);
+
+		return rotation;
+	}
+
 	public void throwWeapon()
 	{
-		weaponPossession.weaponID = -1;
+		if (weaponPossession.weaponID > -1)
+		{
+			GameObject thrownObject = Instantiate(weaponPossession.gameObject, transform.position, Quaternion.Euler(0f,0f,0f));
+			ThrownObject thrownObjectScript = thrownObject.AddComponent<ThrownObject>();
+
+			thrownObjectScript.startPos = weaponPossession.transform.position;
+			thrownObject.transform.localScale = new Vector2(2f, 2f);
+
+			thrownObjectScript.breakableBreaksOnCollision = weaponPossession.weaponID == 0 ? false : true;
+
+			Vector3 velocity = Vector3.zero;
+			int dir = animator.GetInteger("direction");
+			if (dir == 0)
+			{
+				velocity.x = 0;
+				velocity.y = throwSpeed;
+				thrownObject.transform.rotation = Quaternion.Euler(0f, 0f, -90f);
+			}
+			else if (dir == 1)
+			{
+				velocity.x = throwSpeed;
+				velocity.y = 0;
+			}
+			else if (dir == 2)
+			{
+				velocity.x = 0;
+				velocity.y = -throwSpeed;
+				thrownObject.transform.rotation = Quaternion.Euler(0f, 0f, 90f);
+			}
+			else if (dir == 3)
+			{
+				velocity.x = -throwSpeed;
+				velocity.y = 0;
+			}
+			thrownObjectScript.throwVelocity = velocity;
+			thrownObjectScript.throwRotation = 0f;
+
+			weaponPossession.weaponID = -1;
+		}
 	}
 }

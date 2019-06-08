@@ -23,7 +23,7 @@ public class WeaponPossession : MonoBehaviour {
 	
 	private SpriteRenderer sprRenderer;
 	private BoxCollider2D collider;
-	private SpriteRenderer playerRenderer;
+	//private SpriteRenderer playerRenderer;
 	
 	//0 = Dagger
 	//1 = Katana
@@ -32,7 +32,7 @@ public class WeaponPossession : MonoBehaviour {
 	{
 		sprRenderer = GetComponent<SpriteRenderer>();
 		collider = GetComponent<BoxCollider2D>();
-		playerRenderer = transform.parent.parent.parent.GetComponent<SpriteRenderer>();
+		//playerRenderer = transform.parent.parent.parent.GetComponent<SpriteRenderer>();
 	}
 
 	void Update ()
@@ -56,8 +56,5 @@ public class WeaponPossession : MonoBehaviour {
 			
 			prevWeaponID = weaponID;
 		}
-
-		//if (sprRenderer.flipX) collider.offset = new Vector2(Mathf.Abs(collider.offset.x), collider.offset.y);
-		//else collider.offset = new Vector2(-Mathf.Abs(collider.offset.x), collider.offset.y);
 	}
 }

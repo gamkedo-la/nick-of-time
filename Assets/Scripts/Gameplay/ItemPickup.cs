@@ -32,4 +32,12 @@ public class ItemPickup : Interactable
         Interact();
     }
 
+	private void OnCollisionEnter2D(Collision2D collision)
+	{
+		inventory = collision.gameObject.GetComponent<Inventory>();
+		Debug.Log("collision belongs to " + collision.gameObject.name);
+		Debug.Log("Inventory belongs to " + inventory.gameObject.name);
+		Interact();
+	}
+
 }
