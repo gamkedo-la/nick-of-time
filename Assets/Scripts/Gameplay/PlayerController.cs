@@ -9,10 +9,21 @@ public class PlayerController : MonoBehaviour
 	public float attackSpeedTime = 0.1f;
 	public float dashSpeed = 3f;
 	public float dashTime = 0.2f;
-	public GameObject dashFXObject;
 	public float pushForce = 500f;
 	public float throwSpeed = 2f;
 
+	[Space]
+	public GameObject dashFXObject;
+	public GameObject attackFXObject;
+	public GameObject pushFXObject;
+	public GameObject throwFXObject;
+	public GameObject regenerateFXObject;
+	public GameObject walkFXObject;
+
+	// seconds between FX particles while pushing, dashing etc			
+	private const float MINIMUM_TIME_BETWEEN_FX = 0.5f; 
+	private float nextFXdelay = 0f; // so we don't spam FX every frame
+	
 	[Space]
 	public float regenerateActionPointsPerSec = 0.025f;
 
@@ -67,6 +78,8 @@ public class PlayerController : MonoBehaviour
 
 	private void Update()
 	{
+		nextFXdelay -= Time.deltaTime; // don't spam FX every frame
+		
 		if (Time.timeScale > 0f)
 		{
 			if (!animator.GetBool("isAttacking") && !animator.GetBool("isPushing") && !animator.GetBool("isThrowing") && !isDashing)
@@ -218,6 +231,11 @@ public class PlayerController : MonoBehaviour
 				attackSpeedTimer = attackSpeedTime / 2f;
 
 				actionPoints -= throwActionDeplete;
+
+				if (throwFXObject && nextFXdelay<0f) {
+					GameObject FX = Instantiate(throwFXObject, transform.position, Quaternion.Euler(0f,0f,0f));
+					nextFXdelay = MINIMUM_TIME_BETWEEN_FX;
+				}
 			}
 
 			if (actionPoints < 1f)
@@ -236,6 +254,11 @@ public class PlayerController : MonoBehaviour
 				GameObject ghostSpriteFX = Instantiate(dashFXObject, transform.position, Quaternion.Euler(0f,0f,0f));
 
 				SpriteRenderer GSFX_sprRend = ghostSpriteFX.GetComponent<SpriteRenderer>();
+
+				if (dashFXObject && nextFXdelay<0f) {
+					GameObject FX = Instantiate(dashFXObject, transform.position, Quaternion.Euler(0f,0f,0f));
+					nextFXdelay = MINIMUM_TIME_BETWEEN_FX;
+				}
 
 				GSFX_sprRend.sprite = sprRenderer.sprite;
 
@@ -266,6 +289,12 @@ public class PlayerController : MonoBehaviour
 	{
 		if (animator.GetBool("isPushing") == true && collision.gameObject.isStatic == false)
 		{
+			
+			if (pushFXObject && nextFXdelay<0f) {
+				GameObject FX = Instantiate(pushFXObject, transform.position, Quaternion.Euler(0f,0f,0f));
+				nextFXdelay = MINIMUM_TIME_BETWEEN_FX;
+			}
+			
 			Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
 			if (rb != null)
 			{
@@ -392,6 +421,11 @@ public class PlayerController : MonoBehaviour
 	{
 		if (weaponPossession.weaponID > -1)
 		{
+			if (throwFXObject && nextFXdelay<0f) {
+				GameObject FX = Instantiate(throwFXObject, transform.position, Quaternion.Euler(0f,0f,0f));
+				nextFXdelay = MINIMUM_TIME_BETWEEN_FX;
+			}
+
 			GameObject thrownObject = Instantiate(weaponPossession.gameObject, transform.position, Quaternion.Euler(0f,0f,0f));
 			ThrownObject thrownObjectScript = thrownObject.AddComponent<ThrownObject>();
 
