@@ -68018,6 +68018,11 @@ PrefabInstance:
       propertyPath: pl2
       value: 
       objectReference: {fileID: 53627062}
+    - target: {fileID: 8479785457308306589, guid: ed0fc656d5f7d0840ba8795c183865a3,
+        type: 3}
+      propertyPath: proceedInput2
+      value: Jump
+      objectReference: {fileID: 0}
     - target: {fileID: 8479785458082677517, guid: ed0fc656d5f7d0840ba8795c183865a3,
         type: 3}
       propertyPath: tr

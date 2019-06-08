@@ -6482,6 +6482,7 @@ MonoBehaviour:
     - obj: {fileID: 631907478}
       disableAfterLeaving: 1
     enemySpawnObject: {fileID: 0}
+    minimapTilemap: {fileID: 0}
     triggerTimer: 0
     isObjectsActivationDone: 0
     isEnemySpawnDone: 0
@@ -6494,6 +6495,7 @@ MonoBehaviour:
     - obj: {fileID: 819258075}
       disableAfterLeaving: 1
     enemySpawnObject: {fileID: 0}
+    minimapTilemap: {fileID: 0}
     triggerTimer: 0
     isObjectsActivationDone: 0
     isEnemySpawnDone: 0
@@ -6508,6 +6510,7 @@ MonoBehaviour:
     - obj: {fileID: 173072867}
       disableAfterLeaving: 0
     enemySpawnObject: {fileID: 0}
+    minimapTilemap: {fileID: 0}
     triggerTimer: 0
     isObjectsActivationDone: 0
     isEnemySpawnDone: 0
@@ -6520,6 +6523,7 @@ MonoBehaviour:
     - obj: {fileID: 842020135}
       disableAfterLeaving: 1
     enemySpawnObject: {fileID: 0}
+    minimapTilemap: {fileID: 0}
     triggerTimer: 0
     isObjectsActivationDone: 0
     isEnemySpawnDone: 0
@@ -6534,6 +6538,7 @@ MonoBehaviour:
     - obj: {fileID: 1495102725}
       disableAfterLeaving: 0
     enemySpawnObject: {fileID: 0}
+    minimapTilemap: {fileID: 0}
     triggerTimer: 0
     isObjectsActivationDone: 0
     isEnemySpawnDone: 0
@@ -6547,6 +6552,7 @@ MonoBehaviour:
       disableAfterLeaving: 1
     enemySpawnObject: {fileID: 1896489951412202, guid: 5be2b70a812d64a41ae96ac91778a708,
       type: 3}
+    minimapTilemap: {fileID: 0}
     triggerTimer: 0
     isObjectsActivationDone: 0
     isEnemySpawnDone: 0
@@ -6560,6 +6566,7 @@ MonoBehaviour:
       disableAfterLeaving: 1
     enemySpawnObject: {fileID: 1896489951412202, guid: 5be2b70a812d64a41ae96ac91778a708,
       type: 3}
+    minimapTilemap: {fileID: 0}
     triggerTimer: 0
     isObjectsActivationDone: 0
     isEnemySpawnDone: 0
@@ -6572,6 +6579,7 @@ MonoBehaviour:
     - obj: {fileID: 854807316}
       disableAfterLeaving: 1
     enemySpawnObject: {fileID: 0}
+    minimapTilemap: {fileID: 0}
     triggerTimer: 0
     isObjectsActivationDone: 0
     isEnemySpawnDone: 0
@@ -6587,6 +6595,7 @@ MonoBehaviour:
       disableAfterLeaving: 1
     enemySpawnObject: {fileID: 1896489951412202, guid: 5be2b70a812d64a41ae96ac91778a708,
       type: 3}
+    minimapTilemap: {fileID: 0}
     triggerTimer: 0
     isObjectsActivationDone: 0
     isEnemySpawnDone: 0
@@ -6599,6 +6608,7 @@ MonoBehaviour:
     - obj: {fileID: 137510486}
       disableAfterLeaving: 1
     enemySpawnObject: {fileID: 0}
+    minimapTilemap: {fileID: 0}
     triggerTimer: 0
     isObjectsActivationDone: 0
     isEnemySpawnDone: 0
@@ -6612,6 +6622,7 @@ MonoBehaviour:
       disableAfterLeaving: 1
     enemySpawnObject: {fileID: 1896489951412202, guid: 5be2b70a812d64a41ae96ac91778a708,
       type: 3}
+    minimapTilemap: {fileID: 0}
     triggerTimer: 0
     isObjectsActivationDone: 0
     isEnemySpawnDone: 0
@@ -6625,6 +6636,7 @@ MonoBehaviour:
       disableAfterLeaving: 1
     enemySpawnObject: {fileID: 1896489951412202, guid: 5be2b70a812d64a41ae96ac91778a708,
       type: 3}
+    minimapTilemap: {fileID: 0}
     triggerTimer: 0
     isObjectsActivationDone: 0
     isEnemySpawnDone: 0
@@ -6637,6 +6649,7 @@ MonoBehaviour:
     - obj: {fileID: 1251883687}
       disableAfterLeaving: 1
     enemySpawnObject: {fileID: 0}
+    minimapTilemap: {fileID: 0}
     triggerTimer: 0
     isObjectsActivationDone: 0
     isEnemySpawnDone: 0
