@@ -378,6 +378,7 @@ MonoBehaviour:
   itemsParent: {fileID: 2036268201}
   inventoryUI: {fileID: 660761804}
   associatedPlayer: {fileID: 53627062}
+  inventoryOpen: Inventory2
 --- !u!1 &58329200
 GameObject:
   m_ObjectHideFlags: 0
@@ -493,6 +494,7 @@ MonoBehaviour:
   itemsParent: {fileID: 1184305221}
   inventoryUI: {fileID: 1304249830}
   associatedPlayer: {fileID: 74160656}
+  inventoryOpen: Inventory1
 --- !u!114 &74160665
 MonoBehaviour:
   m_ObjectHideFlags: 0

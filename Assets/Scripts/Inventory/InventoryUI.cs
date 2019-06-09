@@ -9,6 +9,8 @@ public class InventoryUI : MonoBehaviour
 
     public GameObject associatedPlayer;
 
+    public string inventoryOpen = "Inventory1";
+
     Inventory inventory;
 
     InventorySlot[] slots;
@@ -25,12 +27,21 @@ public class InventoryUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Inventory1"))
+        if (Input.GetButtonDown(inventoryOpen))
         {
             inventoryUI.SetActive(!inventoryUI.activeSelf);
-            
-                slots[0].GetComponentInChildren<Button>().Select();
+
+            slots[0].GetComponentInChildren<Button>().Select();
         }
+        if (inventoryUI.activeSelf)
+        {
+            GetComponent<PlayerController>().enabled = false;
+        }
+        else
+        {
+            GetComponent<PlayerController>().enabled = true;
+        }
+
     }
 
     void UpdateUI()
@@ -38,7 +49,7 @@ public class InventoryUI : MonoBehaviour
         Debug.Log("UPDATING UI");
         for (int i = 0; i < slots.Length; i++)
         {
-            if(i < inventory.items.Count)
+            if (i < inventory.items.Count)
             {
                 slots[i].AddItem(inventory.items[i]);
             }
