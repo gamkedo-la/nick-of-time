@@ -17,11 +17,9 @@ public class PlayerController : MonoBehaviour
 	public GameObject attackFXObject;
 	public GameObject pushFXObject;
 	public GameObject throwFXObject;
-	public GameObject regenerateFXObject;
 	public GameObject walkFXObject;
 
-	// seconds between FX particles while pushing, dashing etc			
-	private const float MINIMUM_TIME_BETWEEN_FX = 0.5f; 
+	private const float MINIMUM_TIME_BETWEEN_FX = 0.25f; // seconds between FX
 	private float nextFXdelay = 0f; // so we don't spam FX every frame
 	
 	[Space]
