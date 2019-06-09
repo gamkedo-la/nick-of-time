@@ -339,13 +339,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 53627062}
-  inventoryUI: {fileID: 0}
+  inventoryUI: {fileID: 660761804}
   inventory: {fileID: 0}
-  primaryWeaponSlot: {fileID: 0}
-  secondaryWeaponSlot: {fileID: 0}
+  primaryWeaponSlot: {fileID: 751086583}
+  secondaryWeaponSlot: {fileID: 1177410926}
   primaryPotionSlot: {fileID: 0}
   secondaryPotionSlot: {fileID: 0}
-  primaryWeaponSlotName: {fileID: 0}
+  primaryWeaponSlotName: {fileID: 1085702992}
   secondaryWeaponSlotName: {fileID: 0}
   primaryPotionSlotName: {fileID: 0}
   secondaryPotionSlotName: {fileID: 0}
@@ -1187,7 +1187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalAxis: Horizontal1
   m_VerticalAxis: Vertical1
-  m_SubmitButton: Submit
+  m_SubmitButton: Submit1
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
@@ -17010,7 +17010,7 @@ GameObject:
   - component: {fileID: 751086584}
   - component: {fileID: 751086583}
   m_Layer: 5
-  m_Name: Icon
+  m_Name: PrimaryWeaponIcon P2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20754,7 +20754,7 @@ GameObject:
   - component: {fileID: 1085702993}
   - component: {fileID: 1085702992}
   m_Layer: 5
-  m_Name: Item Name
+  m_Name: PrimaryEquipSlotName P2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21791,7 +21791,7 @@ GameObject:
   - component: {fileID: 1177410927}
   - component: {fileID: 1177410926}
   m_Layer: 5
-  m_Name: Icon
+  m_Name: SecondaryWeaponIcon P2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30078,7 +30078,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalAxis: Horizontal2
   m_VerticalAxis: Vertical2
-  m_SubmitButton: Submit
+  m_SubmitButton: Submit2
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
