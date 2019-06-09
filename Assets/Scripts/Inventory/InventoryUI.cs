@@ -29,7 +29,7 @@ public class InventoryUI : MonoBehaviour
         {
             inventoryUI.SetActive(!inventoryUI.activeSelf);
             
-                slots[0].GetComponentInChildren<Button>().Select();            
+                slots[0].GetComponentInChildren<Button>().Select();
         }
     }
 
