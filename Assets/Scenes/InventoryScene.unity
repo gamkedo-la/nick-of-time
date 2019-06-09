@@ -343,12 +343,12 @@ MonoBehaviour:
   inventory: {fileID: 0}
   primaryWeaponSlot: {fileID: 751086583}
   secondaryWeaponSlot: {fileID: 1177410926}
-  primaryPotionSlot: {fileID: 0}
-  secondaryPotionSlot: {fileID: 0}
+  primaryPotionSlot: {fileID: 1329725620}
+  secondaryPotionSlot: {fileID: 1930902962}
   primaryWeaponSlotName: {fileID: 1085702992}
-  secondaryWeaponSlotName: {fileID: 0}
-  primaryPotionSlotName: {fileID: 0}
-  secondaryPotionSlotName: {fileID: 0}
+  secondaryWeaponSlotName: {fileID: 1168118861}
+  primaryPotionSlotName: {fileID: 357651772}
+  secondaryPotionSlotName: {fileID: 862750990}
 --- !u!114 &53627064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11452,7 +11452,7 @@ GameObject:
   - component: {fileID: 357651773}
   - component: {fileID: 357651772}
   m_Layer: 5
-  m_Name: Item Name
+  m_Name: PrimaryPotionName P2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18151,7 +18151,7 @@ GameObject:
   - component: {fileID: 862750991}
   - component: {fileID: 862750990}
   m_Layer: 5
-  m_Name: Item Name
+  m_Name: SecondayPotionSlotName P2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21633,7 +21633,7 @@ GameObject:
   - component: {fileID: 1168118862}
   - component: {fileID: 1168118861}
   m_Layer: 5
-  m_Name: Item Name
+  m_Name: SecondaryEquipSlotName P2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23036,7 +23036,7 @@ GameObject:
   - component: {fileID: 1329725621}
   - component: {fileID: 1329725620}
   m_Layer: 5
-  m_Name: Icon
+  m_Name: PrimaryPotionIcon P2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53518,7 +53518,7 @@ GameObject:
   - component: {fileID: 1930902963}
   - component: {fileID: 1930902962}
   m_Layer: 5
-  m_Name: Icon
+  m_Name: SecondaryPotionIcon P2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
