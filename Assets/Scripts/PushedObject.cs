@@ -14,7 +14,9 @@ public class PushedObject : MonoBehaviour
 	
     void Update()
     {
-    }
+		if (rb.velocity == Vector2.zero)
+			Destroy(this);
+	}
 
 	private void OnCollisionEnter2D(Collision2D collision)
 	{

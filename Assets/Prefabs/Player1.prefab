@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 1148393954563092487}
   - component: {fileID: 3329497469656580619}
   - component: {fileID: 1148393954563092481}
+  - component: {fileID: 74160657}
   m_Layer: 8
   m_Name: Player1
   m_TagString: Player
@@ -66,8 +67,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1148393955804010739}
-  - {fileID: 8144935541084721335}
   - {fileID: 8531208708176992865}
+  - {fileID: 8144935541084721335}
   - {fileID: 1103091295746358210}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -289,10 +290,15 @@ MonoBehaviour:
   attackSpeedTime: 0.1
   dashSpeed: 7
   dashTime: 0.1
-  dashFXObject: {fileID: 2643976167619289179, guid: d16b468af7e8e1a49a14edc85440334d,
-    type: 3}
   pushForce: 500
   throwSpeed: 4
+  dashFXObject: {fileID: 2643976167619289179, guid: d16b468af7e8e1a49a14edc85440334d,
+    type: 3}
+  attackFXObject: {fileID: 0}
+  pushFXObject: {fileID: 0}
+  throwFXObject: {fileID: 0}
+  regenerateFXObject: {fileID: 0}
+  walkFXObject: {fileID: 0}
   regenerateActionPointsPerSec: 0.2
   attackActionDeplete: 0.25
   dashActionDeplete: 0.1
@@ -333,6 +339,19 @@ MonoBehaviour:
   knockback: {x: 0, y: 0}
   HPBarJointCamera: {fileID: 0}
   HPBarSoloCamera: {fileID: 0}
+--- !u!114 &74160657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148393954563092511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baded9fd5e811249b20621c5a6c0337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
 --- !u!1 &1148393955804010700
 GameObject:
   m_ObjectHideFlags: 0
@@ -440,7 +459,7 @@ Transform:
   m_LocalScale: {x: 1.5, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1148393954563092509}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &398308154600217458
 SpriteRenderer:
@@ -550,7 +569,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1148393954563092509}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &630805151483399286
 Light:

@@ -184,6 +184,7 @@ GameObject:
   - component: {fileID: 19519000}
   - component: {fileID: 19518999}
   - component: {fileID: 19519001}
+  - component: {fileID: 19519002}
   m_Layer: 0
   m_Name: BarrelOpen1 (6)
   m_TagString: Untagged
@@ -316,18 +317,135 @@ MonoBehaviour:
   enablePiecesParticles: 0
   pieces:
   - {fileID: 1580847455321010, guid: 2d8da81083ca09b4abade2d65dc3c732, type: 3}
+--- !u!114 &19519002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 19518996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baded9fd5e811249b20621c5a6c0337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
 --- !u!1 &36308672 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4595282840259811506, guid: 39e15d1014de6aa44b2b9ad40c3cd01b,
     type: 3}
   m_PrefabInstance: {fileID: 4595282840291663474}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &53439913
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 53439914}
+  - component: {fileID: 53439915}
+  m_Layer: 0
+  m_Name: Spot Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &53439914
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53439913}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.9, y: -0.82, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1237851672}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!108 &53439915
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53439913}
+  m_Enabled: 1
+  serializedVersion: 9
+  m_Type: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_Range: 5
+  m_SpotAngle: 100
+  m_InnerSpotAngle: 1
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1 &53627062 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1148393954563092511, guid: f34ad73bca23e694585b0119f5a1682a,
     type: 3}
   m_PrefabInstance: {fileID: 464441686}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &53627063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53627062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baded9fd5e811249b20621c5a6c0337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
 --- !u!4 &64490248 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1167263678006678917, guid: 47fc17e7ba01dfa4ca48c88ab81f0cc8,
@@ -6270,6 +6388,7 @@ GameObject:
   - component: {fileID: 211269401}
   - component: {fileID: 211269400}
   - component: {fileID: 211269402}
+  - component: {fileID: 211269403}
   m_Layer: 0
   m_Name: BarrelClose1 (14)
   m_TagString: Untagged
@@ -6402,6 +6521,19 @@ MonoBehaviour:
   enablePiecesParticles: 0
   pieces:
   - {fileID: 1580847455321010, guid: 2d8da81083ca09b4abade2d65dc3c732, type: 3}
+--- !u!114 &211269403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211269397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baded9fd5e811249b20621c5a6c0337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
 --- !u!1 &224268523
 GameObject:
   m_ObjectHideFlags: 0
@@ -6415,6 +6547,7 @@ GameObject:
   - component: {fileID: 224268527}
   - component: {fileID: 224268526}
   - component: {fileID: 224268528}
+  - component: {fileID: 224268529}
   m_Layer: 0
   m_Name: BarrelOpen1
   m_TagString: Untagged
@@ -6547,6 +6680,19 @@ MonoBehaviour:
   enablePiecesParticles: 0
   pieces:
   - {fileID: 1580847455321010, guid: 2d8da81083ca09b4abade2d65dc3c732, type: 3}
+--- !u!114 &224268529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 224268523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baded9fd5e811249b20621c5a6c0337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
 --- !u!1 &232268000
 GameObject:
   m_ObjectHideFlags: 0
@@ -6875,6 +7021,7 @@ GameObject:
   - component: {fileID: 252611633}
   - component: {fileID: 252611632}
   - component: {fileID: 252611634}
+  - component: {fileID: 252611635}
   m_Layer: 0
   m_Name: BarrelOpen1 (10)
   m_TagString: Untagged
@@ -7007,6 +7154,19 @@ MonoBehaviour:
   enablePiecesParticles: 0
   pieces:
   - {fileID: 1580847455321010, guid: 2d8da81083ca09b4abade2d65dc3c732, type: 3}
+--- !u!114 &252611635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252611629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baded9fd5e811249b20621c5a6c0337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
 --- !u!1 &264100736
 GameObject:
   m_ObjectHideFlags: 0
@@ -7182,6 +7342,7 @@ GameObject:
   - component: {fileID: 269769788}
   - component: {fileID: 269769787}
   - component: {fileID: 269769786}
+  - component: {fileID: 269769790}
   m_Layer: 0
   m_Name: Table1 (3)
   m_TagString: Untagged
@@ -7314,6 +7475,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &269769790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269769784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baded9fd5e811249b20621c5a6c0337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
 --- !u!1 &273460770
 GameObject:
   m_ObjectHideFlags: 0
@@ -7327,6 +7501,7 @@ GameObject:
   - component: {fileID: 273460774}
   - component: {fileID: 273460773}
   - component: {fileID: 273460775}
+  - component: {fileID: 273460776}
   m_Layer: 0
   m_Name: BarrelClose1 (7)
   m_TagString: Untagged
@@ -7459,6 +7634,160 @@ MonoBehaviour:
   enablePiecesParticles: 0
   pieces:
   - {fileID: 1580847455321010, guid: 2d8da81083ca09b4abade2d65dc3c732, type: 3}
+--- !u!114 &273460776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273460770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baded9fd5e811249b20621c5a6c0337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
+--- !u!1 &276514685
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 276514689}
+  - component: {fileID: 276514688}
+  - component: {fileID: 276514687}
+  - component: {fileID: 276514686}
+  m_Layer: 0
+  m_Name: Indicator (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &276514686
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276514685}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.16}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.06, y: 0.06}
+  m_EdgeRadius: 0
+--- !u!114 &276514687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276514685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee871060e0130a643b794747d14a2342, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 1
+  type: 0
+  offSprite: {fileID: -2811199446297376348, guid: 34598534baca0b4409852a5bde8d4b1f,
+    type: 3}
+  onSprite: {fileID: -6253594706239539487, guid: 34598534baca0b4409852a5bde8d4b1f,
+    type: 3}
+  offObjects: []
+  onObjects: []
+  keepOffObjectsInactive: 0
+  keepOnObjectsActive: 0
+  enableConditions: 1
+  OR:
+  - {fileID: 1960343538}
+  AND: []
+  NOT: 1
+  noEffectWhenOn: 0
+  noEffectWhenOff: 0
+  updateOnStateChange: []
+  rebound: 0
+  weightRequired: 1
+  refresh: 0
+--- !u!212 &276514688
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276514685}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 37efaa681c6aa3040a7b7c8146f09c50, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 5
+  m_Sprite: {fileID: -6253594706239539487, guid: 34598534baca0b4409852a5bde8d4b1f,
+    type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.16, y: 0.16}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &276514689
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276514685}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.348, y: -0.499, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1237851672}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &283311303
 GameObject:
   m_ObjectHideFlags: 0
@@ -7472,6 +7801,7 @@ GameObject:
   - component: {fileID: 283311307}
   - component: {fileID: 283311306}
   - component: {fileID: 283311308}
+  - component: {fileID: 283311309}
   m_Layer: 0
   m_Name: Rock1 (5)
   m_TagString: Untagged
@@ -7604,6 +7934,19 @@ MonoBehaviour:
   enablePiecesParticles: 0
   pieces:
   - {fileID: 1898713120422944, guid: 74f0553949e076e479d626e44f2102e1, type: 3}
+--- !u!114 &283311309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283311303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baded9fd5e811249b20621c5a6c0337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
 --- !u!1 &291774485
 GameObject:
   m_ObjectHideFlags: 0
@@ -7617,6 +7960,7 @@ GameObject:
   - component: {fileID: 291774489}
   - component: {fileID: 291774488}
   - component: {fileID: 291774490}
+  - component: {fileID: 291774491}
   m_Layer: 0
   m_Name: BarrelOpen1 (5)
   m_TagString: Untagged
@@ -7749,6 +8093,19 @@ MonoBehaviour:
   enablePiecesParticles: 0
   pieces:
   - {fileID: 1580847455321010, guid: 2d8da81083ca09b4abade2d65dc3c732, type: 3}
+--- !u!114 &291774491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291774485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baded9fd5e811249b20621c5a6c0337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
 --- !u!1 &316094594
 GameObject:
   m_ObjectHideFlags: 0
@@ -7762,6 +8119,7 @@ GameObject:
   - component: {fileID: 316094598}
   - component: {fileID: 316094597}
   - component: {fileID: 316094599}
+  - component: {fileID: 316094600}
   m_Layer: 0
   m_Name: BarrelClose1 (8)
   m_TagString: Untagged
@@ -7894,6 +8252,19 @@ MonoBehaviour:
   enablePiecesParticles: 0
   pieces:
   - {fileID: 1580847455321010, guid: 2d8da81083ca09b4abade2d65dc3c732, type: 3}
+--- !u!114 &316094600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 316094594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baded9fd5e811249b20621c5a6c0337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
 --- !u!1 &318125563
 GameObject:
   m_ObjectHideFlags: 0
@@ -7907,6 +8278,7 @@ GameObject:
   - component: {fileID: 318125567}
   - component: {fileID: 318125566}
   - component: {fileID: 318125568}
+  - component: {fileID: 318125569}
   m_Layer: 0
   m_Name: BarrelOpen1 (3)
   m_TagString: Untagged
@@ -7922,7 +8294,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 318125563}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.09, y: 0.028, z: 0}
+  m_LocalPosition: {x: 0.733, y: -0.668, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1580169990}
@@ -8039,6 +8411,19 @@ MonoBehaviour:
   enablePiecesParticles: 0
   pieces:
   - {fileID: 1580847455321010, guid: 2d8da81083ca09b4abade2d65dc3c732, type: 3}
+--- !u!114 &318125569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318125563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baded9fd5e811249b20621c5a6c0337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
 --- !u!1 &330446199
 GameObject:
   m_ObjectHideFlags: 0
@@ -8052,6 +8437,7 @@ GameObject:
   - component: {fileID: 330446203}
   - component: {fileID: 330446202}
   - component: {fileID: 330446204}
+  - component: {fileID: 330446205}
   m_Layer: 0
   m_Name: BarrelClose1 (11)
   m_TagString: Untagged
@@ -8067,7 +8453,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330446199}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.109, y: -0.03150004, z: 0}
+  m_LocalPosition: {x: 0.357, y: -0.481, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5127317}
@@ -8184,6 +8570,19 @@ MonoBehaviour:
   enablePiecesParticles: 0
   pieces:
   - {fileID: 1580847455321010, guid: 2d8da81083ca09b4abade2d65dc3c732, type: 3}
+--- !u!114 &330446205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330446199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baded9fd5e811249b20621c5a6c0337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
 --- !u!1 &338825749
 GameObject:
   m_ObjectHideFlags: 0
@@ -8307,6 +8706,7 @@ GameObject:
   - component: {fileID: 347168278}
   - component: {fileID: 347168277}
   - component: {fileID: 347168279}
+  - component: {fileID: 347168280}
   m_Layer: 0
   m_Name: BarrelClose1 (3)
   m_TagString: Untagged
@@ -8439,6 +8839,19 @@ MonoBehaviour:
   enablePiecesParticles: 0
   pieces:
   - {fileID: 1580847455321010, guid: 2d8da81083ca09b4abade2d65dc3c732, type: 3}
+--- !u!114 &347168280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347168274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baded9fd5e811249b20621c5a6c0337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
 --- !u!1 &358111345
 GameObject:
   m_ObjectHideFlags: 0
@@ -8452,6 +8865,7 @@ GameObject:
   - component: {fileID: 358111349}
   - component: {fileID: 358111348}
   - component: {fileID: 358111347}
+  - component: {fileID: 358111351}
   m_Layer: 0
   m_Name: BarrelClose1 (19)
   m_TagString: Untagged
@@ -8584,6 +8998,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &358111351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 358111345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baded9fd5e811249b20621c5a6c0337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
 --- !u!1 &387623486
 GameObject:
   m_ObjectHideFlags: 0
@@ -8597,6 +9024,7 @@ GameObject:
   - component: {fileID: 387623490}
   - component: {fileID: 387623489}
   - component: {fileID: 387623491}
+  - component: {fileID: 387623492}
   m_Layer: 0
   m_Name: BarrelClose1 (12)
   m_TagString: Untagged
@@ -8729,6 +9157,19 @@ MonoBehaviour:
   enablePiecesParticles: 0
   pieces:
   - {fileID: 1580847455321010, guid: 2d8da81083ca09b4abade2d65dc3c732, type: 3}
+--- !u!114 &387623492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387623486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baded9fd5e811249b20621c5a6c0337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
 --- !u!1 &394657569
 GameObject:
   m_ObjectHideFlags: 0
@@ -8864,6 +9305,7 @@ GameObject:
   - component: {fileID: 411238100}
   - component: {fileID: 411238099}
   - component: {fileID: 411238101}
+  - component: {fileID: 411238102}
   m_Layer: 0
   m_Name: Table1 (1)
   m_TagString: Untagged
@@ -8996,6 +9438,19 @@ MonoBehaviour:
   enablePiecesParticles: 0
   pieces:
   - {fileID: 1477318850237908, guid: 59f652a18251cc647bdeef0222f9511d, type: 3}
+--- !u!114 &411238102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411238096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baded9fd5e811249b20621c5a6c0337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
 --- !u!1 &415381079
 GameObject:
   m_ObjectHideFlags: 0
@@ -9057,6 +9512,7 @@ GameObject:
   - component: {fileID: 432795421}
   - component: {fileID: 432795420}
   - component: {fileID: 432795419}
+  - component: {fileID: 432795423}
   m_Layer: 0
   m_Name: Table1 (2)
   m_TagString: Untagged
@@ -9189,6 +9645,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &432795423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 432795417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baded9fd5e811249b20621c5a6c0337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
 --- !u!4 &432869081 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1167263676638633772, guid: 47fc17e7ba01dfa4ca48c88ab81f0cc8,
@@ -10045,6 +10514,7 @@ GameObject:
   - component: {fileID: 474407546}
   - component: {fileID: 474407545}
   - component: {fileID: 474407547}
+  - component: {fileID: 474407548}
   m_Layer: 0
   m_Name: Chair1 (1)
   m_TagString: Untagged
@@ -10177,6 +10647,19 @@ MonoBehaviour:
   enablePiecesParticles: 0
   pieces:
   - {fileID: 1826484565789208, guid: 9d790d326594d894aa5a77250d81048c, type: 3}
+--- !u!114 &474407548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474407542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baded9fd5e811249b20621c5a6c0337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
 --- !u!1 &488065260
 GameObject:
   m_ObjectHideFlags: 0
@@ -10300,6 +10783,7 @@ GameObject:
   - component: {fileID: 491692414}
   - component: {fileID: 491692413}
   - component: {fileID: 491692415}
+  - component: {fileID: 491692416}
   m_Layer: 0
   m_Name: BarrelOpen1 (4)
   m_TagString: Untagged
@@ -10315,7 +10799,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 491692410}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.484, y: 0.014, z: 0}
+  m_LocalPosition: {x: 0.954, y: -0.24, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1580169990}
@@ -10432,6 +10916,19 @@ MonoBehaviour:
   enablePiecesParticles: 0
   pieces:
   - {fileID: 1580847455321010, guid: 2d8da81083ca09b4abade2d65dc3c732, type: 3}
+--- !u!114 &491692416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491692410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baded9fd5e811249b20621c5a6c0337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
 --- !u!20 &501965150 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 8479785458525007867, guid: ed0fc656d5f7d0840ba8795c183865a3,
@@ -10451,6 +10948,7 @@ GameObject:
   - component: {fileID: 504475790}
   - component: {fileID: 504475789}
   - component: {fileID: 504475791}
+  - component: {fileID: 504475792}
   m_Layer: 0
   m_Name: BarrelClose1
   m_TagString: Untagged
@@ -10583,12 +11081,165 @@ MonoBehaviour:
   enablePiecesParticles: 0
   pieces:
   - {fileID: 1580847455321010, guid: 2d8da81083ca09b4abade2d65dc3c732, type: 3}
+--- !u!114 &504475792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 504475786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baded9fd5e811249b20621c5a6c0337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
 --- !u!1 &517980558 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4595282839936147452, guid: 39e15d1014de6aa44b2b9ad40c3cd01b,
     type: 3}
   m_PrefabInstance: {fileID: 4595282840291663474}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &530857043
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 530857044}
+  - component: {fileID: 530857048}
+  - component: {fileID: 530857047}
+  - component: {fileID: 530857046}
+  m_Layer: 0
+  m_Name: AutoSwitch
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &530857044
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530857043}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.241, y: -2.965, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1237851672}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &530857046
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530857043}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.16}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.06, y: 0.06}
+  m_EdgeRadius: 0
+--- !u!114 &530857047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530857043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee871060e0130a643b794747d14a2342, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 0
+  type: 2
+  offSprite: {fileID: -2811199446297376348, guid: 34598534baca0b4409852a5bde8d4b1f,
+    type: 3}
+  onSprite: {fileID: -6253594706239539487, guid: 34598534baca0b4409852a5bde8d4b1f,
+    type: 3}
+  offObjects: []
+  onObjects: []
+  keepOffObjectsInactive: 0
+  keepOnObjectsActive: 0
+  enableConditions: 0
+  OR: []
+  AND: []
+  NOT: 0
+  noEffectWhenOn: 0
+  noEffectWhenOff: 0
+  updateOnStateChange: []
+  rebound: 0
+  weightRequired: 1
+  refresh: 0
+--- !u!212 &530857048
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530857043}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 37efaa681c6aa3040a7b7c8146f09c50, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 5
+  m_Sprite: {fileID: -2811199446297376348, guid: 34598534baca0b4409852a5bde8d4b1f,
+    type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.16, y: 0.16}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &538262859
 GameObject:
   m_ObjectHideFlags: 0
@@ -11715,6 +12366,7 @@ GameObject:
   - component: {fileID: 576141212}
   - component: {fileID: 576141211}
   - component: {fileID: 576141213}
+  - component: {fileID: 576141214}
   m_Layer: 0
   m_Name: Rock1 (3)
   m_TagString: Untagged
@@ -11847,6 +12499,19 @@ MonoBehaviour:
   enablePiecesParticles: 0
   pieces:
   - {fileID: 1898713120422944, guid: 74f0553949e076e479d626e44f2102e1, type: 3}
+--- !u!114 &576141214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 576141208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baded9fd5e811249b20621c5a6c0337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
 --- !u!1 &577330673
 GameObject:
   m_ObjectHideFlags: 0
@@ -12008,6 +12673,7 @@ GameObject:
   - component: {fileID: 584089828}
   - component: {fileID: 584089827}
   - component: {fileID: 584089826}
+  - component: {fileID: 584089830}
   m_Layer: 0
   m_Name: Chair1 (3)
   m_TagString: Untagged
@@ -12140,6 +12806,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &584089830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584089824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baded9fd5e811249b20621c5a6c0337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
 --- !u!1 &585894048
 GameObject:
   m_ObjectHideFlags: 0
@@ -12263,6 +12942,7 @@ GameObject:
   - component: {fileID: 592008703}
   - component: {fileID: 592008702}
   - component: {fileID: 592008701}
+  - component: {fileID: 592008705}
   m_Layer: 0
   m_Name: Chair1 (5)
   m_TagString: Untagged
@@ -12395,6 +13075,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &592008705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 592008699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baded9fd5e811249b20621c5a6c0337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
 --- !u!1 &598282898
 GameObject:
   m_ObjectHideFlags: 0
@@ -15399,6 +16092,7 @@ GameObject:
   - component: {fileID: 808972316}
   - component: {fileID: 808972315}
   - component: {fileID: 808972317}
+  - component: {fileID: 808972318}
   m_Layer: 0
   m_Name: BarrelOpen1 (7)
   m_TagString: Untagged
@@ -15531,6 +16225,19 @@ MonoBehaviour:
   enablePiecesParticles: 0
   pieces:
   - {fileID: 1580847455321010, guid: 2d8da81083ca09b4abade2d65dc3c732, type: 3}
+--- !u!114 &808972318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808972312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baded9fd5e811249b20621c5a6c0337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
 --- !u!1 &813487502
 GameObject:
   m_ObjectHideFlags: 0
@@ -15722,6 +16429,7 @@ GameObject:
   - component: {fileID: 826969055}
   - component: {fileID: 826969054}
   - component: {fileID: 826969056}
+  - component: {fileID: 826969057}
   m_Layer: 0
   m_Name: BarrelClose1 (1)
   m_TagString: Untagged
@@ -15854,6 +16562,19 @@ MonoBehaviour:
   enablePiecesParticles: 0
   pieces:
   - {fileID: 1580847455321010, guid: 2d8da81083ca09b4abade2d65dc3c732, type: 3}
+--- !u!114 &826969057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826969051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baded9fd5e811249b20621c5a6c0337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
 --- !u!1 &827116213
 GameObject:
   m_ObjectHideFlags: 0
@@ -18882,6 +19603,7 @@ GameObject:
   - component: {fileID: 1008176701}
   - component: {fileID: 1008176700}
   - component: {fileID: 1008176702}
+  - component: {fileID: 1008176703}
   m_Layer: 0
   m_Name: Rock1 (4)
   m_TagString: Untagged
@@ -19014,6 +19736,19 @@ MonoBehaviour:
   enablePiecesParticles: 0
   pieces:
   - {fileID: 1898713120422944, guid: 74f0553949e076e479d626e44f2102e1, type: 3}
+--- !u!114 &1008176703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1008176697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baded9fd5e811249b20621c5a6c0337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
 --- !u!1 &1046909573
 GameObject:
   m_ObjectHideFlags: 0
@@ -19247,6 +19982,7 @@ GameObject:
   - component: {fileID: 1053147939}
   - component: {fileID: 1053147938}
   - component: {fileID: 1053147940}
+  - component: {fileID: 1053147941}
   m_Layer: 0
   m_Name: BarrelClose1 (13)
   m_TagString: Untagged
@@ -19379,6 +20115,19 @@ MonoBehaviour:
   enablePiecesParticles: 0
   pieces:
   - {fileID: 1580847455321010, guid: 2d8da81083ca09b4abade2d65dc3c732, type: 3}
+--- !u!114 &1053147941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053147935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baded9fd5e811249b20621c5a6c0337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
 --- !u!1 &1059277943
 GameObject:
   m_ObjectHideFlags: 0
@@ -19995,6 +20744,7 @@ GameObject:
   - component: {fileID: 1108780447}
   - component: {fileID: 1108780446}
   - component: {fileID: 1108780448}
+  - component: {fileID: 1108780449}
   m_Layer: 0
   m_Name: Chair1
   m_TagString: Untagged
@@ -20127,6 +20877,19 @@ MonoBehaviour:
   enablePiecesParticles: 0
   pieces:
   - {fileID: 1826484565789208, guid: 9d790d326594d894aa5a77250d81048c, type: 3}
+--- !u!114 &1108780449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1108780443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baded9fd5e811249b20621c5a6c0337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
 --- !u!1 &1111659926
 GameObject:
   m_ObjectHideFlags: 0
@@ -20647,6 +21410,43 @@ Transform:
   m_Father: {fileID: 173072868}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1237851671
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1237851672}
+  m_Layer: 0
+  m_Name: PuzzleMechanicsExperiement
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1237851672
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237851671}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1467020592}
+  - {fileID: 276514689}
+  - {fileID: 530857044}
+  - {fileID: 1960343536}
+  - {fileID: 1414659511}
+  - {fileID: 1924331840}
+  - {fileID: 53439914}
+  m_Father: {fileID: 0}
+  m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1244708279
 GameObject:
   m_ObjectHideFlags: 0
@@ -20803,6 +21603,7 @@ GameObject:
   - component: {fileID: 1254224727}
   - component: {fileID: 1254224726}
   - component: {fileID: 1254224728}
+  - component: {fileID: 1254224729}
   m_Layer: 0
   m_Name: BarrelClose1 (5)
   m_TagString: Untagged
@@ -20935,6 +21736,19 @@ MonoBehaviour:
   enablePiecesParticles: 0
   pieces:
   - {fileID: 1580847455321010, guid: 2d8da81083ca09b4abade2d65dc3c732, type: 3}
+--- !u!114 &1254224729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254224723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baded9fd5e811249b20621c5a6c0337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
 --- !u!1 &1262687861
 GameObject:
   m_ObjectHideFlags: 0
@@ -21232,6 +22046,7 @@ GameObject:
   - component: {fileID: 1307424396}
   - component: {fileID: 1307424395}
   - component: {fileID: 1307424397}
+  - component: {fileID: 1307424398}
   m_Layer: 0
   m_Name: Table1
   m_TagString: Untagged
@@ -21364,6 +22179,19 @@ MonoBehaviour:
   enablePiecesParticles: 0
   pieces:
   - {fileID: 1477318850237908, guid: 59f652a18251cc647bdeef0222f9511d, type: 3}
+--- !u!114 &1307424398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1307424392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baded9fd5e811249b20621c5a6c0337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
 --- !u!1 &1319461578
 GameObject:
   m_ObjectHideFlags: 0
@@ -21641,6 +22469,7 @@ GameObject:
   - component: {fileID: 1348350961}
   - component: {fileID: 1348350960}
   - component: {fileID: 1348350962}
+  - component: {fileID: 1348350963}
   m_Layer: 0
   m_Name: BarrelClose1 (9)
   m_TagString: Untagged
@@ -21656,7 +22485,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1348350957}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.14899999, y: 0.02549997, z: 0}
+  m_LocalPosition: {x: 0.016, y: -0.158, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5127317}
@@ -21773,6 +22602,19 @@ MonoBehaviour:
   enablePiecesParticles: 0
   pieces:
   - {fileID: 1580847455321010, guid: 2d8da81083ca09b4abade2d65dc3c732, type: 3}
+--- !u!114 &1348350963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348350957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baded9fd5e811249b20621c5a6c0337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
 --- !u!1 &1350325399
 GameObject:
   m_ObjectHideFlags: 0
@@ -22022,6 +22864,7 @@ GameObject:
   - component: {fileID: 1357217400}
   - component: {fileID: 1357217399}
   - component: {fileID: 1357217401}
+  - component: {fileID: 1357217402}
   m_Layer: 0
   m_Name: BarrelClose1 (10)
   m_TagString: Untagged
@@ -22037,7 +22880,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1357217396}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.06299999, y: 0.034499973, z: 0}
+  m_LocalPosition: {x: -0.129, y: 0.034499973, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5127317}
@@ -22154,6 +22997,19 @@ MonoBehaviour:
   enablePiecesParticles: 0
   pieces:
   - {fileID: 1580847455321010, guid: 2d8da81083ca09b4abade2d65dc3c732, type: 3}
+--- !u!114 &1357217402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357217396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baded9fd5e811249b20621c5a6c0337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
 --- !u!1001 &1366416007
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22660,6 +23516,150 @@ Camera:
     type: 3}
   m_PrefabInstance: {fileID: 8479785458191863461}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1414659510
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1414659511}
+  - component: {fileID: 1414659514}
+  - component: {fileID: 1414659513}
+  - component: {fileID: 1414659512}
+  m_Layer: 0
+  m_Name: PressurePlates
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1414659511
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414659510}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.484, y: -1.469, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1237851672}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1414659512
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414659510}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0.03, y: 0.03, z: 0.03, w: 0.03}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.16}
+    newSize: {x: 0.16, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 2
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.14, y: 0.3}
+  m_EdgeRadius: 0
+--- !u!114 &1414659513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414659510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee871060e0130a643b794747d14a2342, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 0
+  type: 4
+  offSprite: {fileID: 1492780459855952351, guid: 34598534baca0b4409852a5bde8d4b1f,
+    type: 3}
+  onSprite: {fileID: 2823675668617105563, guid: 34598534baca0b4409852a5bde8d4b1f,
+    type: 3}
+  offObjects:
+  - {fileID: 1924331839}
+  onObjects: []
+  keepOffObjectsInactive: 0
+  keepOnObjectsActive: 0
+  enableConditions: 0
+  OR:
+  - {fileID: 0}
+  AND: []
+  NOT: 0
+  noEffectWhenOn: 1
+  noEffectWhenOff: 0
+  updateOnStateChange:
+  - {fileID: 1467020590}
+  - {fileID: 276514687}
+  rebound: 2
+  weightRequired: 1.9
+  refresh: 0
+--- !u!212 &1414659514
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414659510}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 37efaa681c6aa3040a7b7c8146f09c50, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 5
+  m_Sprite: {fileID: 1492780459855952351, guid: 34598534baca0b4409852a5bde8d4b1f,
+    type: 3}
+  m_Color: {r: 0.49019608, g: 0.7058824, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 2
+  m_Size: {x: 0.16, y: 0.32}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &1415219577
 GameObject:
   m_ObjectHideFlags: 0
@@ -23893,6 +24893,147 @@ MonoBehaviour:
   intensity: 8
   factor: 0.1
   disable: 0
+--- !u!1 &1467020588
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1467020592}
+  - component: {fileID: 1467020591}
+  - component: {fileID: 1467020590}
+  - component: {fileID: 1467020589}
+  m_Layer: 0
+  m_Name: Indicator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &1467020589
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467020588}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.16}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.06, y: 0.06}
+  m_EdgeRadius: 0
+--- !u!114 &1467020590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467020588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee871060e0130a643b794747d14a2342, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 0
+  type: 0
+  offSprite: {fileID: -2811199446297376348, guid: 34598534baca0b4409852a5bde8d4b1f,
+    type: 3}
+  onSprite: {fileID: -6253594706239539487, guid: 34598534baca0b4409852a5bde8d4b1f,
+    type: 3}
+  offObjects: []
+  onObjects: []
+  keepOffObjectsInactive: 0
+  keepOnObjectsActive: 0
+  enableConditions: 1
+  OR:
+  - {fileID: 1960343538}
+  AND: []
+  NOT: 0
+  noEffectWhenOn: 0
+  noEffectWhenOff: 0
+  updateOnStateChange: []
+  rebound: 0
+  weightRequired: 1
+  refresh: 0
+--- !u!212 &1467020591
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467020588}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 37efaa681c6aa3040a7b7c8146f09c50, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 5
+  m_Sprite: {fileID: -2811199446297376348, guid: 34598534baca0b4409852a5bde8d4b1f,
+    type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.16, y: 0.16}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1467020592
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467020588}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.019, y: -0.499, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1237851672}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1477349869
 GameObject:
   m_ObjectHideFlags: 0
@@ -24054,6 +25195,7 @@ GameObject:
   - component: {fileID: 1480224942}
   - component: {fileID: 1480224941}
   - component: {fileID: 1480224943}
+  - component: {fileID: 1480224944}
   m_Layer: 0
   m_Name: BarrelClose1 (17)
   m_TagString: Untagged
@@ -24186,6 +25328,19 @@ MonoBehaviour:
   enablePiecesParticles: 0
   pieces:
   - {fileID: 1580847455321010, guid: 2d8da81083ca09b4abade2d65dc3c732, type: 3}
+--- !u!114 &1480224944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480224938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baded9fd5e811249b20621c5a6c0337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
 --- !u!1 &1490552905
 GameObject:
   m_ObjectHideFlags: 0
@@ -25180,6 +26335,7 @@ GameObject:
   - component: {fileID: 1570818251}
   - component: {fileID: 1570818250}
   - component: {fileID: 1570818252}
+  - component: {fileID: 1570818253}
   m_Layer: 0
   m_Name: BarrelOpen1 (2)
   m_TagString: Untagged
@@ -25312,6 +26468,19 @@ MonoBehaviour:
   enablePiecesParticles: 0
   pieces:
   - {fileID: 1580847455321010, guid: 2d8da81083ca09b4abade2d65dc3c732, type: 3}
+--- !u!114 &1570818253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570818247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baded9fd5e811249b20621c5a6c0337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
 --- !u!1 &1572463141
 GameObject:
   m_ObjectHideFlags: 0
@@ -25483,6 +26652,7 @@ GameObject:
   - component: {fileID: 1607847799}
   - component: {fileID: 1607847798}
   - component: {fileID: 1607847800}
+  - component: {fileID: 1607847801}
   m_Layer: 0
   m_Name: BarrelOpen1 (9)
   m_TagString: Untagged
@@ -25615,6 +26785,19 @@ MonoBehaviour:
   enablePiecesParticles: 0
   pieces:
   - {fileID: 1580847455321010, guid: 2d8da81083ca09b4abade2d65dc3c732, type: 3}
+--- !u!114 &1607847801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1607847795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baded9fd5e811249b20621c5a6c0337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
 --- !u!1 &1629688884
 GameObject:
   m_ObjectHideFlags: 0
@@ -25688,6 +26871,7 @@ GameObject:
   - component: {fileID: 1635373477}
   - component: {fileID: 1635373476}
   - component: {fileID: 1635373478}
+  - component: {fileID: 1635373479}
   m_Layer: 0
   m_Name: BarrelClose1 (4)
   m_TagString: Untagged
@@ -25820,6 +27004,19 @@ MonoBehaviour:
   enablePiecesParticles: 0
   pieces:
   - {fileID: 1580847455321010, guid: 2d8da81083ca09b4abade2d65dc3c732, type: 3}
+--- !u!114 &1635373479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635373473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baded9fd5e811249b20621c5a6c0337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
 --- !u!1 &1638371445
 GameObject:
   m_ObjectHideFlags: 0
@@ -25833,6 +27030,7 @@ GameObject:
   - component: {fileID: 1638371449}
   - component: {fileID: 1638371448}
   - component: {fileID: 1638371450}
+  - component: {fileID: 1638371451}
   m_Layer: 0
   m_Name: Rock1 (2)
   m_TagString: Untagged
@@ -25965,6 +27163,19 @@ MonoBehaviour:
   enablePiecesParticles: 0
   pieces:
   - {fileID: 1898713120422944, guid: 74f0553949e076e479d626e44f2102e1, type: 3}
+--- !u!114 &1638371451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638371445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baded9fd5e811249b20621c5a6c0337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
 --- !u!1 &1650993867
 GameObject:
   m_ObjectHideFlags: 0
@@ -26954,6 +28165,7 @@ GameObject:
   - component: {fileID: 1678579050}
   - component: {fileID: 1678579049}
   - component: {fileID: 1678579051}
+  - component: {fileID: 1678579052}
   m_Layer: 0
   m_Name: BarrelOpen1 (8)
   m_TagString: Untagged
@@ -27086,6 +28298,19 @@ MonoBehaviour:
   enablePiecesParticles: 0
   pieces:
   - {fileID: 1580847455321010, guid: 2d8da81083ca09b4abade2d65dc3c732, type: 3}
+--- !u!114 &1678579052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1678579046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baded9fd5e811249b20621c5a6c0337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
 --- !u!1 &1678674752
 GameObject:
   m_ObjectHideFlags: 0
@@ -28795,6 +30020,7 @@ GameObject:
   - component: {fileID: 1715630317}
   - component: {fileID: 1715630316}
   - component: {fileID: 1715630318}
+  - component: {fileID: 1715630319}
   m_Layer: 0
   m_Name: Rock1
   m_TagString: Untagged
@@ -28927,6 +30153,19 @@ MonoBehaviour:
   enablePiecesParticles: 0
   pieces:
   - {fileID: 1898713120422944, guid: 74f0553949e076e479d626e44f2102e1, type: 3}
+--- !u!114 &1715630319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715630313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baded9fd5e811249b20621c5a6c0337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
 --- !u!1 &1717693789
 GameObject:
   m_ObjectHideFlags: 0
@@ -29051,6 +30290,7 @@ GameObject:
   - component: {fileID: 1722043462}
   - component: {fileID: 1722043461}
   - component: {fileID: 1722043463}
+  - component: {fileID: 1722043464}
   m_Layer: 0
   m_Name: Rock1 (1)
   m_TagString: Untagged
@@ -29183,6 +30423,19 @@ MonoBehaviour:
   enablePiecesParticles: 0
   pieces:
   - {fileID: 1898713120422944, guid: 74f0553949e076e479d626e44f2102e1, type: 3}
+--- !u!114 &1722043464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1722043458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baded9fd5e811249b20621c5a6c0337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
 --- !u!1 &1726295256
 GameObject:
   m_ObjectHideFlags: 0
@@ -56886,6 +58139,7 @@ GameObject:
   - component: {fileID: 1797354629}
   - component: {fileID: 1797354628}
   - component: {fileID: 1797354630}
+  - component: {fileID: 1797354631}
   m_Layer: 0
   m_Name: BarrelClose1 (6)
   m_TagString: Untagged
@@ -57018,6 +58272,19 @@ MonoBehaviour:
   enablePiecesParticles: 0
   pieces:
   - {fileID: 1580847455321010, guid: 2d8da81083ca09b4abade2d65dc3c732, type: 3}
+--- !u!114 &1797354631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1797354625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baded9fd5e811249b20621c5a6c0337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
 --- !u!1 &1809854267
 GameObject:
   m_ObjectHideFlags: 0
@@ -57309,6 +58576,7 @@ GameObject:
   - component: {fileID: 1844719602}
   - component: {fileID: 1844719601}
   - component: {fileID: 1844719603}
+  - component: {fileID: 1844719604}
   m_Layer: 0
   m_Name: BarrelOpen1 (1)
   m_TagString: Untagged
@@ -57441,6 +58709,19 @@ MonoBehaviour:
   enablePiecesParticles: 0
   pieces:
   - {fileID: 1580847455321010, guid: 2d8da81083ca09b4abade2d65dc3c732, type: 3}
+--- !u!114 &1844719604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844719598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baded9fd5e811249b20621c5a6c0337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
 --- !u!1 &1859905304
 GameObject:
   m_ObjectHideFlags: 0
@@ -57454,6 +58735,7 @@ GameObject:
   - component: {fileID: 1859905308}
   - component: {fileID: 1859905307}
   - component: {fileID: 1859905309}
+  - component: {fileID: 1859905310}
   m_Layer: 0
   m_Name: Chair1 (2)
   m_TagString: Untagged
@@ -57586,6 +58868,19 @@ MonoBehaviour:
   enablePiecesParticles: 0
   pieces:
   - {fileID: 1826484565789208, guid: 9d790d326594d894aa5a77250d81048c, type: 3}
+--- !u!114 &1859905310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859905304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baded9fd5e811249b20621c5a6c0337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
 --- !u!1 &1860014032
 GameObject:
   m_ObjectHideFlags: 0
@@ -57599,6 +58894,7 @@ GameObject:
   - component: {fileID: 1860014036}
   - component: {fileID: 1860014035}
   - component: {fileID: 1860014034}
+  - component: {fileID: 1860014038}
   m_Layer: 0
   m_Name: BarrelClose1 (18)
   m_TagString: Untagged
@@ -57731,6 +59027,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1860014038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860014032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baded9fd5e811249b20621c5a6c0337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
 --- !u!1 &1862881122
 GameObject:
   m_ObjectHideFlags: 0
@@ -58273,6 +59582,7 @@ GameObject:
   - component: {fileID: 1920350379}
   - component: {fileID: 1920350378}
   - component: {fileID: 1920350380}
+  - component: {fileID: 1920350381}
   m_Layer: 0
   m_Name: Rock1 (6)
   m_TagString: Untagged
@@ -58405,6 +59715,19 @@ MonoBehaviour:
   enablePiecesParticles: 0
   pieces:
   - {fileID: 1898713120422944, guid: 74f0553949e076e479d626e44f2102e1, type: 3}
+--- !u!114 &1920350381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1920350375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baded9fd5e811249b20621c5a6c0337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
 --- !u!483693784 &1924194944
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -63471,6 +64794,112 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
+--- !u!1 &1924331839
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1924331840}
+  - component: {fileID: 1924331842}
+  - component: {fileID: 1924331841}
+  m_Layer: 0
+  m_Name: IronFence
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1924331840
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924331839}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.319, y: -1.432, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1237851672}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1924331841
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924331839}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.16}
+    newSize: {x: 0.32, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 2
+    adaptiveTiling: 0
+  m_AutoTiling: 1
+  serializedVersion: 2
+  m_Size: {x: 0.16, y: 0.16}
+  m_EdgeRadius: 0
+--- !u!212 &1924331842
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924331839}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: d5516e65bdab45e43b420cf2d3708c60, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 5
+  m_Sprite: {fileID: 21300052, guid: 7322ccefd4bf723479dccd14b6de0c2f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 2
+  m_Size: {x: 0.32, y: 0.32}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &1933863398
 GameObject:
   m_ObjectHideFlags: 0
@@ -63728,6 +65157,7 @@ GameObject:
   - component: {fileID: 1960097149}
   - component: {fileID: 1960097148}
   - component: {fileID: 1960097150}
+  - component: {fileID: 1960097151}
   m_Layer: 0
   m_Name: BarrelClose1 (2)
   m_TagString: Untagged
@@ -63860,6 +65290,162 @@ MonoBehaviour:
   enablePiecesParticles: 0
   pieces:
   - {fileID: 1580847455321010, guid: 2d8da81083ca09b4abade2d65dc3c732, type: 3}
+--- !u!114 &1960097151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960097145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baded9fd5e811249b20621c5a6c0337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
+--- !u!1 &1960343535
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1960343536}
+  - component: {fileID: 1960343539}
+  - component: {fileID: 1960343538}
+  - component: {fileID: 1960343537}
+  m_Layer: 0
+  m_Name: WallSwitch
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1960343536
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960343535}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.13, y: -0.813, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1237851672}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1960343537
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960343535}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.16}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.06, y: 0.1}
+  m_EdgeRadius: 0
+--- !u!114 &1960343538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960343535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee871060e0130a643b794747d14a2342, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 0
+  type: 3
+  offSprite: {fileID: 4795338766666625895, guid: 34598534baca0b4409852a5bde8d4b1f,
+    type: 3}
+  onSprite: {fileID: 8260817757050974780, guid: 34598534baca0b4409852a5bde8d4b1f,
+    type: 3}
+  offObjects:
+  - {fileID: 1924331839}
+  onObjects: []
+  keepOffObjectsInactive: 0
+  keepOnObjectsActive: 0
+  enableConditions: 0
+  OR: []
+  AND: []
+  NOT: 0
+  noEffectWhenOn: 0
+  noEffectWhenOff: 0
+  updateOnStateChange:
+  - {fileID: 1467020590}
+  - {fileID: 276514687}
+  rebound: 0
+  weightRequired: 1
+  refresh: 0
+--- !u!212 &1960343539
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960343535}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 37efaa681c6aa3040a7b7c8146f09c50, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 5
+  m_Sprite: {fileID: 4795338766666625895, guid: 34598534baca0b4409852a5bde8d4b1f,
+    type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.16, y: 0.16}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &1966305415
 GameObject:
   m_ObjectHideFlags: 0
@@ -65141,6 +66727,7 @@ GameObject:
   - component: {fileID: 2026095831}
   - component: {fileID: 2026095830}
   - component: {fileID: 2026095832}
+  - component: {fileID: 2026095833}
   m_Layer: 0
   m_Name: BarrelClose1 (16)
   m_TagString: Untagged
@@ -65273,6 +66860,19 @@ MonoBehaviour:
   enablePiecesParticles: 0
   pieces:
   - {fileID: 1580847455321010, guid: 2d8da81083ca09b4abade2d65dc3c732, type: 3}
+--- !u!114 &2026095833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026095827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baded9fd5e811249b20621c5a6c0337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
 --- !u!1 &2041136124 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3476863582865131016, guid: ed0fc656d5f7d0840ba8795c183865a3,
@@ -65292,6 +66892,7 @@ GameObject:
   - component: {fileID: 2060834668}
   - component: {fileID: 2060834667}
   - component: {fileID: 2060834669}
+  - component: {fileID: 2060834670}
   m_Layer: 0
   m_Name: BarrelClose1 (15)
   m_TagString: Untagged
@@ -65424,6 +67025,19 @@ MonoBehaviour:
   enablePiecesParticles: 0
   pieces:
   - {fileID: 1580847455321010, guid: 2d8da81083ca09b4abade2d65dc3c732, type: 3}
+--- !u!114 &2060834670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2060834664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baded9fd5e811249b20621c5a6c0337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
 --- !u!1 &2064490722
 GameObject:
   m_ObjectHideFlags: 0
@@ -65760,6 +67374,7 @@ GameObject:
   - component: {fileID: 2099017799}
   - component: {fileID: 2099017798}
   - component: {fileID: 2099017800}
+  - component: {fileID: 2099017801}
   m_Layer: 0
   m_Name: Rock1 (7)
   m_TagString: Untagged
@@ -65892,6 +67507,19 @@ MonoBehaviour:
   enablePiecesParticles: 0
   pieces:
   - {fileID: 1898713120422944, guid: 74f0553949e076e479d626e44f2102e1, type: 3}
+--- !u!114 &2099017801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099017795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baded9fd5e811249b20621c5a6c0337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
 --- !u!1 &2108842062
 GameObject:
   m_ObjectHideFlags: 0

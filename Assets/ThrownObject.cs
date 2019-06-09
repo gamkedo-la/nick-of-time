@@ -58,7 +58,6 @@ public class ThrownObject : MonoBehaviour
 		}
 		else if (collision.gameObject.tag != "PlayerAttack")
 		{
-			Debug.Log(collision.gameObject.name);
 			throwVelocity = Vector3.zero;
 			throwRotation = 0f;
 		}

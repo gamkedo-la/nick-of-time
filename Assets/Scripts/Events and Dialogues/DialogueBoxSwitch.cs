@@ -75,7 +75,7 @@ public class DialogueBoxSwitch : MonoBehaviour
 			checkForDialogueStringTags(dialogueSequence.dialogues[dialogueSequence.dialogueNo]);
 		}
 
-		if (Input.GetButtonDown(proceedInput) || Input.GetButtonDown(proceedInput2)
+		if ((Input.GetButtonDown(proceedInput) || Input.GetButtonDown(proceedInput2))
 			&& sprRenderer.enabled)
 		{
 			if (aud != null && TogglesValues.sound)
