@@ -25,4 +25,11 @@ public class MyButton : Button
 
         base.OnPointerDown(eventData);
     }
+
+    public override void Select()
+    {
+        if (eventSystem.alreadySelecting)
+            return;
+        eventSystem.SetSelectedGameObject(gameObject);
+    }
 }
