@@ -418,6 +418,7 @@ MonoBehaviour:
   icon: {fileID: 4804616355037858262}
   removeButton: {fileID: 8532006174022391980}
   textMeshPro: {fileID: 1215804260882213845}
+  associatedPlayer: {fileID: 0}
 --- !u!1 &8532006174808601511
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,7 +430,8 @@ GameObject:
   - component: {fileID: 8532006174808601528}
   - component: {fileID: 8532006174808601530}
   - component: {fileID: 8532006174808601529}
-  - component: {fileID: 8532006174808601531}
+  - component: {fileID: 957660737146253454}
+  - component: {fileID: 7949971348971783878}
   m_Layer: 5
   m_Name: ItemButton
   m_TagString: Untagged
@@ -494,7 +496,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
---- !u!114 &8532006174808601531
+--- !u!114 &957660737146253454
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -503,7 +505,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 8532006174808601511}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: 593eb212a455a2c438e481675b0d7725, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSystem: {fileID: 0}
+--- !u!114 &7949971348971783878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8532006174808601511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c5a13782aac33142a3b1a6fd4dac668, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -515,9 +530,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.16260722, g: 0.12629052, b: 0.8113208, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.24096651, g: 0.8962264, b: 0.2509564, a: 0.46666667}
+    m_HighlightedColor: {r: 0.41525087, g: 0.9622642, b: 0.28595585, a: 1}
+    m_PressedColor: {r: 0.20496617, g: 0.32352594, b: 0.9245283, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -550,6 +565,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  eventSystem: {fileID: 0}
 --- !u!1 &9014498450339155975
 GameObject:
   m_ObjectHideFlags: 0
