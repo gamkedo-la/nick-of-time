@@ -31,8 +31,16 @@ public class Inventory : MonoBehaviour
                 Debug.Log("Inventory full");
                 return false;
             }
+            if(item.stackable == false)
+            {
+                items.Add(item);
+            }
+            /*
+            if(HasItem(item) && item.stackable)
+            {
+                
+            }*/
 
-            items.Add(item);
             item.equipmentManager = GetComponent<EquipmentManager>();
             if(onItemChangedCallback != null)
             {
@@ -45,7 +53,7 @@ public class Inventory : MonoBehaviour
 
     public bool HasItem(Item item)
     {
-        return items.Exists(i => i == item);
+        return items.Exists(i => i == item);        
     }
 
     public void Remove(Item item)
