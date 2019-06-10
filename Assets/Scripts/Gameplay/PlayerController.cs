@@ -32,12 +32,11 @@ public class PlayerController : MonoBehaviour
 	public float throwActionDeplete = 0.1f;
 
 	[Space]
+	public float comboMaxTimeGap = 0.05f;
 	public string walkVerticalInput = "Vertical";
 	public string walkHorizontalInput = "Horizontal";
 	public string attackInput = "Fire1";
-	public string dashInput = "Jump";
 	public string pushInput = "Push1";
-	public string throwInput = "Throw1";
 
 	[Space]
 	public WeaponPossession weaponPossession;
@@ -61,6 +60,10 @@ public class PlayerController : MonoBehaviour
 	private AudioSource aud = null;
 	
 	private Vector2 walkInput = Vector2.zero;
+	private int prevWalkState = 0;
+
+	private float comboTimer = 0f;
+	private string comboKeys = "";
 
 	private void Start()
 	{
@@ -73,7 +76,7 @@ public class PlayerController : MonoBehaviour
 		if (aud == null)
 			aud = FindObjectOfType<AudioSource>();
 	}
-
+	
 	private void Update()
 	{
 		nextFXdelay -= Time.deltaTime; // don't spam FX every frame
@@ -86,6 +89,9 @@ public class PlayerController : MonoBehaviour
 
 				if (walkInput != Vector2.zero)
 				{
+					if (prevWalkState == 0)
+						comboKeys += "Walk";
+
 					speed = walkSpeed;
 					animator.SetBool("isWalking", true);
 
@@ -116,6 +122,8 @@ public class PlayerController : MonoBehaviour
 				}
 			}
 
+			prevWalkState = walkInput == Vector2.zero ? 0 : 1;
+
 			//Attack
 			if (actionPoints >= attackActionDeplete
 				&& !animator.GetBool("isAttacking")
@@ -123,43 +131,48 @@ public class PlayerController : MonoBehaviour
 				&& !animator.GetBool("isThrowing")
 				&& !isDashing
 				&& Input.GetButtonDown(attackInput))
-			{                
-				animator.SetBool("isAttacking", true);
+			{
+				comboKeys += "Attack";
 
-				speed = attackSpeed;
-
-				if (animator.GetBool("isWalking"))
-					attackSpeedTimer = attackSpeedTime;
-				else
+				if (comboKeys != "WalkAttack" && comboKeys != "AttackWalk")
 				{
-					int dir = animator.GetInteger("direction");
-					if (dir == 0)
-					{
-						walkInput.x = 0;
-						walkInput.y = 1;
-					}
-					else if (dir == 1)
-					{
-						walkInput.x = 1;
-						walkInput.y = 0;
-					}
-					else if (dir == 2)
-					{
-						walkInput.x = 0;
-						walkInput.y = -1;
-					}
-					else if (dir == 3)
-					{
-						walkInput.x = -1;
-						walkInput.y = 0;
-					}
-					attackSpeedTimer = attackSpeedTime / 2f;
-				}
-				
-				actionPoints -= attackActionDeplete;
+					animator.SetBool("isAttacking", true);
 
-				if (aud != null && TogglesValues.sound)
-					aud.PlayOneShot(attackSound);
+					speed = attackSpeed;
+
+					if (animator.GetBool("isWalking"))
+						attackSpeedTimer = attackSpeedTime;
+					else
+					{
+						int dir = animator.GetInteger("direction");
+						if (dir == 0)
+						{
+							walkInput.x = 0;
+							walkInput.y = 1;
+						}
+						else if (dir == 1)
+						{
+							walkInput.x = 1;
+							walkInput.y = 0;
+						}
+						else if (dir == 2)
+						{
+							walkInput.x = 0;
+							walkInput.y = -1;
+						}
+						else if (dir == 3)
+						{
+							walkInput.x = -1;
+							walkInput.y = 0;
+						}
+						attackSpeedTimer = attackSpeedTime / 2f;
+					}
+
+					actionPoints -= attackActionDeplete;
+
+					if (aud != null && TogglesValues.sound)
+						aud.PlayOneShot(attackSound);
+				}
 			}
 
 			//Dash
@@ -168,7 +181,7 @@ public class PlayerController : MonoBehaviour
 				&& !animator.GetBool("isAttacking")
 				&& !animator.GetBool("isPushing")
 				&& !animator.GetBool("isThrowing")
-				&& Input.GetButtonDown(dashInput)
+				&& comboKeys == "WalkWalk"
 				&& hitCheck.knockback == Vector2.zero)
 			{
 				isDashing = true;
@@ -183,6 +196,8 @@ public class PlayerController : MonoBehaviour
 
 				if (aud != null && TogglesValues.sound)
 					aud.PlayOneShot(dashSound);
+
+				comboKeys = "";
 			}
 
 			/*
@@ -221,7 +236,8 @@ public class PlayerController : MonoBehaviour
 			&& !animator.GetBool("isAttacking")
 			&& !animator.GetBool("isPushing")
 			&& !isDashing
-			&& Input.GetButtonDown(throwInput))
+			&& (comboKeys == "AttackWalk"
+			|| comboKeys == "WalkAttack"))
 			{
 				animator.SetBool("isThrowing", true);
 				speed = attackSpeed;
@@ -234,6 +250,8 @@ public class PlayerController : MonoBehaviour
 					GameObject FX = Instantiate(throwFXObject, transform.position, Quaternion.Euler(0f,0f,0f));
 					nextFXdelay = MINIMUM_TIME_BETWEEN_FX;
 				}
+
+				comboKeys = "";
 			}
 
 			if (actionPoints < 1f)
@@ -273,13 +291,18 @@ public class PlayerController : MonoBehaviour
 			}
 			
 			if ((animator.GetBool("isAttacking") || animator.GetBool("isThrowing")) && attackSpeedTimer <= 0f)
-			{
 				speed = 0f;
-			}
+
+			if (comboTimer >= comboMaxTimeGap)
+				comboKeys = "";
+				
+			if (comboKeys != "")
+				comboTimer += Time.deltaTime;
+			else
+				comboTimer = 0f;
 
 			attackSpeedTimer -= Time.deltaTime;
 			dashTimer -= Time.deltaTime;
-
 		}
 	}
 
