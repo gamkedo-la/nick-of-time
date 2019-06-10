@@ -11,7 +11,7 @@ public class ToggleOnPlatform : MonoBehaviour
     {
 		//#if UNITY_EDITOR
 #if UNITY_WEBGL //#elif UNITY_WEBGL
-
+		
 		foreach (var o in objectsToEnable)
 		{
 			o.SetActive(true);

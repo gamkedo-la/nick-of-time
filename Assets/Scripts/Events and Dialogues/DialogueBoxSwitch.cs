@@ -10,6 +10,7 @@ public class DialogueBoxSwitch : MonoBehaviour
 	public GameObject pl2;
 
 	public string proceedInput = "Submit";
+	public string proceedInput2= "Jump"; // to allow SPACE or ENTER to proceed
 
 	public AudioClip proceedSound;
 
@@ -74,7 +75,7 @@ public class DialogueBoxSwitch : MonoBehaviour
 			checkForDialogueStringTags(dialogueSequence.dialogues[dialogueSequence.dialogueNo]);
 		}
 
-		if (Input.GetButtonDown(proceedInput)
+		if ((Input.GetButtonDown(proceedInput) || Input.GetButtonDown(proceedInput2))
 			&& sprRenderer.enabled)
 		{
 			if (aud != null && TogglesValues.sound)

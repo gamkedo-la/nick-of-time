@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Breakable : MonoBehaviour {
-
+public class Breakable : MonoBehaviour
+{
 	public bool doDestroy = true;
 	public bool enablePiecesParticles = false; //if the object contains children that are supposed to spread/burst out when attacking
 	public GameObject[] pieces;
@@ -52,14 +52,22 @@ public class Breakable : MonoBehaviour {
 		}
 	}
 	
-	void OnCollisionStay2D( Collision2D coll ) {
+	void OnCollisionStay2D( Collision2D coll )
+	{
+		ThrownObject to = coll.gameObject.GetComponent<ThrownObject>();
+
 		if(coll.gameObject.CompareTag("PlayerAttack")
-		&& coll.gameObject.transform.parent.parent.GetComponent<Animator>().GetBool("isAttacking"))
+		&& ((to != null && to.breakableBreaksOnCollision)
+		|| (to == null && coll.gameObject.transform.parent.parent.parent.GetComponent<Animator>().GetBool("isAttacking"))))
 			BreakObject();
 	}
-	void OnTriggerStay2D( Collider2D coll ) {
+	void OnTriggerStay2D( Collider2D coll )
+	{
+		ThrownObject to = coll.gameObject.GetComponent<ThrownObject>();
+
 		if (coll.gameObject.CompareTag("PlayerAttack")
-		&& coll.gameObject.transform.parent.parent.parent.GetComponent<Animator>().GetBool("isAttacking"))
+		&& ((to != null && to.breakableBreaksOnCollision)
+		|| (to == null && coll.gameObject.transform.parent.parent.parent.GetComponent<Animator>().GetBool("isAttacking"))))
 			BreakObject();
 	}
 }

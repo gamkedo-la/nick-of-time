@@ -3119,7 +3119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  cam: {fileID: 8479785458082677512}
+  cam: {fileID: 8479785458525007867}
   bottomLeft: {fileID: 5923680853621793460}
   topRight: {fileID: 5263833878359200722}
   ratio: 0.6
@@ -3622,6 +3622,7 @@ MonoBehaviour:
   pl1: {fileID: 0}
   pl2: {fileID: 0}
   proceedInput: Submit
+  proceedInput2: Jump
   proceedSound: {fileID: 8300000, guid: 3ac4326bbe10ffb42b9652b3dd6cbbc3, type: 3}
   dialogueText: {fileID: 0}
   dialogueSequence: {fileID: 0}

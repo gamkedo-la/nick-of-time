@@ -19,7 +19,7 @@ public class HitCheck : MonoBehaviour
 	[HideInInspector] public Vector2 knockback = Vector2.zero;
 
 	private bool isHit = false;
-	private bool hitLeft = false;
+	private int hitDirection = 0;
 
 	private AudioSource aud = null;
 
@@ -48,12 +48,25 @@ public class HitCheck : MonoBehaviour
 				StartCoroutine(HPBarSoloCamera.GetComponent<ObjectShake>().Shake(10f, 0.2f)); //Shakes HP Bar on Hit
 			}
 
-            knockback = new Vector2(knockbackValue, 0f);
-			knockbackSlowDown = Mathf.Abs(knockbackSlowDown);
-			if(hitLeft)
+			if (hitDirection == 0)
+			{
+				knockback = new Vector2(0f, -knockbackValue);
+				knockbackSlowDown = -Mathf.Abs(knockbackSlowDown);
+			}
+			else if (hitDirection == 1)
 			{
 				knockback = new Vector2(-knockbackValue, 0f);
-				knockbackSlowDown = -knockbackSlowDown;
+				knockbackSlowDown = -Mathf.Abs(knockbackSlowDown);
+			}
+			else if(hitDirection == 2)
+			{
+				knockback = new Vector2(0f, knockbackValue);
+				knockbackSlowDown = Mathf.Abs(knockbackSlowDown);
+			}
+			else if(hitDirection == 3)
+			{
+				knockback = new Vector2(knockbackValue, 0f);
+				knockbackSlowDown = Mathf.Abs(knockbackSlowDown);
 			}
 
 			isHit = false;
@@ -86,12 +99,31 @@ public class HitCheck : MonoBehaviour
 		for(int i = 0; i < hitTags.GetLength(0); i++)
 		{
 			if(coll.gameObject.CompareTag(hitTags[i])
-				&& coll.gameObject.transform.parent.parent.parent.GetComponent<Animator>().GetBool("isAttacking")
-				&& !gameObject.GetComponent<Animator>().GetBool("isRolling"))
+				&& (coll.gameObject.GetComponent<DamageObject>() != null
+				|| coll.gameObject.transform.parent.parent.parent.GetComponent<Animator>().GetBool("isAttacking")))
 			{
-				isHit = true;
-				hitLeft = gameObject.transform.position.x < coll.gameObject.transform.position.x;// coll.gameObject.GetComponent<SpriteRenderer>().flipX;
-				break;
+				if (coll.gameObject.name.Contains("Player"))
+				{
+					if (!coll.gameObject.GetComponent<PlayerController>().isDashing)
+					{
+						Animator anim = coll.gameObject.GetComponent<Animator>();
+
+						isHit = true;
+						hitDirection = anim.GetInteger("direction");
+						break;
+					}
+				}
+				else if (gameObject.name.Contains("Player"))
+				{
+					if (!gameObject.GetComponent<PlayerController>().isDashing)
+					{
+						Animator anim = gameObject.GetComponent<Animator>();
+
+						isHit = true;
+						hitDirection = anim.GetInteger("direction");
+						break;
+					}
+				}
 			}
 		}
 	}
