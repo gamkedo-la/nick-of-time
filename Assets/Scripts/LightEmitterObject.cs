@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[ExecuteInEditMode]
 public class LightEmitterObject : MonoBehaviour
 {
 	public Color highLightColor;
@@ -33,11 +34,14 @@ public class LightEmitterObject : MonoBehaviour
 
 	private void Update()
 	{
-		OnDrawGizmos();
+		Display();
 	}
-
-	void OnDrawGizmos()
+	
+	void Display()
     {
+		if (!mat)
+			Start();
+
 		mat.SetColor("highLightColor", highLightColor);
 		mat.SetColor("midLightColor", midLightColor);
 		mat.SetColor("lowLightColor", lowLightColor);
