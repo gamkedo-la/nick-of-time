@@ -7,6 +7,8 @@ public class Item : ScriptableObject
     public Sprite icon = null;
     public bool isDefaultItem = false;
 
+    public bool stackable = false; //Can you have more than one of this item in a slot? (Potions, bullets, coins etc.)
+
     public EquipmentManager equipmentManager;
 
     public virtual void Use()
