@@ -43,6 +43,11 @@ public class Inventory : MonoBehaviour
         return true;
     }
 
+    public bool HasItem(Item item)
+    {
+        return items.Exists(i => i == item);
+    }
+
     public void Remove(Item item)
     {
         items.Remove(item);
