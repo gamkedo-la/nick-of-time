@@ -303,7 +303,7 @@ MonoBehaviour:
   dashActionDeplete: 0.1
   pushActionDeplete: 0.05
   throwActionDeplete: 0.1
-  comboMaxTimeGap: 0.15
+  comboMaxTimeGap: 0.12
   walkVerticalInput: Vertical1
   walkHorizontalInput: Horizontal1
   attackInput: Fire1
