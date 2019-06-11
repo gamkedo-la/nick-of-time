@@ -6,6 +6,8 @@ public class ItemPickup : Interactable
 
     public Inventory inventory;
 
+    public int amountInStack = 0;
+
     public override void Interact()
     {
         base.Interact();
@@ -15,9 +17,9 @@ public class ItemPickup : Interactable
 
     void PickUp() {
         Debug.Log("Picking up " + item.name);
-        //Add to inventory
+        //Add to inventory        
         bool wasPickedUp = inventory.Add(item);
-
+        inventory.AddToStack(item, amountInStack);
         if (wasPickedUp)
         {
             Destroy(gameObject);

@@ -56,7 +56,7 @@ public class InventoryUI : MonoBehaviour
             else
             {
                 slots[i].ClearSlot();
-            }
+            }            
         }
     }
 

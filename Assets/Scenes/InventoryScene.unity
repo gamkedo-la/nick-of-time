@@ -363,6 +363,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   space: 8
   items: []
+  itemsInSlot: 
 --- !u!114 &53627065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -479,6 +480,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   space: 8
   items: []
+  itemsInSlot: 
 --- !u!114 &74160658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9169,6 +9171,7 @@ MonoBehaviour:
   radius: 0.3
   item: {fileID: 11400000, guid: 32caf8c624487694fbb02f53cd68622b, type: 2}
   inventory: {fileID: 0}
+  amountInStack: 0
 --- !u!58 &199160626
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -21957,6 +21960,7 @@ MonoBehaviour:
   radius: 0.3
   item: {fileID: 11400000, guid: fedbad0a19f7ab54b9630dcad3200f17, type: 2}
   inventory: {fileID: 0}
+  amountInStack: 0
 --- !u!58 &1127975374
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -23194,6 +23198,7 @@ MonoBehaviour:
   radius: 0.3
   item: {fileID: 11400000, guid: a93dad75d96df43459418d1c6d314428, type: 2}
   inventory: {fileID: 0}
+  amountInStack: 1
 --- !u!58 &1270610255
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -27288,6 +27293,7 @@ MonoBehaviour:
   radius: 0.3
   item: {fileID: 11400000, guid: a93dad75d96df43459418d1c6d314428, type: 2}
   inventory: {fileID: 0}
+  amountInStack: 3
 --- !u!58 &1630329612
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -27950,6 +27956,7 @@ MonoBehaviour:
   radius: 0.3
   item: {fileID: 11400000, guid: a93dad75d96df43459418d1c6d314428, type: 2}
   inventory: {fileID: 0}
+  amountInStack: 2
 --- !u!58 &1652581524
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -30622,6 +30629,7 @@ MonoBehaviour:
   radius: 0.3
   item: {fileID: 11400000, guid: b4a8857f5e7b59148850ddbc01e1fea6, type: 2}
   inventory: {fileID: 0}
+  amountInStack: 0
 --- !u!58 &1738663137
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -31027,6 +31035,7 @@ MonoBehaviour:
   radius: 0.3
   item: {fileID: 11400000, guid: 94c86b10df067f74686e77010e2bf681, type: 2}
   inventory: {fileID: 0}
+  amountInStack: 0
 --- !u!58 &1760583905
 CircleCollider2D:
   m_ObjectHideFlags: 0

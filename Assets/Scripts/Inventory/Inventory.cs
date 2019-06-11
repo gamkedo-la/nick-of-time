@@ -21,6 +21,7 @@ public class Inventory : MonoBehaviour
     public int space = 8;
 
     public List<Item> items = new List<Item>();
+    public List<int> itemsInSlot = new List<int>();
 
     public bool Add(Item item)
     {
@@ -39,38 +40,28 @@ public class Inventory : MonoBehaviour
 
             if (HasItem(item) == false && item.stackable == true)
             {
-                items.Add(item);
-            }
-
-
-            
-            if(HasItem(item) && item.stackable)
-            {
-                item.numberOfItemsInStack += item.numberOfItemsInStack;
-            }
+                items.Add(item);                
+            }                  
 
             item.equipmentManager = GetComponent<EquipmentManager>();
             if(onItemChangedCallback != null)
             {
                 onItemChangedCallback.Invoke();
-
             }
         }
         return true;
     }
-
-    public bool AddToItemAmount(Item item, int amountToAdd)
+    
+    public int AddToStack(Item item, int amount)
     {
-        if (HasItem(item))
-        {
-            //Add to the amount of items in slot instead of adding another item to list.             
-        }
-        return true;
+        int index = items.IndexOf(item);
+        itemsInSlot[index] += amount;
+        return amount;
     }
 
     public bool HasItem(Item item)
     {
-        return items.Exists(i => i == item);        
+        return items.Exists(i => i == item);  
     }
 
     public void Remove(Item item)
