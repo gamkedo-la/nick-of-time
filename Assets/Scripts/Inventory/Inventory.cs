@@ -31,15 +31,23 @@ public class Inventory : MonoBehaviour
                 Debug.Log("Inventory full");
                 return false;
             }
+
             if(item.stackable == false)
             {
                 items.Add(item);
             }
-            /*
+
+            if (HasItem(item) == false && item.stackable == true)
+            {
+                items.Add(item);
+            }
+
+
+            
             if(HasItem(item) && item.stackable)
             {
-                
-            }*/
+                item.numberOfItemsInStack += item.numberOfItemsInStack;
+            }
 
             item.equipmentManager = GetComponent<EquipmentManager>();
             if(onItemChangedCallback != null)
@@ -47,6 +55,15 @@ public class Inventory : MonoBehaviour
                 onItemChangedCallback.Invoke();
 
             }
+        }
+        return true;
+    }
+
+    public bool AddToItemAmount(Item item, int amountToAdd)
+    {
+        if (HasItem(item))
+        {
+            //Add to the amount of items in slot instead of adding another item to list.             
         }
         return true;
     }

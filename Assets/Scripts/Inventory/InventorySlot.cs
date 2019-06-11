@@ -7,9 +7,7 @@ public class InventorySlot : MonoBehaviour
     public Image icon;
     public Button removeButton;
     public TextMeshProUGUI itemName;
-
-    private int numberOfItemsInSlot = 0;
-
+    
     [SerializeField]
     private TextMeshProUGUI numberOfItemsInSlotDisplay;
 
@@ -22,7 +20,7 @@ public class InventorySlot : MonoBehaviour
     private void Awake()
     {
         itemName.text = "Empty";
-        numberOfItemsInSlotDisplay.text = numberOfItemsInSlot.ToString();
+        numberOfItemsInSlotDisplay.text = item.numberOfItemsInStack.ToString();
         inventory = associatedPlayer.GetComponent<Inventory>();
     }
 
@@ -34,10 +32,9 @@ public class InventorySlot : MonoBehaviour
         removeButton.interactable = true;
         itemName.text = item.name;
         if(newItem.stackable == true)
-        {
-            numberOfItemsInSlot += 1;
+        {            
             numberOfItemsInSlotDisplay.enabled = true;
-            numberOfItemsInSlotDisplay.text = numberOfItemsInSlot.ToString();
+            numberOfItemsInSlotDisplay.text = item.numberOfItemsInStack.ToString();
         }
     }
 

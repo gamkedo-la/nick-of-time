@@ -9,6 +9,8 @@ public class Item : ScriptableObject
 
     public bool stackable = false; //Can you have more than one of this item in a slot? (Potions, bullets, coins etc.)
 
+    public int numberOfItemsInStack = 1;
+
     public EquipmentManager equipmentManager;
 
     public virtual void Use()
