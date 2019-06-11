@@ -61,7 +61,6 @@ public class ActivateSingleMode : MonoBehaviour {
 		//When all enemies are dead and all triggers are gone (Win)
 		if(GameObject.FindWithTag("Enemy") == null && LevelManager.triggerCount <= 0)
 		{
-			Debug.Log("WIN! " + LevelManager.triggerCount);
 			winObject.SetActive(true);
 			duelCamToSingleCam();
 		}

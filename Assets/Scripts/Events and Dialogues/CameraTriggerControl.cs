@@ -21,35 +21,43 @@ public class CameraTriggerControl : MonoBehaviour
 	
 	[HideInInspector] public bool triggered = false;
 	
-	void Start () {
+	void Start ()
+	{
 		
 	}
 	
-	void Update () {
+	void Update ()
+	{
 		if(cam == null || cam.GetComponent<LerpToTransform>().enabled == false)
 			Destroy(this);
 	}
+
+	void ControlStart()
+	{
+		cam.GetComponent<LerpToTransform>().tr = gameObject.transform;
+		cam.GetComponent<LerpToCamSize>().size = size;
+
+		moodAmbianceLerper.color = ambientColor;
+		moodAmbianceLerper.intensity = ambientIntensity;
+		moodAmbianceLerper.gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, moodAmbianceLerper.gameObject.transform.position.z);
+
+		triggered = true;
+	}
+
+	void ControlStop()
+	{
+		//Camera.main.GetComponent<LerpToTransform>().tr = coll.gameObject.transform;
+		triggered = false;
+	}
 	
-	void OnTriggerEnter2D(Collider2D coll) {
-		if(coll.gameObject.CompareTag(objectTag) && (coll.gameObject.name == "null" || coll.gameObject.name == objectName) )
-		{
-			cam.GetComponent<LerpToTransform>().tr = gameObject.transform;
-			cam.GetComponent<LerpToCamSize>().size = size;
-			moodAmbianceLerper.color = ambientColor;
-			moodAmbianceLerper.intensity = ambientIntensity;
-			moodAmbianceLerper.gameObject.transform.position = new Vector3( gameObject.transform.position.x, gameObject.transform.position.y, moodAmbianceLerper.gameObject.transform.position.z);
-			
-			triggered = true;
-		}
+	void OnTriggerEnter2D(Collider2D coll)
+	{
+		if (coll.gameObject.CompareTag(objectTag) && (coll.gameObject.name == "null" || coll.gameObject.name == objectName)) ControlStart();
 	}
 	
 	//To set the transform follow back to Player after getting out of the trigger zone
 	void OnTriggerExit2D(Collider2D coll)
 	{
-		if (coll.gameObject.CompareTag(objectTag) && (coll.gameObject.name == "null" || coll.gameObject.name == objectName))
-		{
-			//Camera.main.GetComponent<LerpToTransform>().tr = coll.gameObject.transform;
-			triggered = false;
-		}
+		if (coll.gameObject.CompareTag(objectTag) && (coll.gameObject.name == "null" || coll.gameObject.name == objectName)) ControlStop();
 	}
 }
