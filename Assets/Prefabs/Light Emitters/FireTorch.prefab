@@ -161,7 +161,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 10
   m_Sprite: {fileID: 164020339732123076, guid: 86af6eccffc0dbf44981249bcf7fcfea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -214,6 +214,7 @@ MonoBehaviour:
   midLightSpotAngle: 150
   lowLightColor: {r: 0.6698113, g: 0, b: 0.40188703, a: 1}
   holderLightColor: {r: 0.5882353, g: 0.3529412, b: 0.3529412, a: 1}
+  disable: 0
 --- !u!1 &8520000503664625655
 GameObject:
   m_ObjectHideFlags: 0

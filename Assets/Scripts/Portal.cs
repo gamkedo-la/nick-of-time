@@ -105,7 +105,8 @@ public class Portal : MonoBehaviour
     // Does *not* update the selectionIndex
     private void PreviewSelection()
     {
-        playerCamera.tr = exits[selectedIndex].transform;
+		if(exits != null && exits.Length > 0)
+			playerCamera.tr = exits[selectedIndex].transform;
     }
 
     private void TransportPlayer(Portal exit)
