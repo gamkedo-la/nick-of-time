@@ -4,9 +4,19 @@ using UnityEngine;
 
 public class DisableAfterDelay : MonoBehaviour
 {
-	public float delay = 1f;    
+	public float delay = 1f;
 
-    void Update()
+	private void Start()
+	{
+		for (int i = 0; i < gameObject.transform.childCount; i++)
+		{
+			LightEmitterObject leo = gameObject.transform.GetChild(i).gameObject.GetComponent<LightEmitterObject>();
+			if (leo != null)
+				leo.disable = true;
+		}
+	}
+
+	void Update()
     {
 		if (delay <= 0f)
 		{
