@@ -12935,6 +12935,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 417590002}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &423617870
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 423617871}
+  m_Layer: 0
+  m_Name: TE (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &423617871
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423617870}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.042, y: 0.153, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1569953328}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!21 &442915863
 Material:
   serializedVersion: 6
@@ -13141,7 +13171,7 @@ MonoBehaviour:
     isEnemySpawnDone: 0
     decrementTriggerCount: 0
   - triggerTransform: {fileID: 1569953328}
-    checkEnemies: 0
+    checkEnemies: 1
     destroyEnemies: 0
     isCounted: 0
     objectToActivate:
@@ -13149,7 +13179,8 @@ MonoBehaviour:
       disableAfterLeaving: 1
     - obj: {fileID: 2044132719}
       disableAfterLeaving: 0
-    enemySpawnObject: {fileID: 0}
+    enemySpawnObject: {fileID: 1458945338159648, guid: 2128f25ab003fc34390f37350cb0f5e6,
+      type: 3}
     minimapTilemap: {fileID: 2044132722}
     triggerTimer: 0
     isObjectsActivationDone: 0
@@ -30840,7 +30871,9 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 9.444, y: -1.441, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 2053077649}
+  - {fileID: 423617871}
   m_Father: {fileID: 1561379418}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -79565,6 +79598,36 @@ Transform:
   - {fileID: 1786595161}
   m_Father: {fileID: 1704768762}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2053077648
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2053077649}
+  m_Layer: 0
+  m_Name: TE
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2053077649
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2053077648}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.41, y: 0.797, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1569953328}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2053775134
 PrefabInstance:

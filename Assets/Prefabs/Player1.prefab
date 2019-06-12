@@ -695,7 +695,7 @@ GameObject:
   - component: {fileID: 1148393954167941654}
   - component: {fileID: 5660807818573569359}
   m_Layer: 8
-  m_Name: Sprite
+  m_Name: Sprite_PL_ATT
   m_TagString: PlayerAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -56,11 +56,11 @@ public class MuddlingAI : MonoBehaviour {
 		actionTimer = Random.Range(actionMinDelay, actionMaxDelay);
 	}
 	
-	void Update () {
-		
+	void Update ()
+	{
 		walkInput = Vector2.zero;
 		
-		if(targetObjects != null)
+		if(targetObjects != null && animator.GetBool("isSpawned"))
 		{
 			int targetIndex = -1;
 			int indexLeft = -1;
@@ -231,7 +231,6 @@ public class MuddlingAI : MonoBehaviour {
 
 			actionTimer -= Time.deltaTime;
 			walkTimer -= Time.deltaTime;
-		
 		}
 	}
 	

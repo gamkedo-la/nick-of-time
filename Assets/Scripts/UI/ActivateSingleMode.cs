@@ -56,24 +56,39 @@ public class ActivateSingleMode : MonoBehaviour {
 		//pauseObject.SetActive(false);
 	}
 	
-	void Update () {
-		
+	void Update ()
+	{
+		GameObject e = GameObject.FindWithTag("Enemy");
+
+		//Exciting music when enemies appear!
+		if (e == null)
+		{
+			if (MusicManager.instance != null)
+				MusicManager.instance.gameObject.GetComponent<AudioSource>().pitch = Mathf.Lerp(MusicManager.instance.gameObject.GetComponent<AudioSource>().pitch, 0.5f, 0.1f);
+		}
+		else
+		{
+			if (MusicManager.instance != null)
+				MusicManager.instance.gameObject.GetComponent<AudioSource>().pitch = Mathf.Lerp(MusicManager.instance.gameObject.GetComponent<AudioSource>().pitch, 1.5f, 0.025f);
+		}
+
 		//When all enemies are dead and all triggers are gone (Win)
-		if(GameObject.FindWithTag("Enemy") == null && LevelManager.triggerCount <= 0)
+		if (e == null && LevelManager.triggerCount <= 0)
 		{
 			winObject.SetActive(true);
 			duelCamToSingleCam();
 		}
+
 		//When all players are dead (Lose)
-		else if(cam1.gameObject.GetComponent<LerpToTransform>().plTr == null
+		else if (cam1.gameObject.GetComponent<LerpToTransform>().plTr == null
 		&& cam2.gameObject.GetComponent<LerpToTransform>().plTr == null)
 		{
 			loseObject.SetActive(true);
 		}
 		//ESC enables Pause state
-		else if(Input.GetButtonDown(pauseInput))
+		else if (Input.GetButtonDown(pauseInput))
 		{
-			if(!paused)
+			if (!paused)
 			{
 				paused = true;
 				duelCamToSingleCam();
@@ -89,49 +104,49 @@ public class ActivateSingleMode : MonoBehaviour {
 			}
 		}
 		//If game is paused
-		else if(paused)
+		else if (paused)
 		{
 			//Do nothing for now!
 		}
 		//If player 1 is gone
-		else if(cam1.gameObject.GetComponent<LerpToTransform>().plTr == null)
+		else if (cam1.gameObject.GetComponent<LerpToTransform>().plTr == null)
 		{
 			duelCamToSingleCam(true);
 			jointCam.GetComponent<LerpToTransform>().lerpPercent = 0.1f;
-			
+
 			//If the mode is VS. (Arena)
-			if(!TogglesValues.coop)
+			if (!TogglesValues.coop)
 			{
 				winObject.SetActive(true);
 				p2WinObject.SetActive(true);
 			}
 			//If the mode is Story
-			else if(TogglesValues.story && !GameManager.singleGame)
+			else if (TogglesValues.story && !GameManager.singleGame)
 			{
 				loseObject.SetActive(true);
 			}
 		}
 		//If player 2 is gone
-		else if(cam2.gameObject.GetComponent<LerpToTransform>().plTr == null)
+		else if (cam2.gameObject.GetComponent<LerpToTransform>().plTr == null)
 		{
 			duelCamToSingleCam();
 			jointCam.GetComponent<LerpToTransform>().lerpPercent = 0.1f;
-			
+
 			//If the mode is VS. (Arena)
-			if(!TogglesValues.coop)
+			if (!TogglesValues.coop)
 			{
 				winObject.SetActive(true);
 				p1WinObject.SetActive(true);
 			}
 			//If the mode is Story
-			else if(TogglesValues.story && !GameManager.singleGame)
+			else if (TogglesValues.story && !GameManager.singleGame)
 			{
 				loseObject.SetActive(true);
 			}
 		}
 		//If both player live and are in same trigger zone AND player preferred single window
 		//OR if there is some dialogue to be shown on screen
-		else if((cam1.gameObject.GetComponent<LerpToTransform>().tr.position == cam2.gameObject.GetComponent<LerpToTransform>().tr.position
+		else if ((cam1.gameObject.GetComponent<LerpToTransform>().tr.position == cam2.gameObject.GetComponent<LerpToTransform>().tr.position
 		&& TogglesValues.singleWindow)
 		|| (dialogueBoxObject != null && dialogueBoxObject.GetComponent<SpriteRenderer>().enabled))
 		{

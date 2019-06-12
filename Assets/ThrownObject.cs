@@ -62,4 +62,14 @@ public class ThrownObject : MonoBehaviour
 			throwRotation = 0f;
 		}
 	}
+
+	public int GetDirection()
+	{
+		if (throwVelocity.y > 0) return 0;
+		else if (throwVelocity.x > 0) return 1;
+		else if (throwVelocity.y < 0) return 2;
+		else if (throwVelocity.x < 0) return 3;
+
+		return -1;
+	}
 }

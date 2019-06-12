@@ -96,36 +96,69 @@ public class HitCheck : MonoBehaviour
 
 	void OnTriggerStay2D( Collider2D coll )
 	{
-		for(int i = 0; i < hitTags.GetLength(0); i++)
+		for(int i = 0; i < hitTags.Length; i++)
 		{
-			if(coll.gameObject.CompareTag(hitTags[i])
-				&& (coll.gameObject.GetComponent<DamageObject>() != null
-				|| coll.gameObject.transform.parent.parent.parent.GetComponent<Animator>().GetBool("isAttacking")))
+			if (coll.gameObject.tag == hitTags[i])
 			{
-				if (coll.gameObject.name.Contains("Player"))
-				{
-					if (!coll.gameObject.GetComponent<PlayerController>().isDashing)
-					{
-						Animator anim = coll.gameObject.GetComponent<Animator>();
+				ThrownObject to = coll.gameObject.GetComponent<ThrownObject>();
 
-						isHit = true;
-						hitDirection = anim.GetInteger("direction");
-						break;
-					}
+				if (coll.gameObject.GetComponent<DamageObject>() != null)
+				{
+					if (PlayerDamage()) break;
 				}
-				else if (gameObject.name.Contains("Player"))
+				else if (to != null && to.throwVelocity != Vector3.zero)
 				{
-					if (!gameObject.GetComponent<PlayerController>().isDashing)
-					{
-						Animator anim = gameObject.GetComponent<Animator>();
-
-						isHit = true;
-						hitDirection = anim.GetInteger("direction");
-						break;
-					}
+					if (EnemyDamageOnThrownObject(coll, to)) break;
+				}
+				else if (coll.gameObject.transform.parent != null && coll.gameObject.transform.parent.parent != null && coll.gameObject.transform.parent.parent != null && coll.gameObject.transform.parent.parent.parent.GetComponent<Animator>().GetBool("isAttacking"))
+				{
+					if (EnemyDamage(coll)) break;
 				}
 			}
 		}
+	}
+
+	private bool PlayerDamage()
+	{
+		if (gameObject.name.Contains("Player"))
+		{
+			if (!gameObject.GetComponent<PlayerController>().isDashing)
+			{
+				Animator anim = gameObject.GetComponent<Animator>();
+
+				isHit = true;
+				hitDirection = anim.GetInteger("direction");
+				return true;
+			}
+		}
+		return false;
+	}
+
+	private bool EnemyDamageOnThrownObject(Collider2D coll, ThrownObject to)
+	{
+		if (coll.gameObject.name.Contains("PL_ATT"))
+		{
+			isHit = true;
+			hitDirection = to.GetDirection();
+			return true;
+		}
+		return false;
+	}
+
+	private bool EnemyDamage(Collider2D coll)
+	{
+		if (coll.gameObject.name.Contains("PL_ATT"))
+		{
+			if (!coll.gameObject.transform.parent.parent.parent.gameObject.GetComponent<PlayerController>().isDashing)
+			{
+				Animator anim = coll.gameObject.transform.parent.parent.parent.gameObject.GetComponent<Animator>();
+				
+				isHit = true;
+				hitDirection = anim.GetInteger("direction");
+				return true;
+			}
+		}
+		return false;
 	}
 
 	public void die()

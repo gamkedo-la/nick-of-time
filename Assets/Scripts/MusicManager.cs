@@ -3,41 +3,44 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MusicManager : MonoBehaviour {
-	
+public class MusicManager : MonoBehaviour
+{
 	public AudioClip menuMusic;
-	public AudioClip arenaMusic;
-	
-	private AudioSource aud;
-	
-	private string prevScene;
-	
+	public AudioClip storyMusic;
 
-	void Start () {
+	static public MusicManager instance = null;
+
+	private AudioSource aud;
+
+	private string prevScene;
+
+	void Start()
+	{
+		instance = this;
 		aud = GetComponent<AudioSource>();
 	}
-	
-	void Update () {
-		
+
+	void Update()
+	{
 		string newScene = SceneManager.GetActiveScene().name;
-		
-		if((newScene == "Menu"
+
+		if ((newScene == "Menu"
 			|| newScene == "Help"
 			|| newScene == "Credits"
 			|| newScene == "Toggles")
 			&& !aud.isPlaying
 			&& TogglesValues.music)
-				newScene = "MusicToggle";
-		
-		if(newScene != prevScene || !aud.isPlaying)
+			newScene = "MusicToggle";
+
+		if (newScene != prevScene || !aud.isPlaying)
 			changeMusicState(newScene);
-		
+
 		prevScene = newScene;
 	}
-	
+
 	public void changeMusicState(string newScene)
 	{
-		if(
+		if (
 				((newScene == "Menu"
 				|| newScene == "Help"
 				|| newScene == "Credits"
@@ -47,36 +50,35 @@ public class MusicManager : MonoBehaviour {
 				&& prevScene != "Help"
 				&& prevScene != "Credits"
 				&& prevScene != "Toggles"))
-				
+
 				//For turning on music when music toggles to on AND for repeating music
 				|| newScene == "MusicToggle"
 				)
+		{
+			aud.Stop();
+			aud.pitch = 1f;
+
+			if (!aud.isPlaying)
 			{
-				aud.Stop();
-		
-				if(!aud.isPlaying)
-				{
-					if(aud != null && TogglesValues.music)
-						aud.PlayOneShot(menuMusic);
-				}
+				if (aud != null && TogglesValues.music)
+					aud.PlayOneShot(menuMusic);
 			}
-			else if(newScene== "Arena"
-		
-				//TEMPORARILY
-				|| newScene == "Play")
-		
+		}
+		else if (newScene == "Story1")
+		{
+			aud.Stop();
+			aud.pitch = 0.5f;
+
+			if (!aud.isPlaying)
 			{
-				aud.Stop();
-			
-				if(!aud.isPlaying)
-				{
-					if(aud != null && TogglesValues.music)
-						aud.PlayOneShot(arenaMusic);
-				}
+				if (aud != null && TogglesValues.music)
+					aud.PlayOneShot(storyMusic);
 			}
-			else if(newScene == "Prologue")
-			{
-				aud.Stop();
-			}
+		}
+		else if (newScene == "Prologue")
+		{
+			aud.Stop();
+			aud.pitch = 1f;
+		}
 	}
 }

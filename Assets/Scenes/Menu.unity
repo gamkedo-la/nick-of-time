@@ -5184,7 +5184,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -5314,7 +5314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuMusic: {fileID: 8300000, guid: 115392b58054ff34e894830b0d928ffb, type: 3}
-  arenaMusic: {fileID: 0}
+  storyMusic: {fileID: 8300000, guid: 801c0c497f05bb446ade89b7086f0b51, type: 3}
 --- !u!1 &2032853953
 GameObject:
   m_ObjectHideFlags: 0
