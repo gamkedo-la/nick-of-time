@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class Portal : MonoBehaviour
 {
@@ -23,11 +24,10 @@ public class Portal : MonoBehaviour
             if (Input.GetButtonDown(attackInput))
             {
                 TransportPlayer(exits[selectedIndex]);
-                player.GetComponent<PlayerController>().enabled = true;
                 playerCamera.tr = previousCameraTrack;
                 playerCamera.playerFocusFactor = previousPlayerFocusFactor;
-                player = null;
                 playerCamera = null;
+                StartCoroutine(ReactivatePlayer());
             }
 
             // Change selection with horizontalInput
@@ -83,6 +83,18 @@ public class Portal : MonoBehaviour
         }
     }
 
+    // Reactivate on a delay to avoid PlayerController reading
+    // input too early (don't punch out of the portal)
+    private IEnumerator ReactivatePlayer()
+    {
+        while (true)
+        {
+            yield return new WaitForEndOfFrame();
+            player.GetComponent<PlayerController>().enabled = true;
+            player = null;
+        }
+    }
+
     // Re-enables the portal after the player has exited collision with it.
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -106,7 +118,7 @@ public class Portal : MonoBehaviour
     {
         foreach (LerpToTransform c in FindObjectsOfType<LerpToTransform>())
         {
-            if (c.plTr.name == player.name)
+            if (c.plTr && c.plTr.name == player.name)
             {
                 return c;
             }

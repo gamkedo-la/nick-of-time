@@ -8,6 +8,8 @@ public class DialogueBoxSwitch : MonoBehaviour
 
 	public GameObject pl1;
 	public GameObject pl2;
+    private bool disabledP1 = false;
+    private bool disabledP2 = false;
 
 	public string proceedInput = "Submit";
 	public string proceedInput2= "Jump"; // to allow SPACE or ENTER to proceed
@@ -62,15 +64,31 @@ public class DialogueBoxSwitch : MonoBehaviour
 		{
 			sprRenderer.enabled = false;
 
-			if (pl1) pl1.GetComponent<PlayerController>().enabled = true;
-			if (pl2) pl2.GetComponent<PlayerController>().enabled = true;
+            if (pl1 && disabledP1)
+            {
+                disabledP1 = false;
+                pl1.GetComponent<PlayerController>().enabled = true;
+            }
+            if (pl2 && disabledP2)
+            {
+                disabledP2 = false;
+                pl2.GetComponent<PlayerController>().enabled = true;
+            }
 		}
 		else if (!sprRenderer.enabled)
 		{
 			sprRenderer.enabled = true;
 
-			if (pl1) pl1.GetComponent<PlayerController>().enabled = false;
-			if (pl2) pl2.GetComponent<PlayerController>().enabled = false;
+            if (pl1)
+            {
+                disabledP1 = true;
+                pl1.GetComponent<PlayerController>().enabled = false;
+            }
+            if (pl2)
+            {
+                disabledP2 = true;
+                pl2.GetComponent<PlayerController>().enabled = false;
+            }
 
 			checkForDialogueStringTags(dialogueSequence.dialogues[dialogueSequence.dialogueNo]);
 		}

@@ -39,8 +39,7 @@ public class LerpToTransform : MonoBehaviour
 		if(onlyXAxis)
 			plPos = new Vector3 ( plPos.x, transform.position.y, plPos.z);
 		
-        if (!plTr.GetComponent<Portal>())
-            deathFocusTransform();
+        deathFocusTransform();
 
 		transform.position = Vector3.Lerp ( transform.position, plPos + offset, lerpPercent );
 		
