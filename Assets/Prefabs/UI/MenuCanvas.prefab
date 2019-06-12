@@ -1107,7 +1107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b2afe64ec042534db09132c41d29d6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Toggles
+  sceneName: Settings
   startTime: 0
   clickSound: {fileID: 8300000, guid: 3ac4326bbe10ffb42b9652b3dd6cbbc3, type: 3}
 --- !u!114 &1988126989729419784
