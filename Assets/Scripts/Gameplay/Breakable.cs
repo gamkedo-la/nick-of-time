@@ -57,6 +57,7 @@ public class Breakable : MonoBehaviour
 		ThrownObject to = coll.gameObject.GetComponent<ThrownObject>();
 
 		if(coll.gameObject.CompareTag("PlayerAttack")
+		&& coll.gameObject.layer != 15 //PiecesCollision
 		&& ((to != null && to.breakableBreaksOnCollision)
 		|| (to == null && coll.gameObject.transform.parent.parent.parent.GetComponent<Animator>().GetBool("isAttacking"))))
 			BreakObject();
@@ -66,6 +67,7 @@ public class Breakable : MonoBehaviour
 		ThrownObject to = coll.gameObject.GetComponent<ThrownObject>();
 
 		if (coll.gameObject.CompareTag("PlayerAttack")
+		&& coll.gameObject.layer != 15 //PiecesCollision
 		&& ((to != null && to.breakableBreaksOnCollision)
 		|| (to == null && coll.gameObject.transform.parent.parent.parent.GetComponent<Animator>().GetBool("isAttacking"))))
 			BreakObject();

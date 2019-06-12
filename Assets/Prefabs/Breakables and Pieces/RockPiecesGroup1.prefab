@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 114741820360315122}
   - component: {fileID: 61667147619709832}
   - component: {fileID: 50208785426790620}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RockPiece2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,7 +161,7 @@ GameObject:
   - component: {fileID: 114957465322573152}
   - component: {fileID: 61368784933977202}
   - component: {fileID: 50176609728638898}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RockPiece3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -309,7 +309,7 @@ GameObject:
   - component: {fileID: 114257399410588440}
   - component: {fileID: 61942883055557880}
   - component: {fileID: 50267459853662602}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RockPiece1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -457,7 +457,7 @@ GameObject:
   - component: {fileID: 114248676260753660}
   - component: {fileID: 61734442141778380}
   - component: {fileID: 50734756398955136}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RockPiece4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -605,7 +605,7 @@ GameObject:
   - component: {fileID: 114193196616320224}
   - component: {fileID: 61331206281081676}
   - component: {fileID: 50461922841760944}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RockPiece1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -753,7 +753,7 @@ GameObject:
   - component: {fileID: 114944632533780432}
   - component: {fileID: 61132490490332798}
   - component: {fileID: 50755169382277860}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RockPiece5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -897,7 +897,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4253595809585670}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RockPiecesGroup1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -939,7 +939,7 @@ GameObject:
   - component: {fileID: 114597140457515976}
   - component: {fileID: 61738738615399636}
   - component: {fileID: 50973404090073362}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RockPiece6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1087,7 +1087,7 @@ GameObject:
   - component: {fileID: 114676234983965316}
   - component: {fileID: 61034844113248400}
   - component: {fileID: 50990880256919616}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: RockPiece2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

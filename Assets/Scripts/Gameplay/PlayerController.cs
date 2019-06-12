@@ -36,7 +36,6 @@ public class PlayerController : MonoBehaviour
 	public string walkVerticalInput = "Vertical";
 	public string walkHorizontalInput = "Horizontal";
 	public string attackInput = "Fire1";
-	public string pushInput = "Push1";
 
 	[Space]
 	public WeaponPossession weaponPossession;
@@ -64,6 +63,7 @@ public class PlayerController : MonoBehaviour
 
 	private float comboTimer = 0f;
 	private string comboKeys = "";
+	private bool pushPossible = false;
 
 	private void Start()
 	{
@@ -89,27 +89,36 @@ public class PlayerController : MonoBehaviour
 
 				if (walkInput != Vector2.zero)
 				{
-					if (prevWalkState == 0)
-						comboKeys += "Walk";
-
 					speed = walkSpeed;
 					animator.SetBool("isWalking", true);
 
 					if (walkInput.y < 0)
 					{
 						animator.SetInteger("direction", 2);
+
+						if (prevWalkState == 0)
+							comboKeys += "D";
 					}
 					else if (walkInput.y > 0)
 					{
 						animator.SetInteger("direction", 0);
+
+						if (prevWalkState == 0)
+							comboKeys += "U";
 					}
 					else if (walkInput.x > 0)
 					{
 						animator.SetInteger("direction", 1);
+
+						if (prevWalkState == 0)
+							comboKeys += "R";
 					}
 					else if (walkInput.x < 0)
 					{
 						animator.SetInteger("direction", 3);
+
+						if (prevWalkState == 0)
+							comboKeys += "L";
 					}
 
 					if (walkInput.x > 0) sprRenderer.flipX = true;
@@ -132,9 +141,9 @@ public class PlayerController : MonoBehaviour
 				&& !isDashing
 				&& Input.GetButtonDown(attackInput))
 			{
-				comboKeys += "Attack";
+				comboKeys += "A";
 
-				if (comboKeys != "WalkAttack" && comboKeys != "AttackWalk")
+				if (comboKeys != "UA" && comboKeys != "RA" && comboKeys != "DA" && comboKeys != "LA")
 				{
 					animator.SetBool("isAttacking", true);
 
@@ -175,13 +184,31 @@ public class PlayerController : MonoBehaviour
 				}
 			}
 
+			//Push
+			if (pushPossible
+			&& !animator.GetBool("isPushing")
+			&& !animator.GetBool("isAttacking")
+			&& !animator.GetBool("isThrowing")
+			&& !isDashing
+			&& (comboKeys == "UU" || comboKeys == "RR" || comboKeys == "DD" || comboKeys == "LL"))
+			{
+				animator.SetBool("isPushing", true);
+				speed = 0f;
+
+				actionPoints -= pushActionDeplete;
+
+				pushPossible = false;
+
+				comboKeys = "";
+			}
+
 			//Dash
 			if (actionPoints >= dashActionDeplete
 				&& !isDashing
 				&& !animator.GetBool("isAttacking")
 				&& !animator.GetBool("isPushing")
 				&& !animator.GetBool("isThrowing")
-				&& comboKeys == "WalkWalk"
+				&& (comboKeys == "UU" || comboKeys == "RR" || comboKeys == "DD" || comboKeys == "LL")
 				&& hitCheck.knockback == Vector2.zero)
 			{
 				isDashing = true;
@@ -217,27 +244,13 @@ public class PlayerController : MonoBehaviour
 				}
 			}
 			*/
-
-			//Push
-			if(!animator.GetBool("isPushing")
-			&& !animator.GetBool("isAttacking")
-			&& !animator.GetBool("isThrowing")
-			&& !isDashing
-			&& Input.GetButtonDown(pushInput))
-			{
-				animator.SetBool("isPushing", true);
-				speed = 0f;
-
-				actionPoints -= pushActionDeplete;
-			}
-
+			
 			//Throw
 			if(!animator.GetBool("isThrowing")
 			&& !animator.GetBool("isAttacking")
 			&& !animator.GetBool("isPushing")
 			&& !isDashing
-			&& (comboKeys == "AttackWalk"
-			|| comboKeys == "WalkAttack"))
+			&& (comboKeys == "UA" || comboKeys == "RA" || comboKeys == "DA" || comboKeys == "LA"))
 			{
 				animator.SetBool("isThrowing", true);
 				speed = attackSpeed;
@@ -246,7 +259,8 @@ public class PlayerController : MonoBehaviour
 
 				actionPoints -= throwActionDeplete;
 
-				if (throwFXObject && nextFXdelay<0f) {
+				if (throwFXObject && nextFXdelay < 0f)
+				{
 					GameObject FX = Instantiate(throwFXObject, transform.position, Quaternion.Euler(0f,0f,0f));
 					nextFXdelay = MINIMUM_TIME_BETWEEN_FX;
 				}
@@ -271,7 +285,8 @@ public class PlayerController : MonoBehaviour
 
 				SpriteRenderer GSFX_sprRend = ghostSpriteFX.GetComponent<SpriteRenderer>();
 
-				if (dashFXObject && nextFXdelay<0f) {
+				if (dashFXObject && nextFXdelay < 0f)
+				{
 					GameObject FX = Instantiate(dashFXObject, transform.position, Quaternion.Euler(0f,0f,0f));
 					nextFXdelay = MINIMUM_TIME_BETWEEN_FX;
 				}
@@ -310,8 +325,8 @@ public class PlayerController : MonoBehaviour
 	{
 		if (animator.GetBool("isPushing") == true && collision.gameObject.isStatic == false)
 		{
-			
-			if (pushFXObject && nextFXdelay<0f) {
+			if (pushFXObject && nextFXdelay < 0f)
+			{
 				GameObject FX = Instantiate(pushFXObject, transform.position, Quaternion.Euler(0f,0f,0f));
 				nextFXdelay = MINIMUM_TIME_BETWEEN_FX;
 			}
@@ -350,12 +365,22 @@ public class PlayerController : MonoBehaviour
 
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
+		if(collision.gameObject.layer != LayerMask.NameToLayer("Player") && collision.gameObject.isStatic == false)
+			pushPossible = true;
 		pushOnCollision(collision);
 	}
 
 	private void OnCollisionStay2D(Collision2D collision)
 	{
+		if (collision.gameObject.layer != LayerMask.NameToLayer("Player") && collision.gameObject.isStatic == false)
+			pushPossible = true;
 		pushOnCollision(collision);
+	}
+
+	private void OnCollisionExit2D(Collision2D collision)
+	{
+		if (collision.gameObject.layer != LayerMask.NameToLayer("Player") && collision.gameObject.isStatic == false)
+			pushPossible = false;
 	}
 
 	void FixedUpdate()
@@ -442,7 +467,8 @@ public class PlayerController : MonoBehaviour
 	{
 		if (weaponPossession.weaponID > -1)
 		{
-			if (throwFXObject && nextFXdelay<0f) {
+			if (throwFXObject && nextFXdelay < 0f)
+			{
 				GameObject FX = Instantiate(throwFXObject, transform.position, Quaternion.Euler(0f,0f,0f));
 				nextFXdelay = MINIMUM_TIME_BETWEEN_FX;
 			}

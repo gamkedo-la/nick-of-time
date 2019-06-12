@@ -26,8 +26,8 @@ TagManager:
   - OverPlayer2Camera
   - OverJointCamera
   - Minimap
-  - 
-  - 
+  - PiecesCollision
+  - PiecesCollisionPlayer
   - 
   - 
   - 

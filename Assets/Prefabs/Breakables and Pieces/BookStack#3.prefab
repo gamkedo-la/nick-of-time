@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3124024765801754694}
   - component: {fileID: 3124024765801754695}
   - component: {fileID: 3124024765801754688}
+  - component: {fileID: 8829156162774047512}
   m_Layer: 0
   m_Name: BookStack#3
   m_TagString: Untagged
@@ -99,6 +100,19 @@ MonoBehaviour:
   doDestroy: 0
   enablePiecesParticles: 1
   pieces: []
+--- !u!114 &8829156162774047512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3124024765801754690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2baded9fd5e811249b20621c5a6c0337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
 --- !u!1 &3124024766257550265
 GameObject:
   m_ObjectHideFlags: 0

@@ -71,6 +71,7 @@ Transform:
   - {fileID: 8144935541084721335}
   - {fileID: 1103091295746358210}
   - {fileID: 444304565013215508}
+  - {fileID: 2605728702270850878}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -295,20 +296,23 @@ MonoBehaviour:
   throwSpeed: 4
   dashFXObject: {fileID: 2643976167619289179, guid: d16b468af7e8e1a49a14edc85440334d,
     type: 3}
-  attackFXObject: {fileID: 0}
-  pushFXObject: {fileID: 0}
-  throwFXObject: {fileID: 0}
-  walkFXObject: {fileID: 0}
+  attackFXObject: {fileID: 6822276787287973955, guid: d56b00b85024dc248846d64d2fa62c06,
+    type: 3}
+  pushFXObject: {fileID: 265230751362064799, guid: dd8fe7aa1b97cb948aa757f11819bc02,
+    type: 3}
+  throwFXObject: {fileID: 6251211592812678054, guid: 2d6109a009d2847449504103001017d6,
+    type: 3}
+  walkFXObject: {fileID: 5537064423695862265, guid: 5dd81b52208f9264ab6a208f3e35cd8d,
+    type: 3}
   regenerateActionPointsPerSec: 0.2
   attackActionDeplete: 0.25
   dashActionDeplete: 0.1
   pushActionDeplete: 0.05
   throwActionDeplete: 0.1
-  comboMaxTimeGap: 0.12
+  comboMaxTimeGap: 0.125
   walkVerticalInput: Vertical1
   walkHorizontalInput: Horizontal1
   attackInput: Fire1
-  pushInput: Push1
   weaponPossession: {fileID: 1148393954167941654}
   attackSound: {fileID: 8300000, guid: 32ed1d859f4d34a41a11b51400612384, type: 3}
   dashSound: {fileID: 8300000, guid: f8a4e4e3090eccc478baddaf7213dd10, type: 3}
@@ -509,6 +513,53 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &5282673048867340566
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2605728702270850878}
+  - component: {fileID: 6116921939259254877}
+  m_Layer: 16
+  m_Name: FootPiecesCollision
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2605728702270850878
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5282673048867340566}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1148393954563092509}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &6116921939259254877
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5282673048867340566}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.065}
+  serializedVersion: 2
+  m_Radius: 0.04
 --- !u!1 &6656254415287808299
 GameObject:
   m_ObjectHideFlags: 0
