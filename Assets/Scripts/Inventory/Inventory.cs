@@ -60,7 +60,7 @@ public class Inventory : MonoBehaviour
         Debug.Log(item.name + "is in slot " + index);
         itemsInSlot[index] += amount;
         Debug.Log("There are " + itemsInSlot[index].ToString() + " in slot " + index);
-        
+        onItemChangedCallback.Invoke();
     }
 
     public bool HasItem(Item item)
