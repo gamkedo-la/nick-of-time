@@ -3,12 +3,12 @@ using UnityEngine;
 
 public class Portal : MonoBehaviour
 {
-    bool active = true;
+    public bool active = true;
 
     public Portal[] exits;
     private int selectedIndex = 0;
 
-    private GameObject player;
+    public GameObject player;
     private string attackInput = "Fire1";
     private string horizontalInput = "Horizontal";
 
@@ -87,9 +87,9 @@ public class Portal : MonoBehaviour
     // input too early (don't punch out of the portal)
     private IEnumerator ReactivatePlayer()
     {
-        while (true)
+        yield return new WaitForEndOfFrame();
+        if (player)
         {
-            yield return new WaitForEndOfFrame();
             player.GetComponent<PlayerController>().enabled = true;
             player = null;
         }
@@ -98,7 +98,10 @@ public class Portal : MonoBehaviour
     // Re-enables the portal after the player has exited collision with it.
     private void OnTriggerExit2D(Collider2D collision)
     {
-        active = true;
+        if (collision.CompareTag("Player"))
+        {
+            active = true;
+        }
     }
 
     // Updates the player's camera to look at the selected portal.
