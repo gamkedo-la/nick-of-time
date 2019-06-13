@@ -12,11 +12,12 @@ public class Equipment : Item
 
     public override void Use()
     {
-        base.Use();             
-        equipmentManager.Equip(this);
-        equipmentManager.inventory.Remove(this);
+        base.Use();
         int index = equipmentManager.inventory.items.IndexOf(this);
+        equipmentManager.Equip(this);
+        equipmentManager.inventory.Remove(this);        
         equipmentManager.inventory.itemsInSlot.Remove(equipmentManager.inventory.itemsInSlot[index]);
+        equipmentManager.inventory.onItemChangedCallback.Invoke();
     }
 }
 

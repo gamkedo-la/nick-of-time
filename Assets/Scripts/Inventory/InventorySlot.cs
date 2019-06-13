@@ -50,6 +50,9 @@ public class InventorySlot : MonoBehaviour
         icon.enabled = false;
         removeButton.interactable = false;
         itemName.text = "Empty";
+        numberOfItemsInStack = 0;
+        numberOfItemsInSlotDisplay.text = numberOfItemsInStack.ToString();
+        numberOfItemsInSlotDisplay.enabled = false;
     }
 
     public void OnRemoveButton()
