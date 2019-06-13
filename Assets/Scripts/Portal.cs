@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Portal : MonoBehaviour
@@ -6,6 +7,7 @@ public class Portal : MonoBehaviour
     public bool active = true;
 
     public Portal[] exits;
+    private List<int> activePortals;
     private int selectedIndex = 0;
 
     public GameObject player;
@@ -23,7 +25,7 @@ public class Portal : MonoBehaviour
             // Confirm selection with attackInput
             if (Input.GetButtonDown(attackInput))
             {
-                TransportPlayer(exits[selectedIndex]);
+                TransportPlayer(exits[activePortals[selectedIndex]]);
                 playerCamera.tr = previousCameraTrack;
                 playerCamera.playerFocusFactor = previousPlayerFocusFactor;
                 playerCamera = null;
@@ -37,9 +39,9 @@ public class Portal : MonoBehaviour
                 selectedIndex += (int) Mathf.Sign(selection);
                 if (selectedIndex < 0)
                 {
-                    selectedIndex = exits.Length - 1;
+                    selectedIndex = activePortals.Count - 1;
                 }
-                else if (selectedIndex >= exits.Length)
+                else if (selectedIndex >= activePortals.Count)
                 {
                     selectedIndex = 0;
                 }
@@ -49,17 +51,39 @@ public class Portal : MonoBehaviour
         }
     }
 
+    private void GetActivePortalIndices()
+    {
+        activePortals = new List<int>();
+        for (var i = 0; i < exits.Length; i++)
+        {
+            if (exits[i].gameObject.activeInHierarchy)
+            {
+                activePortals.Add(i);
+            }
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (active && collision.CompareTag("Player"))
         {
+            // update active portal index
+            GetActivePortalIndices();
+
             // store reference to player
             player = collision.gameObject;
 
-            // if there's only one exit, just go there
-            if (exits.Length == 1)
+            // no exits, bail
+            // @TODO: notify user somehow?
+            if (activePortals.Count == 0)
             {
-                TransportPlayer(exits[0]);
+                player = null;
+                return;
+            }
+            // if there's only one exit, just go there
+            else if (activePortals.Count == 1)
+            {
+                TransportPlayer(exits[activePortals[0]]);
             }
             // otherwise start "selection mode"
             else
@@ -109,7 +133,7 @@ public class Portal : MonoBehaviour
     private void PreviewSelection()
     {
 		if(exits != null && exits.Length > 0)
-			playerCamera.tr = exits[selectedIndex].transform;
+			playerCamera.tr = exits[activePortals[selectedIndex]].transform;
     }
 
     private void TransportPlayer(Portal exit)
