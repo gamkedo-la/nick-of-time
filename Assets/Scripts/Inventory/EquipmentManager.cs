@@ -25,6 +25,9 @@ public class EquipmentManager : MonoBehaviour
     public TextMeshProUGUI primaryPotionSlotName;
     public TextMeshProUGUI secondaryPotionSlotName;
 
+    public TextMeshProUGUI primaryPotionSlotAmount;
+    public TextMeshProUGUI secondaryPotionSlotAmount;
+
 
    
 
@@ -52,6 +55,8 @@ public class EquipmentManager : MonoBehaviour
     {
         newItem.equipmentManager = this;
         int slotIndex = (int)newItem.equipSlot;
+
+        int index = inventory.items.IndexOf(newItem);
 
         Equipment oldItem = null;
 
@@ -86,13 +91,15 @@ public class EquipmentManager : MonoBehaviour
             primaryPotionSlot.enabled = true;
             primaryPotionSlot.sprite = currentEquipment[slotIndex].icon;
             primaryPotionSlotName.text = currentEquipment[slotIndex].name;
+            primaryPotionSlotAmount.text = inventory.itemsInSlot[index].ToString();
         }
         if (slotIndex == 3)
         {
             secondaryPotionSlot.enabled = true;
             secondaryPotionSlot.sprite = currentEquipment[slotIndex].icon;
             secondaryPotionSlotName.text = currentEquipment[slotIndex].name;
-        }
+            secondaryPotionSlotAmount.text = inventory.itemsInSlot[index].ToString();
+        }               
     }
 
     public void Unequip(int slotIndex)

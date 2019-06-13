@@ -8,12 +8,15 @@ public class Equipment : Item
     public int damageModifier;
 
     public int weaponID;
+    
 
     public override void Use()
     {
         base.Use();             
         equipmentManager.Equip(this);
         equipmentManager.inventory.Remove(this);
+        int index = equipmentManager.inventory.items.IndexOf(this);
+        equipmentManager.inventory.itemsInSlot.Remove(equipmentManager.inventory.itemsInSlot[index]);
     }
 }
 
