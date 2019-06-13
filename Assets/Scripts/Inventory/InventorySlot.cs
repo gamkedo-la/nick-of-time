@@ -32,15 +32,17 @@ public class InventorySlot : MonoBehaviour
         icon.sprite = item.icon;
         icon.enabled = true;
         removeButton.interactable = true;
-        itemName.text = item.name;
-        if(newItem.stackable == true)
-        {
-            int index = inventory.items.IndexOf(newItem);
-            numberOfItemsInStack = inventory.itemsInSlot[index];
-            numberOfItemsInSlotDisplay.enabled = true;            
-            numberOfItemsInSlotDisplay.text = numberOfItemsInStack.ToString();
-        }
+        itemName.text = item.name;       
     }  
+
+    public void AddToNumberInSlot(Item newItem)
+    {
+        item = newItem;
+        int index = inventory.items.IndexOf(newItem);
+        numberOfItemsInStack = inventory.itemsInSlot[index];
+        numberOfItemsInSlotDisplay.enabled = true;
+        numberOfItemsInSlotDisplay.text = numberOfItemsInStack.ToString();
+    }
 
     public void ClearSlot() {
         item = null;

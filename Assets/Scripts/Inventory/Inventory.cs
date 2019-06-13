@@ -36,11 +36,13 @@ public class Inventory : MonoBehaviour
             if(item.stackable == false)
             {
                 items.Add(item);
+                itemsInSlot.Add(1);
             }
 
             if (HasItem(item) == false && item.stackable == true)
             {
-                items.Add(item);                
+                items.Add(item);
+                itemsInSlot.Add(0);
             }                  
 
             item.equipmentManager = GetComponent<EquipmentManager>();
@@ -52,11 +54,13 @@ public class Inventory : MonoBehaviour
         return true;
     }
     
-    public int AddToStack(Item item, int amount)
+    public void AddToStack(Item item, int amount)
     {
         int index = items.IndexOf(item);
+        Debug.Log(item.name + "is in slot " + index);
         itemsInSlot[index] += amount;
-        return amount;
+        Debug.Log("There are " + itemsInSlot[index].ToString() + " in slot " + index);
+        
     }
 
     public bool HasItem(Item item)

@@ -15,3 +15,5 @@ MonoBehaviour:
   name: Key
   icon: {fileID: 21300000, guid: a5263f6778868e34b9d3ed5ca8884d32, type: 3}
   isDefaultItem: 0
+  stackable: 1
+  equipmentManager: {fileID: 0}

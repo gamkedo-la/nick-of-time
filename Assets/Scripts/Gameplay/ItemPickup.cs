@@ -19,16 +19,22 @@ public class ItemPickup : Interactable
         Debug.Log("Picking up " + item.name);
         //Add to inventory        
         bool wasPickedUp = inventory.Add(item);
-        inventory.AddToStack(item, amountInStack);
+
+        if (item.stackable)
+        {
+            inventory.AddToStack(item, amountInStack);
+        }
+
         if (wasPickedUp)
         {
+            Debug.Log("was picked up called");
             Destroy(gameObject);
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        inventory = collider.GetComponent<Inventory>();
+        inventory = collider.GetComponentInParent<Inventory>();
         Debug.Log("collider belongs to " + collider.name);
         Debug.Log("Inventory belongs to " + inventory.gameObject.name);
         Interact();
