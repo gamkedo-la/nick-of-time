@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HitCheck : MonoBehaviour
 {
@@ -27,12 +28,20 @@ public class HitCheck : MonoBehaviour
     private GameObject HPBarJointCamera;
     [SerializeField]
     private GameObject HPBarSoloCamera;
+    [SerializeField]
+    private GameObject HPBarEnemy;
+
+	private Slider hpSlider;
 
 	void Start ()
 	{
 		aud = GetComponent<AudioSource>();
 		if(aud == null)
 			aud = FindObjectOfType<AudioSource>();
+
+		hpSlider = HPBarEnemy.GetComponent<Slider>();
+		hpSlider.maxValue = hp;
+		hpSlider.value = hp;
     }
 
 	void Update ()
@@ -41,11 +50,16 @@ public class HitCheck : MonoBehaviour
 		{
 			hp -= hpDamage;
 			//Debug.Log("current HP is " + hp);
+			if ( hpSlider )
+			{
+				hpSlider.value = hp;
+			}
 
 			if (HPBarSoloCamera != null)
 			{
 				StartCoroutine(HPBarJointCamera.GetComponent<ObjectShake>().Shake(10f, 0.2f)); //Shakes HP Bar on Hit
 				StartCoroutine(HPBarSoloCamera.GetComponent<ObjectShake>().Shake(10f, 0.2f)); //Shakes HP Bar on Hit
+				StartCoroutine(HPBarEnemy.GetComponent<ObjectShake>().Shake(10f, 0.2f)); //Shakes HP Bar on Hit
 			}
 
 			if (hitDirection == 0)
@@ -152,7 +166,7 @@ public class HitCheck : MonoBehaviour
 			if (!coll.gameObject.transform.parent.parent.parent.gameObject.GetComponent<PlayerController>().isDashing)
 			{
 				Animator anim = coll.gameObject.transform.parent.parent.parent.gameObject.GetComponent<Animator>();
-				
+
 				isHit = true;
 				hitDirection = anim.GetInteger("direction");
 				return true;
