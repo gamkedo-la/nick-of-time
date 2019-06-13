@@ -10,6 +10,9 @@ public class PushedObject : MonoBehaviour
     void Start()
     {
 		rb = GetComponent<Rigidbody2D>();
+
+		if (rb == null)
+			Destroy(this);
     }
 	
     void Update()

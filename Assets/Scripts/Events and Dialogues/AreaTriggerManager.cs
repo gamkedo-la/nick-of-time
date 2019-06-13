@@ -5,6 +5,7 @@ using UnityEngine.Tilemaps;
 
 public class AreaTriggerManager : MonoBehaviour
 {
+	public GameObject[] spawnObjects;
 
 	[System.Serializable]
 	public class AreaObject
@@ -29,9 +30,6 @@ public class AreaTriggerManager : MonoBehaviour
 
 		[Space]
 		public AreaObject[] objectToActivate;
-
-		[Space]
-		public GameObject enemySpawnObject = null;
 
 		[Space]
 		public Tilemap minimapTilemap;
@@ -158,7 +156,7 @@ public class AreaTriggerManager : MonoBehaviour
 				}
 			}
 
-			if (t.enemySpawnObject != null && !t.isEnemySpawnDone)
+			if (!t.isEnemySpawnDone)
 			{
 				for (int c = 0; c < t.triggerTransform.gameObject.GetComponents<CameraTriggerControl>().GetLength(0); c++)
 				{
@@ -166,7 +164,11 @@ public class AreaTriggerManager : MonoBehaviour
 					{
 						for (int i = 0; i < t.triggerTransform.transform.childCount; i++)
 						{
-							Instantiate(t.enemySpawnObject, t.triggerTransform.transform.GetChild(i).transform.position, Quaternion.Euler(0f, 0f, 0f));
+							Instantiate(
+								spawnObjects[System.Convert.ToInt16(t.triggerTransform.transform.GetChild(i).gameObject.name)],
+								t.triggerTransform.transform.GetChild(i).transform.position,
+								Quaternion.Euler(0f, 0f, 0f)
+								);
 						}
 
 						t.isEnemySpawnDone = true;

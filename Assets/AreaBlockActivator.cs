@@ -21,8 +21,11 @@ public class AreaBlockActivator : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
-		areaBlock.stateTransition = toState;
+		if (collision.gameObject.name.Contains("Player"))
+		{
+			areaBlock.stateTransition = toState;
 
-		if (destroyOnTrigger) Destroy(gameObject);
+			if (destroyOnTrigger) Destroy(gameObject);
+		}
 	}
 }
