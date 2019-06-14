@@ -48,6 +48,9 @@ GameObject:
   - component: {fileID: 3329497469656580619}
   - component: {fileID: 1148393954563092481}
   - component: {fileID: 74160657}
+  - component: {fileID: 4964958246262903997}
+  - component: {fileID: 349174034595558344}
+  - component: {fileID: 3956037771853261498}
   m_Layer: 8
   m_Name: Player1
   m_TagString: Player
@@ -357,6 +360,62 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weight: 1
+--- !u!114 &4964958246262903997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148393954563092511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f8ab9cbf63038e44881bc3855687174, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  space: 8
+  items: []
+  itemsInSlot: 
+--- !u!114 &349174034595558344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148393954563092511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a61a86c9cfbe0a4083ef3aeb4e713e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemsParent: {fileID: 0}
+  inventoryUI: {fileID: 0}
+  associatedPlayer: {fileID: 0}
+  inventoryOpen: Inventory1
+--- !u!114 &3956037771853261498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148393954563092511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f373e5e0fafa88e468a25b08d625f49a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 0}
+  inventoryUI: {fileID: 0}
+  inventory: {fileID: 0}
+  primaryWeaponSlot: {fileID: 0}
+  secondaryWeaponSlot: {fileID: 0}
+  primaryPotionSlot: {fileID: 0}
+  secondaryPotionSlot: {fileID: 0}
+  primaryWeaponSlotName: {fileID: 0}
+  secondaryWeaponSlotName: {fileID: 0}
+  primaryPotionSlotName: {fileID: 0}
+  secondaryPotionSlotName: {fileID: 0}
+  primaryPotionSlotAmount: {fileID: 0}
+  secondaryPotionSlotAmount: {fileID: 0}
 --- !u!1 &1148393955804010700
 GameObject:
   m_ObjectHideFlags: 0
