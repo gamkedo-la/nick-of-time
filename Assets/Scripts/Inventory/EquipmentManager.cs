@@ -28,7 +28,7 @@ public class EquipmentManager : MonoBehaviour
     public TextMeshProUGUI primaryPotionSlotAmount;
     public TextMeshProUGUI secondaryPotionSlotAmount;
 
-
+    
    
 
     private void Awake()
@@ -107,9 +107,14 @@ public class EquipmentManager : MonoBehaviour
         if(currentEquipment[slotIndex] != null)
         {
             Equipment oldItem = currentEquipment[slotIndex];
-            inventory.Add(oldItem);
+
+            if(slotIndex == 0 || slotIndex == 1)
+            {
+                inventory.Add(oldItem);
+            }
 
             currentEquipment[slotIndex] = null;
+
 
             if (onEquipmentChanged != null)
             {
@@ -139,6 +144,9 @@ public class EquipmentManager : MonoBehaviour
         secondaryPotionSlot.sprite = null;
         secondaryPotionSlot.enabled = false;
         secondaryPotionSlotName.text = "Empty";
+
+        primaryPotionSlotAmount.text = "";
+        secondaryPotionSlotAmount.text = "";
     }
 
     private void Update()

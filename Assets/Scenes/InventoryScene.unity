@@ -12512,6 +12512,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1181d984e058186438283f9cd9e44498, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnObjects: []
   triggers:
   - triggerTransform: {fileID: 1593779905}
     checkEnemies: 0
@@ -12520,7 +12521,6 @@ MonoBehaviour:
     objectToActivate:
     - obj: {fileID: 631907478}
       disableAfterLeaving: 1
-    enemySpawnObject: {fileID: 0}
     minimapTilemap: {fileID: 0}
     triggerTimer: 0
     isObjectsActivationDone: 0
@@ -12533,7 +12533,6 @@ MonoBehaviour:
     objectToActivate:
     - obj: {fileID: 819258075}
       disableAfterLeaving: 1
-    enemySpawnObject: {fileID: 0}
     minimapTilemap: {fileID: 0}
     triggerTimer: 0
     isObjectsActivationDone: 0
@@ -12548,7 +12547,6 @@ MonoBehaviour:
       disableAfterLeaving: 1
     - obj: {fileID: 173072867}
       disableAfterLeaving: 0
-    enemySpawnObject: {fileID: 0}
     minimapTilemap: {fileID: 0}
     triggerTimer: 0
     isObjectsActivationDone: 0
@@ -12561,7 +12559,6 @@ MonoBehaviour:
     objectToActivate:
     - obj: {fileID: 842020135}
       disableAfterLeaving: 1
-    enemySpawnObject: {fileID: 0}
     minimapTilemap: {fileID: 0}
     triggerTimer: 0
     isObjectsActivationDone: 0
@@ -12576,7 +12573,6 @@ MonoBehaviour:
       disableAfterLeaving: 1
     - obj: {fileID: 1495102725}
       disableAfterLeaving: 0
-    enemySpawnObject: {fileID: 0}
     minimapTilemap: {fileID: 0}
     triggerTimer: 0
     isObjectsActivationDone: 0
@@ -12589,8 +12585,6 @@ MonoBehaviour:
     objectToActivate:
     - obj: {fileID: 2134263637}
       disableAfterLeaving: 1
-    enemySpawnObject: {fileID: 1896489951412202, guid: 5be2b70a812d64a41ae96ac91778a708,
-      type: 3}
     minimapTilemap: {fileID: 0}
     triggerTimer: 0
     isObjectsActivationDone: 0
@@ -12603,8 +12597,6 @@ MonoBehaviour:
     objectToActivate:
     - obj: {fileID: 564237105}
       disableAfterLeaving: 1
-    enemySpawnObject: {fileID: 1896489951412202, guid: 5be2b70a812d64a41ae96ac91778a708,
-      type: 3}
     minimapTilemap: {fileID: 0}
     triggerTimer: 0
     isObjectsActivationDone: 0
@@ -12617,7 +12609,6 @@ MonoBehaviour:
     objectToActivate:
     - obj: {fileID: 854807316}
       disableAfterLeaving: 1
-    enemySpawnObject: {fileID: 0}
     minimapTilemap: {fileID: 0}
     triggerTimer: 0
     isObjectsActivationDone: 0
@@ -12632,8 +12623,6 @@ MonoBehaviour:
       disableAfterLeaving: 1
     - obj: {fileID: 1324566999}
       disableAfterLeaving: 1
-    enemySpawnObject: {fileID: 1896489951412202, guid: 5be2b70a812d64a41ae96ac91778a708,
-      type: 3}
     minimapTilemap: {fileID: 0}
     triggerTimer: 0
     isObjectsActivationDone: 0
@@ -12646,7 +12635,6 @@ MonoBehaviour:
     objectToActivate:
     - obj: {fileID: 137510486}
       disableAfterLeaving: 1
-    enemySpawnObject: {fileID: 0}
     minimapTilemap: {fileID: 0}
     triggerTimer: 0
     isObjectsActivationDone: 0
@@ -12659,8 +12647,6 @@ MonoBehaviour:
     objectToActivate:
     - obj: {fileID: 1558113948}
       disableAfterLeaving: 1
-    enemySpawnObject: {fileID: 1896489951412202, guid: 5be2b70a812d64a41ae96ac91778a708,
-      type: 3}
     minimapTilemap: {fileID: 0}
     triggerTimer: 0
     isObjectsActivationDone: 0
@@ -12673,8 +12659,6 @@ MonoBehaviour:
     objectToActivate:
     - obj: {fileID: 1251883687}
       disableAfterLeaving: 1
-    enemySpawnObject: {fileID: 1896489951412202, guid: 5be2b70a812d64a41ae96ac91778a708,
-      type: 3}
     minimapTilemap: {fileID: 0}
     triggerTimer: 0
     isObjectsActivationDone: 0
@@ -12687,7 +12671,6 @@ MonoBehaviour:
     objectToActivate:
     - obj: {fileID: 1251883687}
       disableAfterLeaving: 1
-    enemySpawnObject: {fileID: 0}
     minimapTilemap: {fileID: 0}
     triggerTimer: 0
     isObjectsActivationDone: 0
@@ -16589,6 +16572,7 @@ MonoBehaviour:
   knockback: {x: 0, y: 0}
   HPBarJointCamera: {fileID: 0}
   HPBarSoloCamera: {fileID: 0}
+  HPBarEnemy: {fileID: 0}
 --- !u!82 &697478002
 AudioSource:
   m_ObjectHideFlags: 0
@@ -57440,6 +57424,7 @@ MonoBehaviour:
   knockback: {x: 0, y: 0}
   HPBarJointCamera: {fileID: 0}
   HPBarSoloCamera: {fileID: 0}
+  HPBarEnemy: {fileID: 0}
 --- !u!114 &2012583765
 MonoBehaviour:
   m_ObjectHideFlags: 0

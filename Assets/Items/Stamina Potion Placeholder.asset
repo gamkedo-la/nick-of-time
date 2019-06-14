@@ -19,4 +19,4 @@ MonoBehaviour:
   equipmentManager: {fileID: 0}
   equipSlot: 3
   damageModifier: 0
-  weaponID: 0
+  weaponID: -1
