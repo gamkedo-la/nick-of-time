@@ -5,9 +5,10 @@ using TMPro;
 
 public class DialogueBoxSwitch : MonoBehaviour
 {
-
 	public GameObject pl1;
 	public GameObject pl2;
+	public GameObject inventoryPl1;
+	public GameObject inventoryPl2;
     private bool disabledP1 = false;
     private bool disabledP2 = false;
 
@@ -68,12 +69,16 @@ public class DialogueBoxSwitch : MonoBehaviour
             {
                 disabledP1 = false;
                 pl1.GetComponent<PlayerController>().enabled = true;
+
+				if (inventoryPl1) inventoryPl1.SetActive(true);
             }
             if (pl2 && disabledP2)
             {
                 disabledP2 = false;
                 pl2.GetComponent<PlayerController>().enabled = true;
-            }
+
+				if (inventoryPl2) inventoryPl2.SetActive(true);
+			}
 		}
 		else if (!sprRenderer.enabled)
 		{
@@ -83,12 +88,16 @@ public class DialogueBoxSwitch : MonoBehaviour
             {
                 disabledP1 = true;
                 pl1.GetComponent<PlayerController>().enabled = false;
-            }
+
+				if (inventoryPl1) inventoryPl1.SetActive(false);
+			}
             if (pl2)
             {
                 disabledP2 = true;
                 pl2.GetComponent<PlayerController>().enabled = false;
-            }
+
+				if (inventoryPl2) inventoryPl2.SetActive(false);
+			}
 
 			checkForDialogueStringTags(dialogueSequence.dialogues[dialogueSequence.dialogueNo]);
 		}

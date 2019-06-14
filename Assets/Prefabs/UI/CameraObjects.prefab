@@ -3625,6 +3625,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pl1: {fileID: 0}
   pl2: {fileID: 0}
+  inventoryPl1: {fileID: 0}
+  inventoryPl2: {fileID: 0}
   proceedInput: Submit
   proceedInput2: Jump
   proceedSound: {fileID: 8300000, guid: 3ac4326bbe10ffb42b9652b3dd6cbbc3, type: 3}
@@ -3698,7 +3700,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 1091383
+    m_Bits: 1156919
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -4824,7 +4826,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 1085239
+    m_Bits: 1150775
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -5219,7 +5221,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 1087287
+    m_Bits: 1152823
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
