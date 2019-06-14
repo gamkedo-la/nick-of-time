@@ -133,21 +133,45 @@ public class PuzzleMechanic : MonoBehaviour
 
 				if (!keepOffObjectsInactive)
 					foreach (var obj in offObjects)
-						obj.SetActive(true);
+					{
+						AreaBlockObject abo = obj.GetComponent<AreaBlockObject>();
+						if (abo == null)
+							obj.SetActive(true);
+						else
+							abo.stateTransition = 1f;
+					}
 
 				if (!keepOnObjectsActive)
 					foreach (var obj in onObjects)
-						obj.SetActive(false);
+					{
+						AreaBlockObject abo = obj.GetComponent<AreaBlockObject>();
+						if (abo == null)
+							obj.SetActive(false);
+						else
+							abo.stateTransition = -1f;
+					}
 			}
 			else
 			{
 				spRend.sprite = onSprite;
 
 				foreach (var obj in onObjects)
-					obj.SetActive(true);
-					
+				{
+					AreaBlockObject abo = obj.GetComponent<AreaBlockObject>();
+					if (abo == null)
+						obj.SetActive(true);
+					else
+						abo.stateTransition = 1f;
+				}
+
 				foreach (var obj in offObjects)
-					obj.SetActive(false);
+				{
+					AreaBlockObject abo = obj.GetComponent<AreaBlockObject>();
+					if (abo == null)
+						obj.SetActive(false);
+					else
+						abo.stateTransition = -1f;
+				}
 			}
 
 			refresh = false;

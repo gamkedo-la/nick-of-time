@@ -39,9 +39,12 @@ public class HitCheck : MonoBehaviour
 		if(aud == null)
 			aud = FindObjectOfType<AudioSource>();
 
-		hpSlider = HPBarEnemy.GetComponent<Slider>();
-		hpSlider.maxValue = hp;
-		hpSlider.value = hp;
+		if (gameObject.tag != "Player")
+		{
+			hpSlider = HPBarEnemy.GetComponent<Slider>();
+			hpSlider.maxValue = hp;
+			hpSlider.value = hp;
+		}
     }
 
 	void Update ()
@@ -49,17 +52,19 @@ public class HitCheck : MonoBehaviour
 		if(isHit)
 		{
 			hp -= hpDamage;
-			//Debug.Log("current HP is " + hp);
+
 			if ( hpSlider )
-			{
 				hpSlider.value = hp;
-			}
 
 			if (HPBarSoloCamera != null)
 			{
-				StartCoroutine(HPBarJointCamera.GetComponent<ObjectShake>().Shake(10f, 0.2f)); //Shakes HP Bar on Hit
-				StartCoroutine(HPBarSoloCamera.GetComponent<ObjectShake>().Shake(10f, 0.2f)); //Shakes HP Bar on Hit
-				StartCoroutine(HPBarEnemy.GetComponent<ObjectShake>().Shake(10f, 0.2f)); //Shakes HP Bar on Hit
+				if (HPBarEnemy)
+					StartCoroutine(HPBarEnemy.GetComponent<ObjectShake>().Shake(10f, 0.2f));
+				else
+				{
+					StartCoroutine(HPBarJointCamera.GetComponent<ObjectShake>().Shake(10f, 0.2f));
+					StartCoroutine(HPBarSoloCamera.GetComponent<ObjectShake>().Shake(10f, 0.2f));
+				}
 			}
 
 			if (hitDirection == 0)

@@ -27,7 +27,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2605728702270850878}
   - {fileID: 6390394021368811592}
   m_Father: {fileID: 1103091295746358210}
   m_RootOrder: 0
@@ -72,6 +71,7 @@ Transform:
   - {fileID: 8144935541084721335}
   - {fileID: 1103091295746358210}
   - {fileID: 444304565013215508}
+  - {fileID: 2605728702270850878}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -343,6 +343,7 @@ MonoBehaviour:
   knockback: {x: 0, y: 0}
   HPBarJointCamera: {fileID: 0}
   HPBarSoloCamera: {fileID: 0}
+  HPBarEnemy: {fileID: 0}
 --- !u!114 &74160657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -541,8 +542,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4465674963101058071}
-  m_RootOrder: 0
+  m_Father: {fileID: 1148393954563092509}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &6116921939259254877
 CircleCollider2D:
@@ -713,7 +714,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4465674963101058071}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8663847312133633213
 SpriteRenderer:
@@ -819,6 +820,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1148393954563092509}
     m_Modifications:
+    - target: {fileID: 1612122081451132077, guid: 96b702e7019afe543a36524e6147f84d,
+        type: 3}
+      propertyPath: m_Name
+      value: FootprintParticles
+      objectReference: {fileID: 0}
     - target: {fileID: 1612122081451132072, guid: 96b702e7019afe543a36524e6147f84d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -873,11 +879,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1612122081451132077, guid: 96b702e7019afe543a36524e6147f84d,
-        type: 3}
-      propertyPath: m_Name
-      value: FootprintParticles
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96b702e7019afe543a36524e6147f84d, type: 3}

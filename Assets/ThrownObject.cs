@@ -7,6 +7,7 @@ public class ThrownObject : MonoBehaviour
 	public Vector3 startPos = Vector3.zero;
 	public Vector3 throwVelocity = Vector3.zero;
 	public float throwRotation = 0f;
+	public bool noMove = false;
 	public bool breakableBreaksOnCollision = false;
 
 	private Rigidbody2D rb;
@@ -15,15 +16,22 @@ public class ThrownObject : MonoBehaviour
     {
 		gameObject.GetComponent<Collider2D>().isTrigger = false;
 		rb = gameObject.AddComponent<Rigidbody2D>();
-		rb.gravityScale = 0f;
-		rb.freezeRotation = true;
+
+		if (rb != null)
+		{
+			rb.gravityScale = 0f;
+			rb.freezeRotation = true;
+		}
     }
 	
     void Update()
     {
-		startPos += throwVelocity * Time.deltaTime;
-		transform.position = startPos;
-		transform.rotation = Quaternion.Euler(0f, 0f, transform.rotation.eulerAngles.z + throwRotation);
+		if (!noMove)
+		{
+			startPos += throwVelocity * Time.deltaTime;
+			transform.position = startPos;
+			transform.rotation = Quaternion.Euler(0f, 0f, transform.rotation.eulerAngles.z + throwRotation);
+		}
     }
 
 	/*
