@@ -40,7 +40,7 @@ public class AreaTriggerManager : MonoBehaviour
 
 		[HideInInspector] public int decrementTriggerCount = -1;
 	};
-
+	
 	public AreaTrigger[] triggers;
 
 	private CameraTriggerControl[] camTriggerCont1;

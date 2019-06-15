@@ -33,10 +33,13 @@ public class EquipmentManager : MonoBehaviour
 
     private void Awake()
     {
-        //instance = this;
-        weaponPossession = Player.GetComponentInChildren<WeaponPossession>();
-        primaryWeaponSlot.enabled = false;
-        secondaryWeaponSlot.enabled = false;
+		//instance = this;
+		if (Player)
+		{
+			weaponPossession = Player.GetComponentInChildren<WeaponPossession>();
+			primaryWeaponSlot.enabled = false;
+			secondaryWeaponSlot.enabled = false;
+		}
     }
 
     Equipment[] currentEquipment;

@@ -18,10 +18,13 @@ public class InventoryUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        inventory = associatedPlayer.GetComponent<Inventory>();
-        inventory.onItemChangedCallback += UpdateUI;
+		if (associatedPlayer != null)
+		{
+			inventory = associatedPlayer.GetComponent<Inventory>();
+			inventory.onItemChangedCallback += UpdateUI;
 
-        slots = itemsParent.GetComponentsInChildren<InventorySlot>();
+			slots = itemsParent.GetComponentsInChildren<InventorySlot>();
+		}
     }
 
     // Update is called once per frame
@@ -33,15 +36,17 @@ public class InventoryUI : MonoBehaviour
 
             slots[0].GetComponentInChildren<Button>().Select();
         }
-        if (inventoryUI.activeSelf)
-        {
-            GetComponent<PlayerController>().enabled = false;
-        }
-        else
-        {
-            GetComponent<PlayerController>().enabled = true;
-        }
-
+		if (inventoryUI != null)
+		{
+			if (inventoryUI.activeSelf)
+			{
+				GetComponent<PlayerController>().enabled = false;
+			}
+			else
+			{
+				GetComponent<PlayerController>().enabled = true;
+			}
+		}
     }
 
     void UpdateUI()
