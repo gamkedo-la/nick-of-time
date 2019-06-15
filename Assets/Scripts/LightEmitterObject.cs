@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//[ExecuteInEditMode]
+[ExecuteInEditMode]
 public class LightEmitterObject : MonoBehaviour
 {
 	public Color highLightColor;
@@ -72,6 +72,7 @@ public class LightEmitterObject : MonoBehaviour
 		else
 		{
 			denseLight.intensity = Mathf.Lerp(denseLight.intensity, highLightIntensity, 0.3f);
+
 			spreadLight.intensity = Mathf.Lerp(spreadLight.intensity, midLightIntensity, 0.3f);
 		}
 	}
