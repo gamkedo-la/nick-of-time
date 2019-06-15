@@ -739,6 +739,7 @@ MonoBehaviour:
   fadeOutObject: {fileID: 1468161488452700, guid: 08cef46e707da1548a1ed408bf2e68bd,
     type: 3}
   deathSound: {fileID: 0}
+  sceneName: 
 --- !u!1 &4595282840259811506
 GameObject:
   m_ObjectHideFlags: 0
@@ -859,3 +860,4 @@ MonoBehaviour:
   fadeOutObject: {fileID: 1468161488452700, guid: 08cef46e707da1548a1ed408bf2e68bd,
     type: 3}
   deathSound: {fileID: 8300000, guid: 07a0b43fe673b9442a331a9ba53c1bbe, type: 3}
+  sceneName: Menu

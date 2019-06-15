@@ -7,6 +7,8 @@ public class PublicGameOverStateCompletion : MonoBehaviour {
 	public GameObject fadeOutObject;
 	
 	public AudioClip deathSound;
+
+	public string sceneName;
 	
 	private AudioSource aud;
 	
@@ -30,9 +32,9 @@ public class PublicGameOverStateCompletion : MonoBehaviour {
 			aud = FindObjectOfType<AudioSource>();
 	}
 
-	public void fadeToMenu()
+	public void fadeToNext()
 	{
-		fadeOutObject.GetComponent<PublicSceneChangeFunction>().sceneName = "Menu";
+		fadeOutObject.GetComponent<PublicSceneChangeFunction>().sceneName = sceneName;
 		Instantiate(fadeOutObject);
 	}
 	
