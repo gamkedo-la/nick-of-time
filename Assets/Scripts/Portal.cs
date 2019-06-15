@@ -20,35 +20,46 @@ public class Portal : MonoBehaviour
 
     private void Update()
     {
-        if (player)
-        {
-            // Confirm selection with attackInput
-            if (Input.GetButtonDown(attackInput))
-            {
-                TransportPlayer(exits[activePortals[selectedIndex]]);
-                playerCamera.tr = previousCameraTrack;
-                playerCamera.playerFocusFactor = previousPlayerFocusFactor;
-                playerCamera = null;
-                StartCoroutine(ReactivatePlayer());
-            }
+		if (player)
+		{
+			MinimapController.instances[0].focus = true;
+			if (player.name == "Player1")
+				MinimapController.instances[1].focus = true;
+			else if (player.name == "Player2")
+				MinimapController.instances[2].focus = true;
 
-            // Change selection with horizontalInput
-            float selection = Input.GetAxisRaw(horizontalInput);
-            if (Input.GetButtonDown(horizontalInput))
-            {
-                selectedIndex += (int) Mathf.Sign(selection);
-                if (selectedIndex < 0)
-                {
-                    selectedIndex = activePortals.Count - 1;
-                }
-                else if (selectedIndex >= activePortals.Count)
-                {
-                    selectedIndex = 0;
-                }
-                PreviewSelection();
-            }
+			// Confirm selection with attackInput
+			if (Input.GetButtonDown(attackInput))
+			{
+				MinimapController.instances[0].focus = false;
+				if (player.name == "Player1")
+					MinimapController.instances[1].focus = false;
+				else if (player.name == "Player2")
+					MinimapController.instances[2].focus = false;
 
-        }
+				TransportPlayer(exits[activePortals[selectedIndex]]);
+				playerCamera.tr = previousCameraTrack;
+				playerCamera.playerFocusFactor = previousPlayerFocusFactor;
+				playerCamera = null;
+				StartCoroutine(ReactivatePlayer());
+			}
+
+			// Change selection with horizontalInput
+			float selection = Input.GetAxisRaw(horizontalInput);
+			if (Input.GetButtonDown(horizontalInput))
+			{
+				selectedIndex += (int)Mathf.Sign(selection);
+				if (selectedIndex < 0)
+				{
+					selectedIndex = activePortals.Count - 1;
+				}
+				else if (selectedIndex >= activePortals.Count)
+				{
+					selectedIndex = 0;
+				}
+				PreviewSelection();
+			}
+		}
     }
 
     private void GetActivePortalIndices()
@@ -65,7 +76,7 @@ public class Portal : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (active && collision.CompareTag("Player"))
+        if (active && collision.CompareTag("Player") && player == null)
         {
             // update active portal index
             GetActivePortalIndices();
