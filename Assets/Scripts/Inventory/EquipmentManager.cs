@@ -28,7 +28,8 @@ public class EquipmentManager : MonoBehaviour
     public TextMeshProUGUI primaryPotionSlotAmount;
     public TextMeshProUGUI secondaryPotionSlotAmount;
 
-    
+    [SerializeField]
+    private string primaryPotion;
    
 
     private void Awake()
@@ -133,7 +134,7 @@ public class EquipmentManager : MonoBehaviour
             Unequip(i);
         }
 
-        //TODO: Clean up the following
+        //TODO: Clean up the following.  Can this be refactored to be based on the equipSlot index?  That way it would be more universal.
         weaponPossession.weaponID = -1;
         primaryWeaponSlot.sprite = null;
         primaryWeaponSlot.enabled = false;
@@ -152,11 +153,44 @@ public class EquipmentManager : MonoBehaviour
         secondaryPotionSlotAmount.text = "";
     }
 
+    public void UsePotion()
+    {
+        //TODO Refactor so this is more usable (Will have to copy this for Seconday Potion Use)
+        int indexInInventory = inventory.items.IndexOf(currentEquipment[2]);
+        int amountOfPotions = inventory.itemsInSlot[indexInInventory];
+        Debug.Log("Amount of potions " + amountOfPotions);
+        
+        if(amountOfPotions > 0)
+        {
+            inventory.itemsInSlot[indexInInventory] -= 1;
+            primaryPotionSlotAmount.text = inventory.itemsInSlot[indexInInventory].ToString();            
+        }
+        if(amountOfPotions == 0)
+        {
+            inventory.itemsInSlot.RemoveAt(indexInInventory);
+            inventory.items.Remove(currentEquipment[2]); //currentEquipment[2] is the primary potion slot (See EquipmentSlot enum in Equipment.cs)
+            Unequip(2);
+            
+            primaryPotionSlot.sprite = null;
+            primaryPotionSlot.enabled = false;
+            primaryPotionSlotAmount.text = "";
+            //onEquipmentChanged.Invoke(currentEquipment[2], null);
+        }
+        //inventory.onItemChangedCallback.Invoke();
+
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.U))
         {
             UnequipAll();
+        }
+
+        if (currentEquipment[2] != null && Input.GetButtonDown(primaryPotion))
+        {
+            UsePotion();
+            inventory.onItemChangedCallback.Invoke();
         }
     }
 
