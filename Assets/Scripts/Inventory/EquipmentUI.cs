@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EquipmentUI : MonoBehaviour
 {
-    [SerializeField]
-    private EquipmentSlotDisplay[] equipmentSlotDisplays;
+    
+    public EquipmentSlotDisplay[] equipmentSlotDisplays;
        
 }

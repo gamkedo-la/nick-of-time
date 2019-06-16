@@ -7,11 +7,11 @@ using TMPro;
 public class EquipmentSlotDisplay : MonoBehaviour
 {
     [SerializeField]
-    private Image equipmentIcon;     
+    public Image equipmentIcon;     
 
     [SerializeField]
-    private TextMeshProUGUI itemName;
+    public TextMeshProUGUI itemName;
 
     [SerializeField]
-    private TextMeshProUGUI numberOfItemsInStack;
+    public TextMeshProUGUI numberOfItemsInStack;
 }

@@ -30,6 +30,9 @@ public class EquipmentManager : MonoBehaviour
 
     [SerializeField]
     private string primaryPotion;
+
+    [SerializeField]
+    public EquipmentUI equipmentUI;
    
 
     private void Awake()
@@ -77,7 +80,20 @@ public class EquipmentManager : MonoBehaviour
         weaponPossession.weaponID = newItem.weaponID;
         currentEquipment[slotIndex] = newItem;
 
-        if(slotIndex == 0 )
+        equipmentUI.equipmentSlotDisplays[slotIndex].equipmentIcon.enabled = true;
+        equipmentUI.equipmentSlotDisplays[slotIndex].equipmentIcon.sprite = currentEquipment[slotIndex].icon;
+        equipmentUI.equipmentSlotDisplays[slotIndex].itemName.text = currentEquipment[slotIndex].name;
+        if (newItem.stackable)
+        {
+            equipmentUI.equipmentSlotDisplays[slotIndex].numberOfItemsInStack.text = inventory.itemsInSlot[index].ToString();
+        }
+        else
+        {
+            equipmentUI.equipmentSlotDisplays[slotIndex].numberOfItemsInStack = null;
+        }
+        
+        /*
+        if (slotIndex == 0 )
         {
             primaryWeaponSlot.enabled = true;
             primaryWeaponSlot.sprite = currentEquipment[slotIndex].icon;
@@ -103,7 +119,7 @@ public class EquipmentManager : MonoBehaviour
             secondaryPotionSlot.sprite = currentEquipment[slotIndex].icon;
             secondaryPotionSlotName.text = currentEquipment[slotIndex].name;
             secondaryPotionSlotAmount.text = inventory.itemsInSlot[index].ToString();
-        }               
+        }  */             
     }
 
     public void Unequip(int slotIndex)
@@ -132,11 +148,20 @@ public class EquipmentManager : MonoBehaviour
         for (int i = 0; i < currentEquipment.Length; i++)
         {
             Unequip(i);
+            weaponPossession.weaponID = -1;
+            equipmentUI.equipmentSlotDisplays[i].equipmentIcon.enabled = false;
+            equipmentUI.equipmentSlotDisplays[i].equipmentIcon.sprite = null;
+            equipmentUI.equipmentSlotDisplays[i].itemName.text = "Empty";
+
+            if(equipmentUI.equipmentSlotDisplays[i].numberOfItemsInStack != null)
+            {
+                equipmentUI.equipmentSlotDisplays[i].numberOfItemsInStack.text = "";
+            }
         }
 
         //TODO: Clean up the following.  Can this be refactored to be based on the equipSlot index?  That way it would be more universal.
-        weaponPossession.weaponID = -1;
-        primaryWeaponSlot.sprite = null;
+        
+        /*primaryWeaponSlot.sprite = null;
         primaryWeaponSlot.enabled = false;
         primaryWeaponSlotName.text = "Empty";
         secondaryWeaponSlot.sprite = null;
@@ -150,7 +175,7 @@ public class EquipmentManager : MonoBehaviour
         secondaryPotionSlotName.text = "Empty";
 
         primaryPotionSlotAmount.text = "";
-        secondaryPotionSlotAmount.text = "";
+        secondaryPotionSlotAmount.text = "";*/
     }
 
     public void UsePotion()
