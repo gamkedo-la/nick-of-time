@@ -8,12 +8,14 @@ public class Equipment : Item
     public int damageModifier;
 
     public int weaponID = -1;
-    
+
+    private Inventory inventory;
 
     public override void Use()
     {
         base.Use();
-        int index = equipmentManager.inventory.items.IndexOf(this);
+        inventory = equipmentManager.inventory;
+        int index = inventory.items.IndexOf(this);
         equipmentManager.Equip(this);
         
         if(weaponID == 0 || weaponID == 1)
