@@ -17,13 +17,16 @@ public class DisableOnSamePosition : MonoBehaviour
     {
 		foreach (var o in objectsToDisable)
 		{
-			if (o.transform.position == transform.position)
+			if (o) 
 			{
-				o.SetActive(false);
-			}
-			else if(enableIfDifferentPosition)
-			{
-				o.SetActive(true);
+				if (o.transform.position == transform.position)
+				{
+					o.SetActive(false);
+				}
+				else if(enableIfDifferentPosition)
+				{
+					o.SetActive(true);
+				}
 			}
 		}
     }

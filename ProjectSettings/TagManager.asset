@@ -10,6 +10,7 @@ TagManager:
   - Enemy
   - InCamera
   - DialogueText
+  - Player2Only
   layers:
   - Default
   - TransparentFX

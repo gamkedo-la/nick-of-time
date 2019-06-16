@@ -38,6 +38,13 @@ public class SetupSinglePlayerMode : MonoBehaviour {
 			}
 		}
 		
+		GameObject[] player2Only = GameObject.FindGameObjectsWithTag("Player2Only");
+
+		for (int i = 0; i < player2Only.Length; i++)
+		{
+			Destroy(player2Only[i]);
+		}
+
 		Destroy(gameObject);
 	}
 }

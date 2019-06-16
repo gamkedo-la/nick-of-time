@@ -648,7 +648,7 @@ PrefabInstance:
     - target: {fileID: 1894696908122255597, guid: 00c830c5b9efec64987b7ae803d9b489,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.9759998
+      value: -2.0663118
       objectReference: {fileID: 0}
     - target: {fileID: 1894696908122255597, guid: 00c830c5b9efec64987b7ae803d9b489,
         type: 3}
@@ -698,7 +698,7 @@ PrefabInstance:
     - target: {fileID: 1894696908122255596, guid: 00c830c5b9efec64987b7ae803d9b489,
         type: 3}
       propertyPath: m_Color.a
-      value: 0
+      value: 0.56444967
       objectReference: {fileID: 0}
     - target: {fileID: 1894696908122255596, guid: 00c830c5b9efec64987b7ae803d9b489,
         type: 3}
@@ -2609,6 +2609,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EventSystem Player 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275933290374329896, guid: 6895113cef9c22b4fb4a7c83824b4d06,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player2Only
       objectReference: {fileID: 0}
     - target: {fileID: 5275933290374329876, guid: 6895113cef9c22b4fb4a7c83824b4d06,
         type: 3}
@@ -9248,7 +9253,7 @@ GameObject:
   - component: {fileID: 170910542}
   m_Layer: 0
   m_Name: TutorialPiece
-  m_TagString: Untagged
+  m_TagString: Player2Only
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17537,7 +17542,7 @@ PrefabInstance:
     - target: {fileID: 1894696908122255597, guid: 00c830c5b9efec64987b7ae803d9b489,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.9469998
+      value: -3.0404553
       objectReference: {fileID: 0}
     - target: {fileID: 1894696908122255597, guid: 00c830c5b9efec64987b7ae803d9b489,
         type: 3}
@@ -17587,7 +17592,7 @@ PrefabInstance:
     - target: {fileID: 1894696908122255596, guid: 00c830c5b9efec64987b7ae803d9b489,
         type: 3}
       propertyPath: m_Color.a
-      value: 0
+      value: 0.5840974
       objectReference: {fileID: 0}
     - target: {fileID: 1894696908122255596, guid: 00c830c5b9efec64987b7ae803d9b489,
         type: 3}
@@ -20623,7 +20628,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &631907479
 Transform:
   m_ObjectHideFlags: 0
@@ -22680,6 +22685,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Inventory Canvas Player 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6143464146516182203, guid: ba396c6b7afd56d4d88bf68eb1afa4b9,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player2Only
+      objectReference: {fileID: 0}
     - target: {fileID: 6143464144872203769, guid: ba396c6b7afd56d4d88bf68eb1afa4b9,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -24012,7 +24022,7 @@ GameObject:
   - component: {fileID: 876331339}
   m_Layer: 0
   m_Name: TutorialPieceShadow
-  m_TagString: Untagged
+  m_TagString: Player2Only
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26499,7 +26509,7 @@ GameObject:
   - component: {fileID: 974914549}
   m_Layer: 0
   m_Name: Player2_MoodAmbiance
-  m_TagString: Untagged
+  m_TagString: Player2Only
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -69536,7 +69546,7 @@ PrefabInstance:
     - target: {fileID: 1894696908122255597, guid: 00c830c5b9efec64987b7ae803d9b489,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.035000026
+      value: -0.12975723
       objectReference: {fileID: 0}
     - target: {fileID: 1894696908122255597, guid: 00c830c5b9efec64987b7ae803d9b489,
         type: 3}
@@ -69586,7 +69596,7 @@ PrefabInstance:
     - target: {fileID: 1894696908122255596, guid: 00c830c5b9efec64987b7ae803d9b489,
         type: 3}
       propertyPath: m_Color.a
-      value: 0
+      value: 0.5922327
       objectReference: {fileID: 0}
     - target: {fileID: 1894696908122255586, guid: 00c830c5b9efec64987b7ae803d9b489,
         type: 3}
