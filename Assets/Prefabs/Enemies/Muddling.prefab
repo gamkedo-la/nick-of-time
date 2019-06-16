@@ -498,6 +498,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3830032619771752937}
   - component: {fileID: 7585496701581589427}
+  - component: {fileID: 3426577474312880707}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -514,7 +515,7 @@ RectTransform:
   m_GameObject: {fileID: 2669493700388472715}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_LocalScale: {x: 3, y: 8, z: 1}
   m_Children:
   - {fileID: 1359871285551250737}
   - {fileID: 5091871603959216712}
@@ -579,6 +580,26 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &3426577474312880707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2669493700388472715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 949484c2f7fad5f49a3b26d8f6e75833, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lerpPercent: 0.1
+  tr: {fileID: 4426791380823517489}
+  offset: {x: 0, y: 0, z: -10}
+  plTr: {fileID: 0}
+  playerFocusFactor: 0.5
+  onlyXAxis: 0
+  deathFocus: 0
+  worldToScreen: 1
 --- !u!1 &3838839362319790625
 GameObject:
   m_ObjectHideFlags: 0

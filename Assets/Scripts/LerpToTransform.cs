@@ -14,6 +14,8 @@ public class LerpToTransform : MonoBehaviour
 	public bool onlyXAxis = false;
 	
 	public bool deathFocus = true;
+
+	public bool worldToScreen = false;
 	
 	private Transform trPrev;
 
@@ -41,7 +43,10 @@ public class LerpToTransform : MonoBehaviour
 		
         deathFocusTransform();
 
-		transform.position = Vector3.Lerp ( transform.position, plPos + offset, lerpPercent );
+		if (!worldToScreen)
+			transform.position = Vector3.Lerp(transform.position, plPos + offset, lerpPercent);
+		else
+			transform.position = Camera.allCameras[0].WorldToScreenPoint(plPos + offset);
 		
 		playerFocusTransform();
 	}
