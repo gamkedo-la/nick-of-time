@@ -197,9 +197,12 @@ public class PuzzleMechanic : MonoBehaviour
 
 			if (collision.gameObject.tag == "PlayerAttack" && to == null)
 			{
-				state = !state;
+				if (collision.gameObject.transform.parent.parent.parent.gameObject.GetComponent<Animator>().GetBool("isAttacking"))
+				{
+					state = !state;
 
-				triggered = weightRequired;
+					triggered = weightRequired;
+				}
 			}
 		}
 		else if (type == MechanicType.Wall_Switch)

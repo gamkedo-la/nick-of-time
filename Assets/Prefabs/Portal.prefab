@@ -221,7 +221,7 @@ Light:
   m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 3.4152096e-37, z: 5.1e-43, w: 1.8651879e-37}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: NaN}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -238,8 +238,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   swap: 0
-  blackAtStart: 1
-  color: {r: 1, g: 1, b: 0, a: 1}
+  blackAtStart: 0
+  color: {r: 0, g: 1, b: 0.49019608, a: 1}
   intensity: 10
   factor: 0.025
   disable: 0

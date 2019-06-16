@@ -6,6 +6,8 @@ public class Portal : MonoBehaviour
 {
     public bool active = true;
 
+	public Portal portalActivePair;
+
     public Portal[] exits;
     private List<int> activePortals;
     private int selectedIndex = 0;
@@ -20,14 +22,8 @@ public class Portal : MonoBehaviour
 
     private void Update()
     {
-		if (player)
+		if (active && player)
 		{
-			MinimapController.instances[0].focus = true;
-			if (player.name == "Player1")
-				MinimapController.instances[1].focus = true;
-			else if (player.name == "Player2")
-				MinimapController.instances[2].focus = true;
-
 			// Confirm selection with attackInput
 			if (Input.GetButtonDown(attackInput))
 			{
@@ -78,21 +74,25 @@ public class Portal : MonoBehaviour
     {
         if (active && collision.CompareTag("Player") && player == null)
         {
-            // update active portal index
-            GetActivePortalIndices();
+			// A Portal MUST lead to some other Portal
+			//Make sure that portalActivePair is in the list of activePortals
+			portalActivePair.gameObject.SetActive(true);
+
+			// update active portal index
+			GetActivePortalIndices();
 
             // store reference to player
             player = collision.gameObject;
-
-            // no exits, bail
-            // @TODO: notify user somehow?
-            if (activePortals.Count == 0)
+			
+			// no exits, bail
+			// @TODO: notify user somehow?
+			if (activePortals.Count == 0)
             {
                 player = null;
                 return;
             }
             // if there's only one exit, just go there
-            else if (activePortals.Count == 1)
+            else if (activePortals.Count <= 2) //the second exit is the same portal itself
             {
                 TransportPlayer(exits[activePortals[0]]);
             }
@@ -114,7 +114,14 @@ public class Portal : MonoBehaviour
                 previousPlayerFocusFactor = playerCamera.playerFocusFactor;
                 playerCamera.playerFocusFactor = 0f;
                 PreviewSelection();
-            }
+
+				//Minimap Focus
+				MinimapController.instances[0].focus = true;
+				if (player.name == "Player1")
+					MinimapController.instances[1].focus = true;
+				else if (player.name == "Player2")
+					MinimapController.instances[2].focus = true;
+			}
         }
     }
 
@@ -136,6 +143,7 @@ public class Portal : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             active = true;
+			player = null;
         }
     }
 

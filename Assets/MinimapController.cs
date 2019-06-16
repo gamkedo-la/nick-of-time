@@ -44,8 +44,8 @@ public class MinimapController : MonoBehaviour
 
 		if (focus)
 		{
-			transform.localPosition = Vector3.Lerp(transform.localPosition, new Vector3(0f, 150f, 0f), 0.1f);
-			transform.localScale = Vector3.Lerp(transform.localScale, new Vector3(2.2f, 2.2f, 2.2f), 0.1f);
+			transform.localPosition = Vector3.Lerp(transform.localPosition, new Vector3(0f, 160f, 0f), 0.1f);
+			transform.localScale = Vector3.Lerp(transform.localScale, new Vector3(2f, 2f, 2f), 0.1f);
 			minimapCam.orthographicSize = Mathf.Lerp(minimapCam.orthographicSize, 13f, 0.1f);
 			minimapBG.color = Color.Lerp(minimapBG.color, new Color(0f, 0f, 0f, 0.25f), 0.1f);
 		}
