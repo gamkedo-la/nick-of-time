@@ -352,6 +352,7 @@ MonoBehaviour:
   primaryPotionSlotAmount: {fileID: 0}
   secondaryPotionSlotAmount: {fileID: 0}
   primaryPotion: 
+  equipmentUI: {fileID: 0}
 --- !u!114 &53627064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -473,6 +474,7 @@ MonoBehaviour:
   primaryPotionSlotAmount: {fileID: 1175630599}
   secondaryPotionSlotAmount: {fileID: 1351868400}
   primaryPotion: Fire3
+  equipmentUI: {fileID: 2062573727}
 --- !u!1 &75587764
 GameObject:
   m_ObjectHideFlags: 0
@@ -50932,6 +50934,18 @@ MonoBehaviour:
   enablePiecesParticles: 0
   pieces:
   - {fileID: 1580847455321010, guid: 2d8da81083ca09b4abade2d65dc3c732, type: 3}
+--- !u!114 &2062573727 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1499154138479406712, guid: 6146772f02ed9114bb30ec85bc5ca561,
+    type: 3}
+  m_PrefabInstance: {fileID: 1028207721266535344}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14cc827f82d2f0a43b4410e84cec8215, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2064490722
 GameObject:
   m_ObjectHideFlags: 0

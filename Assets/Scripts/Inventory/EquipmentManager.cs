@@ -30,6 +30,8 @@ public class EquipmentManager : MonoBehaviour
 
     [SerializeField]
     private string primaryPotion;
+    [SerializeField]
+    private string secondaryPotion;
 
     [SerializeField]
     public EquipmentUI equipmentUI;
@@ -140,6 +142,9 @@ public class EquipmentManager : MonoBehaviour
             {
                 onEquipmentChanged.Invoke(null, oldItem);
             }
+            equipmentUI.equipmentSlotDisplays[slotIndex].equipmentIcon.enabled = false;
+            equipmentUI.equipmentSlotDisplays[slotIndex].equipmentIcon.sprite = null;
+            equipmentUI.equipmentSlotDisplays[slotIndex].itemName.text = "Empty";
         }
     }
 
@@ -149,9 +154,9 @@ public class EquipmentManager : MonoBehaviour
         {
             Unequip(i);
             weaponPossession.weaponID = -1;
-            equipmentUI.equipmentSlotDisplays[i].equipmentIcon.enabled = false;
+            /*equipmentUI.equipmentSlotDisplays[i].equipmentIcon.enabled = false;
             equipmentUI.equipmentSlotDisplays[i].equipmentIcon.sprite = null;
-            equipmentUI.equipmentSlotDisplays[i].itemName.text = "Empty";
+            equipmentUI.equipmentSlotDisplays[i].itemName.text = "Empty";*/
 
             if(equipmentUI.equipmentSlotDisplays[i].numberOfItemsInStack != null)
             {
@@ -178,28 +183,28 @@ public class EquipmentManager : MonoBehaviour
         secondaryPotionSlotAmount.text = "";*/
     }
 
-    public void UsePotion()
+    public void UsePotion(string potionButton, Equipment potion)
     {
+        int indexInEquipment = System.Array.IndexOf(currentEquipment, potion);      
         //TODO Refactor so this is more usable (Will have to copy this for Seconday Potion Use)
-        int indexInInventory = inventory.items.IndexOf(currentEquipment[2]);
+      
+        int indexInInventory = inventory.items.IndexOf(potion);
         int amountOfPotions = inventory.itemsInSlot[indexInInventory];
         Debug.Log("Amount of potions " + amountOfPotions);
         
         if(amountOfPotions > 0)
         {
             inventory.itemsInSlot[indexInInventory] -= 1;
-            primaryPotionSlotAmount.text = inventory.itemsInSlot[indexInInventory].ToString();            
+            equipmentUI.equipmentSlotDisplays[indexInEquipment].numberOfItemsInStack.text = inventory.itemsInSlot[indexInInventory].ToString();
+            //primaryPotionSlotAmount.text = inventory.itemsInSlot[indexInInventory].ToString();            
         }
         if(amountOfPotions == 0)
         {
             inventory.itemsInSlot.RemoveAt(indexInInventory);
-            inventory.items.Remove(currentEquipment[2]); //currentEquipment[2] is the primary potion slot (See EquipmentSlot enum in Equipment.cs)
-            Unequip(2);
+            inventory.items.Remove(potion); 
+            Unequip(indexInEquipment);
+                    
             
-            primaryPotionSlot.sprite = null;
-            primaryPotionSlot.enabled = false;
-            primaryPotionSlotAmount.text = "";
-            //onEquipmentChanged.Invoke(currentEquipment[2], null);
         }
         //inventory.onItemChangedCallback.Invoke();
 
@@ -214,9 +219,15 @@ public class EquipmentManager : MonoBehaviour
 
         if (currentEquipment[2] != null && Input.GetButtonDown(primaryPotion))
         {
-            UsePotion();
+            UsePotion(primaryPotion, currentEquipment[2]);
             inventory.onItemChangedCallback.Invoke();
         }
+        if (currentEquipment[3] != null && Input.GetButtonDown(secondaryPotion))
+        {
+            UsePotion(secondaryPotion, currentEquipment[3]);
+            inventory.onItemChangedCallback.Invoke();
+        }
+
     }
 
 }
