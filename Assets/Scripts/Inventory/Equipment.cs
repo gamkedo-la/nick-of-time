@@ -14,6 +14,7 @@ public class Equipment : Item
     public override void Use()
     {
         base.Use();
+        
         inventory = equipmentManager.inventory;
         int index = inventory.items.IndexOf(this);
         equipmentManager.Equip(this);

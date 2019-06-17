@@ -3,8 +3,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Potion", menuName = "Inventory/Potion")]
 public class Potion : Equipment
 {
-    private Inventory inventory;
-
+    
     public string potionButton;
        
      void Update()

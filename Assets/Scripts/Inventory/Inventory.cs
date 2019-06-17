@@ -4,16 +4,8 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    /*
-# region Singleton
 
-    public static Inventory instance;
-
-    private void Awake()
-    {
-        instance = this;
-    }
-    #endregion*/
+    public EquipmentManager equipmentManager;
 
     public delegate void OnItemChanged();
     public OnItemChanged onItemChangedCallback;
@@ -22,6 +14,11 @@ public class Inventory : MonoBehaviour
 
     public List<Item> items = new List<Item>();
     public List<int> itemsInSlot = new List<int>();
+
+    public void Awake()
+    {
+        equipmentManager = GetComponent<EquipmentManager>();
+    }
 
     public bool Add(Item item)
     {
@@ -58,10 +55,14 @@ public class Inventory : MonoBehaviour
     {
         int index = items.IndexOf(item);
         Debug.Log(item.name + "is in slot " + index);
-        itemsInSlot[index] += amount;
+        
         if((itemsInSlot[index] + amount) >= 32)
         {
             itemsInSlot[index] = 32;
+        }
+        else
+        {
+            itemsInSlot[index] += amount;
         }
         Debug.Log("There are " + itemsInSlot[index].ToString() + " in slot " + index);
         onItemChangedCallback.Invoke();

@@ -64,6 +64,7 @@ public class InventorySlot : MonoBehaviour
     {
         if(item != null)
         {
+            item.equipmentManager = inventory.equipmentManager;
             item.Use();
           /*  if (item.stackable)
             {
