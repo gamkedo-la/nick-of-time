@@ -16285,7 +16285,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &469226236
 Light:
   m_ObjectHideFlags: 0
@@ -35477,9 +35477,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4660d568e69d6940955db6c3bef8d40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 296015602}
+  trigger: {fileID: 1693330128}
   lightingGrpsParent: {fileID: 415381079}
-  lightingGrp: {fileID: 842020135}
+  lightingGrp: {fileID: 1887008147}
   jointCamera: {fileID: 1411523593}
   forceJoint: 1
   findLightingGrp: 0
@@ -39946,7 +39946,7 @@ MonoBehaviour:
   cam: {fileID: 501965150}
   objectTag: Player
   objectName: Player2
-  size: 1.5
+  size: 1.75
   moodAmbianceLerper: {fileID: 974914549}
   ambientColor: {r: 1, g: 0.39215687, b: 0, a: 1}
   ambientIntensity: 0.3
@@ -39966,7 +39966,7 @@ MonoBehaviour:
   cam: {fileID: 126225837}
   objectTag: Player
   objectName: Player1
-  size: 1.5
+  size: 1.75
   moodAmbianceLerper: {fileID: 1790351787}
   ambientColor: {r: 1, g: 0.39215687, b: 0, a: 1}
   ambientIntensity: 0.3
@@ -87787,6 +87787,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CameraObjects
       objectReference: {fileID: 0}
+    - target: {fileID: 8479785457321683628, guid: ed0fc656d5f7d0840ba8795c183865a3,
+        type: 3}
+      propertyPath: orthographic size
+      value: 1.4
+      objectReference: {fileID: 0}
     - target: {fileID: 8479785457038440001, guid: ed0fc656d5f7d0840ba8795c183865a3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -87951,6 +87956,16 @@ PrefabInstance:
         type: 3}
       propertyPath: file
       value: Assets/Dialogues/Story1_Double.txt
+      objectReference: {fileID: 0}
+    - target: {fileID: 8479785457321683631, guid: ed0fc656d5f7d0840ba8795c183865a3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 18.369001
+      objectReference: {fileID: 0}
+    - target: {fileID: 8479785457321683631, guid: ed0fc656d5f7d0840ba8795c183865a3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.6959996
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed0fc656d5f7d0840ba8795c183865a3, type: 3}

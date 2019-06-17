@@ -7,14 +7,15 @@ public class TestAreaLighting : MonoBehaviour
 {
 	public CameraTriggerControl trigger;
 	public GameObject lightingGrpsParent;
-	public GameObject lightingGrp;
 	public Camera jointCamera;
 
 	[Space]
 	public bool forceJoint = false;
-	public bool findLightingGrp = false;
 	public bool show = false;
 	public bool reset = false;
+
+	private bool findLightingGrp = true;
+	private GameObject lightingGrp;
 
 	private Vector3 prevCamPos = Vector3.zero;
 	private Vector3 prevMoodPos = Vector3.zero;
@@ -59,8 +60,11 @@ public class TestAreaLighting : MonoBehaviour
 				prevCamPos = Vector3.zero;
 				prevMoodPos = Vector3.zero;
 				reset = false;
-
+				
+				findLightingGrp = true;
 				lightingGrp.SetActive(false);
+
+				trigger = null;
 			}
 			else if (show)
 			{

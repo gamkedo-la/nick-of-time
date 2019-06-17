@@ -38,13 +38,16 @@ public class HitCheck : MonoBehaviour
 		aud = GetComponent<AudioSource>();
 		if(aud == null)
 			aud = FindObjectOfType<AudioSource>();
-
+		
+		//CAUSES CRASH IN THE WEBGL
+		/*
 		if (gameObject.tag != "Player")
 		{
 			hpSlider = HPBarEnemy.GetComponent<Slider>();
 			hpSlider.maxValue = hp;
 			hpSlider.value = hp;
 		}
+		*/
     }
 
 	void Update ()
