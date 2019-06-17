@@ -339,11 +339,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 53627062}
-  inventoryUI: {fileID: 660761804}
+  equipmentUI: {fileID: 1835201577}
   inventory: {fileID: 0}
   primaryPotion: Fire3
   secondaryPotion: Fire1
-  equipmentUI: {fileID: 1835201577}
 --- !u!114 &53627064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -440,11 +439,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 74160656}
-  inventoryUI: {fileID: 1304249830}
+  equipmentUI: {fileID: 2062573727}
   inventory: {fileID: 0}
   primaryPotion: Fire3
   secondaryPotion: Fire1
-  equipmentUI: {fileID: 2062573727}
 --- !u!1 &75587764
 GameObject:
   m_ObjectHideFlags: 0
