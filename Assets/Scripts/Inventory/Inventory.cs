@@ -59,6 +59,10 @@ public class Inventory : MonoBehaviour
         int index = items.IndexOf(item);
         Debug.Log(item.name + "is in slot " + index);
         itemsInSlot[index] += amount;
+        if((itemsInSlot[index] + amount) >= 32)
+        {
+            itemsInSlot[index] = 32;
+        }
         Debug.Log("There are " + itemsInSlot[index].ToString() + " in slot " + index);
         onItemChangedCallback.Invoke();
     }

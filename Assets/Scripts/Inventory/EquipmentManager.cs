@@ -14,7 +14,7 @@ public class EquipmentManager : MonoBehaviour
 
     
     public Inventory inventory;
-
+/*
     public Image primaryWeaponSlot;
     public Image secondaryWeaponSlot;
     public Image primaryPotionSlot;
@@ -26,7 +26,7 @@ public class EquipmentManager : MonoBehaviour
     public TextMeshProUGUI secondaryPotionSlotName;
 
     public TextMeshProUGUI primaryPotionSlotAmount;
-    public TextMeshProUGUI secondaryPotionSlotAmount;
+    public TextMeshProUGUI secondaryPotionSlotAmount;*/
 
     [SerializeField]
     private string primaryPotion;
@@ -35,7 +35,8 @@ public class EquipmentManager : MonoBehaviour
 
     [SerializeField]
     public EquipmentUI equipmentUI;
-   
+
+    Equipment[] currentEquipment;
 
     private void Awake()
     {
@@ -43,12 +44,13 @@ public class EquipmentManager : MonoBehaviour
 		if (Player)
 		{
 			weaponPossession = Player.GetComponentInChildren<WeaponPossession>();
-			primaryWeaponSlot.enabled = false;
-			secondaryWeaponSlot.enabled = false;
+            
+			//primaryWeaponSlot.enabled = false;
+			//secondaryWeaponSlot.enabled = false;
 		}
     }
 
-    Equipment[] currentEquipment;
+    
 
     public delegate void OnEquipmentChanged(Equipment newItem, Equipment oldItem);
     public OnEquipmentChanged onEquipmentChanged;
@@ -58,6 +60,11 @@ public class EquipmentManager : MonoBehaviour
         int numberOfSlots = System.Enum.GetNames(typeof(EquipmentSlot)).Length;
         currentEquipment = new Equipment[numberOfSlots];
         inventory = GetComponent<Inventory>();
+
+        for (int i = 0; i < currentEquipment.Length; i++)
+        {
+            equipmentUI.equipmentSlotDisplays[i].equipmentIcon.enabled = false;
+        }
     }
 
     public void Equip(Equipment newItem) 
