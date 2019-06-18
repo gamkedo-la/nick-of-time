@@ -1,7 +1,8 @@
-37
-<color=#ff6666>Player 1</color><br>Dang it! Did I just came here through a PORTAL!!??
+38
+<color=#ff6666>Player 1</color><br>OMG! Did I just came here through a PORTAL!!??
 <color=#ff6666>Player 1</color><br>Now, I am really freaked out.
 <color=#ff6666>Player 1</color><br>What the hell is this place anyway?
+<color=#ff6666>Player 1</color><br>Hmm...
  
 <color=#ff6666>Player 1</color><br>Hey, what happened to you?
 <color=#ffff00>Slender Guard</color><br>Help! Fo... od
