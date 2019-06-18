@@ -1,1 +1,38 @@
-0
+37
+<color=#ff6666>Player 1</color><br>Dang it! Did we just came here through a PORTAL!!??
+<color=#ff6666>Player 2</color><br>Now, I am really freaked out.
+<color=#ff6666>Player 1</color><br>What the hell is this place anyway?
+ 
+<color=#ff6666>Player 2</color><br>Hey, what happened to you?
+<color=#ffff00>Slender Guard</color><br>Help! Fo... od
+<color=#ff6666>Player 1</color><br>Can you tell us where the exit is?
+<color=#ffff00>Slender Guard</color><br>I need to... eat.
+<color=#ff6666>Player 1</color><br>Huh?
+<color=#ffff00>Slender Guard</color><br>If you give me... some food, I...
+<color=#ff6666>Player 2</color><br>Do you really think this weirdo dungeon would have some food store?
+<color=#ffff00>Slender Guard</color><br>I will tell you a secret exit... if I get some food.
+<color=#ff6666>Player 1</color><br>...
+ 
+<color=#ff6666>Player 1</color><br>Umm hmm. I can smell it! All the pancakes and burgers are behind it.
+<color=#ff6666>Player 2</color><br>But it's locked. I wonder where the key is...
+ 
+<color=#ff6666>Player 1</color><br>WHAT? Who opened that door when we have the key?
+<color=#ff6666>Player 2</color><br>Who cares. Lets get some bites and escape this dungeon.
+
+<color=#ffbb01>Nick</color><br>...om...uom... om...uom...
+<color=#ff6666>Player 1</color><br>Hey, how did you get inside?
+<color=#ffbb01>Nick</color><br>Hmm? Hello! Are you guys alright?
+<color=#ff6666>Player 2</color><br>He asked you something.
+<color=#ffbb01>Nick</color><br>When I came from the portal, I smelled those pancakes and burgers.
+<color=#ffbb01>Nick</color><br>...and the door was already open.
+<color=#ff6666>Player 1</color><br>Ogay... om...uom...
+<color=#ff6666>Player 2</color><br>I am feeling awesome.
+<color=#ff6666>Player 1</color><br>Now, food for the escape.
+ 
+<color=#ff6666>Player 2</color><br>Here, take this bread.
+<color=#ffff00>Slender Guard</color><br>Yeah, thanks.
+<color=#ffff00>Slender Guard</color><br>...om...uom... <i>sigh</i>.
+<color=#ffbb01>Nick</color><br>...
+<color=#ff6666>Player 1</color><br>Tell us how to escape the dungeon.
+<color=#ffff00>Slender Guard</color>In order to escape, you...
+ 

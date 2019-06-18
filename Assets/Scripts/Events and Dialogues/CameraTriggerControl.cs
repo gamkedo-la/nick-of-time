@@ -20,7 +20,10 @@ public class CameraTriggerControl : MonoBehaviour
 	public float ambientIntensity;
 	
 	[HideInInspector] public bool triggered = false;
-	
+
+	static private CameraTriggerControl prevContForPl1 = null;
+	static private CameraTriggerControl prevContForPl2 = null;
+
 	void Start ()
 	{
 		
@@ -32,6 +35,32 @@ public class CameraTriggerControl : MonoBehaviour
 			Destroy(this);
 	}
 
+	void TriggerSetup()
+	{
+		if (objectName == "Player1")
+		{
+			if (prevContForPl1 != null)
+			{
+				if (prevContForPl1 != this && prevContForPl2 != this)
+					prevContForPl1.triggered = false;
+			}
+			
+			prevContForPl1 = this;
+		}
+		else if (objectName == "Player2")
+		{
+			if (prevContForPl2 != null)
+			{
+				if (prevContForPl2 != this && prevContForPl1 != this)
+					prevContForPl2.triggered = false;
+			}
+			
+			prevContForPl2 = this;
+		}
+
+		triggered = true;
+	}
+
 	void ControlStart()
 	{
 		cam.GetComponent<LerpToTransform>().tr = gameObject.transform;
@@ -41,23 +70,18 @@ public class CameraTriggerControl : MonoBehaviour
 		moodAmbianceLerper.intensity = ambientIntensity;
 		moodAmbianceLerper.gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, moodAmbianceLerper.gameObject.transform.position.z);
 
-		triggered = true;
-	}
-
-	void ControlStop()
-	{
-		//Camera.main.GetComponent<LerpToTransform>().tr = coll.gameObject.transform;
-		triggered = false;
+		TriggerSetup();
 	}
 	
 	void OnTriggerEnter2D(Collider2D coll)
 	{
-		if (coll.gameObject.CompareTag(objectTag) && (coll.gameObject.name == "null" || coll.gameObject.name == objectName)) ControlStart();
+		if (coll.gameObject.CompareTag(objectTag) && (coll.gameObject.name == "null" || coll.gameObject.name == objectName))
+			ControlStart();
 	}
-	
-	//To set the transform follow back to Player after getting out of the trigger zone
-	void OnTriggerExit2D(Collider2D coll)
+
+	void OnTriggerStay2D(Collider2D coll)
 	{
-		if (coll.gameObject.CompareTag(objectTag) && (coll.gameObject.name == "null" || coll.gameObject.name == objectName)) ControlStop();
+		if (coll.gameObject.CompareTag(objectTag) && (coll.gameObject.name == "null" || coll.gameObject.name == objectName))
+			TriggerSetup();
 	}
 }
