@@ -15,6 +15,9 @@ public class InventoryUI : MonoBehaviour
 
     InventorySlot[] slots;
 
+    [SerializeField]
+    private Button firstSelected;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,7 +39,10 @@ public class InventoryUI : MonoBehaviour
         {
             inventoryUI.SetActive(!inventoryUI.activeSelf);
 
-            slots[0].GetComponentInChildren<Button>().Select();
+            firstSelected.Select();
+            //firstSelected.OnSelect(null);
+
+            //slots[0].GetComponentInChildren<Button>().Select();
         }
 		if (inventoryUI != null)
 		{
