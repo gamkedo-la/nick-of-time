@@ -16183,6 +16183,21 @@ PrefabInstance:
       propertyPath: normalMaterial
       value: 
       objectReference: {fileID: 2100000, guid: 2b499b674a6af414b85f6cd11a972b3c, type: 2}
+    - target: {fileID: 4761011132813936111, guid: f34ad73bca23e694585b0119f5a1682a,
+        type: 3}
+      propertyPath: blinkColor.r
+      value: 0.15972686
+      objectReference: {fileID: 0}
+    - target: {fileID: 4761011132813936111, guid: f34ad73bca23e694585b0119f5a1682a,
+        type: 3}
+      propertyPath: blinkColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4761011132813936111, guid: f34ad73bca23e694585b0119f5a1682a,
+        type: 3}
+      propertyPath: blinkColor.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1148393954563092480, guid: f34ad73bca23e694585b0119f5a1682a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f34ad73bca23e694585b0119f5a1682a, type: 3}

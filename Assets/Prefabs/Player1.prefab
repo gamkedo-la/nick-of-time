@@ -445,7 +445,7 @@ MonoBehaviour:
   blinkMaterial: {fileID: 2100000, guid: 4101600ffbd946740a304a6e3b29eee6, type: 2}
   blinkTime: 0.1
   normalColor: {r: 1, g: 1, b: 1, a: 1}
-  blinkColor: {r: 1, g: 1, b: 1, a: 1}
+  blinkColor: {r: 1, g: 0, b: 0, a: 1}
   changeColor: 0
 --- !u!1 &1148393955804010700
 GameObject:
@@ -910,6 +910,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1148393954563092509}
     m_Modifications:
+    - target: {fileID: 1612122081451132077, guid: 96b702e7019afe543a36524e6147f84d,
+        type: 3}
+      propertyPath: m_Name
+      value: FootprintParticles
+      objectReference: {fileID: 0}
     - target: {fileID: 1612122081451132072, guid: 96b702e7019afe543a36524e6147f84d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -964,11 +969,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1612122081451132077, guid: 96b702e7019afe543a36524e6147f84d,
-        type: 3}
-      propertyPath: m_Name
-      value: FootprintParticles
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96b702e7019afe543a36524e6147f84d, type: 3}
