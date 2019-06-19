@@ -51,6 +51,7 @@ GameObject:
   - component: {fileID: 4964958246262903997}
   - component: {fileID: 349174034595558344}
   - component: {fileID: 3956037771853261498}
+  - component: {fileID: 4761011132813936111}
   m_Layer: 8
   m_Name: Player1
   m_TagString: Player
@@ -347,6 +348,22 @@ MonoBehaviour:
   HPBarJointCamera: {fileID: 0}
   HPBarSoloCamera: {fileID: 0}
   HPBarEnemy: {fileID: 0}
+  OnHit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4761011132813936111}
+        m_MethodName: Blink
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &74160657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -372,6 +389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f8ab9cbf63038e44881bc3855687174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  equipmentManager: {fileID: 0}
   space: 8
   items: []
   itemsInSlot: 
@@ -404,18 +422,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
-  inventoryUI: {fileID: 0}
+  equipmentUI: {fileID: 0}
   inventory: {fileID: 0}
-  primaryWeaponSlot: {fileID: 0}
-  secondaryWeaponSlot: {fileID: 0}
-  primaryPotionSlot: {fileID: 0}
-  secondaryPotionSlot: {fileID: 0}
-  primaryWeaponSlotName: {fileID: 0}
-  secondaryWeaponSlotName: {fileID: 0}
-  primaryPotionSlotName: {fileID: 0}
-  secondaryPotionSlotName: {fileID: 0}
-  primaryPotionSlotAmount: {fileID: 0}
-  secondaryPotionSlotAmount: {fileID: 0}
+  primaryPotion: 
+  secondaryPotion: 
+--- !u!114 &4761011132813936111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148393954563092511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d96fe222d756a44aa903ce7b484d381, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spritesToBlink:
+  - {fileID: 1148393954563092510}
+  - {fileID: 8663847312133633213}
+  normalMaterial: {fileID: 2100000, guid: 88f61be26ef0d154bbc7b32903715eac, type: 2}
+  blinkMaterial: {fileID: 2100000, guid: 4101600ffbd946740a304a6e3b29eee6, type: 2}
+  blinkTime: 0.1
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  blinkColor: {r: 1, g: 1, b: 1, a: 1}
+  changeColor: 0
 --- !u!1 &1148393955804010700
 GameObject:
   m_ObjectHideFlags: 0
@@ -879,11 +910,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1148393954563092509}
     m_Modifications:
-    - target: {fileID: 1612122081451132077, guid: 96b702e7019afe543a36524e6147f84d,
-        type: 3}
-      propertyPath: m_Name
-      value: FootprintParticles
-      objectReference: {fileID: 0}
     - target: {fileID: 1612122081451132072, guid: 96b702e7019afe543a36524e6147f84d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -938,6 +964,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1612122081451132077, guid: 96b702e7019afe543a36524e6147f84d,
+        type: 3}
+      propertyPath: m_Name
+      value: FootprintParticles
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96b702e7019afe543a36524e6147f84d, type: 3}

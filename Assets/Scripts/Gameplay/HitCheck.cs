@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class HitCheck : MonoBehaviour
@@ -31,6 +32,8 @@ public class HitCheck : MonoBehaviour
     [SerializeField]
     private GameObject HPBarEnemy;
 
+	public UnityEvent OnHit = null;
+
 	private Slider hpSlider;
 
 	void Start ()
@@ -38,7 +41,7 @@ public class HitCheck : MonoBehaviour
 		aud = GetComponent<AudioSource>();
 		if(aud == null)
 			aud = FindObjectOfType<AudioSource>();
-		
+
 		//CAUSES CRASH IN THE WEBGL
 		/*
 		if (gameObject.tag != "Player")
@@ -149,6 +152,7 @@ public class HitCheck : MonoBehaviour
 				Animator anim = gameObject.GetComponent<Animator>();
 
 				isHit = true;
+				OnHit.Invoke( );
 				hitDirection = anim.GetInteger("direction");
 				return true;
 			}
@@ -161,6 +165,7 @@ public class HitCheck : MonoBehaviour
 		if (coll.gameObject.name.Contains("PL_ATT"))
 		{
 			isHit = true;
+			OnHit.Invoke( );
 			hitDirection = to.GetDirection();
 			return true;
 		}
@@ -176,6 +181,7 @@ public class HitCheck : MonoBehaviour
 				Animator anim = coll.gameObject.transform.parent.parent.parent.gameObject.GetComponent<Animator>();
 
 				isHit = true;
+				OnHit.Invoke( );
 				hitDirection = anim.GetInteger("direction");
 				return true;
 			}
