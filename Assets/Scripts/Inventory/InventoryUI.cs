@@ -40,7 +40,7 @@ public class InventoryUI : MonoBehaviour
             inventoryUI.SetActive(!inventoryUI.activeSelf);
 
             firstSelected.Select();
-            //firstSelected.OnSelect(null);
+            firstSelected.OnSelect(null);
 
             //slots[0].GetComponentInChildren<Button>().Select();
         }
