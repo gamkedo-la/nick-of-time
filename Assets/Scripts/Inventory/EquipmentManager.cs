@@ -146,16 +146,11 @@ public class EquipmentManager : MonoBehaviour
             UnequipAll();
         }
 
-        if (currentEquipment[2] != null && Input.GetButtonDown(primaryPotion))
+        if (currentEquipment[1] != null && Input.GetButtonDown(primaryPotion))
         {
             UsePotion(primaryPotion, currentEquipment[2]);
             inventory.onItemChangedCallback.Invoke();
-        }
-        if (currentEquipment[3] != null && Input.GetButtonDown(secondaryPotion))
-        {
-            UsePotion(secondaryPotion, currentEquipment[3]);
-            inventory.onItemChangedCallback.Invoke();
-        }
+        }    
 
     }
 

@@ -17519,6 +17519,18 @@ MonoBehaviour:
   enablePiecesParticles: 0
   pieces:
   - {fileID: 1898713120422944, guid: 74f0553949e076e479d626e44f2102e1, type: 3}
+--- !u!114 &1008776457 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8867092716864298254, guid: 6146772f02ed9114bb30ec85bc5ca561,
+    type: 3}
+  m_PrefabInstance: {fileID: 1028207721266535344}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2e7005b9e6f6b942b0da4e559a051b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1016712046
 GameObject:
   m_ObjectHideFlags: 0
@@ -51690,6 +51702,11 @@ PrefabInstance:
       propertyPath: associatedPlayer
       value: 
       objectReference: {fileID: 74160656}
+    - target: {fileID: 6627801393482279712, guid: 6146772f02ed9114bb30ec85bc5ca561,
+        type: 3}
+      propertyPath: tradePanel
+      value: 
+      objectReference: {fileID: 1008776457}
     - target: {fileID: 8460399259216958870, guid: 6146772f02ed9114bb30ec85bc5ca561,
         type: 3}
       propertyPath: eventSystem

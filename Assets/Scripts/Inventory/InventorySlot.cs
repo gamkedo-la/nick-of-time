@@ -81,7 +81,7 @@ public class InventorySlot : MonoBehaviour
             }
 
             if (inventoryControlPanel.IsTrading)
-            {
+            {                
                 tradePanel.gameObject.SetActive(true);
             }
             

@@ -28,4 +28,4 @@ public class Equipment : Item
     }
 }
 
-public enum EquipmentSlot { primaryWeapon, secondaryWeapon, primaryPotion, secondaryPotion}
+public enum EquipmentSlot { primaryWeapon, primaryPotion}
