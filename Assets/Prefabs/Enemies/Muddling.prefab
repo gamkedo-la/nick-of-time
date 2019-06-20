@@ -465,6 +465,12 @@ MonoBehaviour:
   HPBarJointCamera: {fileID: 0}
   HPBarSoloCamera: {fileID: 0}
   HPBarEnemy: {fileID: 3914579838487646587}
+  OnHit:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  hpSlider: {fileID: 7585496701581589427}
 --- !u!114 &114261233367487362
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -34,6 +34,7 @@ public class HitCheck : MonoBehaviour
 
 	public UnityEvent OnHit = null;
 
+	[SerializeField]
 	private Slider hpSlider;
 
 	void Start ()
@@ -42,15 +43,8 @@ public class HitCheck : MonoBehaviour
 		if(aud == null)
 			aud = FindObjectOfType<AudioSource>();
 
-		//CAUSES CRASH IN THE WEBGL
-		/*
-		if (gameObject.tag != "Player")
-		{
-			hpSlider = HPBarEnemy.GetComponent<Slider>();
-			hpSlider.maxValue = hp;
-			hpSlider.value = hp;
-		}
-		*/
+		hpSlider.maxValue = hp;
+		hpSlider.value = hp;
     }
 
 	void Update ()
