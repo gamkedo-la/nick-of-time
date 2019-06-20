@@ -13,6 +13,12 @@ public class InventoryControlPanel : MonoBehaviour
 
     public bool IsDropping { get => isDropping; set => isDropping = value; }
 
+    public void Using()
+    {
+        isDropping = false;
+        isTrading = false;
+    }
+
     public void Trading()
     {
         isDropping = false;

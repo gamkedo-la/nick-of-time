@@ -17,6 +17,6 @@ MonoBehaviour:
   isDefaultItem: 0
   stackable: 0
   equipmentManager: {fileID: 0}
-  equipSlot: 1
+  equipSlot: 0
   damageModifier: 1
   weaponID: 0
