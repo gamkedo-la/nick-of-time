@@ -1,0 +1,1179 @@
+fileFormatVersion: 2
+guid: 172b581765c759d49a256a352aa1e1d3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5985312783865071065
+    second: nickOfTimeProps0_0
+  - first:
+      213: 3867842463445693093
+    second: nickOfTimeProps0_1
+  - first:
+      213: 8596268269843135954
+    second: nickOfTimeProps0_2
+  - first:
+      213: -1313346529229631449
+    second: nickOfTimeProps0_3
+  - first:
+      213: -5548960403043612106
+    second: nickOfTimeProps0_4
+  - first:
+      213: -141545748011851378
+    second: nickOfTimeProps0_5
+  - first:
+      213: 1036028160398533739
+    second: nickOfTimeProps0_6
+  - first:
+      213: -8545367115621539579
+    second: nickOfTimeProps0_7
+  - first:
+      213: 7513347076833385117
+    second: nickOfTimeProps0_8
+  - first:
+      213: 1728403097701980530
+    second: nickOfTimeProps0_9
+  - first:
+      213: -3033010911713448396
+    second: nickOfTimeProps0_10
+  - first:
+      213: -101622010441534499
+    second: nickOfTimeProps0_11
+  - first:
+      213: 5983469158499739611
+    second: nickOfTimeProps0_12
+  - first:
+      213: 8896889345458149202
+    second: nickOfTimeProps0_13
+  - first:
+      213: -204007356833701588
+    second: nickOfTimeProps0_14
+  - first:
+      213: 244142750318231061
+    second: grandClock
+  - first:
+      213: -1518419606734445466
+    second: blackNeedle
+  - first:
+      213: -687629031244088856
+    second: nickOfTimeProps0_15
+  - first:
+      213: 1475617341184750773
+    second: nickOfTimeProps0_16
+  - first:
+      213: 3814133267113355133
+    second: nickOfTimeProps0_17
+  - first:
+      213: 2966068536894211611
+    second: nickOfTimeProps0_18
+  - first:
+      213: 4031678178634553234
+    second: nickOfTimeProps0_19
+  - first:
+      213: -6796063042227225402
+    second: nickOfTimeProps0_20
+  - first:
+      213: -5689941217912920191
+    second: nickOfTimeProps0_21
+  - first:
+      213: -4267130933630419492
+    second: nickOfTimeProps0_22
+  - first:
+      213: -8996465958395218816
+    second: nickOfTimeProps0_23
+  - first:
+      213: 78747439248138302
+    second: nickOfTimeProps0_24
+  - first:
+      213: 8719158300247166534
+    second: nickOfTimeProps0_25
+  - first:
+      213: -7231836767333326372
+    second: nickOfTimeProps0_26
+  - first:
+      213: 6346365638410864284
+    second: nickOfTimeProps0_27
+  - first:
+      213: 8584169043121762725
+    second: nickOfTimeProps0_28
+  - first:
+      213: 5376944640070039854
+    second: nickOfTimeProps0_29
+  - first:
+      213: 3812195738979948723
+    second: nickOfTimeProps0_30
+  - first:
+      213: 8661313858140888915
+    second: nickOfTimeProps0_31
+  - first:
+      213: -5064580852636488119
+    second: nickOfTimeProps0_32
+  - first:
+      213: 4231516017286943495
+    second: nickOfTimeProps0_33
+  - first:
+      213: -2566179325742770818
+    second: nickOfTimeProps0_34
+  - first:
+      213: -5035042481960175368
+    second: nickOfTimeProps0_35
+  - first:
+      213: 5767786136071079907
+    second: nickOfTimeProps0_36
+  - first:
+      213: 6419471695049973280
+    second: nickOfTimeProps0_37
+  - first:
+      213: -8885032947043796232
+    second: nickOfTimeProps0_38
+  - first:
+      213: 8221117029266366885
+    second: nickOfTimeProps0_39
+  - first:
+      213: -9042600224634481233
+    second: nickOfTimeProps0_40
+  - first:
+      213: -2450593572232681814
+    second: nickOfTimeProps0_41
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: nickOfTimeProps0_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5d27a863dcd6b74aba4ee5002ac9f41
+      internalID: 5985312783865071065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nickOfTimeProps0_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ba7adb2316c73e489a04fdb8fb07542
+      internalID: 3867842463445693093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nickOfTimeProps0_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d8a515dff0055a4994304cecffee3f0
+      internalID: 8596268269843135954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nickOfTimeProps0_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92f97440dd71a9d498fb4d017f860750
+      internalID: -1313346529229631449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nickOfTimeProps0_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbf02f2c5d0e1894db66fe97cd79d14b
+      internalID: -5548960403043612106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nickOfTimeProps0_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c19daf0a0b301e42a735f5d446d5dbe
+      internalID: -141545748011851378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nickOfTimeProps0_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e63a90845b6cfb146ab080017f73b4e7
+      internalID: 1036028160398533739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nickOfTimeProps0_7
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f69b65824c615674183a95f9d3e4d4d7
+      internalID: -8545367115621539579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nickOfTimeProps0_8
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b542985e3f3751f499c1003e7aef2e4d
+      internalID: 7513347076833385117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nickOfTimeProps0_9
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4e3e5bb1fc1a8047b01e3b8bf53ac8f
+      internalID: 1728403097701980530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nickOfTimeProps0_10
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c8d2f31fb85aee46b31656e08b94625
+      internalID: -3033010911713448396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nickOfTimeProps0_11
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e08fbbe99e50bc54fa4cebb16d67261c
+      internalID: -101622010441534499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nickOfTimeProps0_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81eb2f8e7f498954d89b04e0f6c38b49
+      internalID: 5983469158499739611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nickOfTimeProps0_13
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 572f0160cdd37ba478c2dc99deb8fd39
+      internalID: 8896889345458149202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nickOfTimeProps0_14
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ae6f4aee595d5049acbf56e4044241e
+      internalID: -204007356833701588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grandClock
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb4c81d99d8bfad41a2693039c9bb594
+      internalID: 244142750318231061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blackNeedle
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 0
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f5f01ba3e48a1f479123986e5040552
+      internalID: -1518419606734445466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nickOfTimeProps0_15
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 13
+        width: 2
+        height: 2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b67de04b68319ff45bf65086cd5df49f
+      internalID: -687629031244088856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nickOfTimeProps0_16
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 13
+        width: 3
+        height: 2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cd066565833cd94b837f2d1fc70fc29
+      internalID: 1475617341184750773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nickOfTimeProps0_17
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 13
+        width: 1
+        height: 2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0746d2ce61c0d14e82611ada8d18285
+      internalID: 3814133267113355133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nickOfTimeProps0_18
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 13
+        width: 2
+        height: 2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d390de30932af904d80476cbdd926494
+      internalID: 2966068536894211611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nickOfTimeProps0_19
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 13
+        width: 2
+        height: 2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f29e9dcb5576124a8d60afccd514f02
+      internalID: 4031678178634553234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nickOfTimeProps0_20
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 10
+        width: 2
+        height: 2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aa91ad64470d8d4ca878048418f9dff
+      internalID: -6796063042227225402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nickOfTimeProps0_21
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 10
+        width: 2
+        height: 2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f92c38063c00e9c46ab3db02c76eedaa
+      internalID: -5689941217912920191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nickOfTimeProps0_22
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 11
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce901d27177097c4cb1aa5412d0fc3a9
+      internalID: -4267130933630419492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nickOfTimeProps0_23
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 11
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b64e3ad8b6c554940af2b62cbdf547db
+      internalID: -8996465958395218816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nickOfTimeProps0_24
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 11
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e70f6d1613602a44db223a3466b11344
+      internalID: 78747439248138302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nickOfTimeProps0_25
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 7
+        width: 2
+        height: 2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b395e5190fe38d49b71073239e28344
+      internalID: 8719158300247166534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nickOfTimeProps0_26
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 6
+        width: 2
+        height: 3
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b45e56bc9f9dd2469253df3e8bfe092
+      internalID: -7231836767333326372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nickOfTimeProps0_27
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 6
+        width: 1
+        height: 3
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 118f70a9e688df94d95f4a0c122b1d4f
+      internalID: 6346365638410864284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nickOfTimeProps0_28
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 8
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfe0a4e008dbf9b45bfe26abf7774cb7
+      internalID: 8584169043121762725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nickOfTimeProps0_29
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 6
+        width: 5
+        height: 3
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f02b7cbc1fd3e74db99951be7f54ea9
+      internalID: 5376944640070039854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nickOfTimeProps0_30
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 3
+        width: 2
+        height: 2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d92538a666d1c847802890b92caeff8
+      internalID: 3812195738979948723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nickOfTimeProps0_31
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 2
+        width: 2
+        height: 3
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0751b0c0b96be964ea0ade9cda64a72d
+      internalID: 8661313858140888915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nickOfTimeProps0_32
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 3
+        width: 2
+        height: 2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49a3f7b6b0d631e44940f141888a6a15
+      internalID: -5064580852636488119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nickOfTimeProps0_33
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 0
+        width: 2
+        height: 2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5ae3761f889c524ba7ccfc6be468c8b
+      internalID: 4231516017286943495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nickOfTimeProps0_34
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 0
+        width: 5
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fb51758689f50a489f269b2fae48f45
+      internalID: -2566179325742770818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nickOfTimeProps0_35
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 1
+        width: 3
+        height: 3
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b38f058b5c6ed64aaec57acbcefa59a
+      internalID: -5035042481960175368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nickOfTimeProps0_36
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1
+        width: 2
+        height: 3
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d223d1898f553e44a4f6e17f1c81bee
+      internalID: 5767786136071079907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nickOfTimeProps0_37
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 10
+        width: 2
+        height: 2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c218c99a11df3c45bff516e2ed16105
+      internalID: 6419471695049973280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nickOfTimeProps0_38
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 12
+        width: 2
+        height: 3
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe820bd2db4fcdd45accf8ad79a012c8
+      internalID: -8885032947043796232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nickOfTimeProps0_39
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 11
+        width: 2
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17daa48059a7ec040b72435abd3b6cb2
+      internalID: 8221117029266366885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nickOfTimeProps0_40
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 13
+        width: 1
+        height: 2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f73b69d9fdbd584c813f80760206b0c
+      internalID: -9042600224634481233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nickOfTimeProps0_41
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 13
+        width: 1
+        height: 2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d0728983e88bb842a497053888a077a
+      internalID: -2450593572232681814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 54046286ba61b934aaf0cc6dbf3dd3fa
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
