@@ -18,12 +18,22 @@ public class InventorySlot : MonoBehaviour
     private Inventory inventory;
 
     Item item;
-    
+
+    [SerializeField]
+    private InventoryControlPanel inventoryControlPanel;
+
+    [SerializeField]
+    private TradePanel tradePanel;
+
     private void Awake()
     {
         itemName.text = "Empty";
         numberOfItemsInSlotDisplay.text = numberOfItemsInStack.ToString();
         inventory = associatedPlayer.GetComponent<Inventory>();
+        inventoryControlPanel = GetComponentInParent<InventoryControlPanel>();
+       
+
+        tradePanel.gameObject.SetActive(false);
     }
 
     public void AddItem(Item newItem)
@@ -64,12 +74,22 @@ public class InventorySlot : MonoBehaviour
     {
         if(item != null)
         {
-            item.equipmentManager = inventory.equipmentManager;
-            item.Use();
-          /*  if (item.stackable)
+            if(inventoryControlPanel.IsTrading == false && inventoryControlPanel.IsDropping == false)
+            {
+                item.equipmentManager = inventory.equipmentManager;
+                item.Use();
+            }
+
+            if (inventoryControlPanel.IsTrading)
+            {
+                tradePanel.gameObject.SetActive(true);
+            }
+            
+          /*  if (item.stackable)   
             {
                 numberOfItemsInStack -= 1;
             }*/
         }
+        
     }
 }
