@@ -148,7 +148,7 @@ public class EquipmentManager : MonoBehaviour
 
         if (currentEquipment[1] != null && Input.GetButtonDown(primaryPotion))
         {
-            UsePotion(primaryPotion, currentEquipment[2]);
+            UsePotion(primaryPotion, currentEquipment[1]);
             inventory.onItemChangedCallback.Invoke();
         }    
 
