@@ -35,7 +35,9 @@ public class HitCheck : MonoBehaviour
 	public UnityEvent OnHit = null;
 
 	[SerializeField]
-	private Slider hpSlider;
+	private SpriteSlider hpSlider;
+
+	private float maxHp = 1f;
 
 	void Start ()
 	{
@@ -43,8 +45,12 @@ public class HitCheck : MonoBehaviour
 		if(aud == null)
 			aud = FindObjectOfType<AudioSource>();
 
-		hpSlider.maxValue = hp;
-		hpSlider.value = hp;
+		maxHp = hp;
+
+		if (hpSlider)
+		{
+			hpSlider.fillValue = hp / maxHp;
+		}
     }
 
 	void Update ()
@@ -53,8 +59,8 @@ public class HitCheck : MonoBehaviour
 		{
 			hp -= hpDamage;
 
-			if ( hpSlider )
-				hpSlider.value = hp;
+			if (hpSlider)
+				hpSlider.fillValue = hp / maxHp;
 
 			if (HPBarSoloCamera != null)
 			{
