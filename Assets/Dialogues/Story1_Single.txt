@@ -5,17 +5,17 @@
 <color=#ff6666>Player 1</color><br>...<i>sigh</i>
 <color=#ff6666>Player 1</color><br>I have to find out what is going on.
  
-<color=#ffff00>Old man</color><br>Oho ho... A visitor!
+<color=#ffff01>Old man</color><br>Oho ho... A visitor!
 <color=#ff6666>Player 1</color><br>Hey old man! Can you tell the way to get outta here?
-<color=#ffff00>Old man</color><br>You are young and filled with energy. We would become a good family.
+<color=#ffff01>Old man</color><br>You are young and filled with energy. We would become a good family.
 <color=#ff6666>Player 1</color><br>Where is the exit?
 <color=#ffff00>Old man</color><br>Hohoho! There is no exit.
 <color=#ff6666>Player 1</color><br>Huh?
-<color=#ffff00>Old man</color><br>I also entered it like you and then, I am stuck to this place for years.
+<color=#ffff02>Old man</color><br>I also entered it like you and then, I am stuck to this place for years.
 <color=#ffff00>Old man</color><br>The only way to go is up ahead. You see that gate.
 <color=#ff6666>Player 1</color><br>Just OPEN IT!
-<color=#ffff00>Old Man</color><br>You will regret going ahead. There is nothing ahead but...
-<color=#ffff00>Old Man</color><br><color=#ff0000>DEATH!</color>
+<color=#ffff02>Old Man</color><br>You will regret going ahead. There is nothing ahead but...
+<color=#ffff04>Old Man</color><br><color=#ff0000>DEATH!</color>
 <color=#ff6666>Player 1</color><br>I have no problem with that... I will figure things out. Now, open it!
  
 Received <color=#00ff00>Dagger</color>

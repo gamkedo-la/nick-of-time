@@ -4,52 +4,52 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 4648199052851569605
-    second: nickOfTimeNPCs_0
+    second: oldMan1
   - first:
       213: -8608666146596348573
-    second: nickOfTimeNPCs_1
+    second: oldMan2
   - first:
       213: -5876316916878673497
-    second: nickOfTimeNPCs_2
+    second: oldMan3
   - first:
       213: 4265285368735824642
-    second: nickOfTimeNPCs_3
+    second: oldMan4
   - first:
       213: 4773158263169120966
-    second: nickOfTimeNPCs_4
+    second: oldMan5
   - first:
       213: -3642557157301029605
-    second: nickOfTimeNPCs_5
+    second: oldManEvil1
   - first:
       213: 3164053869117397961
-    second: nickOfTimeNPCs_6
+    second: oldManEvil2
   - first:
       213: 3949556091538481763
-    second: nickOfTimeNPCs_7
+    second: fatGuardSword
   - first:
       213: -2643233315870564807
-    second: nickOfTimeNPCs_8
+    second: slenderGuard1
   - first:
       213: -3420777752462455067
-    second: nickOfTimeNPCs_9
+    second: slenderGuard2
   - first:
       213: -5772589409111060119
-    second: nickOfTimeNPCs_10
+    second: slenderGuard3
   - first:
       213: -4170231843795252242
-    second: nickOfTimeNPCs_11
+    second: slenderGuard4
   - first:
       213: 3625696036732093578
-    second: nickOfTimeNPCs_12
+    second: fatGuard1
   - first:
       213: -5790753887962113050
-    second: nickOfTimeNPCs_13
+    second: fatGuard2
   - first:
       213: -5421025599667254206
-    second: nickOfTimeNPCs_14
+    second: fatGuard3
   - first:
       213: 4122010599787003906
-    second: nickOfTimeNPCs_15
+    second: fatGuard4
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -154,7 +154,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: nickOfTimeNPCs_0
+      name: oldMan1
       rect:
         serializedVersion: 2
         x: 0
@@ -162,7 +162,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -175,7 +175,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nickOfTimeNPCs_1
+      name: oldMan2
       rect:
         serializedVersion: 2
         x: 16
@@ -183,7 +183,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -196,7 +196,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nickOfTimeNPCs_2
+      name: oldMan3
       rect:
         serializedVersion: 2
         x: 32
@@ -204,7 +204,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -217,7 +217,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nickOfTimeNPCs_3
+      name: oldMan4
       rect:
         serializedVersion: 2
         x: 48
@@ -225,7 +225,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -238,7 +238,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nickOfTimeNPCs_4
+      name: oldMan5
       rect:
         serializedVersion: 2
         x: 0
@@ -246,7 +246,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -259,7 +259,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nickOfTimeNPCs_5
+      name: oldManEvil1
       rect:
         serializedVersion: 2
         x: 16
@@ -267,7 +267,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -280,7 +280,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nickOfTimeNPCs_6
+      name: oldManEvil2
       rect:
         serializedVersion: 2
         x: 32
@@ -288,7 +288,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -301,7 +301,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nickOfTimeNPCs_7
+      name: fatGuardSword
       rect:
         serializedVersion: 2
         x: 48
@@ -309,7 +309,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -322,7 +322,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nickOfTimeNPCs_8
+      name: slenderGuard1
       rect:
         serializedVersion: 2
         x: 0
@@ -330,7 +330,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -343,7 +343,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nickOfTimeNPCs_9
+      name: slenderGuard2
       rect:
         serializedVersion: 2
         x: 16
@@ -351,7 +351,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -364,7 +364,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nickOfTimeNPCs_10
+      name: slenderGuard3
       rect:
         serializedVersion: 2
         x: 32
@@ -372,7 +372,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -385,7 +385,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nickOfTimeNPCs_11
+      name: slenderGuard4
       rect:
         serializedVersion: 2
         x: 48
@@ -393,7 +393,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -406,7 +406,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nickOfTimeNPCs_12
+      name: fatGuard1
       rect:
         serializedVersion: 2
         x: 0
@@ -414,7 +414,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -427,7 +427,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nickOfTimeNPCs_13
+      name: fatGuard2
       rect:
         serializedVersion: 2
         x: 16
@@ -435,7 +435,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -448,7 +448,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nickOfTimeNPCs_14
+      name: fatGuard3
       rect:
         serializedVersion: 2
         x: 32
@@ -456,7 +456,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -469,7 +469,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nickOfTimeNPCs_15
+      name: fatGuard4
       rect:
         serializedVersion: 2
         x: 48
@@ -477,7 +477,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

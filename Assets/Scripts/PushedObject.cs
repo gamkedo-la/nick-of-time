@@ -23,7 +23,8 @@ public class PushedObject : MonoBehaviour
 
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
-		if (rb != null && collision.gameObject.tag != "Player" && (minVelocity <= Mathf.Abs(rb.velocity.x) || minVelocity <= Mathf.Abs(rb.velocity.y)))
+		if (rb != null && collision.gameObject.tag != "Player" && collision.gameObject.layer != LayerMask.NameToLayer("PiecesCollision")
+		&& (minVelocity <= Mathf.Abs(rb.velocity.x) || minVelocity <= Mathf.Abs(rb.velocity.y)))
 		{
 			Breakable b1 = GetComponent<Breakable>();
 			Breakable b2 = collision.gameObject.GetComponent<Breakable>();
