@@ -364,6 +364,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  hpSlider: {fileID: 0}
 --- !u!114 &74160657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -409,6 +410,7 @@ MonoBehaviour:
   inventoryUI: {fileID: 0}
   associatedPlayer: {fileID: 0}
   inventoryOpen: Inventory1
+  firstSelected: {fileID: 0}
 --- !u!114 &3956037771853261498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -876,6 +878,10 @@ MonoBehaviour:
     position: {x: -0.0744, y: -0.045}
     colliderOffset: {x: 0, y: 0}
     colliderSize: {x: 0.25, y: 0.07}
+  - sprite: {fileID: 21300000, guid: f5ee6da20218406428a211c7057b4dda, type: 3}
+    position: {x: -0.0744, y: -0.045}
+    colliderOffset: {x: 0, y: 0}
+    colliderSize: {x: 0.25, y: 0.07}
   offsetX: 0.06
 --- !u!61 &5660807818573569359
 BoxCollider2D:
@@ -910,11 +916,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1148393954563092509}
     m_Modifications:
-    - target: {fileID: 1612122081451132077, guid: 96b702e7019afe543a36524e6147f84d,
-        type: 3}
-      propertyPath: m_Name
-      value: FootprintParticles
-      objectReference: {fileID: 0}
     - target: {fileID: 1612122081451132072, guid: 96b702e7019afe543a36524e6147f84d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -969,6 +970,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1612122081451132077, guid: 96b702e7019afe543a36524e6147f84d,
+        type: 3}
+      propertyPath: m_Name
+      value: FootprintParticles
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96b702e7019afe543a36524e6147f84d, type: 3}
