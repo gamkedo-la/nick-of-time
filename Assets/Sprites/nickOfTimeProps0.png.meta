@@ -7,7 +7,7 @@ TextureImporter:
     second: nickOfTimeProps0_0
   - first:
       213: 3867842463445693093
-    second: nickOfTimeProps0_1
+    second: p28
   - first:
       213: 8596268269843135954
     second: nickOfTimeProps0_2
@@ -34,19 +34,19 @@ TextureImporter:
     second: nickOfTimeProps0_9
   - first:
       213: -3033010911713448396
-    second: nickOfTimeProps0_10
+    second: rock
   - first:
       213: -101622010441534499
     second: nickOfTimeProps0_11
   - first:
       213: 5983469158499739611
-    second: nickOfTimeProps0_12
+    second: vase
   - first:
       213: 8896889345458149202
     second: nickOfTimeProps0_13
   - first:
       213: -204007356833701588
-    second: nickOfTimeProps0_14
+    second: skeleton
   - first:
       213: 244142750318231061
     second: grandClock
@@ -55,85 +55,97 @@ TextureImporter:
     second: blackNeedle
   - first:
       213: -687629031244088856
-    second: nickOfTimeProps0_15
+    second: p1
   - first:
       213: 1475617341184750773
-    second: nickOfTimeProps0_16
+    second: p2
   - first:
       213: 3814133267113355133
-    second: nickOfTimeProps0_17
+    second: p3
   - first:
       213: 2966068536894211611
-    second: nickOfTimeProps0_18
+    second: p4
   - first:
       213: 4031678178634553234
-    second: nickOfTimeProps0_19
+    second: p5
   - first:
       213: -6796063042227225402
-    second: nickOfTimeProps0_20
+    second: p6
   - first:
       213: -5689941217912920191
-    second: nickOfTimeProps0_21
+    second: p7
   - first:
       213: -4267130933630419492
-    second: nickOfTimeProps0_22
+    second: p8
   - first:
       213: -8996465958395218816
-    second: nickOfTimeProps0_23
+    second: p9
   - first:
       213: 78747439248138302
-    second: nickOfTimeProps0_24
+    second: p10
   - first:
       213: 8719158300247166534
-    second: nickOfTimeProps0_25
+    second: p11
   - first:
       213: -7231836767333326372
-    second: nickOfTimeProps0_26
+    second: p12
   - first:
       213: 6346365638410864284
-    second: nickOfTimeProps0_27
+    second: p13
   - first:
       213: 8584169043121762725
-    second: nickOfTimeProps0_28
+    second: p14
   - first:
       213: 5376944640070039854
-    second: nickOfTimeProps0_29
+    second: p15
   - first:
       213: 3812195738979948723
-    second: nickOfTimeProps0_30
+    second: p16
   - first:
       213: 8661313858140888915
-    second: nickOfTimeProps0_31
+    second: p17
   - first:
       213: -5064580852636488119
-    second: nickOfTimeProps0_32
+    second: p18
   - first:
       213: 4231516017286943495
-    second: nickOfTimeProps0_33
+    second: p21
   - first:
       213: -2566179325742770818
-    second: nickOfTimeProps0_34
+    second: p22
   - first:
       213: -5035042481960175368
-    second: nickOfTimeProps0_35
+    second: p19
   - first:
       213: 5767786136071079907
-    second: nickOfTimeProps0_36
+    second: p20
   - first:
       213: 6419471695049973280
-    second: nickOfTimeProps0_37
+    second: p23
   - first:
       213: -8885032947043796232
-    second: nickOfTimeProps0_38
+    second: p24
   - first:
       213: 8221117029266366885
-    second: nickOfTimeProps0_39
+    second: p25
   - first:
       213: -9042600224634481233
-    second: nickOfTimeProps0_40
+    second: p26
   - first:
       213: -2450593572232681814
-    second: nickOfTimeProps0_41
+    second: p27
+  - first:
+      213: -7506205573613171208
+    second: p29
+  - first:
+      213: -8839482741757788205
+    second: p30
+  - first:
+      213: 8533871255409143930
+    second: p31
+  - first:
+      213: 7317425964099790253
+    second: p32
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -246,7 +258,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -259,15 +271,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nickOfTimeProps0_1
+      name: p28
       rect:
         serializedVersion: 2
-        x: 16
-        y: 48
-        width: 16
-        height: 16
+        x: 18
+        y: 55
+        width: 2
+        height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -288,7 +300,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -309,7 +321,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -330,7 +342,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -351,7 +363,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -372,7 +384,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -393,7 +405,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -414,7 +426,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -435,7 +447,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -448,7 +460,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nickOfTimeProps0_10
+      name: rock
       rect:
         serializedVersion: 2
         x: 64
@@ -456,7 +468,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -477,7 +489,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -490,7 +502,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nickOfTimeProps0_12
+      name: vase
       rect:
         serializedVersion: 2
         x: 0
@@ -498,7 +510,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -519,7 +531,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -532,7 +544,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nickOfTimeProps0_14
+      name: skeleton
       rect:
         serializedVersion: 2
         x: 32
@@ -540,7 +552,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -561,7 +573,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -582,7 +594,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -595,7 +607,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nickOfTimeProps0_15
+      name: p1
       rect:
         serializedVersion: 2
         x: 1
@@ -603,7 +615,7 @@ TextureImporter:
         width: 2
         height: 2
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -616,7 +628,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nickOfTimeProps0_16
+      name: p2
       rect:
         serializedVersion: 2
         x: 4
@@ -624,7 +636,7 @@ TextureImporter:
         width: 3
         height: 2
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -637,7 +649,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nickOfTimeProps0_17
+      name: p3
       rect:
         serializedVersion: 2
         x: 8
@@ -645,7 +657,7 @@ TextureImporter:
         width: 1
         height: 2
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -658,7 +670,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nickOfTimeProps0_18
+      name: p4
       rect:
         serializedVersion: 2
         x: 10
@@ -666,7 +678,7 @@ TextureImporter:
         width: 2
         height: 2
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -679,7 +691,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nickOfTimeProps0_19
+      name: p5
       rect:
         serializedVersion: 2
         x: 13
@@ -687,7 +699,7 @@ TextureImporter:
         width: 2
         height: 2
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -700,7 +712,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nickOfTimeProps0_20
+      name: p6
       rect:
         serializedVersion: 2
         x: 1
@@ -708,7 +720,7 @@ TextureImporter:
         width: 2
         height: 2
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -721,7 +733,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nickOfTimeProps0_21
+      name: p7
       rect:
         serializedVersion: 2
         x: 4
@@ -729,7 +741,7 @@ TextureImporter:
         width: 2
         height: 2
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -742,7 +754,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nickOfTimeProps0_22
+      name: p8
       rect:
         serializedVersion: 2
         x: 7
@@ -750,7 +762,7 @@ TextureImporter:
         width: 1
         height: 1
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -763,7 +775,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nickOfTimeProps0_23
+      name: p9
       rect:
         serializedVersion: 2
         x: 9
@@ -771,7 +783,7 @@ TextureImporter:
         width: 1
         height: 1
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -784,7 +796,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nickOfTimeProps0_24
+      name: p10
       rect:
         serializedVersion: 2
         x: 11
@@ -792,7 +804,7 @@ TextureImporter:
         width: 1
         height: 1
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -805,7 +817,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nickOfTimeProps0_25
+      name: p11
       rect:
         serializedVersion: 2
         x: 1
@@ -813,7 +825,7 @@ TextureImporter:
         width: 2
         height: 2
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -826,7 +838,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nickOfTimeProps0_26
+      name: p12
       rect:
         serializedVersion: 2
         x: 4
@@ -834,7 +846,7 @@ TextureImporter:
         width: 2
         height: 3
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -847,7 +859,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nickOfTimeProps0_27
+      name: p13
       rect:
         serializedVersion: 2
         x: 7
@@ -855,7 +867,7 @@ TextureImporter:
         width: 1
         height: 3
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -868,7 +880,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nickOfTimeProps0_28
+      name: p14
       rect:
         serializedVersion: 2
         x: 9
@@ -876,7 +888,7 @@ TextureImporter:
         width: 1
         height: 1
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -889,7 +901,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nickOfTimeProps0_29
+      name: p15
       rect:
         serializedVersion: 2
         x: 11
@@ -897,7 +909,7 @@ TextureImporter:
         width: 5
         height: 3
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -910,7 +922,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nickOfTimeProps0_30
+      name: p16
       rect:
         serializedVersion: 2
         x: 1
@@ -918,7 +930,7 @@ TextureImporter:
         width: 2
         height: 2
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -931,7 +943,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nickOfTimeProps0_31
+      name: p17
       rect:
         serializedVersion: 2
         x: 4
@@ -939,7 +951,7 @@ TextureImporter:
         width: 2
         height: 3
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -952,15 +964,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nickOfTimeProps0_32
+      name: p18
       rect:
         serializedVersion: 2
         x: 7
-        y: 3
+        y: 2
         width: 2
-        height: 2
+        height: 3
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -973,7 +985,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nickOfTimeProps0_33
+      name: p21
       rect:
         serializedVersion: 2
         x: 1
@@ -981,7 +993,7 @@ TextureImporter:
         width: 2
         height: 2
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -994,7 +1006,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nickOfTimeProps0_34
+      name: p22
       rect:
         serializedVersion: 2
         x: 4
@@ -1002,7 +1014,7 @@ TextureImporter:
         width: 5
         height: 1
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1015,7 +1027,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nickOfTimeProps0_35
+      name: p19
       rect:
         serializedVersion: 2
         x: 10
@@ -1023,7 +1035,7 @@ TextureImporter:
         width: 3
         height: 3
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1036,7 +1048,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nickOfTimeProps0_36
+      name: p20
       rect:
         serializedVersion: 2
         x: 14
@@ -1044,7 +1056,7 @@ TextureImporter:
         width: 2
         height: 3
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1057,7 +1069,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nickOfTimeProps0_37
+      name: p23
       rect:
         serializedVersion: 2
         x: 13
@@ -1065,7 +1077,7 @@ TextureImporter:
         width: 2
         height: 2
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1078,7 +1090,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nickOfTimeProps0_38
+      name: p24
       rect:
         serializedVersion: 2
         x: 17
@@ -1086,7 +1098,7 @@ TextureImporter:
         width: 2
         height: 3
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1099,7 +1111,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nickOfTimeProps0_39
+      name: p25
       rect:
         serializedVersion: 2
         x: 20
@@ -1107,7 +1119,7 @@ TextureImporter:
         width: 2
         height: 4
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1120,7 +1132,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nickOfTimeProps0_40
+      name: p26
       rect:
         serializedVersion: 2
         x: 23
@@ -1128,7 +1140,7 @@ TextureImporter:
         width: 1
         height: 2
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1141,7 +1153,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nickOfTimeProps0_41
+      name: p27
       rect:
         serializedVersion: 2
         x: 25
@@ -1149,7 +1161,7 @@ TextureImporter:
         width: 1
         height: 2
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1157,6 +1169,90 @@ TextureImporter:
       bones: []
       spriteID: 0d0728983e88bb842a497053888a077a
       internalID: -2450593572232681814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: p29
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 55
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a104b348b33a0c4995f963a032dc0a1
+      internalID: -7506205573613171208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: p30
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 49
+        width: 11
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d0f70cca73127349bdfd59bdf22f61f
+      internalID: -8839482741757788205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: p31
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 50
+        width: 5
+        height: 3
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdff68ba2e3824749a033823f49afa82
+      internalID: 8533871255409143930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: p32
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 54
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1974360030aa5243b730bd2d3fda8c1
+      internalID: 7317425964099790253
       vertices: []
       indices: 
       edges: []
