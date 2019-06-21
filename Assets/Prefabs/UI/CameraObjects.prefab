@@ -3778,6 +3778,7 @@ GameObject:
   - component: {fileID: 8479785457038440001}
   - component: {fileID: 3411416542396890113}
   - component: {fileID: 8479785458191863463}
+  - component: {fileID: 8979796406499035760}
   m_Layer: 0
   m_Name: CameraObjects
   m_TagString: Untagged
@@ -3828,6 +3829,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cc6c7a1533a8124a9649b93f0b7626c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8979796406499035760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8479785457038440006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 555fe498ad8e60e4bb75fc2395cac330, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 0.2
+  intensity: 0.5
 --- !u!1 &8479785457308306576
 GameObject:
   m_ObjectHideFlags: 0
@@ -4047,6 +4062,7 @@ MonoBehaviour:
   playerFocusFactor: 0.5
   onlyXAxis: 0
   deathFocus: 1
+  worldToScreen: 0
 --- !u!114 &8479785457321683616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5173,6 +5189,7 @@ MonoBehaviour:
   playerFocusFactor: 0.75
   onlyXAxis: 0
   deathFocus: 1
+  worldToScreen: 0
 --- !u!114 &8479785458082677516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5568,6 +5585,7 @@ MonoBehaviour:
   playerFocusFactor: 0.75
   onlyXAxis: 0
   deathFocus: 1
+  worldToScreen: 0
 --- !u!114 &8479785458525007871
 MonoBehaviour:
   m_ObjectHideFlags: 0

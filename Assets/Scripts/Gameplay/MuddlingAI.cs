@@ -237,20 +237,23 @@ public class MuddlingAI : MonoBehaviour {
 	void FixedUpdate () {
 		if(hitCheck.hp > 0f)
 		{
-			rigidbody.MovePosition( new Vector2( rigidbody.transform.position.x, rigidbody.transform.position.y ) + (walkInput * speed * Time.deltaTime) + ((sprRenderer.flipX == true ? 1f : -1f) * hitCheck.knockback * Time.deltaTime));
+			if(!walkCollided)
+				rigidbody.MovePosition( new Vector2( rigidbody.transform.position.x, rigidbody.transform.position.y ) + (walkInput * speed * Time.deltaTime) + ((sprRenderer.flipX == true ? 1f : -1f) * hitCheck.knockback * Time.deltaTime));
 		}
 		else
 		{
 			rigidbody.MovePosition( new Vector2( rigidbody.transform.position.x, rigidbody.transform.position.y ) + ((sprRenderer.flipX == true ? 1f : -1f) * hitCheck.knockback * Time.deltaTime));
 			
 			stopAttacking();
-			gameObject.layer = 10;
+			gameObject.layer = LayerMask.NameToLayer("Dash");
 		}
 		
 		if(Mathf.Abs(hitCheck.knockback.x) > Mathf.Abs(hitCheck.knockbackSlowDown))
 			hitCheck.knockback -= new Vector2( hitCheck.knockbackSlowDown, 0f );
 		else
 			hitCheck.knockback = Vector2.zero;
+
+		walkCollided = false;
 	}
 	
 	void OnCollisionEnter2D()
@@ -262,7 +265,7 @@ public class MuddlingAI : MonoBehaviour {
 	{
 		animator.SetBool("isSpawned", true);
 
-		gameObject.layer = 10;
+		gameObject.layer = LayerMask.NameToLayer("Enemy");
 	}
 	
 	public void stopAttacking() {

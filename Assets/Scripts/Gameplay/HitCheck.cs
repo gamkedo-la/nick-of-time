@@ -127,7 +127,8 @@ public class HitCheck : MonoBehaviour
 			{
 				ThrownObject to = coll.gameObject.GetComponent<ThrownObject>();
 
-				if (coll.gameObject.GetComponent<DamageObject>() != null)
+				if (coll.gameObject.GetComponent<DamageObject>() != null
+				|| (coll.gameObject.name.Contains("EM_ATT") && (coll.gameObject.transform.parent != null && coll.gameObject.transform.parent.parent != null && coll.gameObject.transform.parent.parent != null && coll.gameObject.transform.parent.parent.parent.GetComponent<Animator>().GetBool("isAttacking"))))
 				{
 					if (PlayerDamage()) break;
 				}

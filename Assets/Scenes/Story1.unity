@@ -21281,6 +21281,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  hpSlider: {fileID: 0}
 --- !u!82 &697478002
 AudioSource:
   m_ObjectHideFlags: 0
@@ -83510,6 +83511,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  hpSlider: {fileID: 0}
 --- !u!114 &2012583765
 MonoBehaviour:
   m_ObjectHideFlags: 0

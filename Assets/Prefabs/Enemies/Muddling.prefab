@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 95754821962735592}
   - component: {fileID: 58818171642985770}
   m_Layer: 9
-  m_Name: AttackArea
+  m_Name: EM_ATT_Sprite
   m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -232,6 +232,7 @@ RectTransform:
   m_Children:
   - {fileID: 4499392473970819499}
   - {fileID: 4426791380823517489}
+  - {fileID: 8924734121609421520}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -502,7 +503,7 @@ MonoBehaviour:
   walkMinDelay: 0.3
   walkMaxDelay: 0.6
   attackSpeed: 0.25
-  attackMaxDistance: 0.24
+  attackMaxDistance: 0.36
   attackSound: {fileID: 8300000, guid: 32ed1d859f4d34a41a11b51400612384, type: 3}
   actionMinDelay: 1
   actionMaxDelay: 1.5
@@ -866,6 +867,53 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!1 &4672422076817738697
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8924734121609421520}
+  - component: {fileID: 560607831623125672}
+  m_Layer: 16
+  m_Name: FootPiecesCollision
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8924734121609421520
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4672422076817738697}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.0247, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3366794532734391966}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &560607831623125672
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4672422076817738697}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.065}
+  serializedVersion: 2
+  m_Radius: 0.08
 --- !u!1 &5813759522917660509
 GameObject:
   m_ObjectHideFlags: 0
