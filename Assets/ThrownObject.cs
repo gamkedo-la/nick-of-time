@@ -68,6 +68,7 @@ public class ThrownObject : MonoBehaviour
 		{
 			throwVelocity = Vector3.zero;
 			throwRotation = 0f;
+			gameObject.layer = LayerMask.NameToLayer("Default");
 		}
 	}
 

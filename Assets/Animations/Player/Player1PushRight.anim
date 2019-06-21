@@ -20,7 +20,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0.015, y: -0.045, z: 0}
+        value: {x: 0.07, y: -0.0006, z: 0}
         inSlope: {x: Infinity, y: Infinity, z: Infinity}
         outSlope: {x: Infinity, y: Infinity, z: Infinity}
         tangentMode: 0
@@ -29,7 +29,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.08888889
-        value: {x: 0.095, y: -0.025, z: 0}
+        value: {x: 0.14, y: 0.02, z: 0}
         inSlope: {x: Infinity, y: Infinity, z: Infinity}
         outSlope: {x: Infinity, y: Infinity, z: Infinity}
         tangentMode: 0
@@ -38,7 +38,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.24444444
-        value: {x: 0.065, y: -0.025, z: 0}
+        value: {x: 0.11, y: 0.02, z: 0}
         inSlope: {x: Infinity, y: Infinity, z: Infinity}
         outSlope: {x: Infinity, y: Infinity, z: Infinity}
         tangentMode: 0
@@ -86,7 +86,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_FlipX
-    path: Weapon/FlipOffset/Sprite
+    path: Weapon/FlipOffset/Sprite_PL_ATT
     classID: 212
     script: {fileID: 0}
   m_PPtrCurves:
@@ -125,7 +125,7 @@ AnimationClip:
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 3957203692
+      path: 809787774
       attribute: 555744692
       script: {fileID: 0}
       typeID: 212
@@ -188,7 +188,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.015
+        value: 0.07
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -197,7 +197,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.08888889
-        value: 0.095
+        value: 0.14
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -206,7 +206,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.24444444
-        value: 0.065
+        value: 0.11
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -225,7 +225,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -0.045
+        value: -0.0006
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -234,7 +234,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.08888889
-        value: -0.025
+        value: 0.02
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -243,7 +243,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.24444444
-        value: -0.025
+        value: 0.02
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -310,7 +310,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_FlipX
-    path: Weapon/FlipOffset/Sprite
+    path: Weapon/FlipOffset/Sprite_PL_ATT
     classID: 212
     script: {fileID: 0}
   m_EulerEditorCurves: []
