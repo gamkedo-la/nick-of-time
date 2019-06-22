@@ -74,6 +74,7 @@ Transform:
   - {fileID: 8531208708176992865}
   - {fileID: 8144935541084721335}
   - {fileID: 1103091295746358210}
+  - {fileID: 2833587493840470029}
   - {fileID: 444304565013215508}
   - {fileID: 2605728702270850878}
   m_Father: {fileID: 0}
@@ -606,6 +607,85 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &4180219442013934880
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2833587493840470029}
+  - component: {fileID: 4797496133314027787}
+  m_Layer: 8
+  m_Name: AnimatedWeapon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2833587493840470029
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4180219442013934880}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1148393954563092509}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &4797496133314027787
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4180219442013934880}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 8
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 0
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &5282673048867340566
 GameObject:
   m_ObjectHideFlags: 0
@@ -635,7 +715,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1148393954563092509}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &6116921939259254877
 CircleCollider2D:
@@ -874,14 +954,81 @@ MonoBehaviour:
     position: {x: -0.0744, y: -0.045}
     colliderOffset: {x: 0, y: 0}
     colliderSize: {x: 0.11, y: 0.05}
+    animatedWeapon:
+      animated: 0
+      attackUpPosition: {x: 0, y: 0}
+      attackDownPosition: {x: 0, y: 0}
+      attackLeftPosition: {x: 0, y: 0}
+      attackRightPosition: {x: 0, y: 0}
+      attackUp: []
+      attackDown: []
+      attackLeft: []
+      timePerFrame: 0
+      flipAttackLeft: 0
+      turnOffSingleSpriteRenderer: 0
   - sprite: {fileID: 21300000, guid: 5049fee2dbaa7954a888d2f4088d905d, type: 3}
     position: {x: -0.0744, y: -0.045}
     colliderOffset: {x: 0, y: 0}
     colliderSize: {x: 0.25, y: 0.07}
+    animatedWeapon:
+      animated: 0
+      attackUpPosition: {x: 0, y: 0}
+      attackDownPosition: {x: 0, y: 0}
+      attackLeftPosition: {x: 0, y: 0}
+      attackRightPosition: {x: 0, y: 0}
+      attackUp: []
+      attackDown: []
+      attackLeft: []
+      timePerFrame: 0
+      flipAttackLeft: 0
+      turnOffSingleSpriteRenderer: 0
   - sprite: {fileID: 21300000, guid: f5ee6da20218406428a211c7057b4dda, type: 3}
     position: {x: -0.0744, y: -0.045}
     colliderOffset: {x: 0, y: 0}
     colliderSize: {x: 0.25, y: 0.07}
+    animatedWeapon:
+      animated: 1
+      attackUpPosition: {x: 0, y: 0.15}
+      attackDownPosition: {x: 0, y: -0.15}
+      attackLeftPosition: {x: -0.15, y: 0}
+      attackRightPosition: {x: 0.15, y: 0}
+      attackUp:
+      - {fileID: 2760126052464048063, guid: 0ee736eaba681104f8d46ed8ab7f29d1, type: 3}
+      - {fileID: -6921960247999797682, guid: 0ee736eaba681104f8d46ed8ab7f29d1, type: 3}
+      - {fileID: -3532105094839930636, guid: 0ee736eaba681104f8d46ed8ab7f29d1, type: 3}
+      - {fileID: 6918895514429534990, guid: 0ee736eaba681104f8d46ed8ab7f29d1, type: 3}
+      - {fileID: -5701699482657123800, guid: 0ee736eaba681104f8d46ed8ab7f29d1, type: 3}
+      - {fileID: -7026775141311510155, guid: 0ee736eaba681104f8d46ed8ab7f29d1, type: 3}
+      - {fileID: -5571390913220216191, guid: 0ee736eaba681104f8d46ed8ab7f29d1, type: 3}
+      - {fileID: 3778174479491177110, guid: 0ee736eaba681104f8d46ed8ab7f29d1, type: 3}
+      - {fileID: 5002443104423013582, guid: 0ee736eaba681104f8d46ed8ab7f29d1, type: 3}
+      - {fileID: 8929385361427679924, guid: 0ee736eaba681104f8d46ed8ab7f29d1, type: 3}
+      attackDown:
+      - {fileID: -7847744188380900495, guid: 7f2aee65fb816f944ae9d5fffacb3bad, type: 3}
+      - {fileID: -6960743400686606924, guid: 7f2aee65fb816f944ae9d5fffacb3bad, type: 3}
+      - {fileID: 8161132595647424879, guid: 7f2aee65fb816f944ae9d5fffacb3bad, type: 3}
+      - {fileID: -5859338310528329776, guid: 7f2aee65fb816f944ae9d5fffacb3bad, type: 3}
+      - {fileID: 1485348009744719408, guid: 7f2aee65fb816f944ae9d5fffacb3bad, type: 3}
+      - {fileID: -1420399568678157120, guid: 7f2aee65fb816f944ae9d5fffacb3bad, type: 3}
+      - {fileID: -2581936064214396912, guid: 7f2aee65fb816f944ae9d5fffacb3bad, type: 3}
+      - {fileID: -2915168835823675128, guid: 7f2aee65fb816f944ae9d5fffacb3bad, type: 3}
+      - {fileID: 4678904595661602438, guid: 7f2aee65fb816f944ae9d5fffacb3bad, type: 3}
+      - {fileID: -5177121621923400788, guid: 7f2aee65fb816f944ae9d5fffacb3bad, type: 3}
+      attackLeft:
+      - {fileID: -3403784633769721938, guid: eb644ff0c9fff4b43837145ad53577a2, type: 3}
+      - {fileID: -4275383012744069714, guid: eb644ff0c9fff4b43837145ad53577a2, type: 3}
+      - {fileID: -1724748634493789846, guid: eb644ff0c9fff4b43837145ad53577a2, type: 3}
+      - {fileID: 7431710495973391545, guid: eb644ff0c9fff4b43837145ad53577a2, type: 3}
+      - {fileID: -4191614330945835846, guid: eb644ff0c9fff4b43837145ad53577a2, type: 3}
+      - {fileID: -626179976448844772, guid: eb644ff0c9fff4b43837145ad53577a2, type: 3}
+      - {fileID: 1364214567692065344, guid: eb644ff0c9fff4b43837145ad53577a2, type: 3}
+      - {fileID: 1894970533241553416, guid: eb644ff0c9fff4b43837145ad53577a2, type: 3}
+      - {fileID: -3467704103143284349, guid: eb644ff0c9fff4b43837145ad53577a2, type: 3}
+      - {fileID: -2391557895855702923, guid: eb644ff0c9fff4b43837145ad53577a2, type: 3}
+      timePerFrame: 0.02
+      flipAttackLeft: 1
+      turnOffSingleSpriteRenderer: 1
+  animatedWeaponRenderer: {fileID: 4797496133314027787}
   offsetX: 0.06
 --- !u!61 &5660807818573569359
 BoxCollider2D:
@@ -954,7 +1101,7 @@ PrefabInstance:
     - target: {fileID: 1612122081451132072, guid: 96b702e7019afe543a36524e6147f84d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1612122081451132072, guid: 96b702e7019afe543a36524e6147f84d,
         type: 3}

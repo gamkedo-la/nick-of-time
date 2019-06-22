@@ -648,7 +648,7 @@ PrefabInstance:
     - target: {fileID: 1894696908122255597, guid: 00c830c5b9efec64987b7ae803d9b489,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.9759998
+      value: -2.0389497
       objectReference: {fileID: 0}
     - target: {fileID: 1894696908122255597, guid: 00c830c5b9efec64987b7ae803d9b489,
         type: 3}
@@ -698,7 +698,7 @@ PrefabInstance:
     - target: {fileID: 1894696908122255596, guid: 00c830c5b9efec64987b7ae803d9b489,
         type: 3}
       propertyPath: m_Color.a
-      value: 0
+      value: 0.39343622
       objectReference: {fileID: 0}
     - target: {fileID: 1894696908122255596, guid: 00c830c5b9efec64987b7ae803d9b489,
         type: 3}
@@ -906,10 +906,35 @@ MonoBehaviour:
     position: {x: -0.0744, y: -0.045}
     colliderOffset: {x: 0, y: 0}
     colliderSize: {x: 0.11, y: 0.05}
+    animatedWeapon:
+      animated: 0
+      attackUpPosition: {x: 0, y: 0}
+      attackDownPosition: {x: 0, y: 0}
+      attackLeftPosition: {x: 0, y: 0}
+      attackRightPosition: {x: 0, y: 0}
+      attackUp: []
+      attackDown: []
+      attackLeft: []
+      timePerFrame: 0
+      flipAttackLeft: 0
+      turnOffSingleSpriteRenderer: 0
   - sprite: {fileID: 21300000, guid: 5049fee2dbaa7954a888d2f4088d905d, type: 3}
     position: {x: -0.0744, y: -0.045}
     colliderOffset: {x: 0, y: 0}
     colliderSize: {x: 0.25, y: 0.07}
+    animatedWeapon:
+      animated: 0
+      attackUpPosition: {x: 0, y: 0}
+      attackDownPosition: {x: 0, y: 0}
+      attackLeftPosition: {x: 0, y: 0}
+      attackRightPosition: {x: 0, y: 0}
+      attackUp: []
+      attackDown: []
+      attackLeft: []
+      timePerFrame: 0
+      flipAttackLeft: 0
+      turnOffSingleSpriteRenderer: 0
+  animatedWeaponRenderer: {fileID: 0}
   offsetX: 0.06
 --- !u!212 &57923016
 SpriteRenderer:
@@ -2157,6 +2182,19 @@ MonoBehaviour:
     position: {x: 0, y: 0}
     colliderOffset: {x: 0, y: 0}
     colliderSize: {x: 0, y: 0}
+    animatedWeapon:
+      animated: 0
+      attackUpPosition: {x: 0, y: 0}
+      attackDownPosition: {x: 0, y: 0}
+      attackLeftPosition: {x: 0, y: 0}
+      attackRightPosition: {x: 0, y: 0}
+      attackUp: []
+      attackDown: []
+      attackLeft: []
+      timePerFrame: 0
+      flipAttackLeft: 0
+      turnOffSingleSpriteRenderer: 0
+  animatedWeaponRenderer: {fileID: 0}
   offsetX: 0.1
 --- !u!212 &116775436
 SpriteRenderer:
@@ -16108,6 +16146,26 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2b499b674a6af414b85f6cd11a972b3c, type: 2}
+    - target: {fileID: 4761011132813936111, guid: f34ad73bca23e694585b0119f5a1682a,
+        type: 3}
+      propertyPath: normalMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 2b499b674a6af414b85f6cd11a972b3c, type: 2}
+    - target: {fileID: 4761011132813936111, guid: f34ad73bca23e694585b0119f5a1682a,
+        type: 3}
+      propertyPath: blinkColor.r
+      value: 0.15972686
+      objectReference: {fileID: 0}
+    - target: {fileID: 4761011132813936111, guid: f34ad73bca23e694585b0119f5a1682a,
+        type: 3}
+      propertyPath: blinkColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4761011132813936111, guid: f34ad73bca23e694585b0119f5a1682a,
+        type: 3}
+      propertyPath: blinkColor.b
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 349174034595558344, guid: f34ad73bca23e694585b0119f5a1682a,
         type: 3}
       propertyPath: itemsParent
@@ -16178,26 +16236,6 @@ PrefabInstance:
       propertyPath: secondaryPotionSlotName
       value: 
       objectReference: {fileID: 999591427}
-    - target: {fileID: 4761011132813936111, guid: f34ad73bca23e694585b0119f5a1682a,
-        type: 3}
-      propertyPath: normalMaterial
-      value: 
-      objectReference: {fileID: 2100000, guid: 2b499b674a6af414b85f6cd11a972b3c, type: 2}
-    - target: {fileID: 4761011132813936111, guid: f34ad73bca23e694585b0119f5a1682a,
-        type: 3}
-      propertyPath: blinkColor.r
-      value: 0.15972686
-      objectReference: {fileID: 0}
-    - target: {fileID: 4761011132813936111, guid: f34ad73bca23e694585b0119f5a1682a,
-        type: 3}
-      propertyPath: blinkColor.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4761011132813936111, guid: f34ad73bca23e694585b0119f5a1682a,
-        type: 3}
-      propertyPath: blinkColor.b
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1148393954563092480, guid: f34ad73bca23e694585b0119f5a1682a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f34ad73bca23e694585b0119f5a1682a, type: 3}
@@ -17249,7 +17287,7 @@ PrefabInstance:
     - target: {fileID: 1894696908122255597, guid: 00c830c5b9efec64987b7ae803d9b489,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.9469998
+      value: -3.0130932
       objectReference: {fileID: 0}
     - target: {fileID: 1894696908122255597, guid: 00c830c5b9efec64987b7ae803d9b489,
         type: 3}
@@ -17299,7 +17337,7 @@ PrefabInstance:
     - target: {fileID: 1894696908122255596, guid: 00c830c5b9efec64987b7ae803d9b489,
         type: 3}
       propertyPath: m_Color.a
-      value: 0
+      value: 0.41308394
       objectReference: {fileID: 0}
     - target: {fileID: 1894696908122255596, guid: 00c830c5b9efec64987b7ae803d9b489,
         type: 3}
@@ -23432,6 +23470,19 @@ MonoBehaviour:
     position: {x: 0, y: 0}
     colliderOffset: {x: 0, y: 0}
     colliderSize: {x: 0, y: 0}
+    animatedWeapon:
+      animated: 0
+      attackUpPosition: {x: 0, y: 0}
+      attackDownPosition: {x: 0, y: 0}
+      attackLeftPosition: {x: 0, y: 0}
+      attackRightPosition: {x: 0, y: 0}
+      attackUp: []
+      attackDown: []
+      attackLeft: []
+      timePerFrame: 0
+      flipAttackLeft: 0
+      turnOffSingleSpriteRenderer: 0
+  animatedWeaponRenderer: {fileID: 0}
   offsetX: 0.1
 --- !u!212 &882846901
 SpriteRenderer:
@@ -67930,7 +67981,7 @@ PrefabInstance:
     - target: {fileID: 1894696908122255597, guid: 00c830c5b9efec64987b7ae803d9b489,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.035000026
+      value: -0.10239506
       objectReference: {fileID: 0}
     - target: {fileID: 1894696908122255597, guid: 00c830c5b9efec64987b7ae803d9b489,
         type: 3}
@@ -67980,7 +68031,7 @@ PrefabInstance:
     - target: {fileID: 1894696908122255596, guid: 00c830c5b9efec64987b7ae803d9b489,
         type: 3}
       propertyPath: m_Color.a
-      value: 0
+      value: 0.4212192
       objectReference: {fileID: 0}
     - target: {fileID: 1894696908122255586, guid: 00c830c5b9efec64987b7ae803d9b489,
         type: 3}
@@ -87296,26 +87347,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1794337873721068216, guid: ed0fc656d5f7d0840ba8795c183865a3,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5738967072247517768, guid: ed0fc656d5f7d0840ba8795c183865a3,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7210092527037609586, guid: ed0fc656d5f7d0840ba8795c183865a3,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6634596877355029979, guid: ed0fc656d5f7d0840ba8795c183865a3,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8479785457038440006, guid: ed0fc656d5f7d0840ba8795c183865a3,
         type: 3}
       propertyPath: m_Name
@@ -87490,6 +87521,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -1.6959996
+      objectReference: {fileID: 0}
+    - target: {fileID: 6634596877355029979, guid: ed0fc656d5f7d0840ba8795c183865a3,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7210092527037609586, guid: ed0fc656d5f7d0840ba8795c183865a3,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5738967072247517768, guid: ed0fc656d5f7d0840ba8795c183865a3,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794337873721068216, guid: ed0fc656d5f7d0840ba8795c183865a3,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8479785458059321904, guid: ed0fc656d5f7d0840ba8795c183865a3,
         type: 3}
