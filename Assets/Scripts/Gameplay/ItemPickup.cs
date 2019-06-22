@@ -8,6 +8,8 @@ public class ItemPickup : Interactable
 
     public int amountInStack = 0;
 
+	public bool destroy = true;
+
     public override void Interact()
     {
         base.Interact();
@@ -28,7 +30,11 @@ public class ItemPickup : Interactable
         if (wasPickedUp)
         {
             Debug.Log("was picked up called");
-            Destroy(gameObject);
+
+			if (destroy)
+				Destroy(gameObject);
+			else
+				Destroy(this);
         }
     }
 
