@@ -82,8 +82,8 @@ public class IndicateTowards : MonoBehaviour
 				pos.y = transform.parent.transform.position.y + (rectangleConfinement.w * cam.orthographicSize);
 				*/
 
-			if (cam.orthographicSize * ratio > 0f)
-				bottomLeft.transform.parent.localScale = new Vector2(cam.orthographicSize * ratio, cam.orthographicSize * ratio);
+			if (cam.orthographicSize * (ratio * ratio) > 0f)
+				bottomLeft.transform.parent.localScale = new Vector2(cam.orthographicSize * (ratio * ratio), cam.orthographicSize * (ratio * ratio));
 
 			if (pos.x < bottomLeft.position.x)
 				pos.x = bottomLeft.position.x;
