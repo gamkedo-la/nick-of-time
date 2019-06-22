@@ -50,6 +50,9 @@ TextureImporter:
   - first:
       213: 4122010599787003906
     second: fatGuard4
+  - first:
+      213: 2197579706494666225
+    second: slenderGuardPieces
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -353,7 +356,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: 0, y: -8}
+        - {x: 0, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -8}
       physicsShape: []
       tessellationDetail: 0
       bones: []
@@ -485,6 +492,27 @@ TextureImporter:
       bones: []
       spriteID: 3fb4c875d1597c340b50935cd2fe2da5
       internalID: 4122010599787003906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slenderGuardPieces
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 17
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4129cf731c7df943bea9507fb76f663
+      internalID: 2197579706494666225
       vertices: []
       indices: 
       edges: []

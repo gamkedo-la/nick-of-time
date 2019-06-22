@@ -55,8 +55,5 @@ public class SetSpriteWithDialogueSequencer : MonoBehaviour {
 			
 			enabled = false;
 		}
-			
-			
-		
 	}
 }

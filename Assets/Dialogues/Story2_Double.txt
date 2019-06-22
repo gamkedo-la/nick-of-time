@@ -5,11 +5,11 @@
 <color=#6666ff>Player 2</color><br>Lets check it out.
  
 <color=#6666ff>Player 2</color><br>Hey, what happened to you?
-<color=#ffff00>Slender Guard</color><br>Help! Fo... od
+<color=#ffff03>Slender Guard</color><br>Help! Fo... od
 <color=#ff6666>Player 1</color><br>Can you tell us where the exit is?
-<color=#ffff00>Slender Guard</color><br>I need to... eat.
+<color=#ffff01>Slender Guard</color><br>I need to... eat.
 <color=#ff6666>Player 1</color><br>Huh?
-<color=#ffff00>Slender Guard</color><br>If you give me... some food, I...
+<color=#ffff03>Slender Guard</color><br>If you give me... some food, I...
 <color=#6666ff>Player 2</color><br>Do you really think this weirdo dungeon would have some food store?
 <color=#ffff00>Slender Guard</color><br>I will tell you a secret exit... if I get some food.
 <color=#ff6666>Player 1</color><br>...
