@@ -24,8 +24,7 @@ public class DialogueBoxSwitch : MonoBehaviour
 	private SpriteRenderer sprRenderer;
 	private GameObject nickFaces;
 	private GameObject oldManFaces;
-	private GameObject slenderGuardFaces;
-	private GameObject fatGuardFaces;
+	private GameObject guardFaces;
 
 	void Start()
 	{
@@ -60,8 +59,7 @@ public class DialogueBoxSwitch : MonoBehaviour
 		sprRenderer = GetComponent<SpriteRenderer>();
 		nickFaces = transform.GetChild(2).gameObject;
 		oldManFaces = transform.GetChild(3).gameObject;
-		slenderGuardFaces = transform.GetChild(4).gameObject;
-		fatGuardFaces = transform.GetChild(5).gameObject;
+		guardFaces = transform.GetChild(4).gameObject;
 	}
 
 	void Update()
@@ -172,56 +170,30 @@ public class DialogueBoxSwitch : MonoBehaviour
 
 
 
-		if (text.Contains("#ffff00>Slender Guard")) //Slender Guard Smile
+		if (text.Contains("#ffff00>Guard")) //Guard Smile
 		{
-			slenderGuardFaces.transform.GetChild(0).gameObject.SetActive(true);
+			guardFaces.transform.GetChild(0).gameObject.SetActive(true);
 		}
-		else if (text.Contains("#ffff01>Slender Guard")) //Slender Guard Happy
+		else if (text.Contains("#ffff01>Guard")) //Guard Happy
 		{
-			slenderGuardFaces.transform.GetChild(1).gameObject.SetActive(true);
+			guardFaces.transform.GetChild(1).gameObject.SetActive(true);
 		}
-		else if (text.Contains("#ffff02>Slender Guard")) //Slender Guard Sad
+		else if (text.Contains("#ffff02>Guard")) //Guard Sad
 		{
-			slenderGuardFaces.transform.GetChild(2).gameObject.SetActive(true);
+			guardFaces.transform.GetChild(2).gameObject.SetActive(true);
 		}
-		else if (text.Contains("#ffff03>Slender Guard")) //Slender Guard Shock
+		else if (text.Contains("#ffff03>Guard")) //Guard Shock
 		{
-			slenderGuardFaces.transform.GetChild(3).gameObject.SetActive(true);
-		}
-		else
-		{
-			for (int i = 0; i < 4; i++)
-			{
-				slenderGuardFaces.transform.GetChild(i).gameObject.SetActive(false);
-			}
-		}
-
-
-
-		if (text.Contains("#ffff00>Fat Guard")) //Fat Guard Smile
-		{
-			fatGuardFaces.transform.GetChild(0).gameObject.SetActive(true);
-		}
-		else if (text.Contains("#ffff01>Fat Guard")) //Fat Guard Happy
-		{
-			fatGuardFaces.transform.GetChild(1).gameObject.SetActive(true);
-		}
-		else if (text.Contains("#ffff02>Fat Guard")) //Fat Guard Sad
-		{
-			fatGuardFaces.transform.GetChild(2).gameObject.SetActive(true);
-		}
-		else if (text.Contains("#ffff03>Fat Guard")) //Fat Guard Shock
-		{
-			fatGuardFaces.transform.GetChild(3).gameObject.SetActive(true);
+			guardFaces.transform.GetChild(3).gameObject.SetActive(true);
 		}
 		else
 		{
 			for (int i = 0; i < 4; i++)
 			{
-				fatGuardFaces.transform.GetChild(i).gameObject.SetActive(false);
+				guardFaces.transform.GetChild(i).gameObject.SetActive(false);
 			}
 		}
-
+		
 
 
 		if (text.Contains("#ffbb00>Nick")) //Nick Smile

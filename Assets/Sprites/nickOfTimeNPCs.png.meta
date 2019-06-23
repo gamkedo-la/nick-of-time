@@ -25,19 +25,19 @@ TextureImporter:
     second: oldManEvil2
   - first:
       213: 3949556091538481763
-    second: fatGuardSword
+    second: sword
   - first:
       213: -2643233315870564807
-    second: slenderGuard1
+    second: guard1
   - first:
       213: -3420777752462455067
-    second: slenderGuard2
+    second: guard2
   - first:
       213: -5772589409111060119
-    second: slenderGuard3
+    second: guard3
   - first:
       213: -4170231843795252242
-    second: slenderGuard4
+    second: guard4
   - first:
       213: 3625696036732093578
     second: fatGuard1
@@ -161,7 +161,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 48
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -182,7 +182,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 48
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -203,7 +203,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 48
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -224,7 +224,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 48
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -245,7 +245,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -266,7 +266,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 32
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -287,7 +287,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 32
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -304,11 +304,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fatGuardSword
+      name: sword
       rect:
         serializedVersion: 2
         x: 48
-        y: 32
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -325,11 +325,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slenderGuard1
+      name: guard1
       rect:
         serializedVersion: 2
         x: 0
-        y: 16
+        y: 0
         width: 16
         height: 16
       alignment: 0
@@ -346,11 +346,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slenderGuard2
+      name: guard2
       rect:
         serializedVersion: 2
         x: 16
-        y: 16
+        y: 0
         width: 16
         height: 16
       alignment: 0
@@ -371,11 +371,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slenderGuard3
+      name: guard3
       rect:
         serializedVersion: 2
         x: 32
-        y: 16
+        y: 0
         width: 16
         height: 16
       alignment: 0
@@ -392,11 +392,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slenderGuard4
+      name: guard4
       rect:
         serializedVersion: 2
         x: 48
-        y: 16
+        y: 0
         width: 16
         height: 16
       alignment: 0
@@ -413,95 +413,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fatGuard1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eae5e36e1b1fe9146b925394919e6e47
-      internalID: 3625696036732093578
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fatGuard2
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 56ede760181832e47953fb536f4c1d6b
-      internalID: -5790753887962113050
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fatGuard3
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0c7fd346a244a5847a85a844baed436c
-      internalID: -5421025599667254206
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fatGuard4
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3fb4c875d1597c340b50935cd2fe2da5
-      internalID: 4122010599787003906
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: slenderGuardPieces
       rect:
         serializedVersion: 2
         x: 17
-        y: 17
+        y: 1
         width: 6
         height: 5
       alignment: 0
