@@ -12,7 +12,21 @@ public class ImageEffect : MonoBehaviour
 
 	[Range(0f, 1f)]
 	public float value = 0;
-	
+
+	static private ImageEffect[] instances = { null, null, null };
+
+	private void Start()
+	{
+		for (int i = 0; i < 3; i++)
+		{
+			if (instances[i] == null)
+			{
+				instances[i] = this;
+				break;
+			}
+		}
+	}
+
 	private void OnRenderImage(RenderTexture source, RenderTexture destination)
 	{
 		imageEffectMaterial[materialIndex].SetFloat("value", value);
@@ -30,5 +44,21 @@ public class ImageEffect : MonoBehaviour
 
 		Graphics.Blit(rt, destination);
 		RenderTexture.ReleaseTemporary(rt);
+	}
+
+	static public void SetImageEffectMaterialIndex(int v)
+	{
+		for (int i = 0; i < 3; i++)
+		{
+			instances[i].materialIndex = v;
+		}
+	}
+
+	static public void SetImageEffectValue(float v)
+	{
+		for (int i = 0; i < 3; i++)
+		{
+			instances[i].value = v;
+		}
 	}
 }
