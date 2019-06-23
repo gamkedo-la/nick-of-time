@@ -44,7 +44,7 @@ public class SetupSinglePlayerMode : MonoBehaviour {
 		
 		for (int i = 1; i < tutorials.Length; i++)
 		{
-			if (tutorials[i].tag == "Player2Only")
+			if (tutorials[i].CompareTag("Player2Only"))
 			{
 				Destroy(tutorials[i].gameObject);
 			}
