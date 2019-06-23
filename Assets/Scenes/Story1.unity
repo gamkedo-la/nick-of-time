@@ -9984,7 +9984,7 @@ GameObject:
   - component: {fileID: 229464739}
   m_Layer: 0
   m_Name: TutorialPieceShadow
-  m_TagString: Untagged
+  m_TagString: Player2Only
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10432,7 +10432,7 @@ GameObject:
   - component: {fileID: 245018290}
   m_Layer: 0
   m_Name: TutorialPiece
-  m_TagString: Untagged
+  m_TagString: Player2Only
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10733,7 +10733,7 @@ GameObject:
   - component: {fileID: 252030669}
   m_Layer: 0
   m_Name: TutorialPieceShadow
-  m_TagString: Untagged
+  m_TagString: Player2Only
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32397,7 +32397,7 @@ GameObject:
   - component: {fileID: 1394767831}
   m_Layer: 0
   m_Name: TutorialPiece
-  m_TagString: Untagged
+  m_TagString: Player2Only
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34395,7 +34395,7 @@ GameObject:
   - component: {fileID: 1498434878}
   m_Layer: 0
   m_Name: TutorialPieceShadow
-  m_TagString: Untagged
+  m_TagString: Player2Only
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -81930,7 +81930,7 @@ GameObject:
   - component: {fileID: 1945619253}
   m_Layer: 0
   m_Name: TutorialPiece
-  m_TagString: Untagged
+  m_TagString: Player2Only
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

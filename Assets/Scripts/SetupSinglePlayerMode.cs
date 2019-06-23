@@ -40,14 +40,14 @@ public class SetupSinglePlayerMode : MonoBehaviour {
 		
 		// To make sure GameObject.FindGameObjectsWithTag("Player2Only") includes T0Grp
 		GameObject lightingAndBlocks = GameObject.Find("LightingAndBlocks");
-		Transform T0Grp = lightingAndBlocks.GetComponentsInChildren<Transform>(true)[1];		
-		T0Grp.gameObject.SetActive(true);
-
-		GameObject[] player2Only = GameObject.FindGameObjectsWithTag("Player2Only");
-
-		for (int i = 0; i < player2Only.Length; i++)
+		Transform[] tutorials = lightingAndBlocks.GetComponentsInChildren<Transform>(true);		
+		
+		for (int i = 1; i < tutorials.Length; i++)
 		{
-			Destroy(player2Only[i]);
+			if (tutorials[i].tag == "Player2Only")
+			{
+				Destroy(tutorials[i].gameObject);
+			}
 		}
 
 		Destroy(gameObject);
