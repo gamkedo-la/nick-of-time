@@ -51,7 +51,7 @@ public class WeaponPossession : MonoBehaviour {
 	//0 = Dagger
 	//1 = Katana
 	//2 = Time Whip
-	//3 - Spear (NOT MADE AND INTEGRATED YET)
+	//3 - Spear
 
 	void Start ()
 	{

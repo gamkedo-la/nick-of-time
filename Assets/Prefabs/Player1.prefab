@@ -1042,6 +1042,52 @@ MonoBehaviour:
       timePerFrame: 0.02
       flipAttackLeft: 1
       turnOffSingleSpriteRenderer: 1
+  - sprite: {fileID: 21300000, guid: 8e6a8e5f89807e6ffbf8a1c73c6a0ea1, type: 3}
+    position: {x: -0.0744, y: -0.045}
+    colliderOffset: {x: 0, y: 0}
+    colliderSize: {x: 0.25, y: 0.07}
+    animatedWeapon:
+      animated: 1
+      attackUpPosition: {x: 0, y: 0.15}
+      attackDownPosition: {x: 0, y: -0.15}
+      attackLeftPosition: {x: -0.15, y: 0}
+      attackRightPosition: {x: 0.15, y: 0}
+      attackUp:
+      - {fileID: 2760126052464048063, guid: 0ee736eaba681104f8d46ed8ab7f29d1, type: 3}
+      - {fileID: -6921960247999797682, guid: 0ee736eaba681104f8d46ed8ab7f29d1, type: 3}
+      - {fileID: -3532105094839930636, guid: 0ee736eaba681104f8d46ed8ab7f29d1, type: 3}
+      - {fileID: 6918895514429534990, guid: 0ee736eaba681104f8d46ed8ab7f29d1, type: 3}
+      - {fileID: -5701699482657123800, guid: 0ee736eaba681104f8d46ed8ab7f29d1, type: 3}
+      - {fileID: -7026775141311510155, guid: 0ee736eaba681104f8d46ed8ab7f29d1, type: 3}
+      - {fileID: -5571390913220216191, guid: 0ee736eaba681104f8d46ed8ab7f29d1, type: 3}
+      - {fileID: 3778174479491177110, guid: 0ee736eaba681104f8d46ed8ab7f29d1, type: 3}
+      - {fileID: 5002443104423013582, guid: 0ee736eaba681104f8d46ed8ab7f29d1, type: 3}
+      - {fileID: 8929385361427679924, guid: 0ee736eaba681104f8d46ed8ab7f29d1, type: 3}
+      attackDown:
+      - {fileID: -7847744188380900495, guid: 7f2aee65fb816f944ae9d5fffacb3bad, type: 3}
+      - {fileID: -6960743400686606924, guid: 7f2aee65fb816f944ae9d5fffacb3bad, type: 3}
+      - {fileID: 8161132595647424879, guid: 7f2aee65fb816f944ae9d5fffacb3bad, type: 3}
+      - {fileID: -5859338310528329776, guid: 7f2aee65fb816f944ae9d5fffacb3bad, type: 3}
+      - {fileID: 1485348009744719408, guid: 7f2aee65fb816f944ae9d5fffacb3bad, type: 3}
+      - {fileID: -1420399568678157120, guid: 7f2aee65fb816f944ae9d5fffacb3bad, type: 3}
+      - {fileID: -2581936064214396912, guid: 7f2aee65fb816f944ae9d5fffacb3bad, type: 3}
+      - {fileID: -2915168835823675128, guid: 7f2aee65fb816f944ae9d5fffacb3bad, type: 3}
+      - {fileID: 4678904595661602438, guid: 7f2aee65fb816f944ae9d5fffacb3bad, type: 3}
+      - {fileID: -5177121621923400788, guid: 7f2aee65fb816f944ae9d5fffacb3bad, type: 3}
+      attackLeft:
+      - {fileID: -3403784633769721938, guid: eb644ff0c9fff4b43837145ad53577a2, type: 3}
+      - {fileID: -4275383012744069714, guid: eb644ff0c9fff4b43837145ad53577a2, type: 3}
+      - {fileID: -1724748634493789846, guid: eb644ff0c9fff4b43837145ad53577a2, type: 3}
+      - {fileID: 7431710495973391545, guid: eb644ff0c9fff4b43837145ad53577a2, type: 3}
+      - {fileID: -4191614330945835846, guid: eb644ff0c9fff4b43837145ad53577a2, type: 3}
+      - {fileID: -626179976448844772, guid: eb644ff0c9fff4b43837145ad53577a2, type: 3}
+      - {fileID: 1364214567692065344, guid: eb644ff0c9fff4b43837145ad53577a2, type: 3}
+      - {fileID: 1894970533241553416, guid: eb644ff0c9fff4b43837145ad53577a2, type: 3}
+      - {fileID: -3467704103143284349, guid: eb644ff0c9fff4b43837145ad53577a2, type: 3}
+      - {fileID: -2391557895855702923, guid: eb644ff0c9fff4b43837145ad53577a2, type: 3}
+      timePerFrame: 0.02
+      flipAttackLeft: 1
+      turnOffSingleSpriteRenderer: 1
   animatedWeaponRenderer: {fileID: 4797496133314027787}
   offsetX: 0.06
 --- !u!61 &5660807818573569359
@@ -1077,11 +1123,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1148393954563092509}
     m_Modifications:
-    - target: {fileID: 1612122081451132077, guid: 96b702e7019afe543a36524e6147f84d,
-        type: 3}
-      propertyPath: m_Name
-      value: FootprintParticles
-      objectReference: {fileID: 0}
     - target: {fileID: 1612122081451132072, guid: 96b702e7019afe543a36524e6147f84d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1136,6 +1177,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1612122081451132077, guid: 96b702e7019afe543a36524e6147f84d,
+        type: 3}
+      propertyPath: m_Name
+      value: FootprintParticles
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96b702e7019afe543a36524e6147f84d, type: 3}
