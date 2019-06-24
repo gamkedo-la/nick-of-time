@@ -9203,7 +9203,7 @@ RectTransform:
   m_LocalScale: {x: 1.0004593, y: 1.0004593, z: 0.9985316}
   m_Children: []
   m_Father: {fileID: 2070835114}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -9368,7 +9368,7 @@ RectTransform:
   m_LocalScale: {x: 1.0004593, y: 1.0004593, z: 0.99853164}
   m_Children: []
   m_Father: {fileID: 1887689611}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -20937,7 +20937,7 @@ RectTransform:
   m_LocalScale: {x: 1.0004593, y: 1.0004593, z: 0.9985316}
   m_Children: []
   m_Father: {fileID: 2070835114}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -28308,7 +28308,7 @@ RectTransform:
   m_LocalScale: {x: 1.0004593, y: 1.0004593, z: 0.9985316}
   m_Children: []
   m_Father: {fileID: 1887689611}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -67216,6 +67216,11 @@ PrefabInstance:
       propertyPath: infoObject
       value: 
       objectReference: {fileID: 1207045828}
+    - target: {fileID: 4750667019975879344, guid: ed0fc656d5f7d0840ba8795c183865a3,
+        type: 3}
+      propertyPath: swayUISetup
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9142163543066842967, guid: ed0fc656d5f7d0840ba8795c183865a3,
         type: 3}
       propertyPath: infoObject
@@ -67236,6 +67241,11 @@ PrefabInstance:
       propertyPath: infoObject
       value: 
       objectReference: {fileID: 1207045828}
+    - target: {fileID: 21292052507069273, guid: ed0fc656d5f7d0840ba8795c183865a3,
+        type: 3}
+      propertyPath: swayUISetup
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5227613462692524698, guid: ed0fc656d5f7d0840ba8795c183865a3,
         type: 3}
       propertyPath: objectToIndicate

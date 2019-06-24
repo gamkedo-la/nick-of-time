@@ -51,6 +51,9 @@ public class PlayerController : MonoBehaviour
 	private float dashTimer = 0f;
 	private float attackSpeedTimer = 0f;
 
+	[HideInInspector] public Vector2 trackVelocity = Vector2.zero;
+	private Vector2 lastPos;
+
 	private Rigidbody2D rigidbody;
 	private Animator animator;
 	private SpriteRenderer sprRenderer;
@@ -86,6 +89,7 @@ public class PlayerController : MonoBehaviour
 			if (!animator.GetBool("isAttacking") && !animator.GetBool("isPushing") && !animator.GetBool("isThrowing") && !isDashing)
 			{
 				walkInput = new Vector2(Input.GetAxisRaw(walkHorizontalInput), Input.GetAxisRaw(walkVerticalInput));
+				if (walkInput.x != 0 && walkInput.y != 0) walkInput /= 1.5f;
 
 				if (walkInput != Vector2.zero)
 				{
@@ -402,6 +406,9 @@ public class PlayerController : MonoBehaviour
 			stopPushing();
 			stopThrowing();
 		}
+
+		trackVelocity = (rigidbody.position - lastPos) * 50;
+		lastPos = rigidbody.position;
 
 		if (Mathf.Abs(hitCheck.knockback.x) > Mathf.Abs(hitCheck.knockbackSlowDown))
 			hitCheck.knockback -= new Vector2(hitCheck.knockbackSlowDown, 0f);
