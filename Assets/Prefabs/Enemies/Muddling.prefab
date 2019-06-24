@@ -437,7 +437,7 @@ MonoBehaviour:
   hpDamage: 0.25
   hitTags:
   - PlayerAttack
-  knockbackValue: 6.4
+  knockbackValue: 4.4
   knockbackSlowDown: 0.4
   invulnerabilityDelay: 0.15
   regenerateHpUpto: 0
@@ -451,6 +451,7 @@ MonoBehaviour:
   - {fileID: 2157152286293793279, guid: abd21b99c234df949b7a4ada08992f91, type: 3}
   hp: 1
   knockback: {x: 0, y: 0}
+  knockbackSlowDownVector: {x: 0, y: 0}
   HPBarJointCamera: {fileID: 0}
   HPBarSoloCamera: {fileID: 0}
   HPBarEnemy: {fileID: 3914579838487646587}

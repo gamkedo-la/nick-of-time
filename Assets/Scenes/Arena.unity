@@ -28684,7 +28684,7 @@ PrefabInstance:
     - target: {fileID: 630805151483399286, guid: f34ad73bca23e694585b0119f5a1682a,
         type: 3}
       propertyPath: m_Intensity
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 630805151483399286, guid: f34ad73bca23e694585b0119f5a1682a,
         type: 3}
@@ -28785,7 +28785,7 @@ PrefabInstance:
     - target: {fileID: 7904644737788364913, guid: 880506fd1ff214948bfc6296d550e5b1,
         type: 3}
       propertyPath: midLightIntensity
-      value: 5
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 7904644737788364913, guid: 880506fd1ff214948bfc6296d550e5b1,
         type: 3}
@@ -28817,6 +28817,11 @@ PrefabInstance:
       propertyPath: m_SpotAngle
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 2222405268081595384, guid: 880506fd1ff214948bfc6296d550e5b1,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 3.9970677
+      objectReference: {fileID: 0}
     - target: {fileID: 2222405269172934152, guid: 880506fd1ff214948bfc6296d550e5b1,
         type: 3}
       propertyPath: m_SpotAngle
@@ -28825,7 +28830,7 @@ PrefabInstance:
     - target: {fileID: 2222405269172934152, guid: 880506fd1ff214948bfc6296d550e5b1,
         type: 3}
       propertyPath: m_Intensity
-      value: 4.9999995
+      value: 2.4560356
       objectReference: {fileID: 0}
     - target: {fileID: 2222405269172934152, guid: 880506fd1ff214948bfc6296d550e5b1,
         type: 3}
@@ -61004,37 +61009,6 @@ PrefabInstance:
       propertyPath: dashInput
       value: Dash2
       objectReference: {fileID: 0}
-    - target: {fileID: 3329497469656580619, guid: f34ad73bca23e694585b0119f5a1682a,
-        type: 3}
-      propertyPath: walkSpeed
-      value: 1.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 3329497469656580619, guid: f34ad73bca23e694585b0119f5a1682a,
-        type: 3}
-      propertyPath: dashSpeed
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3329497469656580619, guid: f34ad73bca23e694585b0119f5a1682a,
-        type: 3}
-      propertyPath: dashTime
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3329497469656580619, guid: f34ad73bca23e694585b0119f5a1682a,
-        type: 3}
-      propertyPath: attackSpeed
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3329497469656580619, guid: f34ad73bca23e694585b0119f5a1682a,
-        type: 3}
-      propertyPath: attackSpeedTime
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3329497469656580619, guid: f34ad73bca23e694585b0119f5a1682a,
-        type: 3}
-      propertyPath: dashFXObject
-      value: 
-      objectReference: {fileID: 2643976167619289179, guid: d16b468af7e8e1a49a14edc85440334d,
-        type: 3}
     - target: {fileID: 2579037237340339661, guid: f34ad73bca23e694585b0119f5a1682a,
         type: 3}
       propertyPath: m_Sprite
@@ -61084,7 +61058,7 @@ PrefabInstance:
     - target: {fileID: 630805151483399286, guid: f34ad73bca23e694585b0119f5a1682a,
         type: 3}
       propertyPath: m_Intensity
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 630805151483399286, guid: f34ad73bca23e694585b0119f5a1682a,
         type: 3}
@@ -63772,7 +63746,7 @@ PrefabInstance:
     - target: {fileID: 7904644737788364913, guid: 880506fd1ff214948bfc6296d550e5b1,
         type: 3}
       propertyPath: midLightIntensity
-      value: 5
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 7904644737788364913, guid: 880506fd1ff214948bfc6296d550e5b1,
         type: 3}
@@ -63804,6 +63778,11 @@ PrefabInstance:
       propertyPath: m_SpotAngle
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 2222405268081595384, guid: 880506fd1ff214948bfc6296d550e5b1,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 3.9970677
+      objectReference: {fileID: 0}
     - target: {fileID: 2222405269172934152, guid: 880506fd1ff214948bfc6296d550e5b1,
         type: 3}
       propertyPath: m_SpotAngle
@@ -63812,7 +63791,7 @@ PrefabInstance:
     - target: {fileID: 2222405269172934152, guid: 880506fd1ff214948bfc6296d550e5b1,
         type: 3}
       propertyPath: m_Intensity
-      value: 4.9999995
+      value: 2.4560356
       objectReference: {fileID: 0}
     - target: {fileID: 2222405269172934152, guid: 880506fd1ff214948bfc6296d550e5b1,
         type: 3}

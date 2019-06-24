@@ -86,14 +86,16 @@ public class PlayerController : MonoBehaviour
 		
 		if (Time.timeScale > 0f)
 		{
-			if (!animator.GetBool("isAttacking") && !animator.GetBool("isPushing") && !animator.GetBool("isThrowing") && !isDashing)
+			if (!animator.GetBool("isAttacking") && !animator.GetBool("isPushing") && !animator.GetBool("isThrowing"))// && !isDashing)
 			{
 				walkInput = new Vector2(Input.GetAxisRaw(walkHorizontalInput), Input.GetAxisRaw(walkVerticalInput));
 				if (walkInput.x != 0 && walkInput.y != 0) walkInput /= 1.5f;
 
 				if (walkInput != Vector2.zero)
 				{
-					speed = walkSpeed;
+					if(!isDashing)
+						speed = walkSpeed;
+					
 					animator.SetBool("isWalking", true);
 
 					if (walkInput.y < 0)
@@ -212,14 +214,16 @@ public class PlayerController : MonoBehaviour
 				&& !animator.GetBool("isAttacking")
 				&& !animator.GetBool("isPushing")
 				&& !animator.GetBool("isThrowing")
-				&& (comboKeys == "UU" || comboKeys == "RR" || comboKeys == "DD" || comboKeys == "LL")
+				&& (comboKeys == "UU" || comboKeys == "RR" || comboKeys == "DD" || comboKeys == "LL"
+				 || comboKeys == "UR" || comboKeys == "UL" || comboKeys == "DR" || comboKeys == "DL"
+				 || comboKeys == "RU" || comboKeys == "RD" || comboKeys == "LU" || comboKeys == "LD")
 				&& hitCheck.knockback == Vector2.zero)
 			{
 				isDashing = true;
 				dashTimer = dashTime;
 				speed = dashSpeed;
 
-				animator.SetBool("isWalking", false);
+				//animator.SetBool("isWalking", false);
 
 				gameObject.layer = 10;
 
@@ -395,11 +399,13 @@ public class PlayerController : MonoBehaviour
 	{
 		if (hitCheck.hp > 0f)
 		{
-			rigidbody.MovePosition(new Vector2(rigidbody.transform.position.x, rigidbody.transform.position.y) + (walkInput * speed * Time.deltaTime) + hitCheck.knockback * Time.deltaTime);
+			rigidbody.MovePosition(new Vector2(rigidbody.transform.position.x, rigidbody.transform.position.y) + (walkInput * speed * Time.deltaTime)
+			+ (-hitCheck.knockback * Time.deltaTime));
 		}
 		else
 		{
-			rigidbody.MovePosition(new Vector2(rigidbody.transform.position.x, rigidbody.transform.position.y) + hitCheck.knockback * Time.deltaTime);
+			rigidbody.MovePosition(new Vector2(rigidbody.transform.position.x, rigidbody.transform.position.y)
+			+ (-hitCheck.knockback * Time.deltaTime));
 
 			stopAttacking();
 			stopDashing();
@@ -410,8 +416,9 @@ public class PlayerController : MonoBehaviour
 		trackVelocity = (rigidbody.position - lastPos) * 50;
 		lastPos = rigidbody.position;
 
-		if (Mathf.Abs(hitCheck.knockback.x) > Mathf.Abs(hitCheck.knockbackSlowDown))
-			hitCheck.knockback -= new Vector2(hitCheck.knockbackSlowDown, 0f);
+		if (Mathf.Abs(hitCheck.knockback.x) > Mathf.Abs(hitCheck.knockbackSlowDown)
+		|| Mathf.Abs(hitCheck.knockback.y) > Mathf.Abs(hitCheck.knockbackSlowDown))
+			hitCheck.knockback -= hitCheck.knockbackSlowDownVector;
 		else
 			hitCheck.knockback = Vector2.zero;
 	}

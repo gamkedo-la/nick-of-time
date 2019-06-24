@@ -324,6 +324,7 @@ MonoBehaviour:
   dashSound: {fileID: 8300000, guid: f8a4e4e3090eccc478baddaf7213dd10, type: 3}
   actionPoints: 1
   isDashing: 0
+  trackVelocity: {x: 0, y: 0}
 --- !u!114 &1148393954563092481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -336,10 +337,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87afb66cc8e462f48a975d17129f1406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hpDamage: 0.02
+  hpDamage: 0.1
   hitTags:
   - EnemyAttack
-  knockbackValue: 6.4
+  knockbackValue: 4.4
   knockbackSlowDown: 0.4
   invulnerabilityDelay: 0.3
   regenerateHpUpto: 0.4
@@ -351,6 +352,7 @@ MonoBehaviour:
   lootItems: []
   hp: 1
   knockback: {x: 0, y: 0}
+  knockbackSlowDownVector: {x: 0, y: 0}
   HPBarJointCamera: {fileID: 0}
   HPBarSoloCamera: {fileID: 0}
   HPBarEnemy: {fileID: 0}

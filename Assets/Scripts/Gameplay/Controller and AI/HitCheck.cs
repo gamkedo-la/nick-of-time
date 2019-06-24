@@ -31,9 +31,12 @@ public class HitCheck : MonoBehaviour
 
 	[HideInInspector] public float hp = 1f;
 	[HideInInspector] public Vector2 knockback = Vector2.zero;
+	[HideInInspector] public Vector2 knockbackSlowDownVector = Vector2.zero;
 
 	private bool isHit = false;
 	private int hitDirection = 0;
+
+	private float hitAngle = 0f;
 
 	private AudioSource aud = null;
 
@@ -89,26 +92,31 @@ public class HitCheck : MonoBehaviour
 				}
 			}
 
+			knockback = new Vector2(knockbackValue * Mathf.Cos(hitAngle), knockbackValue * Mathf.Sin(hitAngle));
+			knockbackSlowDownVector = new Vector2(knockbackSlowDown * Mathf.Cos(hitAngle), knockbackSlowDown * Mathf.Sin(hitAngle));
+
+			/*
 			if (hitDirection == 0)
 			{
 				knockback = new Vector2(0f, -knockbackValue);
-				knockbackSlowDown = -Mathf.Abs(knockbackSlowDown);
+				knockbackSlowDownVector = new Vector2(0f, knockbackSlowDown);
 			}
 			else if (hitDirection == 1)
 			{
 				knockback = new Vector2(-knockbackValue, 0f);
-				knockbackSlowDown = -Mathf.Abs(knockbackSlowDown);
+				knockbackSlowDownVector = new Vector2(knockbackSlowDown, 0f);
 			}
 			else if (hitDirection == 2)
 			{
 				knockback = new Vector2(0f, knockbackValue);
-				knockbackSlowDown = Mathf.Abs(knockbackSlowDown);
+				knockbackSlowDownVector = new Vector2(0f, -knockbackSlowDown);
 			}
 			else if (hitDirection == 3)
 			{
 				knockback = new Vector2(knockbackValue, 0f);
-				knockbackSlowDown = Mathf.Abs(knockbackSlowDown);
+				knockbackSlowDownVector = new Vector2(-knockbackSlowDown, 0f);
 			}
+			*/
 
 			isHit = false;
 
@@ -168,7 +176,7 @@ public class HitCheck : MonoBehaviour
 					if (coll.gameObject.GetComponent<DamageObject>() != null
 					|| (coll.gameObject.name.Contains("EM_ATT") && (coll.gameObject.transform.parent != null && coll.gameObject.transform.parent.parent != null && coll.gameObject.transform.parent.parent != null && coll.gameObject.transform.parent.parent.parent.GetComponent<Animator>().GetBool("isAttacking"))))
 					{
-						if (PlayerDamage()) break;
+						if (PlayerDamage(coll)) break;
 					}
 					else if (to != null && to.throwVelocity != Vector3.zero)
 					{
@@ -183,17 +191,18 @@ public class HitCheck : MonoBehaviour
 		}
 	}
 
-	private bool PlayerDamage()
+	private bool PlayerDamage(Collider2D coll)
 	{
 		if (gameObject.name.Contains("Player"))
 		{
 			if (!gameObject.GetComponent<PlayerController>().isDashing)
 			{
-				Animator anim = gameObject.GetComponent<Animator>();
+				//Animator anim = gameObject.GetComponent<Animator>();
 
 				isHit = true;
 				OnHit.Invoke( );
-				hitDirection = anim.GetInteger("direction");
+				//hitDirection = anim.GetInteger("direction");
+				hitAngle = Vector2.Angle(coll.gameObject.transform.position, gameObject.transform.position);
 				return true;
 			}
 		}
@@ -219,11 +228,13 @@ public class HitCheck : MonoBehaviour
 			PlayerController plCont = coll.gameObject.transform.parent.parent.parent.gameObject.GetComponent<PlayerController>();
 			if (!plCont.isDashing)
 			{
-				Animator anim = coll.gameObject.transform.parent.parent.parent.gameObject.GetComponent<Animator>();
+				//Animator anim = coll.gameObject.transform.parent.parent.parent.gameObject.GetComponent<Animator>();
 				
 				isHit = true;
 				OnHit.Invoke( );
-				hitDirection = anim.GetInteger("direction");
+				//hitDirection = anim.GetInteger("direction");
+				hitAngle = Mathf.Atan2(coll.gameObject.transform.position.y - gameObject.transform.position.y,
+				coll.gameObject.transform.position.x - gameObject.transform.position.x);
 				return true;
 			}
 		}

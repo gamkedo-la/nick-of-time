@@ -11,14 +11,13 @@ public class EnemyShaderEffect : MonoBehaviour
 	private float hitEffect = 0f;
 
 	private Material mat;
-	
-    void Start()
-    {
-		mat = gameObject.GetComponent<SpriteRenderer>().material;
-    }
+
+	private float timer = 0f;
 	
     void Update()
     {
+		mat = gameObject.GetComponent<SpriteRenderer>().material;
+
 		outlineEffect = Mathf.Lerp(outlineEffect, 0.5001f, outlineLerpFactor);
 		hitEffect = Mathf.Lerp(hitEffect, 0f, hitLerpFactor);
 

@@ -29,7 +29,7 @@ public class LightEmitterObject : MonoBehaviour
 
     void Start()
     {
-		mat = gameObject.GetComponent<SpriteRenderer>().sharedMaterial;
+		mat = gameObject.GetComponent<SpriteRenderer>().material;
 		denseLight = gameObject.transform.GetChild(0).GetChild(0).GetComponent<Light>();
 		spreadLight = gameObject.transform.GetChild(0).GetChild(1).GetComponent<Light>();
 		disable = false;
