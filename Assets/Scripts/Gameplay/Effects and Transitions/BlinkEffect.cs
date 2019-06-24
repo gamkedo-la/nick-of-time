@@ -42,7 +42,7 @@ public class BlinkEffect : MonoBehaviour
 	{
 		if ( blinking )
 			return;
-		Debug.Log( "Blink" );
+
 		blinking = true;
 		SwapMaterial( blinkMaterial, blinkColor );
 		Invoke( "Unblink", time );

@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4632251379214322}
   - component: {fileID: 212934151125677660}
-  - component: {fileID: 95754821962735592}
   - component: {fileID: 58818171642985770}
   m_Layer: 9
   m_Name: EM_ATT_Sprite
@@ -81,25 +80,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &95754821962735592
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1164165663827878}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d2ddde67855b6954282e5d753839f394, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!58 &58818171642985770
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -113,9 +93,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0027313232, y: -0.011863254}
   serializedVersion: 2
-  m_Radius: 0.16
+  m_Radius: 0.072402954
 --- !u!1 &1171110530013928
 GameObject:
   m_ObjectHideFlags: 0
@@ -212,6 +192,7 @@ GameObject:
   - component: {fileID: 114270344248536278}
   - component: {fileID: 114261233367487362}
   - component: {fileID: 6423873604275834842}
+  - component: {fileID: 8397847391258807991}
   m_Layer: 9
   m_Name: Muddling
   m_TagString: Enemy
@@ -527,6 +508,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineLerpFactor: 0.1
   hitLerpFactor: 0.15
+--- !u!114 &8397847391258807991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458945338159648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d96fe222d756a44aa903ce7b484d381, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spritesToBlink:
+  - {fileID: 212536309799836632}
+  normalMaterial: {fileID: 2100000, guid: 480c017d944efd344bb191084807428a, type: 2}
+  blinkMaterial: {fileID: 2100000, guid: 4101600ffbd946740a304a6e3b29eee6, type: 2}
+  blinkTime: 0.1
+  normalColor: {r: 0.8000001, g: 0.5764706, b: 0.27450982, a: 1}
+  blinkColor: {r: 1, g: 1, b: 1, a: 1}
+  changeColor: 1
 --- !u!1 &1669632393684600117
 GameObject:
   m_ObjectHideFlags: 0
