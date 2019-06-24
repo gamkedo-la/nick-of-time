@@ -146,9 +146,9 @@ public class PlayerController : MonoBehaviour
 				if (comboKeys != "UA" && comboKeys != "RA" && comboKeys != "DA" && comboKeys != "LA")
 				{
 					animator.SetBool("isAttacking", true);
-
+					
 					speed = attackSpeed;
-
+					
 					if (animator.GetBool("isWalking"))
 						attackSpeedTimer = attackSpeedTime;
 					else
@@ -250,6 +250,7 @@ public class PlayerController : MonoBehaviour
 			&& !animator.GetBool("isAttacking")
 			&& !animator.GetBool("isPushing")
 			&& !isDashing
+			&& comboTimer <= comboMaxTimeGap / 2
 			&& (comboKeys == "UA" || comboKeys == "RA" || comboKeys == "DA" || comboKeys == "LA"))
 			{
 				animator.SetBool("isThrowing", true);
@@ -365,21 +366,24 @@ public class PlayerController : MonoBehaviour
 
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
-		if(collision.gameObject.layer != LayerMask.NameToLayer("Player") && collision.gameObject.isStatic == false)
+		if(collision.gameObject.layer != LayerMask.NameToLayer("Player") && collision.gameObject.layer != LayerMask.NameToLayer("Enemy")
+		&& collision.gameObject.isStatic == false)
 			pushPossible = true;
 		pushOnCollision(collision);
 	}
 
 	private void OnCollisionStay2D(Collision2D collision)
 	{
-		if (collision.gameObject.layer != LayerMask.NameToLayer("Player") && collision.gameObject.isStatic == false)
+		if (collision.gameObject.layer != LayerMask.NameToLayer("Player") && collision.gameObject.layer != LayerMask.NameToLayer("Enemy")
+		&& collision.gameObject.isStatic == false)
 			pushPossible = true;
 		pushOnCollision(collision);
 	}
 
 	private void OnCollisionExit2D(Collision2D collision)
 	{
-		if (collision.gameObject.layer != LayerMask.NameToLayer("Player") && collision.gameObject.isStatic == false)
+		if (collision.gameObject.layer != LayerMask.NameToLayer("Player") && collision.gameObject.layer != LayerMask.NameToLayer("Enemy")
+		&& collision.gameObject.isStatic == false)
 			pushPossible = false;
 	}
 

@@ -453,11 +453,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87afb66cc8e462f48a975d17129f1406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hpDamage: 0.08
+  hpDamage: 0.25
   hitTags:
   - PlayerAttack
   knockbackValue: 6.4
   knockbackSlowDown: 0.4
+  invulnerabilityDelay: 0.15
   regenerateHpUpto: 0
   regenerateHpPerSecond: 0
   damageSound: {fileID: 8300000, guid: 1df4bd1fa77bc9840b97a6eb60d5cd34, type: 3}

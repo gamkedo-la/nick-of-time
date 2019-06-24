@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MuddlingAI : MonoBehaviour {
-	
+public class MuddlingAI : MonoBehaviour
+{
 	public GameObject[] targetObjects = null;
 	
 	public float walkSpeed = 1f;
@@ -122,82 +122,6 @@ public class MuddlingAI : MonoBehaviour {
 				}
 			}
 
-			//Commented code for Random walk when Player is not under the Minimal Walk distance
-			{
-				/*else if(walkTimer <= 0f)
-				{
-					if(walkRandomizer < 1f)
-					{
-						walkInput.x = -1f;
-						if(!animator.GetBool("isAttacking") )
-							sprRenderer.flipX = true;
-					}
-					else if(walkRandomizer < 2f)
-					{
-						walkInput.y = -1f;
-					}
-					else if(walkRandomizer < 3f)
-					{
-						walkInput.x = 1f;
-						if(!animator.GetBool("isAttacking") )
-							sprRenderer.flipX = false;
-					}
-					else if(walkRandomizer < 4f)
-					{
-						walkInput.y = 1f;
-					}
-					if(walkRandomizer < 5f)
-					{
-						walkInput.x = -1f;
-						if(!animator.GetBool("isAttacking") )
-							sprRenderer.flipX = true;
-						walkInput.y = -1f;
-					}
-					else if(walkRandomizer < 6f)
-					{
-						walkInput.x = 1f;
-						if(!animator.GetBool("isAttacking") )
-							sprRenderer.flipX = false;
-						walkInput.y = -1f;
-					}
-					else if(walkRandomizer < 7f)
-					{
-						walkInput.x = 1f;
-						if(!animator.GetBool("isAttacking") )
-							sprRenderer.flipX = false;
-						walkInput.y = 1f;
-					}
-					else if(walkRandomizer < 8f)
-					{
-						walkInput.x = -1f;
-						if(!animator.GetBool("isAttacking") )
-							sprRenderer.flipX = true;
-						walkInput.y = 1f;
-					}
-
-					if(walkTimer <= -walkTime) 
-					{
-						walkTimer = Random.Range(walkMinDelay, walkMaxDelay);
-
-						if(walkCollided)
-						{
-							if(walkRandomizer >= 7f)
-								walkRandomizer -= 1f;
-							else if(walkRandomizer <= 1f)
-								walkRandomizer += 1f;
-							else
-								walkRandomizer += Random.Range(0f, 2f) - 1f;
-
-							walkCollided = false;
-						}
-						else
-						{
-							walkRandomizer = Random.Range(0f, 8f);
-						}
-					}
-				}*/
-			}
-		
 			if(walkInput != Vector2.zero)
 			{
 				speed = walkSpeed;

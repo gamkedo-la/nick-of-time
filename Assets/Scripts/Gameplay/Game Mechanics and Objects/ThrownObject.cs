@@ -64,7 +64,7 @@ public class ThrownObject : MonoBehaviour
 				Destroy(gameObject);
 			}
 		}
-		else if (collision.gameObject.tag != "PlayerAttack")
+		else if (collision.gameObject.tag != "PlayerAttack" && collision.gameObject.layer != LayerMask.NameToLayer("Enemy"))
 		{
 			throwVelocity = Vector3.zero;
 			throwRotation = 0f;

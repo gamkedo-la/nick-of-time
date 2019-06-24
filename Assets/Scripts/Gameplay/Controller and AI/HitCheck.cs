@@ -8,15 +8,23 @@ public class HitCheck : MonoBehaviour
 {
 	public float hpDamage = 0.04f;
 	public string[] hitTags;
+
+	[Space]
 	public float knockbackValue = 0.48f;
 	public float knockbackSlowDown = 0.001f;
 
+	[Space]
+	public float invulnerabilityDelay = 0f;
+
+	[Space]
 	public float regenerateHpUpto = 0f;
 	public float regenerateHpPerSecond = 0.0025f;
 
+	[Space]
 	public AudioClip damageSound;
 	public AudioClip deathSound;
 
+	[Space]
 	public int lootIterations = 0;
 	public float lootChance = 0f;
 	public GameObject[] lootItems = null;
@@ -43,6 +51,8 @@ public class HitCheck : MonoBehaviour
 
 	private float maxHp = 1f;
 
+	private float invulnerabilityTimer = 0f;
+
 	void Start ()
 	{
 		aud = GetComponent<AudioSource>();
@@ -59,9 +69,11 @@ public class HitCheck : MonoBehaviour
 
 	void Update ()
 	{
-		if(isHit)
+		if (isHit)
 		{
 			hp -= hpDamage;
+
+			invulnerabilityTimer = invulnerabilityDelay;
 
 			if (hpSlider)
 				hpSlider.fillValue = hp / maxHp;
@@ -87,12 +99,12 @@ public class HitCheck : MonoBehaviour
 				knockback = new Vector2(-knockbackValue, 0f);
 				knockbackSlowDown = -Mathf.Abs(knockbackSlowDown);
 			}
-			else if(hitDirection == 2)
+			else if (hitDirection == 2)
 			{
 				knockback = new Vector2(0f, knockbackValue);
 				knockbackSlowDown = Mathf.Abs(knockbackSlowDown);
 			}
-			else if(hitDirection == 3)
+			else if (hitDirection == 3)
 			{
 				knockback = new Vector2(knockbackValue, 0f);
 				knockbackSlowDown = Mathf.Abs(knockbackSlowDown);
@@ -100,10 +112,15 @@ public class HitCheck : MonoBehaviour
 
 			isHit = false;
 
-			if(aud != null && TogglesValues.sound)
+			if (aud != null && TogglesValues.sound)
 				aud.PlayOneShot(damageSound);
 
-			FloatingTextService.Instance.ShowFloatingTextStandard( transform.position, hpDamage.ToString( ), Color.red );
+			FloatingTextService.Instance.ShowFloatingTextStandard(transform.position,
+				Mathf.RoundToInt(hpDamage * 100f).ToString(), Color.white);
+		}
+		else
+		{
+			invulnerabilityTimer -= Time.deltaTime;
 		}
 
 		if (hp <= 0f)
@@ -140,24 +157,27 @@ public class HitCheck : MonoBehaviour
 
 	void OnTriggerStay2D( Collider2D coll )
 	{
-		for(int i = 0; i < hitTags.Length; i++)
+		if (invulnerabilityTimer <= 0f)
 		{
-			if (coll.gameObject.tag == hitTags[i])
+			for (int i = 0; i < hitTags.Length; i++)
 			{
-				ThrownObject to = coll.gameObject.GetComponent<ThrownObject>();
+				if (coll.gameObject.tag == hitTags[i])
+				{
+					ThrownObject to = coll.gameObject.GetComponent<ThrownObject>();
 
-				if (coll.gameObject.GetComponent<DamageObject>() != null
-				|| (coll.gameObject.name.Contains("EM_ATT") && (coll.gameObject.transform.parent != null && coll.gameObject.transform.parent.parent != null && coll.gameObject.transform.parent.parent != null && coll.gameObject.transform.parent.parent.parent.GetComponent<Animator>().GetBool("isAttacking"))))
-				{
-					if (PlayerDamage()) break;
-				}
-				else if (to != null && to.throwVelocity != Vector3.zero)
-				{
-					if (EnemyDamageOnThrownObject(coll, to)) break;
-				}
-				else if (coll.gameObject.transform.parent != null && coll.gameObject.transform.parent.parent != null && coll.gameObject.transform.parent.parent != null && coll.gameObject.transform.parent.parent.parent.GetComponent<Animator>().GetBool("isAttacking"))
-				{
-					if (EnemyDamage(coll)) break;
+					if (coll.gameObject.GetComponent<DamageObject>() != null
+					|| (coll.gameObject.name.Contains("EM_ATT") && (coll.gameObject.transform.parent != null && coll.gameObject.transform.parent.parent != null && coll.gameObject.transform.parent.parent != null && coll.gameObject.transform.parent.parent.parent.GetComponent<Animator>().GetBool("isAttacking"))))
+					{
+						if (PlayerDamage()) break;
+					}
+					else if (to != null && to.throwVelocity != Vector3.zero)
+					{
+						if (EnemyDamageOnThrownObject(coll, to)) break;
+					}
+					else if (coll.gameObject.transform.parent != null && coll.gameObject.transform.parent.parent != null && coll.gameObject.transform.parent.parent != null && coll.gameObject.transform.parent.parent.parent.GetComponent<Animator>().GetBool("isAttacking"))
+					{
+						if (EnemyDamage(coll)) break;
+					}
 				}
 			}
 		}
@@ -196,10 +216,11 @@ public class HitCheck : MonoBehaviour
 	{
 		if (coll.gameObject.name.Contains("PL_ATT"))
 		{
-			if (!coll.gameObject.transform.parent.parent.parent.gameObject.GetComponent<PlayerController>().isDashing)
+			PlayerController plCont = coll.gameObject.transform.parent.parent.parent.gameObject.GetComponent<PlayerController>();
+			if (!plCont.isDashing)
 			{
 				Animator anim = coll.gameObject.transform.parent.parent.parent.gameObject.GetComponent<Animator>();
-
+				
 				isHit = true;
 				OnHit.Invoke( );
 				hitDirection = anim.GetInteger("direction");
