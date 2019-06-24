@@ -462,6 +462,11 @@ MonoBehaviour:
   regenerateHpPerSecond: 0
   damageSound: {fileID: 8300000, guid: 1df4bd1fa77bc9840b97a6eb60d5cd34, type: 3}
   deathSound: {fileID: 8300000, guid: 07a0b43fe673b9442a331a9ba53c1bbe, type: 3}
+  lootIterations: 5
+  lootChance: 0.25
+  lootItems:
+  - {fileID: 631510479250266562, guid: 81fb658ac45ff604cabef20fa29afbc4, type: 3}
+  - {fileID: 2157152286293793279, guid: abd21b99c234df949b7a4ada08992f91, type: 3}
   hp: 1
   knockback: {x: 0, y: 0}
   HPBarJointCamera: {fileID: 0}

@@ -425,7 +425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f373e5e0fafa88e468a25b08d625f49a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  Player: {fileID: 1148393954563092511}
   equipmentUI: {fileID: 0}
   inventory: {fileID: 0}
   primaryPotion: 
@@ -1123,6 +1123,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1148393954563092509}
     m_Modifications:
+    - target: {fileID: 1612122081451132077, guid: 96b702e7019afe543a36524e6147f84d,
+        type: 3}
+      propertyPath: m_Name
+      value: FootprintParticles
+      objectReference: {fileID: 0}
     - target: {fileID: 1612122081451132072, guid: 96b702e7019afe543a36524e6147f84d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1177,11 +1182,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1612122081451132077, guid: 96b702e7019afe543a36524e6147f84d,
-        type: 3}
-      propertyPath: m_Name
-      value: FootprintParticles
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96b702e7019afe543a36524e6147f84d, type: 3}

@@ -12,19 +12,42 @@ public class CopyTextComponent : MonoBehaviour {
 	private TextMeshPro textComponent;
 	private TextMeshPro otherTextComponent;
 
+	private TextMeshProUGUI textComponentUI;
+	private TextMeshProUGUI otherTextComponentUI;
+
 	void Start () {
 		textComponent = GetComponent<TextMeshPro>();
 		otherTextComponent = textObject.GetComponent<TextMeshPro>();
+
+		textComponentUI = GetComponent<TextMeshProUGUI>();
+		otherTextComponentUI = GetComponent<TextMeshProUGUI>();
+
 	}
 	
 	void Update () {
 		if(onlyTextString)
 		{
-			textComponent.text = otherTextComponent.text;
+			if (textComponent != null)
+			{
+				if (otherTextComponent != null)
+					textComponent.text = otherTextComponent.text;
+				else
+					textComponent.text = otherTextComponentUI.text;
+			}
+			else
+			{
+				if (otherTextComponent != null)
+					textComponentUI.text = otherTextComponent.text;
+				else
+					textComponentUI.text = otherTextComponentUI.text;
+			}
 		}
 		else
 		{
-			textComponent = otherTextComponent;
+			if(textComponent != null)
+				textComponent = otherTextComponent;
+			else
+				textComponentUI = otherTextComponentUI;
 		}
 	}
 }
