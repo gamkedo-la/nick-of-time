@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[ExecuteInEditMode]
+//[ExecuteInEditMode] //USE SHAREDMATERIAL INSTEAD OF MATERIAL OTHERWISE MATERIAL LEAKAGE!!!
 public class LightEmitterObject : MonoBehaviour
 {
 	public Color highLightColor;
@@ -29,7 +29,7 @@ public class LightEmitterObject : MonoBehaviour
 
     void Start()
     {
-		mat = gameObject.GetComponent<SpriteRenderer>().material;
+		mat = gameObject.GetComponent<SpriteRenderer>().material; //sharedmaterial; //IF USING EXECUTE IN EDIT MODE, OTHERWISE MATERIAL LEAKAGE!!!
 		denseLight = gameObject.transform.GetChild(0).GetChild(0).GetComponent<Light>();
 		spreadLight = gameObject.transform.GetChild(0).GetChild(1).GetComponent<Light>();
 		disable = false;
