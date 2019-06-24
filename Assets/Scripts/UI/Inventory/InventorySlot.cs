@@ -34,6 +34,7 @@ public class InventorySlot : MonoBehaviour
        
 
         tradePanel.gameObject.SetActive(false);
+        
     }
 
     public void AddItem(Item newItem)
@@ -76,6 +77,7 @@ public class InventorySlot : MonoBehaviour
         {
             if(inventoryControlPanel.IsTrading == false && inventoryControlPanel.IsDropping == false)
             {
+                tradePanel.gameObject.SetActive(false);
                 item.equipmentManager = inventory.equipmentManager;
                 item.Use();
             }
@@ -83,6 +85,7 @@ public class InventorySlot : MonoBehaviour
             if (inventoryControlPanel.IsTrading)
             {                
                 tradePanel.gameObject.SetActive(true);
+                tradePanel.ActivateTradePanel();
             }
             
           /*  if (item.stackable)   

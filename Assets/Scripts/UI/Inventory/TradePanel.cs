@@ -13,6 +13,10 @@ public class TradePanel : MonoBehaviour
     private Button increaseTradeAmountButton;
     [SerializeField]
     private Button decreaseTradeAmountButton;
+    [SerializeField]
+    private Button tradeButton;
+    [SerializeField]
+    private Button cancelButton;
 
     // Start is called before the first frame update
     void Start()
@@ -23,18 +27,15 @@ public class TradePanel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (this.gameObject.activeSelf)
-        {
-            amountToTradeDisplay.text = "0";
-
-            increaseTradeAmountButton.Select();
-            increaseTradeAmountButton.OnSelect(null);
-
-        }
+      
     }
 
     public void ActivateTradePanel() {
+        Debug.Log("Trade panel opened");
+        amountToTradeDisplay.text = "0";
 
+        tradeButton.Select();
+        tradeButton.OnSelect(null);
     }
 
 }

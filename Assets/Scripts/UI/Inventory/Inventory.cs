@@ -82,4 +82,27 @@ public class Inventory : MonoBehaviour
 
         }
     }
+
+    public void Trade(Item itemToTrade, Inventory givingInventory, Inventory recievingInventory, int amountToTrade)
+    {
+        if(itemToTrade.stackable == false)
+        {
+            givingInventory.Remove(itemToTrade);
+            recievingInventory.Add(itemToTrade);
+        }
+
+        if(itemToTrade.stackable == true)
+        {
+            givingInventory.AddToStack(itemToTrade, -amountToTrade);
+            if(recievingInventory.HasItem(itemToTrade) == true)
+            {
+                recievingInventory.AddToStack(itemToTrade, amountToTrade);
+            }
+            if(recievingInventory.HasItem(itemToTrade) == false)
+            {
+                recievingInventory.Add(itemToTrade);
+                recievingInventory.AddToStack(itemToTrade, amountToTrade);
+            }
+        }
+    }
 }

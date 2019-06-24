@@ -635,6 +635,19 @@ MonoBehaviour:
     position: {x: 0, y: 0}
     colliderOffset: {x: 0, y: 0}
     colliderSize: {x: 0, y: 0}
+    animatedWeapon:
+      animated: 0
+      attackUpPosition: {x: 0, y: 0}
+      attackDownPosition: {x: 0, y: 0}
+      attackLeftPosition: {x: 0, y: 0}
+      attackRightPosition: {x: 0, y: 0}
+      attackUp: []
+      attackDown: []
+      attackLeft: []
+      timePerFrame: 0
+      flipAttackLeft: 0
+      turnOffSingleSpriteRenderer: 0
+  animatedWeaponRenderer: {fileID: 0}
   offsetX: 0.1
 --- !u!212 &116775436
 SpriteRenderer:
@@ -8761,6 +8774,7 @@ MonoBehaviour:
   item: {fileID: 11400000, guid: 32caf8c624487694fbb02f53cd68622b, type: 2}
   inventory: {fileID: 0}
   amountInStack: 0
+  destroy: 1
 --- !u!58 &199160626
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -9978,6 +9992,30 @@ MonoBehaviour:
   enablePiecesParticles: 0
   pieces:
   - {fileID: 1580847455321010, guid: 2d8da81083ca09b4abade2d65dc3c732, type: 3}
+--- !u!1 &301193098 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8656810259374431457, guid: 6146772f02ed9114bb30ec85bc5ca561,
+    type: 3}
+  m_PrefabInstance: {fileID: 1028207721266535344}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &301193104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 301193098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60d88939c99b99144a436fc629a7a414, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: {fileID: 0}
+  delay: 0
+  onceEverytime: 0
+  isMusic: 0
+  doRepeat: 0
+  done: 0
 --- !u!1 &316094594
 GameObject:
   m_ObjectHideFlags: 0
@@ -14573,6 +14611,9 @@ MonoBehaviour:
   regenerateHpPerSecond: 0.0025
   damageSound: {fileID: 8300000, guid: 1df4bd1fa77bc9840b97a6eb60d5cd34, type: 3}
   deathSound: {fileID: 8300000, guid: 07a0b43fe673b9442a331a9ba53c1bbe, type: 3}
+  lootIterations: 0
+  lootChance: 0
+  lootItems: []
   hp: 1
   knockback: {x: 0, y: 0}
   HPBarJointCamera: {fileID: 0}
@@ -16017,6 +16058,19 @@ MonoBehaviour:
     position: {x: 0, y: 0}
     colliderOffset: {x: 0, y: 0}
     colliderSize: {x: 0, y: 0}
+    animatedWeapon:
+      animated: 0
+      attackUpPosition: {x: 0, y: 0}
+      attackDownPosition: {x: 0, y: 0}
+      attackLeftPosition: {x: 0, y: 0}
+      attackRightPosition: {x: 0, y: 0}
+      attackUp: []
+      attackDown: []
+      attackLeft: []
+      timePerFrame: 0
+      flipAttackLeft: 0
+      turnOffSingleSpriteRenderer: 0
+  animatedWeaponRenderer: {fileID: 0}
   offsetX: 0.1
 --- !u!212 &882846901
 SpriteRenderer:
@@ -18391,6 +18445,7 @@ MonoBehaviour:
   item: {fileID: 11400000, guid: fedbad0a19f7ab54b9630dcad3200f17, type: 2}
   inventory: {fileID: 0}
   amountInStack: 1
+  destroy: 1
 --- !u!58 &1127975374
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -18678,6 +18733,7 @@ MonoBehaviour:
   item: {fileID: 11400000, guid: a93dad75d96df43459418d1c6d314428, type: 2}
   inventory: {fileID: 0}
   amountInStack: 17
+  destroy: 1
 --- !u!58 &1165876926
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -22650,6 +22706,7 @@ MonoBehaviour:
   item: {fileID: 11400000, guid: a93dad75d96df43459418d1c6d314428, type: 2}
   inventory: {fileID: 0}
   amountInStack: 17
+  destroy: 1
 --- !u!58 &1652581524
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -24843,6 +24900,7 @@ MonoBehaviour:
   item: {fileID: 11400000, guid: b4a8857f5e7b59148850ddbc01e1fea6, type: 2}
   inventory: {fileID: 0}
   amountInStack: 0
+  destroy: 1
 --- !u!58 &1738663137
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -25274,6 +25332,7 @@ MonoBehaviour:
   item: {fileID: 11400000, guid: 94c86b10df067f74686e77010e2bf681, type: 2}
   inventory: {fileID: 0}
   amountInStack: 2
+  destroy: 1
 --- !u!58 &1760583905
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -50379,6 +50438,9 @@ MonoBehaviour:
   regenerateHpPerSecond: 0.0025
   damageSound: {fileID: 8300000, guid: 1df4bd1fa77bc9840b97a6eb60d5cd34, type: 3}
   deathSound: {fileID: 8300000, guid: 07a0b43fe673b9442a331a9ba53c1bbe, type: 3}
+  lootIterations: 0
+  lootChance: 0
+  lootItems: []
   hp: 1
   knockback: {x: 0, y: 0}
   HPBarJointCamera: {fileID: 0}
@@ -52289,6 +52351,47 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7721356360926602746, guid: 6146772f02ed9114bb30ec85bc5ca561,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7721356360926602746, guid: 6146772f02ed9114bb30ec85bc5ca561,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7721356360926602746, guid: 6146772f02ed9114bb30ec85bc5ca561,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7721356360926602746, guid: 6146772f02ed9114bb30ec85bc5ca561,
+        type: 3}
+      propertyPath: eventSystem
+      value: 
+      objectReference: {fileID: 156075088}
+    - target: {fileID: 7721356360926602746, guid: 6146772f02ed9114bb30ec85bc5ca561,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1148393954563092511, guid: f34ad73bca23e694585b0119f5a1682a,
+        type: 3}
+    - target: {fileID: 3856582380660712390, guid: 6146772f02ed9114bb30ec85bc5ca561,
+        type: 3}
+      propertyPath: eventSystem
+      value: 
+      objectReference: {fileID: 156075088}
+    - target: {fileID: 1458805523668576736, guid: 6146772f02ed9114bb30ec85bc5ca561,
+        type: 3}
+      propertyPath: eventSystem
+      value: 
+      objectReference: {fileID: 156075088}
+    - target: {fileID: 4523565727537845154, guid: 6146772f02ed9114bb30ec85bc5ca561,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1521430586911158092, guid: 6146772f02ed9114bb30ec85bc5ca561,
         type: 3}
       propertyPath: eventSystem
@@ -52318,6 +52421,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8149486260345811869, guid: 6146772f02ed9114bb30ec85bc5ca561,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8149486260345811869, guid: 6146772f02ed9114bb30ec85bc5ca561,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8149486260345811869, guid: 6146772f02ed9114bb30ec85bc5ca561,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 8752975713419059168, guid: 6146772f02ed9114bb30ec85bc5ca561,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6484730785981839690, guid: 6146772f02ed9114bb30ec85bc5ca561,
         type: 3}
