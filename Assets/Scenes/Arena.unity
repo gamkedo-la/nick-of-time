@@ -28701,6 +28701,16 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 349174034595558344, guid: f34ad73bca23e694585b0119f5a1682a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3956037771853261498, guid: f34ad73bca23e694585b0119f5a1682a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f34ad73bca23e694585b0119f5a1682a, type: 3}
 --- !u!4 &1207045827 stripped
@@ -60964,6 +60974,36 @@ PrefabInstance:
       propertyPath: OnHit.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8144935541084721335, guid: f34ad73bca23e694585b0119f5a1682a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 630805151483399286, guid: f34ad73bca23e694585b0119f5a1682a,
+        type: 3}
+      propertyPath: m_Range
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 630805151483399286, guid: f34ad73bca23e694585b0119f5a1682a,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 630805151483399286, guid: f34ad73bca23e694585b0119f5a1682a,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 630805151483399286, guid: f34ad73bca23e694585b0119f5a1682a,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 630805151483399286, guid: f34ad73bca23e694585b0119f5a1682a,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1148393954563092510, guid: f34ad73bca23e694585b0119f5a1682a,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -61040,43 +61080,24 @@ PrefabInstance:
       propertyPath: normalMaterial
       value: 
       objectReference: {fileID: 2100000, guid: 2b499b674a6af414b85f6cd11a972b3c, type: 2}
-    - target: {fileID: 8144935541084721335, guid: f34ad73bca23e694585b0119f5a1682a,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -2
-      objectReference: {fileID: 0}
     - target: {fileID: 4797496133314027787, guid: f34ad73bca23e694585b0119f5a1682a,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2b499b674a6af414b85f6cd11a972b3c, type: 2}
-    - target: {fileID: 630805151483399286, guid: f34ad73bca23e694585b0119f5a1682a,
+    - target: {fileID: 349174034595558344, guid: f34ad73bca23e694585b0119f5a1682a,
         type: 3}
-      propertyPath: m_Range
-      value: 1.1
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 630805151483399286, guid: f34ad73bca23e694585b0119f5a1682a,
+    - target: {fileID: 3956037771853261498, guid: f34ad73bca23e694585b0119f5a1682a,
         type: 3}
-      propertyPath: m_Intensity
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 630805151483399286, guid: f34ad73bca23e694585b0119f5a1682a,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 630805151483399286, guid: f34ad73bca23e694585b0119f5a1682a,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 630805151483399286, guid: f34ad73bca23e694585b0119f5a1682a,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 1
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1148393954563092480, guid: f34ad73bca23e694585b0119f5a1682a, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: f34ad73bca23e694585b0119f5a1682a, type: 3}
 --- !u!4 &1717321960 stripped
 Transform:

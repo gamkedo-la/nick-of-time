@@ -25,6 +25,7 @@ public class WeaponPossession : MonoBehaviour {
 	[System.Serializable]
 	public class WeaponProperties
 	{
+		public float damage;
 		public Sprite sprite;
 		public Vector2 position;
 		public Vector2 colliderOffset;
@@ -32,6 +33,8 @@ public class WeaponPossession : MonoBehaviour {
 
 		public AnimatedWeaponProperties animatedWeapon = null;
 	}
+
+	public float defaultDamage = 0.05f;
 	
 	public WeaponProperties[] weapons;
 
@@ -82,7 +85,7 @@ public class WeaponPossession : MonoBehaviour {
 			prevWeaponID = weaponID;
 		}
 
-		if (weaponID > -1 && weapons[weaponID].animatedWeapon.animated)
+		if (weaponID > -1 && weapons[weaponID].animatedWeapon.animated && GetComponent<ThrownObject>() == null)
 		{
 			if (playerAnimator.GetBool("isAttacking"))
 			{
@@ -99,21 +102,29 @@ public class WeaponPossession : MonoBehaviour {
 
 				if (dir == 0)
 				{
+					if (frame >= weapons[weaponID].animatedWeapon.attackUp.Length) frame = weapons[weaponID].animatedWeapon.attackUp.Length - 1;
+
 					animatedWeaponRenderer.sprite = weapons[weaponID].animatedWeapon.attackUp[frame];
 					animatedWeaponRenderer.gameObject.transform.localPosition = weapons[weaponID].animatedWeapon.attackUpPosition;
 				}
 				else if (dir == 1)
 				{
+					if (frame >= weapons[weaponID].animatedWeapon.attackLeft.Length) frame = weapons[weaponID].animatedWeapon.attackLeft.Length - 1;
+
 					animatedWeaponRenderer.sprite = weapons[weaponID].animatedWeapon.attackLeft[frame];
 					animatedWeaponRenderer.gameObject.transform.localPosition = weapons[weaponID].animatedWeapon.attackRightPosition;
 				}
 				else if (dir == 2)
 				{
+					if (frame >= weapons[weaponID].animatedWeapon.attackDown.Length) frame = weapons[weaponID].animatedWeapon.attackDown.Length - 1;
+
 					animatedWeaponRenderer.sprite = weapons[weaponID].animatedWeapon.attackDown[frame];
 					animatedWeaponRenderer.gameObject.transform.localPosition = weapons[weaponID].animatedWeapon.attackDownPosition;
 				}
 				else if (dir == 3)
 				{
+					if (frame >= weapons[weaponID].animatedWeapon.attackLeft.Length) frame = weapons[weaponID].animatedWeapon.attackLeft.Length - 1;
+
 					animatedWeaponRenderer.sprite = weapons[weaponID].animatedWeapon.attackLeft[frame];
 					animatedWeaponRenderer.gameObject.transform.localPosition = weapons[weaponID].animatedWeapon.attackLeftPosition;
 				}

@@ -32,10 +32,14 @@ public class PlayerController : MonoBehaviour
 	public float throwActionDeplete = 0.1f;
 
 	[Space]
-	public float comboMaxTimeGap = 0.05f;
+	public float keyComboMaxTimeGap = 0.05f;
 	public string walkVerticalInput = "Vertical";
 	public string walkHorizontalInput = "Horizontal";
 	public string attackInput = "Fire1";
+
+	[Space]
+	public float hitComboMaxTime = 0.5f;
+	public float criticalHitTimePause = 0.01f;
 
 	[Space]
 	public WeaponPossession weaponPossession;
@@ -43,7 +47,9 @@ public class PlayerController : MonoBehaviour
 	[Space]
 	public AudioClip attackSound;
 	public AudioClip dashSound;
-	
+
+	[HideInInspector] public int hitComboCount = 0;
+
 	[HideInInspector] public float actionPoints = 1f;
 
 	private float speed = 0f;
@@ -64,9 +70,13 @@ public class PlayerController : MonoBehaviour
 	private Vector2 walkInput = Vector2.zero;
 	private int prevWalkState = 0;
 
-	private float comboTimer = 0f;
+	private float keyComboTimer = 0f;
 	private string comboKeys = "";
 	private bool pushPossible = false;
+	
+	private float hitComboTimer = 0f;
+	[HideInInspector] public int didAttackHitEnemy = 0;
+	static private float criticalHitTimePauseTimer = 0f;
 
 	private void Start()
 	{
@@ -84,7 +94,7 @@ public class PlayerController : MonoBehaviour
 	{
 		nextFXdelay -= Time.deltaTime; // don't spam FX every frame
 		
-		if (Time.timeScale > 0f)
+		//if (Time.timeScale > 0f)
 		{
 			if (!animator.GetBool("isAttacking") && !animator.GetBool("isPushing") && !animator.GetBool("isThrowing"))// && !isDashing)
 			{
@@ -258,7 +268,7 @@ public class PlayerController : MonoBehaviour
 			&& !animator.GetBool("isAttacking")
 			&& !animator.GetBool("isPushing")
 			&& !isDashing
-			&& comboTimer <= comboMaxTimeGap / 2
+			&& keyComboTimer <= keyComboMaxTimeGap / 2.5f
 			&& (comboKeys == "UA" || comboKeys == "RA" || comboKeys == "DA" || comboKeys == "LA"))
 			{
 				animator.SetBool("isThrowing", true);
@@ -317,13 +327,29 @@ public class PlayerController : MonoBehaviour
 			if ((animator.GetBool("isAttacking") || animator.GetBool("isThrowing")) && attackSpeedTimer <= 0f)
 				speed = 0f;
 
-			if (comboTimer >= comboMaxTimeGap)
+			if (keyComboTimer >= keyComboMaxTimeGap)
 				comboKeys = "";
 				
 			if (comboKeys != "")
-				comboTimer += Time.deltaTime;
+				keyComboTimer += Time.deltaTime;
 			else
-				comboTimer = 0f;
+				keyComboTimer = 0f;
+
+			if (hitComboTimer <= 0f)
+				hitComboCount = 0;
+			else
+				hitComboTimer -= Time.deltaTime;
+
+			if (criticalHitTimePauseTimer <= 0f)
+			{
+				if(Time.timeScale <= 0f)
+					Time.timeScale = 1f;
+			}
+			else
+			{
+				Time.timeScale = 0f;
+				criticalHitTimePauseTimer -= Time.unscaledDeltaTime;
+			}
 
 			attackSpeedTimer -= Time.deltaTime;
 			dashTimer -= Time.deltaTime;
@@ -528,5 +554,29 @@ public class PlayerController : MonoBehaviour
 
 			weaponPossession.weaponID = -1;
 		}
+	}
+
+	public void processHitCombo()
+	{
+		if (didAttackHitEnemy > 0)
+		{
+			hitComboCount += didAttackHitEnemy;
+			hitComboTimer = hitComboMaxTime;
+
+			if (hitComboCount >= 3)
+			{
+				Time.timeScale = 0f;
+				criticalHitTimePauseTimer = criticalHitTimePause;
+
+				hitComboCount = 0;
+			}
+		}
+		else
+		{
+			hitComboCount = 0;
+			hitComboTimer = 0f;
+		}
+		
+		didAttackHitEnemy = 0;
 	}
 }

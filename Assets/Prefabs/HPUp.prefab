@@ -148,9 +148,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  value: 0.06
+  value: 0.04
   minCollectDistance: 0.1
-  magnetStrength: 0.05
+  magnetStrength: 0.1
 --- !u!50 &631510479250266585
 Rigidbody2D:
   serializedVersion: 4

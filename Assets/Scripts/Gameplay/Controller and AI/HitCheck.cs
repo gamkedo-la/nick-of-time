@@ -6,7 +6,8 @@ using UnityEngine.UI;
 
 public class HitCheck : MonoBehaviour
 {
-	public float hpDamage = 0.04f;
+	public float defenseFactor = 1f;
+	public float thrownObjectDamage = 0.25f;
 	public string[] hitTags;
 
 	[Space]
@@ -34,6 +35,7 @@ public class HitCheck : MonoBehaviour
 	[HideInInspector] public Vector2 knockbackSlowDownVector = Vector2.zero;
 
 	private bool isHit = false;
+	private float hpDamage = 0f;
 	private int hitDirection = 0;
 
 	private float hitAngle = 0f;
@@ -197,11 +199,10 @@ public class HitCheck : MonoBehaviour
 		{
 			if (!gameObject.GetComponent<PlayerController>().isDashing)
 			{
-				//Animator anim = gameObject.GetComponent<Animator>();
+				hpDamage = 0.2f / defenseFactor;
 
 				isHit = true;
 				OnHit.Invoke( );
-				//hitDirection = anim.GetInteger("direction");
 				hitAngle = Vector2.Angle(coll.gameObject.transform.position, gameObject.transform.position);
 				return true;
 			}
@@ -213,6 +214,8 @@ public class HitCheck : MonoBehaviour
 	{
 		if (coll.gameObject.name.Contains("PL_ATT"))
 		{
+			hpDamage = thrownObjectDamage / defenseFactor;
+
 			isHit = true;
 			OnHit.Invoke( );
 			hitDirection = to.GetDirection();
@@ -228,11 +231,15 @@ public class HitCheck : MonoBehaviour
 			PlayerController plCont = coll.gameObject.transform.parent.parent.parent.gameObject.GetComponent<PlayerController>();
 			if (!plCont.isDashing)
 			{
-				//Animator anim = coll.gameObject.transform.parent.parent.parent.gameObject.GetComponent<Animator>();
-				
+				plCont.didAttackHitEnemy++;
+
+				if (plCont.weaponPossession.weaponID <= 0)
+					hpDamage = plCont.weaponPossession.defaultDamage;
+				else
+					hpDamage = plCont.weaponPossession.weapons[plCont.weaponPossession.weaponID].damage / defenseFactor;
+
 				isHit = true;
 				OnHit.Invoke( );
-				//hitDirection = anim.GetInteger("direction");
 				hitAngle = Mathf.Atan2(coll.gameObject.transform.position.y - gameObject.transform.position.y,
 				coll.gameObject.transform.position.x - gameObject.transform.position.x);
 				return true;

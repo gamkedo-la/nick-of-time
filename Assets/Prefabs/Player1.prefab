@@ -315,16 +315,20 @@ MonoBehaviour:
   dashActionDeplete: 0.1
   pushActionDeplete: 0.05
   throwActionDeplete: 0.1
-  comboMaxTimeGap: 0.2
+  keyComboMaxTimeGap: 0.2
   walkVerticalInput: Vertical1
   walkHorizontalInput: Horizontal1
   attackInput: Fire1
+  hitComboMaxTime: 1
+  criticalHitTimePause: 0.3
   weaponPossession: {fileID: 1148393954167941654}
   attackSound: {fileID: 8300000, guid: 32ed1d859f4d34a41a11b51400612384, type: 3}
   dashSound: {fileID: 8300000, guid: f8a4e4e3090eccc478baddaf7213dd10, type: 3}
+  hitComboCount: 0
   actionPoints: 1
   isDashing: 0
   trackVelocity: {x: 0, y: 0}
+  didAttackHitEnemy: 0
 --- !u!114 &1148393954563092481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -969,8 +973,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponID: -1
+  defaultDamage: 0.05
   weapons:
-  - sprite: {fileID: 21300000, guid: 7808ced47403a1444bf4ac3b7b07d8e2, type: 3}
+  - damage: 0.2
+    sprite: {fileID: 21300000, guid: 7808ced47403a1444bf4ac3b7b07d8e2, type: 3}
     position: {x: -0.0744, y: -0.045}
     colliderOffset: {x: 0, y: 0}
     colliderSize: {x: 0.11, y: 0.05}
@@ -986,7 +992,8 @@ MonoBehaviour:
       timePerFrame: 0
       flipAttackLeft: 0
       turnOffSingleSpriteRenderer: 0
-  - sprite: {fileID: 21300000, guid: 5049fee2dbaa7954a888d2f4088d905d, type: 3}
+  - damage: 0.3
+    sprite: {fileID: 21300000, guid: 5049fee2dbaa7954a888d2f4088d905d, type: 3}
     position: {x: -0.0744, y: -0.045}
     colliderOffset: {x: 0, y: 0}
     colliderSize: {x: 0.25, y: 0.07}
@@ -1002,10 +1009,11 @@ MonoBehaviour:
       timePerFrame: 0
       flipAttackLeft: 0
       turnOffSingleSpriteRenderer: 0
-  - sprite: {fileID: 21300000, guid: f5ee6da20218406428a211c7057b4dda, type: 3}
+  - damage: 0.4
+    sprite: {fileID: 21300000, guid: f5ee6da20218406428a211c7057b4dda, type: 3}
     position: {x: -0.0744, y: -0.045}
     colliderOffset: {x: 0, y: 0}
-    colliderSize: {x: 0.25, y: 0.07}
+    colliderSize: {x: 0.34, y: 0.08}
     animatedWeapon:
       animated: 1
       attackUpPosition: {x: 0, y: 0.15}
@@ -1048,7 +1056,8 @@ MonoBehaviour:
       timePerFrame: 0.02
       flipAttackLeft: 0
       turnOffSingleSpriteRenderer: 1
-  - sprite: {fileID: 21300000, guid: 8e6a8e5f89807e6ffbf8a1c73c6a0ea1, type: 3}
+  - damage: 0.4
+    sprite: {fileID: 21300000, guid: 8e6a8e5f89807e6ffbf8a1c73c6a0ea1, type: 3}
     position: {x: -0.0744, y: -0.045}
     colliderOffset: {x: 0, y: 0}
     colliderSize: {x: 0.4, y: 0.07}
