@@ -1448,6 +1448,7 @@ MonoBehaviour:
   forHp: 0
   forAction: 1
   swayFactor: 4
+  trackVelocityThreshold: 2
   gainPop: 2500
   gainPopFactor: 0.4
   gainPopDecayFactor: 0.15
@@ -1712,6 +1713,7 @@ MonoBehaviour:
   forHp: 1
   forAction: 0
   swayFactor: 4
+  trackVelocityThreshold: 2
   gainPop: 2500
   gainPopFactor: 0.4
   gainPopDecayFactor: 0.15
@@ -2977,6 +2979,7 @@ MonoBehaviour:
   forHp: 1
   forAction: 0
   swayFactor: 4
+  trackVelocityThreshold: 2
   gainPop: 2500
   gainPopFactor: 0.4
   gainPopDecayFactor: 0.15
@@ -3418,6 +3421,7 @@ MonoBehaviour:
   forHp: 1
   forAction: 0
   swayFactor: 4
+  trackVelocityThreshold: 2
   gainPop: 2500
   gainPopFactor: 0.4
   gainPopDecayFactor: 0.15
@@ -3628,6 +3632,7 @@ MonoBehaviour:
   forHp: 1
   forAction: 0
   swayFactor: 4
+  trackVelocityThreshold: 2
   gainPop: 2500
   gainPopFactor: 0.4
   gainPopDecayFactor: 0.15
@@ -3812,6 +3817,7 @@ MonoBehaviour:
   forHp: 0
   forAction: 1
   swayFactor: 4
+  trackVelocityThreshold: 2
   gainPop: 2500
   gainPopFactor: 0.4
   gainPopDecayFactor: 0.15
@@ -4258,6 +4264,7 @@ MonoBehaviour:
   forHp: 0
   forAction: 1
   swayFactor: 4
+  trackVelocityThreshold: 2
   gainPop: 2500
   gainPopFactor: 0.4
   gainPopDecayFactor: 0.15
@@ -4448,6 +4455,7 @@ MonoBehaviour:
   forHp: 0
   forAction: 1
   swayFactor: 4
+  trackVelocityThreshold: 2
   gainPop: 2500
   gainPopFactor: 0.4
   gainPopDecayFactor: 0.15

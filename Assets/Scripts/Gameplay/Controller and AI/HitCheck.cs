@@ -11,7 +11,6 @@ public class HitCheck : MonoBehaviour
 	public string[] hitTags;
 
 	[Space]
-	public float knockbackValue = 0.48f;
 	public float knockbackSlowDown = 0.001f;
 
 	[Space]
@@ -39,6 +38,7 @@ public class HitCheck : MonoBehaviour
 	private int hitDirection = 0;
 
 	private float hitAngle = 0f;
+	private float knockbackValue = 0f;
 
 	private AudioSource aud = null;
 
@@ -200,10 +200,11 @@ public class HitCheck : MonoBehaviour
 			if (!gameObject.GetComponent<PlayerController>().isDashing)
 			{
 				hpDamage = 0.2f / defenseFactor;
+				knockbackValue = 4.0f;
 
 				isHit = true;
 				OnHit.Invoke( );
-				hitAngle = Vector2.Angle(coll.gameObject.transform.position, gameObject.transform.position);
+				hitAngle = Vector2.Angle(gameObject.transform.position, coll.gameObject.transform.position);
 				return true;
 			}
 		}
@@ -215,6 +216,9 @@ public class HitCheck : MonoBehaviour
 		if (coll.gameObject.name.Contains("PL_ATT"))
 		{
 			hpDamage = thrownObjectDamage / defenseFactor;
+
+			//no knockback on thrown object
+			knockbackValue = 0f;
 
 			isHit = true;
 			OnHit.Invoke( );
@@ -233,15 +237,21 @@ public class HitCheck : MonoBehaviour
 			{
 				plCont.didAttackHitEnemy++;
 
-				if (plCont.weaponPossession.weaponID <= 0)
+				if (plCont.weaponPossession.weaponID < 0)
+				{
 					hpDamage = plCont.weaponPossession.defaultDamage;
+					knockbackValue = plCont.weaponPossession.defaultKnockback;
+				}
 				else
+				{
 					hpDamage = plCont.weaponPossession.weapons[plCont.weaponPossession.weaponID].damage / defenseFactor;
+					knockbackValue = plCont.weaponPossession.weapons[plCont.weaponPossession.weaponID].knockback / defenseFactor;
+				}
 
 				isHit = true;
 				OnHit.Invoke( );
-				hitAngle = Mathf.Atan2(coll.gameObject.transform.position.y - gameObject.transform.position.y,
-				coll.gameObject.transform.position.x - gameObject.transform.position.x);
+				hitAngle = Mathf.Atan2(coll.gameObject.transform.parent.parent.parent.position.y - gameObject.transform.position.y,
+				coll.gameObject.transform.parent.parent.parent.position.x - gameObject.transform.position.x);
 				return true;
 			}
 		}

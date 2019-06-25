@@ -8,4 +8,9 @@ public class PublicDestroyFunction : MonoBehaviour {
 	{
 		Destroy(gameObject);
 	}
+
+	public void destroyParent()
+	{
+		Destroy(gameObject.transform.parent.gameObject);
+	}
 }

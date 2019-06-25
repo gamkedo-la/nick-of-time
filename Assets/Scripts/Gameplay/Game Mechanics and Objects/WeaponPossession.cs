@@ -26,6 +26,7 @@ public class WeaponPossession : MonoBehaviour {
 	public class WeaponProperties
 	{
 		public float damage;
+		public float knockback;
 		public Sprite sprite;
 		public Vector2 position;
 		public Vector2 colliderOffset;
@@ -35,6 +36,7 @@ public class WeaponPossession : MonoBehaviour {
 	}
 
 	public float defaultDamage = 0.05f;
+	public float defaultKnockback = 2f;
 	
 	public WeaponProperties[] weapons;
 
@@ -60,7 +62,9 @@ public class WeaponPossession : MonoBehaviour {
 	{
 		sprRenderer = GetComponent<SpriteRenderer>();
 		collider = GetComponent<BoxCollider2D>();
-		playerAnimator = transform.parent.parent.parent.GetComponent<Animator>();
+
+		if(GetComponent<ThrownObject>() == null)
+			playerAnimator = transform.parent.parent.parent.GetComponent<Animator>();
 	}
 
 	void Update ()

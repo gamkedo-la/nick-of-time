@@ -10,6 +10,7 @@ public class BarUpdater : MonoBehaviour {
     public bool forHp = true;
 	public bool forAction = false;
 	public float swayFactor = 1f;
+	public float trackVelocityThreshold = 1f;
 
 	[Space]
 	public float gainPop = 1f;
@@ -27,7 +28,7 @@ public class BarUpdater : MonoBehaviour {
 
 	private float barProgress = 0f;
 
-	private float prevValue;
+	private float prevValue = 1f;
 	private float valueDiff = 0f;
 	private Vector3 prevPos;
 	private Vector3 prevScale;
@@ -69,8 +70,11 @@ public class BarUpdater : MonoBehaviour {
 
 			}
 			
-			transform.parent.localPosition = Vector3.Lerp(transform.parent.localPosition, prevPos + (new Vector3(playerController.trackVelocity.x * swayFactor,
-				playerController.trackVelocity.y * swayFactor, 0f)), 0.2f);
+			if(Mathf.Abs(playerController.trackVelocity.x) <= trackVelocityThreshold && Mathf.Abs(playerController.trackVelocity.y) <= trackVelocityThreshold)
+				transform.parent.localPosition = Vector3.Lerp(transform.parent.localPosition, prevPos + (new Vector3(playerController.trackVelocity.x * swayFactor,
+					playerController.trackVelocity.y * swayFactor, 0f)), 0.2f);
+			else
+					transform.parent.localPosition = Vector3.Lerp(transform.parent.localPosition, prevPos, 0.2f);
 
 			transform.localScale = Vector3.Lerp(prevScale,
 				new Vector3(prevScale.x + (valueDiff * gainPop), prevScale.y + (valueDiff * gainPop), prevScale.z + (valueDiff * gainPop)),

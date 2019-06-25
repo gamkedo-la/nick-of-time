@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class PlayerController : MonoBehaviour
 	public GameObject pushFXObject;
 	public GameObject throwFXObject;
 	public GameObject walkFXObject;
+	public GameObject hitComboTextObject;
 
 	private const float MINIMUM_TIME_BETWEEN_FX = 0.25f; // seconds between FX
 	private float nextFXdelay = 0f; // so we don't spam FX every frame
@@ -38,8 +40,12 @@ public class PlayerController : MonoBehaviour
 	public string attackInput = "Fire1";
 
 	[Space]
+	public float criticalHitChance = 0.05f;
 	public float hitComboMaxTime = 0.5f;
 	public float criticalHitTimePause = 0.01f;
+
+	[Space]
+	public float timeSlowMoTime = 3f;
 
 	[Space]
 	public WeaponPossession weaponPossession;
@@ -77,6 +83,10 @@ public class PlayerController : MonoBehaviour
 	private float hitComboTimer = 0f;
 	[HideInInspector] public int didAttackHitEnemy = 0;
 	static private float criticalHitTimePauseTimer = 0f;
+	private GameObject lastHitComboTextObject = null;
+
+	static private float timeSlowMoTimer = 0f;
+	private float timeSlowMoEffectValue = 0f;
 
 	private void Start()
 	{
@@ -342,8 +352,40 @@ public class PlayerController : MonoBehaviour
 
 			if (criticalHitTimePauseTimer <= 0f)
 			{
-				if(Time.timeScale <= 0f)
+				if (Time.timeScale <= 0f)
+				{
 					Time.timeScale = 1f;
+				}
+				else if (timeSlowMoTimer > 0f)
+				{
+					timeSlowMoTimer -= Time.unscaledDeltaTime;
+					Time.timeScale = Mathf.Lerp(Time.timeScale, 0.5f, 0.025f);
+
+					ImageEffect.SetImageEffectMaterialIndex(2);
+
+					timeSlowMoEffectValue = Mathf.Lerp(timeSlowMoEffectValue, 0.25f, 0.025f);
+					ImageEffect.SetImageEffectValue(timeSlowMoEffectValue);
+				}
+				else if(timeSlowMoTimer <= 0f)
+				{
+					if (Time.timeScale >= 0.5f && Time.timeScale != 1f)
+					{
+						Time.timeScale = Mathf.Lerp(Time.timeScale, 1f, 0.05f);
+					}
+
+					if (timeSlowMoEffectValue <= 0f)
+					{
+						ImageEffect.SetImageEffectMaterialIndex(0);
+						ImageEffect.SetImageEffectValue(0.04f);
+
+						timeSlowMoEffectValue = 0f;
+					}
+					else
+					{
+						timeSlowMoEffectValue -= Time.unscaledDeltaTime / 5f;
+						ImageEffect.SetImageEffectValue(timeSlowMoEffectValue);
+					}
+				}
 			}
 			else
 			{
@@ -562,13 +604,41 @@ public class PlayerController : MonoBehaviour
 		{
 			hitComboCount += didAttackHitEnemy;
 			hitComboTimer = hitComboMaxTime;
-
+			
 			if (hitComboCount >= 3)
 			{
-				Time.timeScale = 0f;
-				criticalHitTimePauseTimer = criticalHitTimePause;
+				if (lastHitComboTextObject != null)
+				{
+					lastHitComboTextObject.transform.GetChild(0).GetComponent<Animator>().Play("HitComboPop", 0, 0f);
+				}
+				else
+				{
+					lastHitComboTextObject = Instantiate(hitComboTextObject, transform.position + new Vector3(0f, 0.72f, 0f), Quaternion.Euler(0f, 0f, Random.Range(-5f, 5f)));
+				}
 
-				hitComboCount = 0;
+				if (Random.Range(0f, 1f) < criticalHitChance * hitComboCount)
+				{
+					Time.timeScale = 0f;
+					criticalHitTimePauseTimer = criticalHitTimePause;
+
+					if (weaponPossession.weaponID == 2) //Time Whip
+					{
+						timeSlowMoTimer = timeSlowMoTime;
+
+						lastHitComboTextObject.transform.GetChild(0).GetChild(0).gameObject.GetComponent<TextMeshPro>().text = "slow mo!";
+						lastHitComboTextObject.transform.GetChild(0).GetChild(1).gameObject.GetComponent<TextMeshPro>().text = "slow mo!";
+					}
+					else
+					{
+						lastHitComboTextObject.transform.GetChild(0).GetChild(0).gameObject.GetComponent<TextMeshPro>().text = "critical!";
+						lastHitComboTextObject.transform.GetChild(0).GetChild(1).gameObject.GetComponent<TextMeshPro>().text = "critical!";
+					}
+				}
+				else
+				{
+					lastHitComboTextObject.transform.GetChild(0).GetChild(0).gameObject.GetComponent<TextMeshPro>().text = "combo x" + hitComboCount.ToString();
+					lastHitComboTextObject.transform.GetChild(0).GetChild(1).gameObject.GetComponent<TextMeshPro>().text = "combo x" + hitComboCount.ToString();
+				}
 			}
 		}
 		else

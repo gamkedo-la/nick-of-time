@@ -1,4 +1,4 @@
-﻿Shader "Custom/WobbleImageEffect"
+﻿Shader "Custom/TimeImageEffect"
 {
     Properties
     {
@@ -35,9 +35,12 @@
             {
                 v2f o;
                 o.vertex = UnityObjectToClipPos(v.vertex);
+                /*
+                //Wobble Effect
                 float val = (sin(_Time.w * 10)) / 25;
                 if (val < 0) val *= -1;
                 o.vertex.w += val * value;
+                */
 
                 o.uv = v.uv;
 
@@ -49,6 +52,26 @@
             fixed4 frag (v2f i) : SV_Target
             {
                 fixed4 col = tex2D(_MainTex, i.uv);
+
+                float var = sin(_Time.w);
+                if(var < 0) var *= -1;
+                var -= 2;
+
+                if(col.g > 0.8)
+                  col.g += value / (4 * var);
+                else if(col.g > 0.6)
+                  col.g += value / (2 * var);
+                else if(col.g > 0.4)
+                  col.g -= value / (2 * var);
+                else if(col.g > 0.2)
+                  col.g -= value / (4 * var);
+
+                if(col.r < 0.75)
+                  col.r -= value;
+
+                if (col.b < 0.75)
+                  col.b -= value;
+
                 return col;
             }
             ENDCG
