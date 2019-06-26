@@ -610,6 +610,7 @@ public class PlayerController : MonoBehaviour
 				if (lastHitComboTextObject != null)
 				{
 					lastHitComboTextObject.transform.GetChild(0).GetComponent<Animator>().Play("HitComboPop", 0, 0f);
+					lastHitComboTextObject.transform.position = transform.position + new Vector3(0f, 0.72f, 0f);
 				}
 				else
 				{

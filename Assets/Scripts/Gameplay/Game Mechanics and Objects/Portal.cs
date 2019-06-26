@@ -76,7 +76,8 @@ public class Portal : MonoBehaviour
         {
 			// A Portal MUST lead to some other Portal
 			//Make sure that portalActivePair is in the list of activePortals
-			portalActivePair.gameObject.SetActive(true);
+			if(portalActivePair != null)
+				portalActivePair.gameObject.SetActive(true);
 
 			// update active portal index
 			GetActivePortalIndices();

@@ -138,8 +138,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 24
-        height: 24
+        width: 26
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,7 +147,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8efd8579399494745986e340bc95cc72
+      spriteID: 5d41297676a8e4c4fb122834b4610b23
       internalID: 9001728643286729889
       vertices: []
       indices: 
@@ -157,10 +157,10 @@ TextureImporter:
       name: bossClockSheet_attack_1
       rect:
         serializedVersion: 2
-        x: 24
+        x: 26
         y: 0
-        width: 24
-        height: 24
+        width: 26
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,7 +168,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49c509bce70d77943b7b5730ec5f7081
+      spriteID: c85703914e778814a86200a12e0ec256
       internalID: -5718714617144805553
       vertices: []
       indices: 
@@ -178,10 +178,10 @@ TextureImporter:
       name: bossClockSheet_attack_2
       rect:
         serializedVersion: 2
-        x: 48
+        x: 52
         y: 0
-        width: 24
-        height: 24
+        width: 26
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,7 +189,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9bbd3f105fc1e18418fa7ddd48c697d0
+      spriteID: 2df46fc3e3ec22c429195678ddb08ff9
       internalID: 8821303869471572748
       vertices: []
       indices: 
@@ -199,10 +199,10 @@ TextureImporter:
       name: bossClockSheet_attack_3
       rect:
         serializedVersion: 2
-        x: 72
+        x: 78
         y: 0
-        width: 24
-        height: 24
+        width: 26
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -210,7 +210,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 781f911ed46d88442bfafcb32ae9cd35
+      spriteID: 9e1b0c60b0e2cc845bfcf5086ae0760c
       internalID: 8143592088566720648
       vertices: []
       indices: 
@@ -220,10 +220,10 @@ TextureImporter:
       name: bossClockSheet_attack_4
       rect:
         serializedVersion: 2
-        x: 96
+        x: 104
         y: 0
-        width: 24
-        height: 24
+        width: 26
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,7 +231,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 751b41e00b6d45448bc0315cbdbf2a03
+      spriteID: 0f052d1451c0d3240b752cd9b4204815
       internalID: 1704229154089977414
       vertices: []
       indices: 
@@ -241,10 +241,10 @@ TextureImporter:
       name: bossClockSheet_attack_5
       rect:
         serializedVersion: 2
-        x: 120
+        x: 130
         y: 0
-        width: 24
-        height: 24
+        width: 26
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -252,7 +252,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cfe8440d9d4a2ba428ca5c84c79670ff
+      spriteID: 2ad4258f5fae1c149999fe2fe220a6b3
       internalID: 2603309339246888283
       vertices: []
       indices: 
@@ -262,10 +262,10 @@ TextureImporter:
       name: bossClockSheet_attack_6
       rect:
         serializedVersion: 2
-        x: 144
+        x: 156
         y: 0
-        width: 24
-        height: 24
+        width: 26
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -273,7 +273,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b664cb4ea605c0c408345841e1e5c7ef
+      spriteID: 2151ab75455a3b44383487cb18eeddc0
       internalID: -2425057898780822466
       vertices: []
       indices: 
@@ -283,10 +283,10 @@ TextureImporter:
       name: bossClockSheet_attack_7
       rect:
         serializedVersion: 2
-        x: 168
+        x: 182
         y: 0
-        width: 24
-        height: 24
+        width: 26
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -294,7 +294,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a2731e27c2cbde4090a78a72e535483
+      spriteID: a47271433a88d164ea23595f3f482ec8
       internalID: -3187210759463242747
       vertices: []
       indices: 
@@ -304,10 +304,10 @@ TextureImporter:
       name: bossClockSheet_attack_8
       rect:
         serializedVersion: 2
-        x: 192
+        x: 208
         y: 0
-        width: 24
-        height: 24
+        width: 26
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,7 +315,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73cc1a44926a31d4c9bd47a90f275007
+      spriteID: 4d68675213a6a95458d44512e6fcd3e2
       internalID: 2904966705761184082
       vertices: []
       indices: 

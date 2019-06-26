@@ -96,23 +96,29 @@ public class IndicateTowards : MonoBehaviour
 
 			transform.rotation = Quaternion.Euler(0f, 0f, (angle * Mathf.Rad2Deg) + angleOffset);
 			transform.position = pos;
-			
+
 			if (type == IndicateToEntity.Enemy_Player1 && player1 != null)
 			{
 				SpriteRenderer sprRend = gameObject.GetComponent<SpriteRenderer>();
+				sprRend.enabled = true;
 
 				Color col = sprRend.color;
-				col.a = 1f - (Vector2.Distance(target, player1.transform.position) / 2.5f);
+				col.a = 1f - (Vector2.Distance(target, player1.transform.position) / 3.5f);
 				sprRend.color = col;
 			}
 			else if (type == IndicateToEntity.Enemy_Player2 && player2 != null)
 			{
 				SpriteRenderer sprRend = gameObject.GetComponent<SpriteRenderer>();
+				sprRend.enabled = true;
 
 				Color col = sprRend.color;
-				col.a = 1f - (Vector2.Distance(target, player2.transform.position) / 2.5f);
+				col.a = 1f - (Vector2.Distance(target, player2.transform.position) / 3.5f);
 				sprRend.color = col;
 			}
+		}
+		else
+		{
+			gameObject.GetComponent<SpriteRenderer>().enabled = false;
 		}
     }
 }
