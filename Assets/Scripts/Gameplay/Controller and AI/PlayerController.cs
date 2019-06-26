@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
 	public float keyComboMaxTimeGap = 0.05f;
 	public string walkVerticalInput = "Vertical";
 	public string walkHorizontalInput = "Horizontal";
-	public string attackInput = "Fire1";
+	public string attackInput = "Fire";
 
 	[Space]
 	public float criticalHitChance = 0.05f;
@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour
 	public float criticalHitTimePause = 0.01f;
 
 	[Space]
-	public float timeSlowMoTime = 3f;
+	public float timeSlowMoTime = 10f;
 
 	[Space]
 	public WeaponPossession weaponPossession;
@@ -57,6 +57,8 @@ public class PlayerController : MonoBehaviour
 	[HideInInspector] public int hitComboCount = 0;
 
 	[HideInInspector] public float actionPoints = 1f;
+
+	private int playerNo = -1;
 
 	private float speed = 0f;
 	[HideInInspector] public bool isDashing = false;
@@ -91,6 +93,9 @@ public class PlayerController : MonoBehaviour
 
 	private void Start()
 	{
+		if (name == "Player1") playerNo = 1;
+		else if (name == "Player2") playerNo = 2;
+
 		rigidbody = GetComponent<Rigidbody2D>();
 		animator = GetComponent<Animator>();
 		sprRenderer = GetComponent<SpriteRenderer>();
@@ -103,13 +108,20 @@ public class PlayerController : MonoBehaviour
 	
 	private void Update()
 	{
-		nextFXdelay -= Time.deltaTime; // don't spam FX every frame
-		
 		//if (Time.timeScale > 0f)
 		{
 			if (!animator.GetBool("isAttacking") && !animator.GetBool("isPushing") && !animator.GetBool("isThrowing"))// && !isDashing)
 			{
-				walkInput = new Vector2(Input.GetAxisRaw(walkHorizontalInput), Input.GetAxisRaw(walkVerticalInput));
+				walkInput = new Vector2(Input.GetAxisRaw(walkHorizontalInput + playerNo.ToString()), Input.GetAxisRaw(walkVerticalInput + playerNo.ToString()));
+
+				if (GameManager.singleGame)
+				{
+					if(walkInput.x == 0f)
+						walkInput.x = Input.GetAxisRaw(walkHorizontalInput + "2");
+					if(walkInput.y == 0f)
+						walkInput.y = Input.GetAxisRaw(walkVerticalInput + "2");
+				}
+
 				if (walkInput.x != 0 && walkInput.y != 0) walkInput /= 1.5f;
 
 				if (walkInput != Vector2.zero)
@@ -166,7 +178,7 @@ public class PlayerController : MonoBehaviour
 				&& !animator.GetBool("isPushing")
 				&& !animator.GetBool("isThrowing")
 				&& !isDashing
-				&& Input.GetButtonDown(attackInput))
+				&& Input.GetButtonDown(attackInput + playerNo.ToString()) || (GameManager.singleGame && Input.GetButtonDown(attackInput + "2")))
 			{
 				comboKeys += "A";
 
@@ -400,6 +412,7 @@ public class PlayerController : MonoBehaviour
 
 			attackSpeedTimer -= Time.deltaTime;
 			dashTimer -= Time.deltaTime;
+			nextFXdelay -= Time.deltaTime; // don't spam FX every frame
 		}
 	}
 

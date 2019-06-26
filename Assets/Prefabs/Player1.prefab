@@ -318,9 +318,9 @@ MonoBehaviour:
   pushActionDeplete: 0.05
   throwActionDeplete: 0.1
   keyComboMaxTimeGap: 0.2
-  walkVerticalInput: Vertical1
-  walkHorizontalInput: Horizontal1
-  attackInput: Fire1
+  walkVerticalInput: Vertical
+  walkHorizontalInput: Horizontal
+  attackInput: Fire
   criticalHitChance: 0.05
   hitComboMaxTime: 0.4
   criticalHitTimePause: 0.3

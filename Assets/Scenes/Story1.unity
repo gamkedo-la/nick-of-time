@@ -889,8 +889,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponID: 0
   defaultDamage: 0.05
+  defaultKnockback: 2
   weapons:
   - damage: 0
+    knockback: 0
     sprite: {fileID: 21300000, guid: 7808ced47403a1444bf4ac3b7b07d8e2, type: 3}
     position: {x: -0.0744, y: -0.045}
     colliderOffset: {x: 0, y: 0}
@@ -908,6 +910,7 @@ MonoBehaviour:
       flipAttackLeft: 0
       turnOffSingleSpriteRenderer: 0
   - damage: 0
+    knockback: 0
     sprite: {fileID: 21300000, guid: 5049fee2dbaa7954a888d2f4088d905d, type: 3}
     position: {x: -0.0744, y: -0.045}
     colliderOffset: {x: 0, y: 0}
@@ -15785,107 +15788,6 @@ PrefabInstance:
       propertyPath: HPBarSoloCamera
       value: 
       objectReference: {fileID: 1764954182}
-    - target: {fileID: 1148393954563092510, guid: f34ad73bca23e694585b0119f5a1682a,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 2b499b674a6af414b85f6cd11a972b3c, type: 2}
-    - target: {fileID: 1148393954563092480, guid: f34ad73bca23e694585b0119f5a1682a,
-        type: 3}
-      propertyPath: walkVerticalInput
-      value: Vertical2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1148393954563092480, guid: f34ad73bca23e694585b0119f5a1682a,
-        type: 3}
-      propertyPath: walkHorizontalInput
-      value: Horizontal2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1148393954563092480, guid: f34ad73bca23e694585b0119f5a1682a,
-        type: 3}
-      propertyPath: attackInput
-      value: Fire2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1148393954563092480, guid: f34ad73bca23e694585b0119f5a1682a,
-        type: 3}
-      propertyPath: rollInput
-      value: Dash2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3329497469656580619, guid: f34ad73bca23e694585b0119f5a1682a,
-        type: 3}
-      propertyPath: walkVerticalInput
-      value: Vertical2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3329497469656580619, guid: f34ad73bca23e694585b0119f5a1682a,
-        type: 3}
-      propertyPath: walkHorizontalInput
-      value: Horizontal2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3329497469656580619, guid: f34ad73bca23e694585b0119f5a1682a,
-        type: 3}
-      propertyPath: attackInput
-      value: Fire2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3329497469656580619, guid: f34ad73bca23e694585b0119f5a1682a,
-        type: 3}
-      propertyPath: dashInput
-      value: Dash2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3329497469656580619, guid: f34ad73bca23e694585b0119f5a1682a,
-        type: 3}
-      propertyPath: pushInput
-      value: Push2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3329497469656580619, guid: f34ad73bca23e694585b0119f5a1682a,
-        type: 3}
-      propertyPath: throwInput
-      value: Throw2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2579037237340339661, guid: f34ad73bca23e694585b0119f5a1682a,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 3a5fb7d265d02d045bdf5d039d749fa7,
-        type: 3}
-    - target: {fileID: 2579037237340339661, guid: f34ad73bca23e694585b0119f5a1682a,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 0.48
-      objectReference: {fileID: 0}
-    - target: {fileID: 2579037237340339661, guid: f34ad73bca23e694585b0119f5a1682a,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 0.48
-      objectReference: {fileID: 0}
-    - target: {fileID: 2579037237340339661, guid: f34ad73bca23e694585b0119f5a1682a,
-        type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8663847312133633213, guid: f34ad73bca23e694585b0119f5a1682a,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 2b499b674a6af414b85f6cd11a972b3c, type: 2}
-    - target: {fileID: 4761011132813936111, guid: f34ad73bca23e694585b0119f5a1682a,
-        type: 3}
-      propertyPath: normalMaterial
-      value: 
-      objectReference: {fileID: 2100000, guid: 2b499b674a6af414b85f6cd11a972b3c, type: 2}
-    - target: {fileID: 4761011132813936111, guid: f34ad73bca23e694585b0119f5a1682a,
-        type: 3}
-      propertyPath: blinkColor.r
-      value: 0.15972686
-      objectReference: {fileID: 0}
-    - target: {fileID: 4761011132813936111, guid: f34ad73bca23e694585b0119f5a1682a,
-        type: 3}
-      propertyPath: blinkColor.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4761011132813936111, guid: f34ad73bca23e694585b0119f5a1682a,
-        type: 3}
-      propertyPath: blinkColor.b
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 349174034595558344, guid: f34ad73bca23e694585b0119f5a1682a,
         type: 3}
       propertyPath: itemsParent
@@ -15956,6 +15858,92 @@ PrefabInstance:
       propertyPath: equipmentUI
       value: 
       objectReference: {fileID: 1380013287}
+    - target: {fileID: 1148393954563092510, guid: f34ad73bca23e694585b0119f5a1682a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2b499b674a6af414b85f6cd11a972b3c, type: 2}
+    - target: {fileID: 1148393954563092480, guid: f34ad73bca23e694585b0119f5a1682a,
+        type: 3}
+      propertyPath: walkVerticalInput
+      value: Vertical2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148393954563092480, guid: f34ad73bca23e694585b0119f5a1682a,
+        type: 3}
+      propertyPath: walkHorizontalInput
+      value: Horizontal2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148393954563092480, guid: f34ad73bca23e694585b0119f5a1682a,
+        type: 3}
+      propertyPath: attackInput
+      value: Fire2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148393954563092480, guid: f34ad73bca23e694585b0119f5a1682a,
+        type: 3}
+      propertyPath: rollInput
+      value: Dash2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3329497469656580619, guid: f34ad73bca23e694585b0119f5a1682a,
+        type: 3}
+      propertyPath: dashInput
+      value: Dash2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3329497469656580619, guid: f34ad73bca23e694585b0119f5a1682a,
+        type: 3}
+      propertyPath: pushInput
+      value: Push2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3329497469656580619, guid: f34ad73bca23e694585b0119f5a1682a,
+        type: 3}
+      propertyPath: throwInput
+      value: Throw2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2579037237340339661, guid: f34ad73bca23e694585b0119f5a1682a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3a5fb7d265d02d045bdf5d039d749fa7,
+        type: 3}
+    - target: {fileID: 2579037237340339661, guid: f34ad73bca23e694585b0119f5a1682a,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 2579037237340339661, guid: f34ad73bca23e694585b0119f5a1682a,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 2579037237340339661, guid: f34ad73bca23e694585b0119f5a1682a,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8663847312133633213, guid: f34ad73bca23e694585b0119f5a1682a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2b499b674a6af414b85f6cd11a972b3c, type: 2}
+    - target: {fileID: 4761011132813936111, guid: f34ad73bca23e694585b0119f5a1682a,
+        type: 3}
+      propertyPath: normalMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 2b499b674a6af414b85f6cd11a972b3c, type: 2}
+    - target: {fileID: 4761011132813936111, guid: f34ad73bca23e694585b0119f5a1682a,
+        type: 3}
+      propertyPath: blinkColor.r
+      value: 0.15972686
+      objectReference: {fileID: 0}
+    - target: {fileID: 4761011132813936111, guid: f34ad73bca23e694585b0119f5a1682a,
+        type: 3}
+      propertyPath: blinkColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4761011132813936111, guid: f34ad73bca23e694585b0119f5a1682a,
+        type: 3}
+      propertyPath: blinkColor.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1148393954563092480, guid: f34ad73bca23e694585b0119f5a1682a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f34ad73bca23e694585b0119f5a1682a, type: 3}
