@@ -36,11 +36,13 @@ public class FloatingTextService : MonoBehaviour
 	/// <param name="tintColor">Text color.</param>
 	/// <param name="speedMultiplier"></param>
 	/// <param name="size">Scale of the text object.</param>
-	public void ShowFloatingTextStandard( Vector3 position, string text, Color tintColor, float speedMultiplier = 1.0f, float scale = 1.0f )
+	public GameObject ShowFloatingTextStandard( Vector3 position, string text, Color tintColor, float speedMultiplier = 1.0f, float scale = 1.0f )
 	{
 		GameObject go = Instantiate( floatingTextStandard, position, Quaternion.identity );
 
 		FloatingText ft = go.GetComponent<FloatingText>( );
 		ft.SetPrameters( text, tintColor, speedMultiplier, scale );
+
+		return go;
 	}
 }

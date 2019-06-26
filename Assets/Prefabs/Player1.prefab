@@ -297,7 +297,7 @@ MonoBehaviour:
   attackSpeed: 4
   attackSpeedTime: 0.1
   dashSpeed: 7
-  dashTime: 0.1
+  dashTime: 0.12
   pushForce: 500
   throwSpeed: 4
   dashFXObject: {fileID: 2643976167619289179, guid: d16b468af7e8e1a49a14edc85440334d,
@@ -347,9 +347,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defenseFactor: 1
   thrownObjectDamage: 0.25
+  breakAttackOnHit: 0
   hitTags:
   - EnemyAttack
-  knockbackValue: 4.4
   knockbackSlowDown: 0.4
   invulnerabilityDelay: 0.3
   regenerateHpUpto: 0.4
@@ -1026,7 +1026,7 @@ MonoBehaviour:
     animatedWeapon:
       animated: 1
       attackUpPosition: {x: 0, y: 0.15}
-      attackDownPosition: {x: 0, y: -0.15}
+      attackDownPosition: {x: 0, y: -0.22}
       attackLeftPosition: {x: -0.15, y: 0}
       attackRightPosition: {x: 0.15, y: 0}
       attackUp:

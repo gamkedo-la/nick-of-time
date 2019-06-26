@@ -33,6 +33,9 @@ public class SpriteSlider : MonoBehaviour
 	
     void Update()
     {
+		if (fillValue < 0f) fillValue = 0f;
+		else if (fillValue > 1f) fillValue = 1f;
+
 		Vector2 scale = transform.localScale;
 		Vector3 pos = transform.localPosition;
 

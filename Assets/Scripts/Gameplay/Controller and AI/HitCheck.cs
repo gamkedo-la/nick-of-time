@@ -8,6 +8,11 @@ public class HitCheck : MonoBehaviour
 {
 	public float defenseFactor = 1f;
 	public float thrownObjectDamage = 0.25f;
+	public bool breakAttackOnHit = true;
+
+	private float criticalDamageRatio = 2f;
+	private float criticalKnockbackRatio = 1.5f;
+
 	public string[] hitTags;
 
 	[Space]
@@ -58,6 +63,8 @@ public class HitCheck : MonoBehaviour
 
 	private float invulnerabilityTimer = 0f;
 
+	private bool critical = false;
+
 	void Start ()
 	{
 		aud = GetComponent<AudioSource>();
@@ -96,37 +103,17 @@ public class HitCheck : MonoBehaviour
 
 			knockback = new Vector2(knockbackValue * Mathf.Cos(hitAngle), knockbackValue * Mathf.Sin(hitAngle));
 			knockbackSlowDownVector = new Vector2(knockbackSlowDown * Mathf.Cos(hitAngle), knockbackSlowDown * Mathf.Sin(hitAngle));
-
-			/*
-			if (hitDirection == 0)
-			{
-				knockback = new Vector2(0f, -knockbackValue);
-				knockbackSlowDownVector = new Vector2(0f, knockbackSlowDown);
-			}
-			else if (hitDirection == 1)
-			{
-				knockback = new Vector2(-knockbackValue, 0f);
-				knockbackSlowDownVector = new Vector2(knockbackSlowDown, 0f);
-			}
-			else if (hitDirection == 2)
-			{
-				knockback = new Vector2(0f, knockbackValue);
-				knockbackSlowDownVector = new Vector2(0f, -knockbackSlowDown);
-			}
-			else if (hitDirection == 3)
-			{
-				knockback = new Vector2(knockbackValue, 0f);
-				knockbackSlowDownVector = new Vector2(-knockbackSlowDown, 0f);
-			}
-			*/
-
+			
 			isHit = false;
 
 			if (aud != null && TogglesValues.sound)
 				aud.PlayOneShot(damageSound);
 
 			FloatingTextService.Instance.ShowFloatingTextStandard(transform.position,
-				Mathf.RoundToInt(hpDamage * 100f).ToString(), Color.white);
+				Mathf.RoundToInt(hpDamage * 100f).ToString(), critical ? Color.yellow : Color.white,
+				critical ? 2f : 1f, critical ? 2f : 1f);
+			
+			critical = false;
 		}
 		else
 		{
@@ -202,6 +189,9 @@ public class HitCheck : MonoBehaviour
 				hpDamage = 0.2f / defenseFactor;
 				knockbackValue = 4.0f;
 
+				if (breakAttackOnHit)
+					GetComponent<PlayerController>().stopAttacking();
+
 				isHit = true;
 				OnHit.Invoke( );
 				hitAngle = Vector2.Angle(gameObject.transform.position, coll.gameObject.transform.position);
@@ -220,6 +210,9 @@ public class HitCheck : MonoBehaviour
 			//no knockback on thrown object
 			knockbackValue = 0f;
 
+			if (breakAttackOnHit)
+				GetComponent<EnemyAI>().stopAttacking();
+
 			isHit = true;
 			OnHit.Invoke( );
 			hitDirection = to.GetDirection();
@@ -237,16 +230,27 @@ public class HitCheck : MonoBehaviour
 			{
 				plCont.didAttackHitEnemy++;
 
+				critical = plCont.processCriticalHit();
+				
 				if (plCont.weaponPossession.weaponID < 0)
 				{
-					hpDamage = plCont.weaponPossession.defaultDamage;
-					knockbackValue = plCont.weaponPossession.defaultKnockback;
+					hpDamage = plCont.weaponPossession.defaultDamage
+					* (critical ? criticalDamageRatio : 1f);
+
+					knockbackValue = plCont.weaponPossession.defaultKnockback
+					* (critical ? criticalKnockbackRatio : 1f);
 				}
 				else
 				{
-					hpDamage = plCont.weaponPossession.weapons[plCont.weaponPossession.weaponID].damage / defenseFactor;
-					knockbackValue = plCont.weaponPossession.weapons[plCont.weaponPossession.weaponID].knockback / defenseFactor;
+					hpDamage = (plCont.weaponPossession.weapons[plCont.weaponPossession.weaponID].damage
+					* (critical ? criticalDamageRatio : 1f)) / defenseFactor;
+
+					knockbackValue = (plCont.weaponPossession.weapons[plCont.weaponPossession.weaponID].knockback
+					* (critical ? criticalKnockbackRatio : 1f)) / defenseFactor;
 				}
+
+				if (breakAttackOnHit)
+					GetComponent<EnemyAI>().stopAttacking();
 
 				isHit = true;
 				OnHit.Invoke( );

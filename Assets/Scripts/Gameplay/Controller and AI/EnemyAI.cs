@@ -2,23 +2,37 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MuddlingAI : MonoBehaviour
+public class EnemyAI : MonoBehaviour
 {
-	public GameObject[] targetObjects = null;
+	[HideInInspector] public GameObject[] targetObjects = null;
 
+	public enum EnemyAIType
+	{
+		Animated,
+		Rotational,
+		Procedural
+	};
+
+	public EnemyAIType type = EnemyAIType.Animated;
+
+	[Space]
 	public float walkSpeed = 1f;
 	public float walkMaxDistance = 3.36f;
 	public float walkTime = 0f;
 	public float walkMinDelay = 0f;
 	public float walkMaxDelay = 0f;
 
+	[Space]
 	public float attackSpeed = 0.5f;
 	public float attackMaxDistance = 0.48f;
 
+	[Space]
 	public AudioClip attackSound;
 
+	[Space]
 	public float actionMinDelay = 1f;
 	public float actionMaxDelay = 1.25f;
+	public float noActionFactor = 1.4f;
 
 	private float speed = 0f;
 
@@ -87,8 +101,7 @@ public class MuddlingAI : MonoBehaviour
 			if(targetIndex <= -1) targetIndex = indexLeft;
 
 			//Determining walkInput
-			if(!animator.GetBool("isAttacking")
-				&& Vector2.Distance(
+			if(Vector2.Distance(
 					new Vector2( targetObjects[targetIndex].transform.position.x, targetObjects[targetIndex].transform.position.y ),
 					new Vector2( rigidbody.transform.position.x, rigidbody.transform.position.y )
 					) < walkMaxDistance
@@ -96,35 +109,24 @@ public class MuddlingAI : MonoBehaviour
 			)
 			{
 				if(targetObjects[targetIndex].transform.position.x + 0.36f < rigidbody.transform.position.x)
-				{
 					walkInput.x = -1f;
-					if(!animator.GetBool("isAttacking") )
-						sprRenderer.flipX = true;
-				}
 				if(targetObjects[targetIndex].transform.position.y + 0.04f < rigidbody.transform.position.y)
-				{
 					walkInput.y = -1f;
-				}
 				if(targetObjects[targetIndex].transform.position.x - 0.36f > rigidbody.transform.position.x)
-				{
 					walkInput.x = 1f;
-					if(!animator.GetBool("isAttacking") )
-						sprRenderer.flipX = false;
-				}
 				if(targetObjects[targetIndex].transform.position.y - 0.04f > rigidbody.transform.position.y)
-				{
 					walkInput.y = 1f;
-				}
 
 				if(walkTimer <= -walkTime)
-				{
 					walkTimer = Random.Range(walkMinDelay, walkMaxDelay);
-				}
 			}
 
-			if(walkInput != Vector2.zero)
+			if (walkInput != Vector2.zero)
 			{
-				speed = walkSpeed;
+				if (animator.GetBool("isAttacking"))
+					speed = attackSpeed;
+				else
+					speed = walkSpeed / (actionTimer > 0f ? noActionFactor : 1f);
 			}
 
 			if(actionTimer <= 0f)
@@ -138,14 +140,11 @@ public class MuddlingAI : MonoBehaviour
 					) <= attackMaxDistance)
 				{
 					animator.SetBool("isAttacking", true);
-					speed = attackSpeed;
-
-					Debug.Log( "Attacking" );
-
-					//attackAreaObject.GetComponent<Animator>().SetBool("isAttacking", true);
-
+					
 					if(aud != null && TogglesValues.sound)
 						aud.PlayOneShot(attackSound);
+
+					actionTimer = Random.Range(actionMinDelay, actionMaxDelay);
 				}
 			}
 
@@ -193,9 +192,7 @@ public class MuddlingAI : MonoBehaviour
 
 	public void stopAttacking() {
 		animator.SetBool("isAttacking", false);
-
-		//attackAreaObject.GetComponent<Animator>().SetBool("isAttacking", false);
-
+		
 		actionTimer = Random.Range(actionMinDelay, actionMaxDelay);
 	}
 }

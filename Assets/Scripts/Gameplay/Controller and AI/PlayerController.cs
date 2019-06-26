@@ -82,6 +82,7 @@ public class PlayerController : MonoBehaviour
 	
 	private float hitComboTimer = 0f;
 	[HideInInspector] public int didAttackHitEnemy = 0;
+	private bool wasHitCritical = false;
 	static private float criticalHitTimePauseTimer = 0f;
 	private GameObject lastHitComboTextObject = null;
 
@@ -113,8 +114,8 @@ public class PlayerController : MonoBehaviour
 
 				if (walkInput != Vector2.zero)
 				{
-					if(!isDashing)
-						speed = walkSpeed;
+					if (!isDashing)
+						speed = walkSpeed * (1 + (4 * timeSlowMoEffectValue));
 					
 					animator.SetBool("isWalking", true);
 
@@ -173,8 +174,8 @@ public class PlayerController : MonoBehaviour
 				{
 					animator.SetBool("isAttacking", true);
 					
-					speed = attackSpeed;
-					
+					speed = attackSpeed * (1 + (4 * timeSlowMoEffectValue));
+
 					if (animator.GetBool("isWalking"))
 						attackSpeedTimer = attackSpeedTime;
 					else
@@ -227,7 +228,7 @@ public class PlayerController : MonoBehaviour
 
 				comboKeys = "";
 			}
-
+			
 			//Dash
 			if (actionPoints >= dashActionDeplete
 				&& !isDashing
@@ -240,8 +241,8 @@ public class PlayerController : MonoBehaviour
 				&& hitCheck.knockback == Vector2.zero)
 			{
 				isDashing = true;
-				dashTimer = dashTime;
-				speed = dashSpeed;
+				dashTimer = dashTime / (1 + (4 * timeSlowMoEffectValue));
+				speed = dashSpeed * (1 + (4 * timeSlowMoEffectValue));
 
 				//animator.SetBool("isWalking", false);
 
@@ -282,7 +283,7 @@ public class PlayerController : MonoBehaviour
 			&& (comboKeys == "UA" || comboKeys == "RA" || comboKeys == "DA" || comboKeys == "LA"))
 			{
 				animator.SetBool("isThrowing", true);
-				speed = attackSpeed;
+				speed = attackSpeed * (1 + (4 * timeSlowMoEffectValue));
 
 				attackSpeedTimer = attackSpeedTime / 2f;
 
@@ -299,13 +300,13 @@ public class PlayerController : MonoBehaviour
 
 			if (actionPoints < 1f)
 			{
-				actionPoints += regenerateActionPointsPerSec * Time.deltaTime;
+				actionPoints += regenerateActionPointsPerSec * Time.deltaTime * (1 + (4 * timeSlowMoEffectValue));
 			}
 
 			if (isDashing && dashTimer <= 0f)
 			{
 				isDashing = false;
-				speed = walkSpeed;
+				speed = walkSpeed * (1 + (4 * timeSlowMoEffectValue));
 				gameObject.layer = 8;
 			}
 			else if (dashTimer > 0f || (attackSpeedTimer > 0f && attackSpeedTimer < attackSpeedTime/3f))
@@ -313,12 +314,14 @@ public class PlayerController : MonoBehaviour
 				GameObject ghostSpriteFX = Instantiate(dashFXObject, transform.position, Quaternion.Euler(0f,0f,0f));
 
 				SpriteRenderer GSFX_sprRend = ghostSpriteFX.GetComponent<SpriteRenderer>();
-
+				
 				if (dashFXObject && nextFXdelay < 0f)
 				{
 					GameObject FX = Instantiate(dashFXObject, transform.position, Quaternion.Euler(0f,0f,0f));
+					FX.GetComponent<SpriteRenderer>().sprite = sprRenderer.sprite;
 					nextFXdelay = MINIMUM_TIME_BETWEEN_FX;
 				}
+				
 
 				GSFX_sprRend.sprite = sprRenderer.sprite;
 
@@ -392,6 +395,8 @@ public class PlayerController : MonoBehaviour
 				Time.timeScale = 0f;
 				criticalHitTimePauseTimer -= Time.unscaledDeltaTime;
 			}
+
+			animator.speed = 1f * (1 + (4 * timeSlowMoEffectValue));
 
 			attackSpeedTimer -= Time.deltaTime;
 			dashTimer -= Time.deltaTime;
@@ -551,7 +556,7 @@ public class PlayerController : MonoBehaviour
 
 	public void throwWeapon()
 	{
-		if (weaponPossession.weaponID > -1)
+		if (weaponPossession.weaponID > -1 && weaponPossession.weaponID != 2) //2 = Time Whip
 		{
 			if (throwFXObject && nextFXdelay < 0f)
 			{
@@ -617,7 +622,7 @@ public class PlayerController : MonoBehaviour
 					lastHitComboTextObject = Instantiate(hitComboTextObject, transform.position + new Vector3(0f, 0.72f, 0f), Quaternion.Euler(0f, 0f, Random.Range(-5f, 5f)));
 				}
 
-				if (Random.Range(0f, 1f) < criticalHitChance * hitComboCount)
+				if (wasHitCritical)
 				{
 					Time.timeScale = 0f;
 					criticalHitTimePauseTimer = criticalHitTimePause;
@@ -649,5 +654,14 @@ public class PlayerController : MonoBehaviour
 		}
 		
 		didAttackHitEnemy = 0;
+		wasHitCritical = false;
+	}
+
+	public bool processCriticalHit()
+	{
+		if(hitComboCount >= 3 && !wasHitCritical)
+			wasHitCritical = Random.Range(0f, 1f) < criticalHitChance * hitComboCount;
+
+		return wasHitCritical;
 	}
 }

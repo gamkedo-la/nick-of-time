@@ -844,9 +844,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.027}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.05
+  m_Radius: 0.09
 --- !u!82 &7157545449976618631
 AudioSource:
   m_ObjectHideFlags: 0
@@ -974,8 +974,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87afb66cc8e462f48a975d17129f1406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defenseFactor: 1
+  defenseFactor: 1.25
   thrownObjectDamage: 0.25
+  breakAttackOnHit: 1
   hitTags:
   - PlayerAttack
   knockbackSlowDown: 0.4
@@ -1025,16 +1026,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetObjects: []
-  walkSpeed: 0.5
-  walkMaxDistance: 3.84
-  walkTime: 2
-  walkMinDelay: 0.3
-  walkMaxDelay: 0.6
-  attackSpeed: 0.25
-  attackMaxDistance: 0.36
+  type: 0
+  walkSpeed: 0.8
+  walkMaxDistance: 4
+  walkTime: 1
+  walkMinDelay: 0.1
+  walkMaxDelay: 0.2
+  attackSpeed: 1.4
+  attackMaxDistance: 1.4
   attackSound: {fileID: 8300000, guid: 32ed1d859f4d34a41a11b51400612384, type: 3}
-  actionMinDelay: 1
-  actionMaxDelay: 1.5
+  actionMinDelay: 0.4
+  actionMaxDelay: 0.8
+  noActionFactor: 2
 --- !u!114 &4276141235801705201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1243,7 +1246,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.12
 --- !u!1 &8456195626731601950
 GameObject:
   m_ObjectHideFlags: 0

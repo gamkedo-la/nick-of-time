@@ -434,10 +434,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87afb66cc8e462f48a975d17129f1406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hpDamage: 0.25
+  defenseFactor: 1
+  thrownObjectDamage: 0.25
+  breakAttackOnHit: 0
   hitTags:
   - PlayerAttack
-  knockbackValue: 4.4
   knockbackSlowDown: 0.4
   invulnerabilityDelay: 0.15
   regenerateHpUpto: 0
@@ -485,16 +486,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetObjects: []
+  type: 0
   walkSpeed: 0.5
-  walkMaxDistance: 3.84
+  walkMaxDistance: 4
   walkTime: 2
   walkMinDelay: 0.3
   walkMaxDelay: 0.6
-  attackSpeed: 0.25
-  attackMaxDistance: 0.36
+  attackSpeed: 0
+  attackMaxDistance: 0.58
   attackSound: {fileID: 8300000, guid: 32ed1d859f4d34a41a11b51400612384, type: 3}
-  actionMinDelay: 1
-  actionMaxDelay: 1.5
+  actionMinDelay: 0.3
+  actionMaxDelay: 0.6
+  noActionFactor: 2
 --- !u!114 &6423873604275834842
 MonoBehaviour:
   m_ObjectHideFlags: 0
