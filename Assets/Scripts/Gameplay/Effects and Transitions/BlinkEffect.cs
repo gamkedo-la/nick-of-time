@@ -48,7 +48,12 @@ public class BlinkEffect : MonoBehaviour
 		Invoke( "Unblink", time );
 	}
 
-	private void Unblink( )
+	public bool IsBlinking()
+	{
+		return blinking;
+	}
+
+	public void Unblink( )
 	{
 		SwapMaterial( normalMaterial, normalColor );
 		blinking = false;

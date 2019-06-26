@@ -122,7 +122,7 @@ public class HitCheck : MonoBehaviour
 
 		if (hp <= 0f)
 		{
-			if (!GetComponent<Animator>().GetBool("isDying") && aud != null && TogglesValues.sound)
+			if ((GetComponent<Animator>() != null && !GetComponent<Animator>().GetBool("isDying")) && aud != null && TogglesValues.sound)
 			{
 				aud.clip = deathSound;
 				aud.PlayDelayed(0.5f);
@@ -139,7 +139,15 @@ public class HitCheck : MonoBehaviour
 				}
 			}
 
-			GetComponent<Animator>().SetBool("isDying", true);
+			if (GetComponent<Animator>() != null)
+				GetComponent<Animator>().SetBool("isDying", true);
+			else
+			{
+				Destroy(GetComponent<BlinkEffect>());
+				Destroy(GetComponent<EnemyAI>());
+				Destroy(GetComponent<HitCheck>());
+				gameObject.AddComponent<SpriteFadeOut>().delay = 1f;
+			}
 		}
 		else if (hp < regenerateHpUpto)
 		{
@@ -163,7 +171,7 @@ public class HitCheck : MonoBehaviour
 					ThrownObject to = coll.gameObject.GetComponent<ThrownObject>();
 
 					if (coll.gameObject.GetComponent<DamageObject>() != null
-					|| (coll.gameObject.name.Contains("EM_ATT") && (coll.gameObject.transform.parent != null && coll.gameObject.transform.parent.parent != null && coll.gameObject.transform.parent.parent != null && coll.gameObject.transform.parent.parent.parent.GetComponent<Animator>().GetBool("isAttacking"))))
+					|| (coll.gameObject.name.Contains("EM_ATT") && (coll.gameObject.transform.parent != null && coll.gameObject.transform.parent.parent != null && coll.gameObject.transform.parent.parent != null && (coll.gameObject.transform.parent.parent.parent.GetComponent<EnemyAI>().isAttacking || coll.gameObject.transform.parent.parent.parent.GetComponent<Animator>().GetBool("isAttacking")))))
 					{
 						if (PlayerDamage(coll)) break;
 					}
@@ -194,7 +202,8 @@ public class HitCheck : MonoBehaviour
 
 				isHit = true;
 				OnHit.Invoke( );
-				hitAngle = Vector2.Angle(gameObject.transform.position, coll.gameObject.transform.position);
+				hitAngle = Mathf.Atan2(gameObject.transform.position.y - coll.gameObject.transform.position.y,
+				coll.gameObject.transform.position.x - coll.gameObject.transform.position.x);
 				return true;
 			}
 		}
