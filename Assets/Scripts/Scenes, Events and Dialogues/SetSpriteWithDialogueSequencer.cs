@@ -33,14 +33,15 @@ public class SetSpriteWithDialogueSequencer : MonoBehaviour {
 			objectAnimator.enabled = false;
 		}
 			
-		sprRenderer = objectToSet.GetComponent<SpriteRenderer>();
+		if(objectToSet != null)
+			sprRenderer = objectToSet.GetComponent<SpriteRenderer>();
 	}
 	
-	void Update () {
-		
+	void Update ()
+	{
 		int dialogueNo = dialogueBoxObject.GetComponent<DialogueBoxSwitch>().dialogueSequence.dialogueNo;
 		
-		if(dialogueNo >= dialogueNoOffset)
+		if(dialogueNo >= dialogueNoOffset && objectToSet != null & sprites.Length > 0)
 		{
 			sprRenderer.sprite = sprites[dialogueNo - dialogueNoOffset];
 		}

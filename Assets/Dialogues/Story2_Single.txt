@@ -1,4 +1,4 @@
-42
+40
 <color=#ff6666>Player 1</color><br>OMG! Did I just came here through a PORTAL!!??
 <color=#ff6666>Player 1</color><br>Now, I am really freaked out.
 <color=#ff6666>Player 1</color><br>What the hell is this place anyway?
@@ -34,10 +34,8 @@
 <color=#ff6666>Player 1</color><br>I am feeling awesome.
 <color=#ff6666>Player 1</color><br>Now, food for the escape.
  
-<color=#ff6666>Player 1</color><br>Here, take this bread.
-<color=#ffff00>Guard</color><br>Yeah, thanks.
-<color=#ffff00>Guard</color><br>...om...uom... <i>sigh</i>.
+<color=#ffff00>Guard</color><br>Thanks fom.. bread uom.. <i>sigh<i>.
 <color=#ffbb01>Nick</color><br>...
 <color=#ff6666>Player 1</color><br>Tell me how to escape the dungeon.
-<color=#ffff00>Guard</color>In order to escape, you...
+<color=#ffff00>Guard</color><br>In order to escape, you need to get rid of a kid!
  
