@@ -6,6 +6,8 @@ using TMPro;
 public class TradePanel : MonoBehaviour
 {
 
+    public int amountToTrade;
+
     [SerializeField]
     private TextMeshProUGUI amountToTradeDisplay;
 
@@ -18,6 +20,9 @@ public class TradePanel : MonoBehaviour
     [SerializeField]
     private Button cancelButton;
 
+    [SerializeField]
+    private string VerticalAxis;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +32,18 @@ public class TradePanel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      
+        if(Input.GetAxis(VerticalAxis) > 0.5f)
+        {
+            amountToTrade += 1;
+            amountToTradeDisplay.text = amountToTrade.ToString();
+        }
+
+        if (Input.GetAxis(VerticalAxis) < -0.5f)
+        {
+            amountToTrade -= 1;
+            amountToTradeDisplay.text = amountToTrade.ToString();
+        }
+
     }
 
     public void ActivateTradePanel() {

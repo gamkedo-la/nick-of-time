@@ -95,6 +95,11 @@ public class InventorySlot : MonoBehaviour
                 {
                     inventory.Trade(item, inventory, otherPlayerInventory, 1);
                 }
+
+                if(item.stackable == true)
+                {
+                    inventory.Trade(item, inventory, otherPlayerInventory, tradePanel.amountToTrade);
+                }
             }
             
           /*  if (item.stackable)   
