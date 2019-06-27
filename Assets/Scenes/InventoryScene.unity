@@ -630,8 +630,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponID: -1
+  defaultDamage: 0.05
+  defaultKnockback: 2
   weapons:
-  - sprite: {fileID: 0}
+  - damage: 0
+    knockback: 0
+    sprite: {fileID: 0}
     position: {x: 0, y: 0}
     colliderOffset: {x: 0, y: 0}
     colliderSize: {x: 0, y: 0}
@@ -14602,11 +14606,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87afb66cc8e462f48a975d17129f1406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hpDamage: 0.02
+  defenseFactor: 1
+  thrownObjectDamage: 0.25
+  breakAttackOnHit: 1
   hitTags:
   - EnemyAttack
-  knockbackValue: 6.4
   knockbackSlowDown: 0.4
+  invulnerabilityDelay: 0
   regenerateHpUpto: 0.4
   regenerateHpPerSecond: 0.0025
   damageSound: {fileID: 8300000, guid: 1df4bd1fa77bc9840b97a6eb60d5cd34, type: 3}
@@ -14616,6 +14622,7 @@ MonoBehaviour:
   lootItems: []
   hp: 1
   knockback: {x: 0, y: 0}
+  knockbackSlowDownVector: {x: 0, y: 0}
   HPBarJointCamera: {fileID: 0}
   HPBarSoloCamera: {fileID: 0}
   HPBarEnemy: {fileID: 0}
@@ -15427,7 +15434,7 @@ SpriteRenderer:
   m_Size: {x: 0.32, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &822858420
@@ -16053,8 +16060,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponID: -1
+  defaultDamage: 0.05
+  defaultKnockback: 2
   weapons:
-  - sprite: {fileID: 0}
+  - damage: 0
+    knockback: 0
+    sprite: {fileID: 0}
     position: {x: 0, y: 0}
     colliderOffset: {x: 0, y: 0}
     colliderSize: {x: 0, y: 0}
@@ -50429,11 +50440,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87afb66cc8e462f48a975d17129f1406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hpDamage: 0.02
+  defenseFactor: 1
+  thrownObjectDamage: 0.25
+  breakAttackOnHit: 1
   hitTags:
   - EnemyAttack
-  knockbackValue: 6.4
   knockbackSlowDown: 0.4
+  invulnerabilityDelay: 0
   regenerateHpUpto: 0.4
   regenerateHpPerSecond: 0.0025
   damageSound: {fileID: 8300000, guid: 1df4bd1fa77bc9840b97a6eb60d5cd34, type: 3}
@@ -50443,6 +50456,7 @@ MonoBehaviour:
   lootItems: []
   hp: 1
   knockback: {x: 0, y: 0}
+  knockbackSlowDownVector: {x: 0, y: 0}
   HPBarJointCamera: {fileID: 0}
   HPBarSoloCamera: {fileID: 0}
   HPBarEnemy: {fileID: 0}
@@ -51791,6 +51805,11 @@ PrefabInstance:
       propertyPath: tradePanel
       value: 
       objectReference: {fileID: 1008776457}
+    - target: {fileID: 6627801393482279712, guid: 6146772f02ed9114bb30ec85bc5ca561,
+        type: 3}
+      propertyPath: otherPlayer
+      value: 
+      objectReference: {fileID: 53627062}
     - target: {fileID: 8460399259216958870, guid: 6146772f02ed9114bb30ec85bc5ca561,
         type: 3}
       propertyPath: eventSystem
@@ -51836,6 +51855,11 @@ PrefabInstance:
       propertyPath: associatedPlayer
       value: 
       objectReference: {fileID: 74160656}
+    - target: {fileID: 3286897829919283214, guid: 6146772f02ed9114bb30ec85bc5ca561,
+        type: 3}
+      propertyPath: otherPlayer
+      value: 
+      objectReference: {fileID: 53627062}
     - target: {fileID: 220296106386663096, guid: 6146772f02ed9114bb30ec85bc5ca561,
         type: 3}
       propertyPath: eventSystem
@@ -51901,6 +51925,11 @@ PrefabInstance:
       propertyPath: associatedPlayer
       value: 
       objectReference: {fileID: 74160656}
+    - target: {fileID: 3286897829631238526, guid: 6146772f02ed9114bb30ec85bc5ca561,
+        type: 3}
+      propertyPath: otherPlayer
+      value: 
+      objectReference: {fileID: 53627062}
     - target: {fileID: 220296106140983240, guid: 6146772f02ed9114bb30ec85bc5ca561,
         type: 3}
       propertyPath: eventSystem
@@ -51946,6 +51975,11 @@ PrefabInstance:
       propertyPath: associatedPlayer
       value: 
       objectReference: {fileID: 74160656}
+    - target: {fileID: 3286897830016205783, guid: 6146772f02ed9114bb30ec85bc5ca561,
+        type: 3}
+      propertyPath: otherPlayer
+      value: 
+      objectReference: {fileID: 53627062}
     - target: {fileID: 220296105351265633, guid: 6146772f02ed9114bb30ec85bc5ca561,
         type: 3}
       propertyPath: eventSystem
@@ -51991,6 +52025,11 @@ PrefabInstance:
       propertyPath: associatedPlayer
       value: 
       objectReference: {fileID: 74160656}
+    - target: {fileID: 3286897829643156697, guid: 6146772f02ed9114bb30ec85bc5ca561,
+        type: 3}
+      propertyPath: otherPlayer
+      value: 
+      objectReference: {fileID: 53627062}
     - target: {fileID: 220296106127557231, guid: 6146772f02ed9114bb30ec85bc5ca561,
         type: 3}
       propertyPath: eventSystem
@@ -52036,6 +52075,11 @@ PrefabInstance:
       propertyPath: associatedPlayer
       value: 
       objectReference: {fileID: 74160656}
+    - target: {fileID: 3286897830184161593, guid: 6146772f02ed9114bb30ec85bc5ca561,
+        type: 3}
+      propertyPath: otherPlayer
+      value: 
+      objectReference: {fileID: 53627062}
     - target: {fileID: 220296105586487183, guid: 6146772f02ed9114bb30ec85bc5ca561,
         type: 3}
       propertyPath: eventSystem
@@ -52081,6 +52125,11 @@ PrefabInstance:
       propertyPath: associatedPlayer
       value: 
       objectReference: {fileID: 74160656}
+    - target: {fileID: 3286897829388642794, guid: 6146772f02ed9114bb30ec85bc5ca561,
+        type: 3}
+      propertyPath: otherPlayer
+      value: 
+      objectReference: {fileID: 53627062}
     - target: {fileID: 220296106921498460, guid: 6146772f02ed9114bb30ec85bc5ca561,
         type: 3}
       propertyPath: eventSystem
@@ -52126,6 +52175,11 @@ PrefabInstance:
       propertyPath: associatedPlayer
       value: 
       objectReference: {fileID: 74160656}
+    - target: {fileID: 3286897829051250530, guid: 6146772f02ed9114bb30ec85bc5ca561,
+        type: 3}
+      propertyPath: otherPlayer
+      value: 
+      objectReference: {fileID: 53627062}
     - target: {fileID: 220296106584132052, guid: 6146772f02ed9114bb30ec85bc5ca561,
         type: 3}
       propertyPath: eventSystem

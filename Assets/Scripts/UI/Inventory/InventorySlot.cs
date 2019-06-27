@@ -14,8 +14,11 @@ public class InventorySlot : MonoBehaviour
     public int numberOfItemsInStack = 0;
 
     public GameObject associatedPlayer;
+    public GameObject otherPlayer;
 
     private Inventory inventory;
+
+    private Inventory otherPlayerInventory;
 
     Item item;
 
@@ -30,6 +33,8 @@ public class InventorySlot : MonoBehaviour
         itemName.text = "Empty";
         numberOfItemsInSlotDisplay.text = numberOfItemsInStack.ToString();
         inventory = associatedPlayer.GetComponent<Inventory>();
+        otherPlayerInventory = otherPlayer.GetComponent<Inventory>();
+
         inventoryControlPanel = GetComponentInParent<InventoryControlPanel>();
        
 
@@ -86,6 +91,10 @@ public class InventorySlot : MonoBehaviour
             {                
                 tradePanel.gameObject.SetActive(true);
                 tradePanel.ActivateTradePanel();
+                if (item.stackable == false)
+                {
+                    inventory.Trade(item, inventory, otherPlayerInventory, 1);
+                }
             }
             
           /*  if (item.stackable)   
