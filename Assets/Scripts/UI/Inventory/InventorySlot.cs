@@ -7,6 +7,9 @@ public class InventorySlot : MonoBehaviour
     public Image icon;
     public Button removeButton;
     public TextMeshProUGUI itemName;
+
+    [SerializeField]
+    private GameObject confirmTradeButton;
     
     [SerializeField]
     private TextMeshProUGUI numberOfItemsInSlotDisplay;
@@ -88,18 +91,21 @@ public class InventorySlot : MonoBehaviour
             }
 
             if (inventoryControlPanel.IsTrading)
-            {                
-                tradePanel.gameObject.SetActive(true);
+            {                                
                 tradePanel.ActivateTradePanel();
-                if (item.stackable == false)
-                {
-                    inventory.Trade(item, inventory, otherPlayerInventory, 1);
-                }
+                inventory.onItemChangedCallback.Invoke();
 
-                if(item.stackable == true)
-                {
-                    inventory.Trade(item, inventory, otherPlayerInventory, tradePanel.amountToTrade);
-                }
+                /* if (item.stackable == false)
+                 {
+                     inventory.Trade(item, inventory, otherPlayerInventory, 1);
+                 }
+
+                 if(item.stackable == true)
+                 {
+                     inventory.Trade(item, inventory, otherPlayerInventory, tradePanel.amountToTrade);
+                 }*/
+
+                confirmTradeButton.SetActive(true);
             }
             
           /*  if (item.stackable)   
@@ -108,5 +114,18 @@ public class InventorySlot : MonoBehaviour
             }*/
         }
         
+    }
+
+    public void ConfirmTrade()
+    {
+        if (item.stackable == false)
+        {
+            inventory.Trade(item, inventory, otherPlayerInventory, 1);
+        }
+
+        if (item.stackable == true)
+        {
+            inventory.Trade(item, inventory, otherPlayerInventory, tradePanel.amountToTrade);
+        }
     }
 }

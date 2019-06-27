@@ -28,7 +28,7 @@ public class TradePanel : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        this.gameObject.SetActive(false);
+       // this.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -50,7 +50,9 @@ public class TradePanel : MonoBehaviour
 
     public void ActivateTradePanel() {
         Debug.Log("Trade panel opened");
-        amountToTradeDisplay.text = "0";
+        this.gameObject.SetActive(true);
+        //amountToTrade = 0;
+        amountToTradeDisplay.text = amountToTrade.ToString();
 
         tradeButton.Select();
         tradeButton.OnSelect(null);

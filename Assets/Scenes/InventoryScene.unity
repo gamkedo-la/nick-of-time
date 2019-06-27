@@ -52300,6 +52300,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trade Panel
       objectReference: {fileID: 0}
+    - target: {fileID: 1983665920639765859, guid: 6146772f02ed9114bb30ec85bc5ca561,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1019450384265341552, guid: 6146772f02ed9114bb30ec85bc5ca561,
         type: 3}
       propertyPath: m_textInfo.characterCount
