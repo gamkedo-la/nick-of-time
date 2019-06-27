@@ -105,7 +105,7 @@ public class AreaTriggerManager : MonoBehaviour
 						if (obj.obj != null)
 						{
 							if (obj.obj.GetComponent<DisableAfterDelay>())
-								Destroy(obj.obj.GetComponent<DisableAfterDelay>());
+								obj.obj.GetComponent<DisableAfterDelay>().Revert();
 
 							obj.obj.SetActive(true);
 						}
@@ -135,7 +135,7 @@ public class AreaTriggerManager : MonoBehaviour
 						if (obj.disableAfterLeaving)
 						{
 							if (obj.obj.GetComponent<DisableAfterDelay>())
-								Destroy(obj.obj.GetComponent<DisableAfterDelay>());
+								obj.obj.GetComponent<DisableAfterDelay>().Revert();
 
 							obj.obj.SetActive(true);
 						}

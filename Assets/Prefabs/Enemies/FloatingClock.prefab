@@ -797,7 +797,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 7
+  m_SortingOrder: 8
   m_Sprite: {fileID: 2852742513839081014, guid: d2317e3af7c5ac04bbcec137b6921a92,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1027,6 +1027,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetObjects: []
   type: 0
+  damageToPlayer: 0.15
   walkSpeed: 0.8
   walkMaxDistance: 4
   walkTime: 1
@@ -1035,9 +1036,11 @@ MonoBehaviour:
   attackSpeed: 1.4
   attackMaxDistance: 1.4
   attackSound: {fileID: 8300000, guid: 32ed1d859f4d34a41a11b51400612384, type: 3}
-  actionMinDelay: 0.4
-  actionMaxDelay: 0.8
+  actionMinDelay: 0.6
+  actionMaxDelay: 1.2
   noActionFactor: 2
+  attackCollider: {fileID: 0}
+  isAttacking: 0
 --- !u!114 &4276141235801705201
 MonoBehaviour:
   m_ObjectHideFlags: 0

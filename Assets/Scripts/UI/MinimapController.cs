@@ -36,11 +36,13 @@ public class MinimapController : MonoBehaviour
 			focus = _focus;
 			changed = false;
 		}
+		/*
 		if (Input.GetKeyDown(KeyCode.M))
 		{
 			_focus = !_focus;
 			changed = true;
 		}
+		*/
 
 		if (focus)
 		{

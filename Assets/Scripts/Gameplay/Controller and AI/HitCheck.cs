@@ -140,12 +140,21 @@ public class HitCheck : MonoBehaviour
 			}
 
 			if (GetComponent<Animator>() != null)
+			{
 				GetComponent<Animator>().SetBool("isDying", true);
+
+				Destroy(GetComponent<Collider2D>());
+				if(hpSlider) Destroy(hpSlider.gameObject.transform.parent.gameObject);
+			}
 			else
 			{
 				Destroy(GetComponent<BlinkEffect>());
 				Destroy(GetComponent<EnemyAI>());
 				Destroy(GetComponent<HitCheck>());
+
+				Destroy(GetComponent<Collider2D>());
+				if (hpSlider) Destroy(hpSlider.gameObject.transform.parent.gameObject);
+
 				gameObject.AddComponent<SpriteFadeOut>().delay = 1f;
 			}
 		}
@@ -194,8 +203,18 @@ public class HitCheck : MonoBehaviour
 		{
 			if (!gameObject.GetComponent<PlayerController>().isDashing)
 			{
-				hpDamage = 0.2f / defenseFactor;
-				knockbackValue = 4.0f;
+				DamageObject dmg = coll.gameObject.GetComponent<DamageObject>();
+
+				if (dmg != null)
+				{
+					hpDamage = dmg.hpDamage / defenseFactor;
+					knockbackValue = 0f;
+				}
+				else
+				{
+					hpDamage = coll.gameObject.transform.parent.parent.parent.GetComponent<EnemyAI>().damageToPlayer / defenseFactor;
+					knockbackValue = 4.0f;
+				}
 
 				if (breakAttackOnHit)
 					GetComponent<PlayerController>().stopAttacking();

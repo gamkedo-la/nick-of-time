@@ -14,6 +14,7 @@ public class EnemyAI : MonoBehaviour
 	};
 
 	public EnemyAIType type = EnemyAIType.Animated;
+	public float damageToPlayer = 0.1f;
 
 	[Space]
 	public float walkSpeed = 1f;
@@ -63,6 +64,7 @@ public class EnemyAI : MonoBehaviour
 	private Vector3 targetPosition = Vector3.zero;
 	private float angleAtTargetTime = 1.2f;
 	private float angleAtTargetTimer = 0f;
+	private TrailRenderer trail;
 
 	void Start () {
 		targetObjects = GameObject.FindGameObjectsWithTag("Player");
@@ -79,6 +81,9 @@ public class EnemyAI : MonoBehaviour
 		actionTimer = Random.Range(actionMinDelay, actionMaxDelay);
 
 		angleAtTargetTimer = angleAtTargetTime;
+
+		if(type == EnemyAIType.Rotational || type == EnemyAIType.Procedural)
+			trail = transform.GetChild(3).gameObject.GetComponent<TrailRenderer>();
 	}
 
 	void Update ()
@@ -233,6 +238,9 @@ public class EnemyAI : MonoBehaviour
 
 					if (isAttacking)
 					{
+						trail.Clear();
+						trail.enabled = false;
+
 						if (targetPosition != Vector3.zero)
 						{
 							attackCollider.enabled = true;
@@ -284,6 +292,8 @@ public class EnemyAI : MonoBehaviour
 					{
 						if (rotationAlt)
 						{
+							trail.enabled = true;
+
 							rotationSpeed = Mathf.Lerp(rotationSpeed, 1020f * (rotationClockwise ? -1f : 1f), 0.1f);
 
 							if (Mathf.Abs(rotationSpeed) >= 1019.5f)
@@ -293,6 +303,9 @@ public class EnemyAI : MonoBehaviour
 						}
 						else
 						{
+							trail.Clear();
+							trail.enabled = false;
+
 							rotationSpeed = Mathf.Lerp(rotationSpeed, 30f * (rotationClockwise ? -1f : 1f), 0.1f);
 
 							if (Mathf.Abs(rotationSpeed) <= 30.1f)
@@ -338,18 +351,21 @@ public class EnemyAI : MonoBehaviour
 		walkCollided = false;
 	}
 
-	void OnCollisionEnter2D()
+	void OnCollisionEnter2D( Collision2D coll )
 	{
-		walkCollided = true;
-
-		//for rotating and procedural AI
-		if (isAttacking)
+		if (!coll.gameObject.name.Contains("Player") && coll.gameObject.layer != LayerMask.NameToLayer("Player"))
 		{
-			isAttacking = false;
-			attackCollider.enabled = false;
-			actionTimer = Random.Range(actionMinDelay, actionMaxDelay);
-			targetPosition = Vector3.zero;
-			angleAtTargetTimer = angleAtTargetTime;
+			walkCollided = true;
+
+			//for rotating and procedural AI
+			if (isAttacking)
+			{
+				isAttacking = false;
+				attackCollider.enabled = false;
+				actionTimer = Random.Range(actionMinDelay, actionMaxDelay);
+				targetPosition = Vector3.zero;
+				angleAtTargetTimer = angleAtTargetTime;
+			}
 		}
 	}
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DamageObject : MonoBehaviour
 {
-	[SerializeField] private float hpDamage = 0.1f;
+	public float hpDamage = 0.1f;
 	[SerializeField] private bool disableObjectAfterDamage = false;
 	[SerializeField] private bool destroyScriptAfterDamage = false;
 	[SerializeField] private bool destroyObjectAfterDamage = false;

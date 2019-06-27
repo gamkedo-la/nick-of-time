@@ -505,6 +505,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5644491694915418969}
   - component: {fileID: 2347248020069403377}
+  - component: {fileID: 5415220513395469208}
   m_Layer: 0
   m_Name: HPbar
   m_TagString: Untagged
@@ -520,8 +521,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5001596599321363219}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.11, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 7, y: 7, z: 1}
   m_Children:
   - {fileID: 3576169988677501238}
   - {fileID: 8190108637393939883}
@@ -544,6 +545,18 @@ MonoBehaviour:
   keepShaking: 0
   delay: 0.01
   intensity: 1
+--- !u!114 &5415220513395469208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5001596599321363219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 953974c0ef115444a9adcb105bfa4adb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5078952121168552009
 GameObject:
   m_ObjectHideFlags: 0
@@ -1064,7 +1077,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.8025}
+  m_Offset: {x: 0, y: 0.74}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1075,7 +1088,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.125, y: 2.2}
+  m_Size: {x: 0.125, y: 1.675}
   m_EdgeRadius: 0
 --- !u!1 &8304482560517136456
 GameObject:
@@ -1160,7 +1173,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 7
+  m_SortingOrder: 8
   m_Sprite: {fileID: -1518419606734445466, guid: 172b581765c759d49a256a352aa1e1d3,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1355,6 +1368,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetObjects: []
   type: 1
+  damageToPlayer: 0.2
   walkSpeed: 0.6
   walkMaxDistance: 4
   walkTime: 0
@@ -1363,8 +1377,8 @@ MonoBehaviour:
   attackSpeed: 5
   attackMaxDistance: 2.6
   attackSound: {fileID: 8300000, guid: 32ed1d859f4d34a41a11b51400612384, type: 3}
-  actionMinDelay: 1
-  actionMaxDelay: 2
+  actionMinDelay: 2
+  actionMaxDelay: 4
   noActionFactor: 0
   attackCollider: {fileID: 8304214167245977039}
   isAttacking: 0

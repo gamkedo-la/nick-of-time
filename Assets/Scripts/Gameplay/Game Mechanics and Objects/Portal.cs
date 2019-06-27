@@ -13,7 +13,7 @@ public class Portal : MonoBehaviour
     private int selectedIndex = 0;
 
     public GameObject player;
-    private string attackInput = "Fire1";
+    private string attackInput = "Fire";
     private string horizontalInput = "Horizontal";
 
     private LerpToTransform playerCamera;
@@ -25,13 +25,13 @@ public class Portal : MonoBehaviour
 		if (active && player)
 		{
 			// Confirm selection with attackInput
-			if (Input.GetButtonDown(attackInput))
+			if (Input.GetButtonDown(attackInput + (player.name == "Player1" ? "1" : "2")))
 			{
 				MinimapController.instances[0].focus = false;
 				if (player.name == "Player1")
-					MinimapController.instances[1].focus = false;
-				else if (player.name == "Player2")
 					MinimapController.instances[2].focus = false;
+				else if (player.name == "Player2")
+					MinimapController.instances[1].focus = false;
 
 				TransportPlayer(exits[activePortals[selectedIndex]]);
 				playerCamera.tr = previousCameraTrack;
@@ -41,8 +41,8 @@ public class Portal : MonoBehaviour
 			}
 
 			// Change selection with horizontalInput
-			float selection = Input.GetAxisRaw(horizontalInput);
-			if (Input.GetButtonDown(horizontalInput))
+			float selection = Input.GetAxisRaw(horizontalInput + (player.name == "Player1" ? "1" : "2"));
+			if (Input.GetButtonDown(horizontalInput + (player.name == "Player1" ? "1" : "2")))
 			{
 				selectedIndex += (int)Mathf.Sign(selection);
 				if (selectedIndex < 0)
@@ -119,9 +119,9 @@ public class Portal : MonoBehaviour
 				//Minimap Focus
 				MinimapController.instances[0].focus = true;
 				if (player.name == "Player1")
-					MinimapController.instances[1].focus = true;
-				else if (player.name == "Player2")
 					MinimapController.instances[2].focus = true;
+				else if (player.name == "Player2")
+					MinimapController.instances[1].focus = true;
 			}
         }
     }

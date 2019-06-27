@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class ScreenShake : MonoBehaviour
 {
-	public void SmallShake() { StartCoroutine(Shake(0.015f, 0.2f)); }
+	public void SmallShake() { StartCoroutine(Shake(0.3f, 0.5f)); }
 
-	public void MediumShake() { StartCoroutine(Shake(0.015f, 0.4f)); }
+	public void MediumShake() { StartCoroutine(Shake(0.6f, 1f)); }
 
-	public void BigShake() { StartCoroutine(Shake(0.015f, 1f)); }
+	public void BigShake() { StartCoroutine(Shake(1f, 2f)); }
 
-	public void Earthquake() { StartCoroutine(Shake(5f, 0.25f)); }
+	public void Earthquake() { StartCoroutine(Shake(5f, 2f)); }
 
 	public IEnumerator Shake(float duration, float intensity)
 	{
