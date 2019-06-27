@@ -21,7 +21,9 @@ public class TradePanel : MonoBehaviour
     private Button cancelButton;
 
     [SerializeField]
-    private string VerticalAxis;
+    private string VerticalAxisUpKey;
+    [SerializeField]
+    private string VerticalAxisDownKey;
 
     // Start is called before the first frame update
     void Start()
@@ -32,13 +34,13 @@ public class TradePanel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetAxis(VerticalAxis) > 0.5f)
+        if(Input.GetKeyDown(VerticalAxisUpKey))
         {
             amountToTrade += 1;
             amountToTradeDisplay.text = amountToTrade.ToString();
         }
 
-        if (Input.GetAxis(VerticalAxis) < -0.5f)
+        if (Input.GetKeyDown(VerticalAxisDownKey))
         {
             amountToTrade -= 1;
             amountToTradeDisplay.text = amountToTrade.ToString();

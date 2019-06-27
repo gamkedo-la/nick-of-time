@@ -51650,6 +51650,16 @@ PrefabInstance:
       propertyPath: VerticalAxis
       value: Vertical1
       objectReference: {fileID: 0}
+    - target: {fileID: 8867092716864298254, guid: 6146772f02ed9114bb30ec85bc5ca561,
+        type: 3}
+      propertyPath: VerticalAxisUpKey
+      value: w
+      objectReference: {fileID: 0}
+    - target: {fileID: 8867092716864298254, guid: 6146772f02ed9114bb30ec85bc5ca561,
+        type: 3}
+      propertyPath: VerticalAxisDownKey
+      value: s
+      objectReference: {fileID: 0}
     - target: {fileID: 7002225674640820238, guid: 6146772f02ed9114bb30ec85bc5ca561,
         type: 3}
       propertyPath: m_Enabled
