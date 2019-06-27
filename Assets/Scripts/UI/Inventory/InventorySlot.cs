@@ -25,6 +25,8 @@ public class InventorySlot : MonoBehaviour
 
     Item item;
 
+    private int index;
+
     [SerializeField]
     private InventoryControlPanel inventoryControlPanel;
 
@@ -39,9 +41,14 @@ public class InventorySlot : MonoBehaviour
         otherPlayerInventory = otherPlayer.GetComponent<Inventory>();
 
         inventoryControlPanel = GetComponentInParent<InventoryControlPanel>();
-       
 
         tradePanel.gameObject.SetActive(false);
+
+        int index = inventory.items.IndexOf(item);
+    }
+
+    private void Update()
+    {
         
     }
 
@@ -81,7 +88,8 @@ public class InventorySlot : MonoBehaviour
 
     public void UseItem()
     {
-        if(item != null)
+
+        if (item != null)
         {
             if(inventoryControlPanel.IsTrading == false && inventoryControlPanel.IsDropping == false)
             {

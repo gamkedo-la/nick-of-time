@@ -46,6 +46,13 @@ public class TradePanel : MonoBehaviour
             amountToTradeDisplay.text = amountToTrade.ToString();
         }
 
+        if(amountToTrade < 0)
+        {
+            amountToTrade = 0;
+            amountToTradeDisplay.text = amountToTrade.ToString();
+        }
+
+
     }
 
     public void ActivateTradePanel() {
