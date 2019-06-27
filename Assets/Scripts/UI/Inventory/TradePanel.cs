@@ -53,9 +53,7 @@ public class TradePanel : MonoBehaviour
         this.gameObject.SetActive(true);
         //amountToTrade = 0;
         amountToTradeDisplay.text = amountToTrade.ToString();
-
-        tradeButton.Select();
-        tradeButton.OnSelect(null);
+        
     }
 
 }

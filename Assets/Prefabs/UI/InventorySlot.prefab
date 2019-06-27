@@ -799,7 +799,7 @@ MonoBehaviour:
   icon: {fileID: 4804616355037858262}
   removeButton: {fileID: 8532006174022391980}
   itemName: {fileID: 1215804260882213845}
-  confirmTradeButton: {fileID: 2349200657917047847}
+  confirmTradeButton: {fileID: 1128103828196743164}
   numberOfItemsInSlotDisplay: {fileID: 4394284185365228748}
   numberOfItemsInStack: 0
   associatedPlayer: {fileID: 0}

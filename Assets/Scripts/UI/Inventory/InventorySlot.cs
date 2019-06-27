@@ -9,7 +9,7 @@ public class InventorySlot : MonoBehaviour
     public TextMeshProUGUI itemName;
 
     [SerializeField]
-    private GameObject confirmTradeButton;
+    private Button confirmTradeButton;
     
     [SerializeField]
     private TextMeshProUGUI numberOfItemsInSlotDisplay;
@@ -105,7 +105,9 @@ public class InventorySlot : MonoBehaviour
                      inventory.Trade(item, inventory, otherPlayerInventory, tradePanel.amountToTrade);
                  }*/
 
-                confirmTradeButton.SetActive(true);
+                confirmTradeButton.gameObject.SetActive(true);
+                confirmTradeButton.Select();
+                confirmTradeButton.OnSelect(null);
             }
             
           /*  if (item.stackable)   
