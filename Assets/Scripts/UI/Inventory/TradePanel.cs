@@ -55,12 +55,6 @@ public class TradePanel : MonoBehaviour
 
     }
 
-    public void ActivateTradePanel() {
-        Debug.Log("Trade panel opened");
-        this.gameObject.SetActive(true);
-        //amountToTrade = 0;
-        amountToTradeDisplay.text = amountToTrade.ToString();
-        
-    }
+   
 
 }

@@ -9,6 +9,9 @@ public class InventorySlot : MonoBehaviour
     public TextMeshProUGUI itemName;
 
     [SerializeField]
+    private Button thisItemButton;
+
+    [SerializeField]
     private Button confirmTradeButton;
     
     [SerializeField]
@@ -40,16 +43,13 @@ public class InventorySlot : MonoBehaviour
         inventory = associatedPlayer.GetComponent<Inventory>();
         otherPlayerInventory = otherPlayer.GetComponent<Inventory>();
 
+        tradePanel = GetComponentInChildren<TradePanel>(true); //"true"overload Includes Inactive GameObjects
+
         inventoryControlPanel = GetComponentInParent<InventoryControlPanel>();
 
-        tradePanel.gameObject.SetActive(false);
+        //tradePanel.gameObject.SetActive(false);
 
         int index = inventory.items.IndexOf(item);
-    }
-
-    private void Update()
-    {
-        
     }
 
     public void AddItem(Item newItem)
@@ -99,31 +99,15 @@ public class InventorySlot : MonoBehaviour
             }
 
             if (inventoryControlPanel.IsTrading)
-            {                                
-                tradePanel.ActivateTradePanel();
+            {
+                tradePanel.gameObject.SetActive(true);
                 inventory.onItemChangedCallback.Invoke();
-
-                /* if (item.stackable == false)
-                 {
-                     inventory.Trade(item, inventory, otherPlayerInventory, 1);
-                 }
-
-                 if(item.stackable == true)
-                 {
-                     inventory.Trade(item, inventory, otherPlayerInventory, tradePanel.amountToTrade);
-                 }*/
 
                 confirmTradeButton.gameObject.SetActive(true);
                 confirmTradeButton.Select();
                 confirmTradeButton.OnSelect(null);
-            }
-            
-          /*  if (item.stackable)   
-            {
-                numberOfItemsInStack -= 1;
-            }*/
+            }          
         }
-        
     }
 
     public void ConfirmTrade()
@@ -137,5 +121,10 @@ public class InventorySlot : MonoBehaviour
         {
             inventory.Trade(item, inventory, otherPlayerInventory, tradePanel.amountToTrade);
         }
+        tradePanel.amountToTrade = 0;
+        tradePanel.gameObject.SetActive(false);
+
+        thisItemButton.Select();
+        thisItemButton.OnSelect(null);
     }
 }
