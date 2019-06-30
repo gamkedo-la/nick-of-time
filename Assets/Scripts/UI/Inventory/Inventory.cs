@@ -113,6 +113,7 @@ public class Inventory : MonoBehaviour
             if (itemsInSlot[index] <= 0)
             {
                 givingInventory.Remove(itemToTrade);
+                givingInventory.itemsInSlot.RemoveAt(index);
             }
             onItemChangedCallback.Invoke();
         }
