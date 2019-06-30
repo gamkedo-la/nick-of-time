@@ -128,12 +128,7 @@ public class InventorySlot : MonoBehaviour
         if (item.stackable == true)
         {
             inventory.Trade(item, inventory, otherPlayerInventory, tradePanel.amountToTrade);
-
-            if (inventory.itemsInSlot[index] <= 0)
-            {
-                Debug.Log("number of items in invetory slot " + inventory.itemsInSlot[index]);
-                inventory.Remove(item);
-            }
+          
         }
         tradePanel.amountToTrade = 0;
         tradePanel.gameObject.SetActive(false);
