@@ -120,12 +120,14 @@ public class InventorySlot : MonoBehaviour
 
     public void ConfirmTrade()
     {
+        
+
         if (item.stackable == false)
         {
             inventory.Trade(item, inventory, otherPlayerInventory, 1);
         }
 
-        if (item.stackable == true)
+        if (item.stackable == true && tradePanel.amountToTrade != 0)
         {
             inventory.Trade(item, inventory, otherPlayerInventory, tradePanel.amountToTrade);
           

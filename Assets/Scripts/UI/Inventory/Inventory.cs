@@ -91,6 +91,9 @@ public class Inventory : MonoBehaviour
         {
             givingInventory.Remove(itemToTrade);
             recievingInventory.Add(itemToTrade);
+
+            givingInventory.itemsInSlot.RemoveAt(index);
+            recievingInventory.itemsInSlot.Add(recievingInventory.itemsInSlot[index]);
         }
 
         if(itemToTrade.stackable == true)
