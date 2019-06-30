@@ -118,7 +118,7 @@ public class Inventory : MonoBehaviour
                 givingInventory.Remove(itemToTrade);
                 givingInventory.itemsInSlot.RemoveAt(index);
             }
-            onItemChangedCallback.Invoke();
         }
+        onItemChangedCallback.Invoke();
     }
 }

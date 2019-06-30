@@ -9,7 +9,7 @@ public class TradePanel : MonoBehaviour
     public int amountToTrade;
 
     [SerializeField]
-    private TextMeshProUGUI amountToTradeDisplay;
+    public TextMeshProUGUI amountToTradeDisplay;
 
     [SerializeField]
     private Button increaseTradeAmountButton;
@@ -30,7 +30,6 @@ public class TradePanel : MonoBehaviour
     {
        // this.gameObject.SetActive(false);
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -51,10 +50,5 @@ public class TradePanel : MonoBehaviour
             amountToTrade = 0;
             amountToTradeDisplay.text = amountToTrade.ToString();
         }
-
-
     }
-
-   
-
 }
