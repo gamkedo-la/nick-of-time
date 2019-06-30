@@ -52,6 +52,14 @@ public class InventorySlot : MonoBehaviour
         int index = inventory.items.IndexOf(item);
     }
 
+    private void Update()
+    {
+        if (Input.GetButtonDown("Inventory1") && inventoryControlPanel.IsTrading)
+        {
+            CancelTrade();
+        }              
+    }
+
     public void AddItem(Item newItem)
     {
         item = newItem;
@@ -120,11 +128,26 @@ public class InventorySlot : MonoBehaviour
         if (item.stackable == true)
         {
             inventory.Trade(item, inventory, otherPlayerInventory, tradePanel.amountToTrade);
+
+            if (inventory.itemsInSlot[index] <= 0)
+            {
+                Debug.Log("number of items in invetory slot " + inventory.itemsInSlot[index]);
+                inventory.Remove(item);
+            }
         }
         tradePanel.amountToTrade = 0;
         tradePanel.gameObject.SetActive(false);
 
+        inventory.onItemChangedCallback.Invoke();
+
         thisItemButton.Select();
         thisItemButton.OnSelect(null);
+    }
+
+    public void CancelTrade()
+    {
+        inventoryControlPanel.tradeButton.Select();
+        inventoryControlPanel.tradeButton.OnSelect(null);
+
     }
 }

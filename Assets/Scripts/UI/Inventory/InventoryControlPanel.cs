@@ -1,9 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventoryControlPanel : MonoBehaviour
 {
+
+    public Button useButton;
+    public Button tradeButton;
+    public Button dropButton;
 
     private bool isTrading = false;
 
