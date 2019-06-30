@@ -48,9 +48,12 @@ public class EquipmentManager : MonoBehaviour
 
     public void Equip(Equipment newItem) 
     {
-        Player.GetComponent<Subtitles>().Caption("Equipped " + newItem.name);
-        
-        newItem.equipmentManager = this;
+		if(Player.name == "Player1")
+			Subtitles.AddPlayer1Subtitle("Equipped " + newItem.name);
+		else
+			Subtitles.AddPlayer2Subtitle("Equipped " + newItem.name);
+
+		newItem.equipmentManager = this;
         int slotIndex = (int)newItem.equipSlot;
 
         int index = inventory.items.IndexOf(newItem);

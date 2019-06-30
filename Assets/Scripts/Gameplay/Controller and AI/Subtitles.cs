@@ -7,30 +7,76 @@ using TMPro;
 // example: "picked up a potion"
 public class Subtitles : MonoBehaviour
 {
-    public TextMeshProUGUI SubtitlesTextMesh;
     public float fadePerFrame = 0.005f;
-
+	
+	private TextMeshProUGUI[] texts;
     private float alpha = 1f;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        if (!SubtitlesTextMesh) return;
-        Caption("Subtitles: ON");
-    }
 
-    // Update is called once per frame
+	static public void AddPlayer1Subtitle(string str)
+	{
+		p1Subtitles[0].Caption(str);
+		p1Subtitles[1].Caption(str);
+	}
+
+	static public void AddPlayer2Subtitle(string str)
+	{
+		p2Subtitles[0].Caption(str);
+		p2Subtitles[1].Caption(str);
+	}
+
+	static private Subtitles[] p1Subtitles = new Subtitles[2];
+	static private Subtitles[] p2Subtitles = new Subtitles[2];
+	
+	void Start()
+    {
+		texts = new TextMeshProUGUI[transform.childCount];
+
+		for (int i = 0; i < transform.childCount; i++)
+		{
+			texts[i] = transform.GetChild(i).gameObject.GetComponent<TextMeshProUGUI>();
+		}
+
+		if (name.Contains("P1"))
+		{
+			if (p1Subtitles[0] == null) p1Subtitles[0] = this;
+			else if (p1Subtitles[1] == null) p1Subtitles[1] = this;
+		}
+		else if (name.Contains("P2"))
+		{
+			if (p2Subtitles[0] == null) p2Subtitles[0] = this;
+			else if (p2Subtitles[1] == null) p2Subtitles[1] = this;
+		}
+
+		Caption("Subtitles: ON");
+    }
+	
     void Update()
     {
-        if (!SubtitlesTextMesh) return;
-        alpha -= fadePerFrame;
-        if (alpha < 0f) alpha = 0f;
-        SubtitlesTextMesh.color = Color.Lerp(Color.white, Color.clear, 1f - alpha);
+		for (int i = 0; i < transform.childCount; i++)
+		{
+			Color col = texts[i].color;
+			col.a = Mathf.Lerp(col.a, 0f, fadePerFrame);
+			texts[i].color = col;
+		}
     }
 
-    public void Caption(string Str) {
-        Debug.Log("Caption: " + Str);
-        SubtitlesTextMesh.text = Str;
-        alpha = 1f;
+    public void Caption(string str)
+	{
+		for (int n = 0; n < transform.childCount; n++)
+		{
+			texts[n].color -= new Color(0f, 0f, 0f, 0.1f);
+			texts[n].gameObject.transform.localPosition -= new Vector3(0f, 40f, 0f);
+		}
+		
+		for (int i = 0; i < transform.childCount; i++)
+		{
+			if (texts[i].gameObject.transform.localPosition == new Vector3(0f, -80f, 0f))
+			{
+				texts[i].text = str;
+				texts[i].color = Color.white;
+				texts[i].gameObject.transform.localPosition = new Vector3(0f, 40f, 0f);
+				break;
+			}
+		}
     }
 }

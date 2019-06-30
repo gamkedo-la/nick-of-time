@@ -90,9 +90,7 @@ public class PlayerController : MonoBehaviour
 
 	static private float timeSlowMoTimer = 0f;
 	private float timeSlowMoEffectValue = 0f;
-
-	private Subtitles subtitle = null; 
-
+	
 	private void Start()
 	{
 		if (name == "Player1") playerNo = 1;
@@ -102,7 +100,6 @@ public class PlayerController : MonoBehaviour
 		animator = GetComponent<Animator>();
 		sprRenderer = GetComponent<SpriteRenderer>();
 		hitCheck = GetComponent<HitCheck>();
-		subtitle = GetComponent<Subtitles>();
 
 		aud = GetComponent<AudioSource>();
 		if (aud == null)
@@ -191,6 +188,11 @@ public class PlayerController : MonoBehaviour
 					
 					speed = attackSpeed * (1 + (4 * timeSlowMoEffectValue));
 
+					if (playerNo == 1)
+						Subtitles.AddPlayer1Subtitle("TEST_Player 1 Attacking");
+					else if (playerNo == 2)
+						Subtitles.AddPlayer2Subtitle("TEST_Player 2 Attacking");
+
 					if (animator.GetBool("isWalking"))
 						attackSpeedTimer = attackSpeedTime;
 					else
@@ -237,6 +239,11 @@ public class PlayerController : MonoBehaviour
 				animator.SetBool("isPushing", true);
 				speed = 0f;
 
+				if (playerNo == 1)
+					Subtitles.AddPlayer1Subtitle("TEST_Player 1 Pushing");
+				else if (playerNo == 2)
+					Subtitles.AddPlayer2Subtitle("TEST_Player 2 Pushing");
+
 				actionPoints -= pushActionDeplete;
 
 				pushPossible = false;
@@ -258,6 +265,11 @@ public class PlayerController : MonoBehaviour
 				isDashing = true;
 				dashTimer = dashTime / (1 + (4 * timeSlowMoEffectValue));
 				speed = dashSpeed * (1 + (4 * timeSlowMoEffectValue));
+
+				if (playerNo == 1)
+					Subtitles.AddPlayer1Subtitle("TEST_Player 1 Dashing");
+				else if (playerNo == 2)
+					Subtitles.AddPlayer2Subtitle("TEST_Player 2 Dashing");
 
 				//animator.SetBool("isWalking", false);
 
@@ -299,6 +311,11 @@ public class PlayerController : MonoBehaviour
 			{
 				animator.SetBool("isThrowing", true);
 				speed = attackSpeed * (1 + (4 * timeSlowMoEffectValue));
+
+				if (playerNo == 1)
+					Subtitles.AddPlayer1Subtitle("TEST_Player 1 Throwing");
+				else if (playerNo == 2)
+					Subtitles.AddPlayer2Subtitle("TEST_Player 2 Throwing");
 
 				attackSpeedTimer = attackSpeedTime / 2f;
 
@@ -628,9 +645,6 @@ public class PlayerController : MonoBehaviour
 			
 			if (hitComboCount >= 3)
 			{
-				
-				if (wasHitCritical) subtitle.Caption("Combo x" + hitComboCount + "!");
-
 				if (lastHitComboTextObject != null)
 				{
 					lastHitComboTextObject.transform.GetChild(0).GetComponent<Animator>().Play("HitComboPop", 0, 0f);
@@ -652,17 +666,32 @@ public class PlayerController : MonoBehaviour
 
 						lastHitComboTextObject.transform.GetChild(0).GetChild(0).gameObject.GetComponent<TextMeshPro>().text = "slow mo!";
 						lastHitComboTextObject.transform.GetChild(0).GetChild(1).gameObject.GetComponent<TextMeshPro>().text = "slow mo!";
+
+						if (playerNo == 1)
+							Subtitles.AddPlayer1Subtitle("Slow Mo! Combo x" + hitComboCount.ToString() + "!");
+						else
+							Subtitles.AddPlayer2Subtitle("Slow Mo! Combo x" + hitComboCount.ToString() + "!");
 					}
 					else
 					{
 						lastHitComboTextObject.transform.GetChild(0).GetChild(0).gameObject.GetComponent<TextMeshPro>().text = "critical!";
 						lastHitComboTextObject.transform.GetChild(0).GetChild(1).gameObject.GetComponent<TextMeshPro>().text = "critical!";
+
+						if (playerNo == 1)
+							Subtitles.AddPlayer1Subtitle("Critical! Combo x" + hitComboCount.ToString() + "!");
+						else
+							Subtitles.AddPlayer2Subtitle("Critical! Combo x" + hitComboCount.ToString() + "!");
 					}
 				}
 				else
 				{
 					lastHitComboTextObject.transform.GetChild(0).GetChild(0).gameObject.GetComponent<TextMeshPro>().text = "combo x" + hitComboCount.ToString();
 					lastHitComboTextObject.transform.GetChild(0).GetChild(1).gameObject.GetComponent<TextMeshPro>().text = "combo x" + hitComboCount.ToString();
+
+					if (playerNo == 1)
+						Subtitles.AddPlayer1Subtitle("Combo x" + hitComboCount.ToString() + "!");
+					else
+						Subtitles.AddPlayer2Subtitle("Combo x" + hitComboCount.ToString() + "!");
 				}
 			}
 		}
@@ -681,7 +710,7 @@ public class PlayerController : MonoBehaviour
 		if(hitComboCount >= 3 && !wasHitCritical)
 			wasHitCritical = Random.Range(0f, 1f) < criticalHitChance * hitComboCount;
 
-		if (wasHitCritical) subtitle.Caption("Critical Hit! Combo x" + hitComboCount + "!");
+		if (wasHitCritical) Subtitles.AddPlayer2Subtitle("Critical Hit! Combo x" + hitComboCount + "!");
 
 		return wasHitCritical;
 	}
