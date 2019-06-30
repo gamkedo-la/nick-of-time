@@ -85,7 +85,9 @@ public class Inventory : MonoBehaviour
 
     public void Trade(Item itemToTrade, Inventory givingInventory, Inventory recievingInventory, int amountToTrade)
     {
-        if(itemToTrade.stackable == false)
+        int index = items.IndexOf(itemToTrade);
+
+        if (itemToTrade.stackable == false)
         {
             givingInventory.Remove(itemToTrade);
             recievingInventory.Add(itemToTrade);
@@ -93,6 +95,10 @@ public class Inventory : MonoBehaviour
 
         if(itemToTrade.stackable == true)
         {
+            if(amountToTrade >= itemsInSlot[index])
+            {
+                amountToTrade = itemsInSlot[index];
+            }
             givingInventory.AddToStack(itemToTrade, -amountToTrade);
             if(recievingInventory.HasItem(itemToTrade) == true)
             {
@@ -103,6 +109,12 @@ public class Inventory : MonoBehaviour
                 recievingInventory.Add(itemToTrade);
                 recievingInventory.AddToStack(itemToTrade, amountToTrade);
             }
+
+            if (itemsInSlot[index] <= 0)
+            {
+                givingInventory.Remove(itemToTrade);
+            }
+            onItemChangedCallback.Invoke();
         }
     }
 }
