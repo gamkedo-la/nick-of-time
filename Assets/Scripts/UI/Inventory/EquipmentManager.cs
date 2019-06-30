@@ -48,6 +48,8 @@ public class EquipmentManager : MonoBehaviour
 
     public void Equip(Equipment newItem) 
     {
+        Player.GetComponent<Subtitles>().Caption("Equipped " + newItem.name);
+        
         newItem.equipmentManager = this;
         int slotIndex = (int)newItem.equipSlot;
 

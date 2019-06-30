@@ -91,6 +91,8 @@ public class PlayerController : MonoBehaviour
 	static private float timeSlowMoTimer = 0f;
 	private float timeSlowMoEffectValue = 0f;
 
+	private Subtitles subtitle = null; 
+
 	private void Start()
 	{
 		if (name == "Player1") playerNo = 1;
@@ -100,6 +102,7 @@ public class PlayerController : MonoBehaviour
 		animator = GetComponent<Animator>();
 		sprRenderer = GetComponent<SpriteRenderer>();
 		hitCheck = GetComponent<HitCheck>();
+		subtitle = GetComponent<Subtitles>();
 
 		aud = GetComponent<AudioSource>();
 		if (aud == null)
@@ -625,6 +628,9 @@ public class PlayerController : MonoBehaviour
 			
 			if (hitComboCount >= 3)
 			{
+				
+				if (wasHitCritical) subtitle.Caption("Combo x" + hitComboCount + "!");
+
 				if (lastHitComboTextObject != null)
 				{
 					lastHitComboTextObject.transform.GetChild(0).GetComponent<Animator>().Play("HitComboPop", 0, 0f);
@@ -674,6 +680,8 @@ public class PlayerController : MonoBehaviour
 	{
 		if(hitComboCount >= 3 && !wasHitCritical)
 			wasHitCritical = Random.Range(0f, 1f) < criticalHitChance * hitComboCount;
+
+		if (wasHitCritical) subtitle.Caption("Critical Hit! Combo x" + hitComboCount + "!");
 
 		return wasHitCritical;
 	}
