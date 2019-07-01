@@ -10,8 +10,9 @@ public class SetupSinglePlayerMode : MonoBehaviour {
 	}
 	
 	void Update () {
-		if(SceneManager.GetActiveScene().name == "Story1"
-		|| SceneManager.GetActiveScene().name == "Arena")
+		if(GameManager.singleGame &&
+		(SceneManager.GetActiveScene().name.Contains("Story")
+		|| SceneManager.GetActiveScene().name == "Arena"))
 			setup();
 	}
 	
@@ -40,13 +41,16 @@ public class SetupSinglePlayerMode : MonoBehaviour {
 		
 		// To make sure GameObject.FindGameObjectsWithTag("Player2Only") includes T0Grp
 		GameObject lightingAndBlocks = GameObject.Find("LightingAndBlocks");
-		Transform[] tutorials = lightingAndBlocks.GetComponentsInChildren<Transform>(true);		
-		
-		for (int i = 1; i < tutorials.Length; i++)
+		if (lightingAndBlocks != null)
 		{
-			if (tutorials[i].CompareTag("Player2Only"))
+			Transform[] tutorials = lightingAndBlocks.GetComponentsInChildren<Transform>(true);
+
+			for (int i = 1; i < tutorials.Length; i++)
 			{
-				Destroy(tutorials[i].gameObject);
+				if (tutorials[i].CompareTag("Player2Only"))
+				{
+					Destroy(tutorials[i].gameObject);
+				}
 			}
 		}
 

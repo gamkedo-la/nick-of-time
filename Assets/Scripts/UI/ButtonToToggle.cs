@@ -9,6 +9,7 @@ public class ButtonToToggle : MonoBehaviour {
 	public bool forSingleWindow = false;
 	public bool forCoop = false;
 	public bool forStory = false;
+	public bool forSubtitles = false;
 
 	public AudioClip clickSound;
 	
@@ -31,30 +32,32 @@ public class ButtonToToggle : MonoBehaviour {
 		}
 		if(aud == null)
 			aud = FindObjectOfType<AudioSource>();
+
+		UpdateState();
 	}
 	
-	void Update () {
-		if(forMusic)
+	void UpdateState () {
+		if (forMusic)
 		{
-			gameObject.transform.GetChild(0).gameObject.SetActive( TogglesValues.music );
-			gameObject.transform.GetChild(1).gameObject.SetActive( !TogglesValues.music );
+			gameObject.transform.GetChild(0).gameObject.SetActive(TogglesValues.music);
+			gameObject.transform.GetChild(1).gameObject.SetActive(!TogglesValues.music);
 		}
-		else if(forSound)
+		else if (forSound)
 		{
-			gameObject.transform.GetChild(0).gameObject.SetActive( TogglesValues.sound );
-			gameObject.transform.GetChild(1).gameObject.SetActive( !TogglesValues.sound );
+			gameObject.transform.GetChild(0).gameObject.SetActive(TogglesValues.sound);
+			gameObject.transform.GetChild(1).gameObject.SetActive(!TogglesValues.sound);
 		}
-		else if(forSingleWindow)
+		else if (forSingleWindow)
 		{
-			gameObject.transform.GetChild(0).gameObject.SetActive( TogglesValues.singleWindow );
-			gameObject.transform.GetChild(1).gameObject.SetActive( !TogglesValues.singleWindow );
+			gameObject.transform.GetChild(0).gameObject.SetActive(TogglesValues.singleWindow);
+			gameObject.transform.GetChild(1).gameObject.SetActive(!TogglesValues.singleWindow);
 		}
-		else if(forCoop)
+		else if (forCoop)
 		{
-			gameObject.transform.GetChild(0).gameObject.SetActive( TogglesValues.coop );
-			gameObject.transform.GetChild(1).gameObject.SetActive( !TogglesValues.coop );
-			
-			if(TogglesValues.story)
+			gameObject.transform.GetChild(0).gameObject.SetActive(TogglesValues.coop);
+			gameObject.transform.GetChild(1).gameObject.SetActive(!TogglesValues.coop);
+
+			if (TogglesValues.story)
 			{
 				gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0.5f);
 				gameObject.GetComponent<ScaleOnMouseOver>().newScale = new Vector3(300f, 300f, 300f);
@@ -66,72 +69,60 @@ public class ButtonToToggle : MonoBehaviour {
 				gameObject.GetComponent<ScaleOnMouseOver>().newScale = new Vector3(350f, 350f, 350f);
 			}
 		}
-		else if(forStory)
+		else if (forStory)
 		{
-			if(TogglesValues.story)
+			if (TogglesValues.story)
 				TogglesValues.coop = true;
-			
-			gameObject.transform.GetChild(0).gameObject.SetActive( TogglesValues.story );
-			gameObject.transform.GetChild(1).gameObject.SetActive( !TogglesValues.story );
-			}
+
+			gameObject.transform.GetChild(0).gameObject.SetActive(TogglesValues.story);
+			gameObject.transform.GetChild(1).gameObject.SetActive(!TogglesValues.story);
+		}
+		else if (forSubtitles)
+		{
+			gameObject.transform.GetChild(0).gameObject.SetActive(TogglesValues.subtitles);
+			gameObject.transform.GetChild(1).gameObject.SetActive(!TogglesValues.subtitles);
+		}
 	}
 	
 	void OnMouseOver() {
 		if(Input.GetMouseButtonDown(0))
 		{
-			
-			if(forMusic)
+			if (aud != null && TogglesValues.sound)
 			{
-				if(aud != null && TogglesValues.sound)
-				{
-					aud.PlayOneShot(clickSound);
-				}
-				
+				aud.PlayOneShot(clickSound);
+			}
+
+			if (forMusic)
+			{
 				TogglesValues.music = !TogglesValues.music;
-				
-				if(aud.isPlaying && !TogglesValues.music)
+
+				if (aud.isPlaying && !TogglesValues.music)
 					aud.Stop();
-				else if(TogglesValues.music)
+				else if (TogglesValues.music)
 					aud.gameObject.GetComponent<MusicManager>().changeMusicState("MusicToggle");
 			}
-			else if(forSound)
+			else if (forSound)
 			{
-				if(aud != null && TogglesValues.sound)
-				{
-					aud.PlayOneShot(clickSound);
-				}
-				
 				TogglesValues.sound = !TogglesValues.sound;
 			}
-			else if(forSingleWindow)
+			else if (forSingleWindow)
 			{
-				if(aud != null && TogglesValues.sound)
-				{
-					aud.PlayOneShot(clickSound);
-				}
-				
 				TogglesValues.singleWindow = !TogglesValues.singleWindow;
 			}
-			else if(forCoop && !TogglesValues.story)
+			else if (forCoop && !TogglesValues.story)
 			{
-				if(aud != null && TogglesValues.sound)
-				{
-					aud.PlayOneShot(clickSound);
-				}
-				
 				TogglesValues.coop = !TogglesValues.coop;
 			}
-			else if(forStory)
+			else if (forStory)
 			{
-				if(aud != null && TogglesValues.sound)
-				{
-					aud.PlayOneShot(clickSound);
-				}
-				
 				TogglesValues.story = !TogglesValues.story;
 			}
-			
-			
+			else if (forSubtitles)
+			{
+				TogglesValues.subtitles = !TogglesValues.subtitles;
+			}
+
+			UpdateState();
 		}
 	}
 }

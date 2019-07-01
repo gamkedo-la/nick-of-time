@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 74871542}
   - component: {fileID: 74871541}
   m_Layer: 0
-  m_Name: Coop Or VS.ToggleN
+  m_Name: Subtitles ToggleN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -112,7 +112,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: VS
+  m_text: OFF
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3a13cf1699052b459e0104421c84054, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -337,6 +337,7 @@ MonoBehaviour:
   forSingleWindow: 0
   forCoop: 0
   forStory: 0
+  forSubtitles: 0
   clickSound: {fileID: 8300000, guid: 3ac4326bbe10ffb42b9652b3dd6cbbc3, type: 3}
 --- !u!114 &201502943
 MonoBehaviour:
@@ -2229,7 +2230,7 @@ GameObject:
   - component: {fileID: 860579853}
   - component: {fileID: 860579857}
   m_Layer: 0
-  m_Name: Coop Or VS.Toggle
+  m_Name: Subtitles Toggle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2327,7 +2328,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Coop
+  m_text: ON
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3a13cf1699052b459e0104421c84054, type: 2}
   m_sharedMaterial: {fileID: -2134230250208531588, guid: e3a13cf1699052b459e0104421c84054,
@@ -2397,13 +2398,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 860579853}
-    characterCount: 4
+    characterCount: 0
     spriteCount: 0
     spaceCount: 0
-    wordCount: 1
+    wordCount: 0
     linkCount: 0
-    lineCount: 1
-    pageCount: 1
+    lineCount: 0
+    pageCount: 0
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -2451,12 +2452,12 @@ GameObject:
   - component: {fileID: 982607362}
   - component: {fileID: 982607366}
   m_Layer: 0
-  m_Name: Coop Or VS.
+  m_Name: Subtitles Toggle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &982607361
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2549,7 +2550,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Coop Or VS
+  m_text: Subtitles/Captions
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3a13cf1699052b459e0104421c84054, type: 2}
   m_sharedMaterial: {fileID: -2134230250208531588, guid: e3a13cf1699052b459e0104421c84054,
@@ -2619,13 +2620,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 982607362}
-    characterCount: 10
+    characterCount: 0
     spriteCount: 0
-    spaceCount: 2
-    wordCount: 3
+    spaceCount: 0
+    wordCount: 0
     linkCount: 0
-    lineCount: 1
-    pageCount: 1
+    lineCount: 0
+    pageCount: 0
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -2673,12 +2674,12 @@ GameObject:
   - component: {fileID: 1148182272}
   - component: {fileID: 1148182276}
   m_Layer: 0
-  m_Name: Coop Or VS.ToggleButton
+  m_Name: Subtitles Toggle Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1148182271
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2717,7 +2718,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 37efaa681c6aa3040a7b7c8146f09c50, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2789,8 +2790,9 @@ MonoBehaviour:
   forMusic: 0
   forSound: 0
   forSingleWindow: 0
-  forCoop: 1
+  forCoop: 0
   forStory: 0
+  forSubtitles: 1
   clickSound: {fileID: 8300000, guid: 3ac4326bbe10ffb42b9652b3dd6cbbc3, type: 3}
 --- !u!114 &1148182272
 MonoBehaviour:
@@ -3036,6 +3038,7 @@ MonoBehaviour:
   forSingleWindow: 0
   forCoop: 0
   forStory: 0
+  forSubtitles: 0
   clickSound: {fileID: 8300000, guid: 3ac4326bbe10ffb42b9652b3dd6cbbc3, type: 3}
 --- !u!114 &1336551348
 MonoBehaviour:
@@ -3200,6 +3203,7 @@ MonoBehaviour:
   forSingleWindow: 1
   forCoop: 0
   forStory: 0
+  forSubtitles: 0
   clickSound: {fileID: 8300000, guid: 3ac4326bbe10ffb42b9652b3dd6cbbc3, type: 3}
 --- !u!114 &1348771235
 MonoBehaviour:
@@ -4030,6 +4034,7 @@ MonoBehaviour:
   forSingleWindow: 0
   forCoop: 0
   forStory: 1
+  forSubtitles: 0
   clickSound: {fileID: 8300000, guid: 3ac4326bbe10ffb42b9652b3dd6cbbc3, type: 3}
 --- !u!114 &1718090495
 MonoBehaviour:
@@ -4721,7 +4726,7 @@ RectTransform:
   - {fileID: 2244687017970322623}
   - {fileID: 4461612312934253593}
   m_Father: {fileID: 1972727292967040528}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4908,6 +4913,7 @@ GameObject:
   - component: {fileID: 1972727292967040528}
   - component: {fileID: 5654304113142681303}
   - component: {fileID: 1795157725715412963}
+  - component: {fileID: 8988140812289489041}
   m_Layer: 0
   m_Name: PlayMenu
   m_TagString: Untagged
@@ -4927,8 +4933,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7297941490688647330}
-  - {fileID: 9066975439605518219}
   - {fileID: 5947544534626822833}
+  - {fileID: 9066975439605518219}
   - {fileID: 175715869742447490}
   - {fileID: 1988126990247312503}
   - {fileID: 1988126989830972583}
@@ -4979,6 +4985,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   setState: 0
+--- !u!114 &8988140812289489041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335566642813247151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f9485e8b8c334046bd1136ad326f537, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  singlePlayerSetup: {fileID: 1138517928633368, guid: 08e5fbe869b721f46acbf2ab6ca566bb,
+    type: 3}
+  deselectedColor: {r: 0.78431374, g: 0.49019608, b: 0.29411766, a: 0.5882353}
+  selectedColor: {r: 1, g: 0.88235295, b: 0.6839622, a: 1}
+  clickSound: {fileID: 8300000, guid: 3ac4326bbe10ffb42b9652b3dd6cbbc3, type: 3}
 --- !u!1 &341864362906537765
 GameObject:
   m_ObjectHideFlags: 0
@@ -4990,9 +5013,9 @@ GameObject:
   - component: {fileID: 712285272073746905}
   - component: {fileID: 3216205167445517017}
   - component: {fileID: 6881481294493710464}
-  - component: {fileID: 2943786179826178375}
   - component: {fileID: 2816868188427940907}
   - component: {fileID: 2132129083689488014}
+  - component: {fileID: 7594957377549920582}
   m_Layer: 0
   m_Name: TruePlayButton
   m_TagString: Untagged
@@ -5059,7 +5082,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 95868a9851dab744b85871d09f3450b6, type: 3}
-  m_Color: {r: 1, g: 0, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.6666667, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -5095,19 +5118,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.54}
   m_EdgeRadius: 0
---- !u!114 &2943786179826178375
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 341864362906537765}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a433bc745db1cd49a61326233cb467e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clickSound: {fileID: 8300000, guid: 3ac4326bbe10ffb42b9652b3dd6cbbc3, type: 3}
 --- !u!114 &2816868188427940907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5138,6 +5148,34 @@ MonoBehaviour:
   text: 0
   text_noUI: 0
   delay: 0.6
+--- !u!114 &7594957377549920582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341864362906537765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b117104f3100724397b782130a9be74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8988140812289489041}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &352073282820511677
 GameObject:
   m_ObjectHideFlags: 0
@@ -5679,9 +5717,9 @@ GameObject:
   - component: {fileID: 3691146999467413301}
   - component: {fileID: 4835544045046774760}
   - component: {fileID: 1420802519762893241}
-  - component: {fileID: 3971549294293361146}
   - component: {fileID: 5797372088762655540}
   - component: {fileID: 3786062768064265117}
+  - component: {fileID: 7126116474601414299}
   m_Layer: 0
   m_Name: P1ControlsButton
   m_TagString: Untagged
@@ -5748,7 +5786,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 95868a9851dab744b85871d09f3450b6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.49019608, g: 1, b: 0.49019608, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -5784,20 +5822,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.24, y: 0.36}
   m_EdgeRadius: 0
---- !u!114 &3971549294293361146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1219578424277186213}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2428f4d675f28b42854d5dc76332dcc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  setup: {fileID: 1138517928633368, guid: 08e5fbe869b721f46acbf2ab6ca566bb, type: 3}
-  clickSound: {fileID: 8300000, guid: 3ac4326bbe10ffb42b9652b3dd6cbbc3, type: 3}
 --- !u!114 &5797372088762655540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5828,6 +5852,34 @@ MonoBehaviour:
   text: 0
   text_noUI: 0
   delay: 0.6
+--- !u!114 &7126116474601414299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1219578424277186213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b117104f3100724397b782130a9be74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8988140812289489041}
+        m_MethodName: SelectP1Controls
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1241745672857255109
 GameObject:
   m_ObjectHideFlags: 0
@@ -7782,9 +7834,9 @@ GameObject:
   - component: {fileID: 1988126989830972583}
   - component: {fileID: 1988126989830972603}
   - component: {fileID: 1988126989830972602}
-  - component: {fileID: 1988126989830972601}
   - component: {fileID: 1988126989830972600}
   - component: {fileID: 909521354}
+  - component: {fileID: 2671355053163555912}
   m_Layer: 0
   m_Name: DoubleButton
   m_TagString: Untagged
@@ -7851,7 +7903,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 95868a9851dab744b85871d09f3450b6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.88235295, b: 0.6839622, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -7887,19 +7939,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.24, y: 0.36}
   m_EdgeRadius: 0
---- !u!114 &1988126989830972601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1988126989830972582}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a433bc745db1cd49a61326233cb467e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clickSound: {fileID: 8300000, guid: 3ac4326bbe10ffb42b9652b3dd6cbbc3, type: 3}
 --- !u!114 &1988126989830972600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7930,6 +7969,34 @@ MonoBehaviour:
   text: 0
   text_noUI: 0
   delay: 0.6
+--- !u!114 &2671355053163555912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1988126989830972582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b117104f3100724397b782130a9be74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8988140812289489041}
+        m_MethodName: SelectDouble
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1988126989832250778
 GameObject:
   m_ObjectHideFlags: 0
@@ -8455,9 +8522,9 @@ GameObject:
   - component: {fileID: 1988126990247312503}
   - component: {fileID: 1988126990247312520}
   - component: {fileID: 1988126990247312523}
-  - component: {fileID: 1988126990247312522}
   - component: {fileID: 1988126990247312521}
   - component: {fileID: 1746551362}
+  - component: {fileID: 2739884998189909335}
   m_Layer: 0
   m_Name: SingleButton
   m_TagString: Untagged
@@ -8524,7 +8591,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 95868a9851dab744b85871d09f3450b6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.88235295, b: 0.6839622, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -8560,20 +8627,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.24, y: 0.36}
   m_EdgeRadius: 0
---- !u!114 &1988126990247312522
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1988126990247312502}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2428f4d675f28b42854d5dc76332dcc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  setup: {fileID: 1138517928633368, guid: 08e5fbe869b721f46acbf2ab6ca566bb, type: 3}
-  clickSound: {fileID: 8300000, guid: 3ac4326bbe10ffb42b9652b3dd6cbbc3, type: 3}
 --- !u!114 &1988126990247312521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8604,6 +8657,34 @@ MonoBehaviour:
   text: 0
   text_noUI: 0
   delay: 0.6
+--- !u!114 &2739884998189909335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1988126990247312502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b117104f3100724397b782130a9be74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8988140812289489041}
+        m_MethodName: SelectSingle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1988126990531163096
 GameObject:
   m_ObjectHideFlags: 0
@@ -9576,8 +9657,8 @@ GameObject:
   - component: {fileID: 6798350006556197331}
   - component: {fileID: 1813770098718437868}
   - component: {fileID: 2030679807575324361}
-  - component: {fileID: 6920675790558853386}
   - component: {fileID: 4234216446880251715}
+  - component: {fileID: 3435815703627271537}
   m_Layer: 0
   m_Name: ArenaCoopButton
   m_TagString: Untagged
@@ -9644,7 +9725,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 95868a9851dab744b85871d09f3450b6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.88235295, b: 0.6839622, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -9680,19 +9761,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.24, y: 0.36}
   m_EdgeRadius: 0
---- !u!114 &6920675790558853386
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2042740099683499740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a433bc745db1cd49a61326233cb467e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clickSound: {fileID: 8300000, guid: 3ac4326bbe10ffb42b9652b3dd6cbbc3, type: 3}
 --- !u!114 &4234216446880251715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9707,6 +9775,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   newScale: {x: 350, y: 350, z: 350}
   hoverSound: {fileID: 8300000, guid: 76e7756eba2281d45b85bc16f9c5d8aa, type: 3}
+--- !u!114 &3435815703627271537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042740099683499740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b117104f3100724397b782130a9be74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8988140812289489041}
+        m_MethodName: SelectArenaCoop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &2092589622083008981
 GameObject:
   m_ObjectHideFlags: 0
@@ -10480,7 +10576,7 @@ RectTransform:
   - {fileID: 6316942885132357954}
   - {fileID: 7254052048119570788}
   m_Father: {fileID: 1972727292967040528}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -10498,9 +10594,9 @@ GameObject:
   - component: {fileID: 1553474448780475915}
   - component: {fileID: 9204402066235464138}
   - component: {fileID: 7697448647121501044}
-  - component: {fileID: 1985034381305249970}
   - component: {fileID: 5776901341715323651}
   - component: {fileID: 5624030481673530895}
+  - component: {fileID: 4140154295132685167}
   m_Layer: 0
   m_Name: P2ControlsButton
   m_TagString: Untagged
@@ -10567,7 +10663,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 95868a9851dab744b85871d09f3450b6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.49019608, g: 1, b: 0.49019608, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -10603,19 +10699,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.24, y: 0.36}
   m_EdgeRadius: 0
---- !u!114 &1985034381305249970
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3481296813575917258}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a433bc745db1cd49a61326233cb467e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clickSound: {fileID: 8300000, guid: 3ac4326bbe10ffb42b9652b3dd6cbbc3, type: 3}
 --- !u!114 &5776901341715323651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10646,6 +10729,34 @@ MonoBehaviour:
   text: 0
   text_noUI: 0
   delay: 0.6
+--- !u!114 &4140154295132685167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3481296813575917258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b117104f3100724397b782130a9be74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8988140812289489041}
+        m_MethodName: SelectP2Controls
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &3532725131839965787
 GameObject:
   m_ObjectHideFlags: 0
@@ -10879,9 +10990,9 @@ GameObject:
   - component: {fileID: 2244687017970322623}
   - component: {fileID: 1070294283712978226}
   - component: {fileID: 5984177630910142387}
-  - component: {fileID: 6209383669947514934}
   - component: {fileID: 2478115712158712748}
   - component: {fileID: 8673901652588124245}
+  - component: {fileID: 3383038310151085694}
   m_Layer: 0
   m_Name: StoryButton
   m_TagString: Untagged
@@ -10948,7 +11059,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 95868a9851dab744b85871d09f3450b6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.88235295, b: 0.6839622, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -10984,20 +11095,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.24, y: 0.36}
   m_EdgeRadius: 0
---- !u!114 &6209383669947514934
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3688988331181112535}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2428f4d675f28b42854d5dc76332dcc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  setup: {fileID: 1138517928633368, guid: 08e5fbe869b721f46acbf2ab6ca566bb, type: 3}
-  clickSound: {fileID: 8300000, guid: 3ac4326bbe10ffb42b9652b3dd6cbbc3, type: 3}
 --- !u!114 &2478115712158712748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11028,6 +11125,34 @@ MonoBehaviour:
   text: 0
   text_noUI: 0
   delay: 0.6
+--- !u!114 &3383038310151085694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3688988331181112535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b117104f3100724397b782130a9be74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8988140812289489041}
+        m_MethodName: SelectStory
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &3821082785395454463
 GameObject:
   m_ObjectHideFlags: 0
@@ -11630,9 +11755,9 @@ GameObject:
   - component: {fileID: 4461612312934253593}
   - component: {fileID: 6518430525013953057}
   - component: {fileID: 3144245053059176214}
-  - component: {fileID: 7544566717831144512}
   - component: {fileID: 4558545817322807837}
   - component: {fileID: 3486830462070254332}
+  - component: {fileID: 1417955969642479841}
   m_Layer: 0
   m_Name: ArenaButton
   m_TagString: Untagged
@@ -11699,7 +11824,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 95868a9851dab744b85871d09f3450b6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.88235295, b: 0.6839622, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -11735,19 +11860,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.24, y: 0.36}
   m_EdgeRadius: 0
---- !u!114 &7544566717831144512
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4819598169515859599}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a433bc745db1cd49a61326233cb467e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clickSound: {fileID: 8300000, guid: 3ac4326bbe10ffb42b9652b3dd6cbbc3, type: 3}
 --- !u!114 &4558545817322807837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11778,6 +11890,34 @@ MonoBehaviour:
   text: 0
   text_noUI: 0
   delay: 0.6
+--- !u!114 &1417955969642479841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4819598169515859599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b117104f3100724397b782130a9be74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8988140812289489041}
+        m_MethodName: SelectArenaCoop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &5022977940089223905
 GameObject:
   m_ObjectHideFlags: 0
@@ -12140,9 +12280,9 @@ GameObject:
   - component: {fileID: 2493709677508521072}
   - component: {fileID: 9214566182087617127}
   - component: {fileID: 5996417597435466482}
-  - component: {fileID: 3212881699944380608}
   - component: {fileID: 2198618119888093396}
   - component: {fileID: 8379080832022407072}
+  - component: {fileID: 1619010745529170978}
   m_Layer: 0
   m_Name: BackButton
   m_TagString: Untagged
@@ -12244,20 +12384,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.36}
   m_EdgeRadius: 0
---- !u!114 &3212881699944380608
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5354560797339486043}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5198fde4868818d488915b6a94ec99c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  newScale: {x: 350, y: 350, z: 350}
-  hoverSound: {fileID: 8300000, guid: 76e7756eba2281d45b85bc16f9c5d8aa, type: 3}
 --- !u!114 &2198618119888093396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12293,6 +12419,34 @@ MonoBehaviour:
   text: 0
   text_noUI: 0
   delay: 0.6
+--- !u!114 &1619010745529170978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5354560797339486043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b117104f3100724397b782130a9be74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 335566642813247151}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &5527455404916410965
 GameObject:
   m_ObjectHideFlags: 0
@@ -12471,8 +12625,8 @@ GameObject:
   - component: {fileID: 8059718102437482092}
   - component: {fileID: 6041202020650466881}
   - component: {fileID: 5238138376233114957}
-  - component: {fileID: 5282351796643843494}
   - component: {fileID: 1528811403069032193}
+  - component: {fileID: 3197455200185449291}
   m_Layer: 0
   m_Name: StoryButton
   m_TagString: Untagged
@@ -12539,7 +12693,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 95868a9851dab744b85871d09f3450b6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.88235295, b: 0.6839622, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -12575,20 +12729,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.24, y: 0.36}
   m_EdgeRadius: 0
---- !u!114 &5282351796643843494
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5583746585485422430}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2428f4d675f28b42854d5dc76332dcc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  setup: {fileID: 1138517928633368, guid: 08e5fbe869b721f46acbf2ab6ca566bb, type: 3}
-  clickSound: {fileID: 8300000, guid: 3ac4326bbe10ffb42b9652b3dd6cbbc3, type: 3}
 --- !u!114 &1528811403069032193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12603,6 +12743,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   newScale: {x: 350, y: 350, z: 350}
   hoverSound: {fileID: 8300000, guid: 76e7756eba2281d45b85bc16f9c5d8aa, type: 3}
+--- !u!114 &3197455200185449291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5583746585485422430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b117104f3100724397b782130a9be74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8988140812289489041}
+        m_MethodName: SelectStory
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &5802691970375491593
 GameObject:
   m_ObjectHideFlags: 0
@@ -14969,8 +15137,8 @@ GameObject:
   - component: {fileID: 6316942885132357954}
   - component: {fileID: 4243437642511148492}
   - component: {fileID: 1845049470086416391}
-  - component: {fileID: 1622120405713695091}
   - component: {fileID: 7771959779514939249}
+  - component: {fileID: 1244060886632851080}
   m_Layer: 0
   m_Name: ArenaVSButton
   m_TagString: Untagged
@@ -15037,7 +15205,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 95868a9851dab744b85871d09f3450b6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.88235295, b: 0.6839622, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -15073,19 +15241,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.24, y: 0.36}
   m_EdgeRadius: 0
---- !u!114 &1622120405713695091
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9089200089384567527}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a433bc745db1cd49a61326233cb467e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clickSound: {fileID: 8300000, guid: 3ac4326bbe10ffb42b9652b3dd6cbbc3, type: 3}
 --- !u!114 &7771959779514939249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15100,3 +15255,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   newScale: {x: 350, y: 350, z: 350}
   hoverSound: {fileID: 8300000, guid: 76e7756eba2281d45b85bc16f9c5d8aa, type: 3}
+--- !u!114 &1244060886632851080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9089200089384567527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b117104f3100724397b782130a9be74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8988140812289489041}
+        m_MethodName: SelectArenaVS
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null

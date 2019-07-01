@@ -14,8 +14,13 @@ public class Subtitles : MonoBehaviour
 
 	static public void AddPlayer1Subtitle(string str)
 	{
-		p1Subtitles[0].Caption(str);
-		p1Subtitles[1].Caption(str);
+		if (GameManager.singleGame)
+			singlePlayerSubtitles.Caption(str);
+		else
+		{
+			p1Subtitles[0].Caption(str);
+			p1Subtitles[1].Caption(str);
+		}
 	}
 
 	static public void AddPlayer2Subtitle(string str)
@@ -24,6 +29,7 @@ public class Subtitles : MonoBehaviour
 		p2Subtitles[1].Caption(str);
 	}
 
+	static private Subtitles singlePlayerSubtitles;
 	static private Subtitles[] p1Subtitles = new Subtitles[2];
 	static private Subtitles[] p2Subtitles = new Subtitles[2];
 	
@@ -45,6 +51,15 @@ public class Subtitles : MonoBehaviour
 		{
 			if (p2Subtitles[0] == null) p2Subtitles[0] = this;
 			else if (p2Subtitles[1] == null) p2Subtitles[1] = this;
+		}
+
+		if (name == "P1JointSubtitles")
+		{
+			singlePlayerSubtitles = this;
+
+			if (GameManager.singleGame)
+				singlePlayerSubtitles.gameObject.transform.localPosition = new Vector3(0f,
+					singlePlayerSubtitles.gameObject.transform.localPosition.y, singlePlayerSubtitles.gameObject.transform.localPosition.z);
 		}
 
 		Caption("Subtitles: ON");

@@ -348,7 +348,7 @@ GameObject:
   - component: {fileID: 1206478645}
   m_Layer: 13
   m_Name: Minimap
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -518,7 +518,7 @@ GameObject:
   - component: {fileID: 1567012586}
   m_Layer: 13
   m_Name: MinimapCamera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3418,7 +3418,7 @@ GameObject:
   - component: {fileID: 2151550387365235160}
   m_Layer: 13
   m_Name: Text2
-  m_TagString: InCamera
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3793,7 +3793,7 @@ GameObject:
   - component: {fileID: 5860422827936152448}
   m_Layer: 13
   m_Name: Text1
-  m_TagString: InCamera
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4861,7 +4861,7 @@ GameObject:
   - component: {fileID: 1660110036970212740}
   m_Layer: 13
   m_Name: P1JointSubtitles
-  m_TagString: InCamera
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5018,7 +5018,7 @@ GameObject:
   - component: {fileID: 6223279049925766710}
   m_Layer: 13
   m_Name: Text0
-  m_TagString: InCamera
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6763,7 +6763,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8479785457038440006}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9cc6c7a1533a8124a9649b93f0b7626c, type: 3}
   m_Name: 
@@ -8030,7 +8030,7 @@ GameObject:
   - component: {fileID: 510162307}
   m_Layer: 0
   m_Name: Player1Camera
-  m_TagString: InCamera
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

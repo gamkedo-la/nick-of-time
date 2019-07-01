@@ -178,7 +178,7 @@ public class PlayerController : MonoBehaviour
 				&& !animator.GetBool("isPushing")
 				&& !animator.GetBool("isThrowing")
 				&& !isDashing
-				&& Input.GetButtonDown(attackInput + playerNo.ToString()) || (GameManager.singleGame && Input.GetButtonDown(attackInput + "2")))
+				&& (Input.GetButtonDown(attackInput + playerNo.ToString()) || GameManager.singleGame && Input.GetButtonDown(attackInput + "2")))
 			{
 				comboKeys += "A";
 
@@ -306,7 +306,7 @@ public class PlayerController : MonoBehaviour
 			&& !animator.GetBool("isAttacking")
 			&& !animator.GetBool("isPushing")
 			&& !isDashing
-			&& keyComboTimer <= keyComboMaxTimeGap / 2.5f
+			&& keyComboTimer <= keyComboMaxTimeGap / 3f
 			&& (comboKeys == "UA" || comboKeys == "RA" || comboKeys == "DA" || comboKeys == "LA"))
 			{
 				animator.SetBool("isThrowing", true);

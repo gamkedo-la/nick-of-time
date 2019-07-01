@@ -41,7 +41,6 @@ public class EnemyAI : MonoBehaviour
 	private float speed = 0f;
 
 	private float walkTimer = 0f;
-	private float walkRandomizer = 0f;
 	private bool walkCollided = false;
 
 	private float actionTimer = 0f;
