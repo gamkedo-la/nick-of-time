@@ -6,6 +6,7 @@ public class SpriteFadeOut : MonoBehaviour
 {
 	public float delay = 0.1f;
 	public bool destroy = true;
+	public bool disable = false;
 
 	private float timer = 0f;
 
@@ -23,9 +24,18 @@ public class SpriteFadeOut : MonoBehaviour
 		if (timer <= 0f)
 		{
 			if (destroy)
+			{
 				Destroy(gameObject);
+			}
+			else if (disable)
+			{
+				gameObject.SetActive(false);
+				Destroy(this);
+			}
 			else
+			{
 				timer = delay;
+			}
 		}
 		else
 		{
