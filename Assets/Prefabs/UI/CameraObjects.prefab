@@ -1057,9 +1057,9 @@ GameObject:
   - component: {fileID: 2212986635175136539}
   - component: {fileID: 4289985881678085709}
   - component: {fileID: 7603617358211016215}
-  m_Layer: 13
+  m_Layer: 11
   m_Name: P1Subtitles
-  m_TagString: MainCamera
+  m_TagString: InCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1650,9 +1650,9 @@ GameObject:
   - component: {fileID: 2208637116193409833}
   - component: {fileID: 7138315069873198560}
   - component: {fileID: 8732243135264312850}
-  m_Layer: 13
+  m_Layer: 11
   m_Name: Text0
-  m_TagString: MainCamera
+  m_TagString: InCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2788,9 +2788,9 @@ GameObject:
   - component: {fileID: 4700751983793353678}
   - component: {fileID: 7442351152642159703}
   - component: {fileID: 577155996814246879}
-  m_Layer: 13
+  m_Layer: 11
   m_Name: Text2
-  m_TagString: MainCamera
+  m_TagString: InCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3176,7 +3176,7 @@ GameObject:
   - component: {fileID: 4306303981209705982}
   m_Layer: 13
   m_Name: Text0
-  m_TagString: MainCamera
+  m_TagString: InCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3418,7 +3418,7 @@ GameObject:
   - component: {fileID: 2151550387365235160}
   m_Layer: 13
   m_Name: Text2
-  m_TagString: MainCamera
+  m_TagString: InCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3793,7 +3793,7 @@ GameObject:
   - component: {fileID: 5860422827936152448}
   m_Layer: 13
   m_Name: Text1
-  m_TagString: MainCamera
+  m_TagString: InCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3949,9 +3949,9 @@ GameObject:
   - component: {fileID: 2777188220739715884}
   - component: {fileID: 4183551614789118146}
   - component: {fileID: 5301800088117322602}
-  m_Layer: 13
+  m_Layer: 11
   m_Name: Text1
-  m_TagString: MainCamera
+  m_TagString: InCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4109,7 +4109,7 @@ GameObject:
   - component: {fileID: 8112242299550718929}
   m_Layer: 13
   m_Name: Text2
-  m_TagString: MainCamera
+  m_TagString: InCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4545,9 +4545,9 @@ GameObject:
   - component: {fileID: 3087390011720524340}
   - component: {fileID: 8557494502670874173}
   - component: {fileID: 5417271961186291800}
-  m_Layer: 13
+  m_Layer: 12
   m_Name: P2Subtitles
-  m_TagString: MainCamera
+  m_TagString: InCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4703,7 +4703,7 @@ GameObject:
   - component: {fileID: 6602244382427731986}
   m_Layer: 13
   m_Name: Text1
-  m_TagString: MainCamera
+  m_TagString: InCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4861,7 +4861,7 @@ GameObject:
   - component: {fileID: 1660110036970212740}
   m_Layer: 13
   m_Name: P1JointSubtitles
-  m_TagString: MainCamera
+  m_TagString: InCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4957,7 +4957,7 @@ GameObject:
   - component: {fileID: 6901055610207926383}
   m_Layer: 13
   m_Name: P2JointSubtitles
-  m_TagString: MainCamera
+  m_TagString: InCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5018,7 +5018,7 @@ GameObject:
   - component: {fileID: 6223279049925766710}
   m_Layer: 13
   m_Name: Text0
-  m_TagString: MainCamera
+  m_TagString: InCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5886,9 +5886,9 @@ GameObject:
   - component: {fileID: 4372939903715724891}
   - component: {fileID: 8951325951199709369}
   - component: {fileID: 540149411611414565}
-  m_Layer: 13
+  m_Layer: 12
   m_Name: Text2
-  m_TagString: MainCamera
+  m_TagString: InCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6155,9 +6155,9 @@ GameObject:
   - component: {fileID: 708922350798369867}
   - component: {fileID: 654341062491402005}
   - component: {fileID: 171989540339819064}
-  m_Layer: 13
+  m_Layer: 12
   m_Name: Text1
-  m_TagString: MainCamera
+  m_TagString: InCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6504,9 +6504,9 @@ GameObject:
   - component: {fileID: 3090209780170592941}
   - component: {fileID: 640536473966244911}
   - component: {fileID: 4298206511271425327}
-  m_Layer: 13
+  m_Layer: 12
   m_Name: Text0
-  m_TagString: MainCamera
+  m_TagString: InCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8030,7 +8030,7 @@ GameObject:
   - component: {fileID: 510162307}
   m_Layer: 0
   m_Name: Player1Camera
-  m_TagString: MainCamera
+  m_TagString: InCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
