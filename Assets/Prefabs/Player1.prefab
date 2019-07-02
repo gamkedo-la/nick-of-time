@@ -321,7 +321,7 @@ MonoBehaviour:
   walkVerticalInput: Vertical
   walkHorizontalInput: Horizontal
   attackInput: Fire
-  criticalHitChance: 0.05
+  criticalHitChance: 0.12
   hitComboMaxTime: 0.4
   criticalHitTimePause: 0.3
   timeSlowMoTime: 10

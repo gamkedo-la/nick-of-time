@@ -3,23 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SetupSinglePlayerMode : MonoBehaviour {
-
-	void Start () {
+public class SetupSinglePlayerMode : MonoBehaviour
+{
+	void Start ()
+	{
 		DontDestroyOnLoad(gameObject);
 	}
 	
-	void Update () {
+	void Update ()
+	{
 		if(GameManager.singleGame)
 			setup();
 
 		Destroy(gameObject);
 	}
 	
-	void setup() {
+	void setup()
+	{
 		GameObject[] inCameraObjects = GameObject.FindGameObjectsWithTag("InCamera");
 		
-		for(int i = 0; i < inCameraObjects.GetLength(0); i++)
+		for (int i = 0; i < inCameraObjects.GetLength(0); i++)
 		{
 			if(inCameraObjects[i] != null
 			&& inCameraObjects[i].name != "HPBar1"
