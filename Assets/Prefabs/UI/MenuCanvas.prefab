@@ -738,7 +738,7 @@ MonoBehaviour:
   objectsToDeactivate:
   - {fileID: 1235059425}
   selfDeactivate: 0
-  clickSound: {fileID: 0}
+  clickSound: {fileID: 8300000, guid: 3ac4326bbe10ffb42b9652b3dd6cbbc3, type: 3}
 --- !u!114 &313476635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4063,7 +4063,7 @@ MonoBehaviour:
   objectsToDeactivate:
   - {fileID: 1235059425}
   selfDeactivate: 0
-  clickSound: {fileID: 0}
+  clickSound: {fileID: 8300000, guid: 3ac4326bbe10ffb42b9652b3dd6cbbc3, type: 3}
 --- !u!1 &2057414392
 GameObject:
   m_ObjectHideFlags: 0
@@ -5013,8 +5013,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f9485e8b8c334046bd1136ad326f537, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  singlePlayerSetup: {fileID: 1138517928633368, guid: 08e5fbe869b721f46acbf2ab6ca566bb,
-    type: 3}
   deselectedColor: {r: 0.78431374, g: 0.49019608, b: 0.29411766, a: 0.5882353}
   selectedColor: {r: 1, g: 0.88235295, b: 0.6839622, a: 1}
   clickSound: {fileID: 8300000, guid: 3ac4326bbe10ffb42b9652b3dd6cbbc3, type: 3}
@@ -5395,7 +5393,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5542165139109972888
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5599,7 +5597,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 95868a9851dab744b85871d09f3450b6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.39215687}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -5642,7 +5640,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 468341084393299825}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5198fde4868818d488915b6a94ec99c6, type: 3}
   m_Name: 
@@ -6417,7 +6415,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 95868a9851dab744b85871d09f3450b6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.39215687}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -6460,7 +6458,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1058912565819106411}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5198fde4868818d488915b6a94ec99c6, type: 3}
   m_Name: 
@@ -6595,7 +6593,6 @@ GameObject:
   - component: {fileID: 3716562069711571090}
   - component: {fileID: 7090673225908582258}
   - component: {fileID: 870352604433832413}
-  - component: {fileID: 4876494101155625580}
   - component: {fileID: 8429464001063846954}
   - component: {fileID: 2566996554907315073}
   m_Layer: 0
@@ -6664,7 +6661,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 95868a9851dab744b85871d09f3450b6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.39215687}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -6700,25 +6697,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.72, y: 0.3}
   m_EdgeRadius: 0
---- !u!114 &4876494101155625580
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1082658873015283805}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 269da9e2455402147887e40d0d4483c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  forMusic: 0
-  forSound: 0
-  forSingleWindow: 0
-  forCoop: 0
-  forStory: 0
-  forSubtitles: 1
-  clickSound: {fileID: 8300000, guid: 3ac4326bbe10ffb42b9652b3dd6cbbc3, type: 3}
 --- !u!114 &8429464001063846954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6726,7 +6704,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1082658873015283805}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5198fde4868818d488915b6a94ec99c6, type: 3}
   m_Name: 
@@ -9220,7 +9198,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 95868a9851dab744b85871d09f3450b6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.39215687}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -9263,7 +9241,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1717005829251190696}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5198fde4868818d488915b6a94ec99c6, type: 3}
   m_Name: 
@@ -9365,7 +9343,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 95868a9851dab744b85871d09f3450b6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.39215687}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -9408,7 +9386,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1880148554051506816}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5198fde4868818d488915b6a94ec99c6, type: 3}
   m_Name: 
@@ -10514,7 +10492,7 @@ MonoBehaviour:
   - {fileID: 7002977440541380148}
   - {fileID: 3854681622344450636}
   selfDeactivate: 0
-  clickSound: {fileID: 0}
+  clickSound: {fileID: 8300000, guid: 3ac4326bbe10ffb42b9652b3dd6cbbc3, type: 3}
 --- !u!1 &1988126989773522739
 GameObject:
   m_ObjectHideFlags: 0
@@ -11164,7 +11142,7 @@ MonoBehaviour:
   - {fileID: 7002977440541380148}
   - {fileID: 3854681622344450636}
   selfDeactivate: 0
-  clickSound: {fileID: 0}
+  clickSound: {fileID: 8300000, guid: 3ac4326bbe10ffb42b9652b3dd6cbbc3, type: 3}
 --- !u!1 &1988126990225017883
 GameObject:
   m_ObjectHideFlags: 0
@@ -12653,7 +12631,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 95868a9851dab744b85871d09f3450b6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.39215687}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -12696,7 +12674,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2075618944226512067}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5198fde4868818d488915b6a94ec99c6, type: 3}
   m_Name: 
@@ -12897,7 +12875,6 @@ GameObject:
   - component: {fileID: 9188630804205518194}
   - component: {fileID: 3899669627628511933}
   - component: {fileID: 3164521337378935105}
-  - component: {fileID: 1405215234555376520}
   - component: {fileID: 8551394803764504649}
   - component: {fileID: 6705319148679234471}
   m_Layer: 0
@@ -12966,7 +12943,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 95868a9851dab744b85871d09f3450b6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.39215687}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -13002,25 +12979,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.72, y: 0.3}
   m_EdgeRadius: 0
---- !u!114 &1405215234555376520
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2119904946726877514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 269da9e2455402147887e40d0d4483c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  forMusic: 0
-  forSound: 0
-  forSingleWindow: 0
-  forCoop: 0
-  forStory: 0
-  forSubtitles: 1
-  clickSound: {fileID: 8300000, guid: 3ac4326bbe10ffb42b9652b3dd6cbbc3, type: 3}
 --- !u!114 &8551394803764504649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13028,7 +12986,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2119904946726877514}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5198fde4868818d488915b6a94ec99c6, type: 3}
   m_Name: 
@@ -13829,7 +13787,6 @@ GameObject:
   - component: {fileID: 8509598365630122604}
   - component: {fileID: 8886907627098336519}
   - component: {fileID: 6853800860936095156}
-  - component: {fileID: 3732645073063860289}
   - component: {fileID: 6307285082054714492}
   - component: {fileID: 525884717599643301}
   m_Layer: 0
@@ -13898,7 +13855,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 95868a9851dab744b85871d09f3450b6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.39215687}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -13934,25 +13891,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.72, y: 0.3}
   m_EdgeRadius: 0
---- !u!114 &3732645073063860289
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2566371030095049066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 269da9e2455402147887e40d0d4483c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  forMusic: 0
-  forSound: 0
-  forSingleWindow: 0
-  forCoop: 0
-  forStory: 0
-  forSubtitles: 1
-  clickSound: {fileID: 8300000, guid: 3ac4326bbe10ffb42b9652b3dd6cbbc3, type: 3}
 --- !u!114 &6307285082054714492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13960,7 +13898,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2566371030095049066}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5198fde4868818d488915b6a94ec99c6, type: 3}
   m_Name: 
@@ -14062,7 +14000,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 95868a9851dab744b85871d09f3450b6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.39215687}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -14105,7 +14043,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2598070325324961960}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5198fde4868818d488915b6a94ec99c6, type: 3}
   m_Name: 
@@ -15303,7 +15241,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 95868a9851dab744b85871d09f3450b6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.39215687}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -15346,7 +15284,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3080030637632699091}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5198fde4868818d488915b6a94ec99c6, type: 3}
   m_Name: 
@@ -15448,7 +15386,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 95868a9851dab744b85871d09f3450b6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.39215687}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -15491,7 +15429,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3307322816697912006}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5198fde4868818d488915b6a94ec99c6, type: 3}
   m_Name: 
@@ -17413,7 +17351,7 @@ MonoBehaviour:
   - {fileID: 7002977440541380148}
   - {fileID: 3854681622344450636}
   selfDeactivate: 0
-  clickSound: {fileID: 0}
+  clickSound: {fileID: 8300000, guid: 3ac4326bbe10ffb42b9652b3dd6cbbc3, type: 3}
 --- !u!1 &3854681622344450636
 GameObject:
   m_ObjectHideFlags: 0
@@ -17836,7 +17774,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 95868a9851dab744b85871d09f3450b6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.39215687}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -17879,7 +17817,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3971627580226783646}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5198fde4868818d488915b6a94ec99c6, type: 3}
   m_Name: 
@@ -19239,7 +19177,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 95868a9851dab744b85871d09f3450b6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.39215687}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -19282,7 +19220,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4829917330672634809}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5198fde4868818d488915b6a94ec99c6, type: 3}
   m_Name: 
@@ -19956,7 +19894,7 @@ GameObject:
   - component: {fileID: 5996417597435466482}
   - component: {fileID: 2198618119888093396}
   - component: {fileID: 8379080832022407072}
-  - component: {fileID: 1619010745529170978}
+  - component: {fileID: 7717986824598418193}
   m_Layer: 0
   m_Name: BackButton
   m_TagString: Untagged
@@ -20076,7 +20014,7 @@ MonoBehaviour:
   objectsToDeactivate:
   - {fileID: 335566642813247151}
   selfDeactivate: 0
-  clickSound: {fileID: 0}
+  clickSound: {fileID: 8300000, guid: 3ac4326bbe10ffb42b9652b3dd6cbbc3, type: 3}
 --- !u!114 &8379080832022407072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20093,7 +20031,7 @@ MonoBehaviour:
   text: 0
   text_noUI: 0
   delay: 0.6
---- !u!114 &1619010745529170978
+--- !u!114 &7717986824598418193
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20102,25 +20040,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5354560797339486043}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b117104f3100724397b782130a9be74, type: 3}
+  m_Script: {fileID: 11500000, guid: 5198fde4868818d488915b6a94ec99c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 335566642813247151}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+  newScale: {x: 350, y: 350, z: 350}
+  hoverSound: {fileID: 8300000, guid: 76e7756eba2281d45b85bc16f9c5d8aa, type: 3}
 --- !u!1 &5527455404916410965
 GameObject:
   m_ObjectHideFlags: 0
@@ -20591,7 +20515,7 @@ MonoBehaviour:
   objectsToDeactivate:
   - {fileID: 6973807011217208296}
   selfDeactivate: 0
-  clickSound: {fileID: 0}
+  clickSound: {fileID: 8300000, guid: 3ac4326bbe10ffb42b9652b3dd6cbbc3, type: 3}
 --- !u!114 &6810810873281047850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21093,7 +21017,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 95868a9851dab744b85871d09f3450b6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.39215687}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -21136,7 +21060,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5818355145872275643}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5198fde4868818d488915b6a94ec99c6, type: 3}
   m_Name: 
@@ -21682,7 +21606,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 95868a9851dab744b85871d09f3450b6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.39215687}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -21725,7 +21649,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6321803641569675566}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5198fde4868818d488915b6a94ec99c6, type: 3}
   m_Name: 
@@ -22049,7 +21973,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 95868a9851dab744b85871d09f3450b6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.39215687}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -22092,7 +22016,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6574985108908604772}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5198fde4868818d488915b6a94ec99c6, type: 3}
   m_Name: 
@@ -23686,7 +23610,7 @@ MonoBehaviour:
   objectsToDeactivate:
   - {fileID: 2034171405622984574}
   selfDeactivate: 0
-  clickSound: {fileID: 0}
+  clickSound: {fileID: 8300000, guid: 3ac4326bbe10ffb42b9652b3dd6cbbc3, type: 3}
 --- !u!114 &2738763909419736188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27482,7 +27406,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 95868a9851dab744b85871d09f3450b6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.39215687}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -27525,7 +27449,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8437638481046475924}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5198fde4868818d488915b6a94ec99c6, type: 3}
   m_Name: 
@@ -28798,7 +28722,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 95868a9851dab744b85871d09f3450b6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.39215687}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -28841,7 +28765,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8918473143722022732}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5198fde4868818d488915b6a94ec99c6, type: 3}
   m_Name: 

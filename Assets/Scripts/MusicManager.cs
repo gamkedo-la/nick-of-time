@@ -64,7 +64,7 @@ public class MusicManager : MonoBehaviour
 					aud.PlayOneShot(menuMusic);
 			}
 		}
-		else if (newScene == "Story1")
+		else if (newScene.Contains("Story") || newScene == "Arena")
 		{
 			aud.Stop();
 			aud.pitch = 0.5f;
