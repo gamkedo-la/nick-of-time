@@ -15,7 +15,7 @@ public class JointCameraToPlayerCameras : MonoBehaviour
 	
     void Update()
     {
-		cameras[0].GetComponent<LerpToTransform>().tr = cameras[1].GetComponent<LerpToTransform>().tr;
+		//cameras[0].GetComponent<LerpToTransform>().tr = cameras[1].GetComponent<LerpToTransform>().tr;
 		cameras[0].GetComponent<LerpToCamSize>().size = cameras[1].GetComponent<LerpToCamSize>().size;
 
 		//cameras[0].gameObject.transform.position = cameras[1].gameObject.transform.position;

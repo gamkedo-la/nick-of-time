@@ -14482,6 +14482,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bulb (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6053654793638694014, guid: 737acc284181ad4498a5e57563ebd0b0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6053654793638694013, guid: 737acc284181ad4498a5e57563ebd0b0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20415,6 +20420,63 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 659990842}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &670336115
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1138517928633368, guid: 08e5fbe869b721f46acbf2ab6ca566bb, type: 3}
+      propertyPath: m_Name
+      value: SinglePlayerMode
+      objectReference: {fileID: 0}
+    - target: {fileID: 4762855591925610, guid: 08e5fbe869b721f46acbf2ab6ca566bb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4762855591925610, guid: 08e5fbe869b721f46acbf2ab6ca566bb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4762855591925610, guid: 08e5fbe869b721f46acbf2ab6ca566bb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4762855591925610, guid: 08e5fbe869b721f46acbf2ab6ca566bb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4762855591925610, guid: 08e5fbe869b721f46acbf2ab6ca566bb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4762855591925610, guid: 08e5fbe869b721f46acbf2ab6ca566bb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4762855591925610, guid: 08e5fbe869b721f46acbf2ab6ca566bb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4762855591925610, guid: 08e5fbe869b721f46acbf2ab6ca566bb, type: 3}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 4762855591925610, guid: 08e5fbe869b721f46acbf2ab6ca566bb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4762855591925610, guid: 08e5fbe869b721f46acbf2ab6ca566bb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4762855591925610, guid: 08e5fbe869b721f46acbf2ab6ca566bb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 08e5fbe869b721f46acbf2ab6ca566bb, type: 3}
 --- !u!1001 &694622601
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28654,6 +28716,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bulb (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6053654793638694014, guid: 737acc284181ad4498a5e57563ebd0b0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6053654793638694013, guid: 737acc284181ad4498a5e57563ebd0b0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -34342,12 +34409,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1561379417}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4660d568e69d6940955db6c3bef8d40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 1693330128}
+  trigger: {fileID: 0}
   lightingGrpsParent: {fileID: 415381079}
   jointCamera: {fileID: 1411523593}
   forceJoint: 1
@@ -39490,6 +39557,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bulb
       objectReference: {fileID: 0}
+    - target: {fileID: 6053654793638694014, guid: 737acc284181ad4498a5e57563ebd0b0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6053654793638694013, guid: 737acc284181ad4498a5e57563ebd0b0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -39553,7 +39625,7 @@ PrefabInstance:
     - target: {fileID: 6053654795219601414, guid: 737acc284181ad4498a5e57563ebd0b0,
         type: 3}
       propertyPath: m_Intensity
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6053654795219601414, guid: 737acc284181ad4498a5e57563ebd0b0,
         type: 3}
@@ -39570,10 +39642,15 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6053654795219601414, guid: 737acc284181ad4498a5e57563ebd0b0,
+        type: 3}
+      propertyPath: m_Range
+      value: 2.2
+      objectReference: {fileID: 0}
     - target: {fileID: 5856507047825567244, guid: 737acc284181ad4498a5e57563ebd0b0,
         type: 3}
       propertyPath: highLightIntensity
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5856507047825567244, guid: 737acc284181ad4498a5e57563ebd0b0,
         type: 3}
@@ -39588,7 +39665,7 @@ PrefabInstance:
     - target: {fileID: 5856507047825567244, guid: 737acc284181ad4498a5e57563ebd0b0,
         type: 3}
       propertyPath: midLightIntensity
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5856507047825567244, guid: 737acc284181ad4498a5e57563ebd0b0,
         type: 3}
@@ -39604,6 +39681,16 @@ PrefabInstance:
         type: 3}
       propertyPath: midLightColor.b
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5856507047825567244, guid: 737acc284181ad4498a5e57563ebd0b0,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5856507047825567244, guid: 737acc284181ad4498a5e57563ebd0b0,
+        type: 3}
+      propertyPath: midLightRange
+      value: 2.2
       objectReference: {fileID: 0}
     - target: {fileID: 6053654793963965942, guid: 737acc284181ad4498a5e57563ebd0b0,
         type: 3}
@@ -74105,6 +74192,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bulb (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6053654793638694014, guid: 737acc284181ad4498a5e57563ebd0b0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6053654793638694013, guid: 737acc284181ad4498a5e57563ebd0b0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -74573,12 +74665,12 @@ PrefabInstance:
     - target: {fileID: 1894696908122255597, guid: 00c830c5b9efec64987b7ae803d9b489,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.76100004
+      value: 0.7622
       objectReference: {fileID: 0}
     - target: {fileID: 1894696908122255597, guid: 00c830c5b9efec64987b7ae803d9b489,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.685
+      value: 0.6055
       objectReference: {fileID: 0}
     - target: {fileID: 1894696908122255597, guid: 00c830c5b9efec64987b7ae803d9b489,
         type: 3}
@@ -74658,12 +74750,12 @@ PrefabInstance:
     - target: {fileID: 1894696908122255587, guid: 00c830c5b9efec64987b7ae803d9b489,
         type: 3}
       propertyPath: prevPosition.x
-      value: 2.236
+      value: 2.2384
       objectReference: {fileID: 0}
     - target: {fileID: 1894696908122255587, guid: 00c830c5b9efec64987b7ae803d9b489,
         type: 3}
       propertyPath: prevPosition.y
-      value: 0.32500005
+      value: 0.16600001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00c830c5b9efec64987b7ae803d9b489, type: 3}

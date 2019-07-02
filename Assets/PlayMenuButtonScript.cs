@@ -6,8 +6,6 @@ using TMPro;
 
 public class PlayMenuButtonScript : MonoBehaviour
 {
-	public GameObject singlePlayerSetup;
-
 	public Color deselectedColor;
 	public Color selectedColor;
 
@@ -227,7 +225,6 @@ public class PlayMenuButtonScript : MonoBehaviour
 		}
 		else
 		{
-			Instantiate(singlePlayerSetup);
 			SceneManager.LoadScene("Arena");
 		}
 	}

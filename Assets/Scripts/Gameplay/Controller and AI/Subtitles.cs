@@ -62,7 +62,13 @@ public class Subtitles : MonoBehaviour
 					singlePlayerSubtitles.gameObject.transform.localPosition.y, singlePlayerSubtitles.gameObject.transform.localPosition.z);
 		}
 
-		Caption("Subtitles: ON");
+		if (!TogglesValues.subtitles)
+		{
+			enabled = false;
+
+			for (int n = 0; n < transform.childCount; n++)
+				texts[n].enabled = false;
+		}
     }
 	
     void Update()
