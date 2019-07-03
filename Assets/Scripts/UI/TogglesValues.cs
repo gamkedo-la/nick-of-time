@@ -10,4 +10,6 @@ public class TogglesValues : MonoBehaviour
 	static public bool coop = true;
 	static public bool story = true;
 	static public bool subtitles = true;
+	static public string p1controller = "";
+	static public string p2controller = "";
 }

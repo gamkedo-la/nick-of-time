@@ -90,6 +90,8 @@ public class PlayerController : MonoBehaviour
 
 	static private float timeSlowMoTimer = 0f;
 	private float timeSlowMoEffectValue = 0f;
+
+	private string inputExtensionString = "";
 	
 	private void Start()
 	{
@@ -104,6 +106,21 @@ public class PlayerController : MonoBehaviour
 		aud = GetComponent<AudioSource>();
 		if (aud == null)
 			aud = FindObjectOfType<AudioSource>();
+
+		if (playerNo == 1)
+		{
+			if (TogglesValues.p1controller == "")
+				inputExtensionString = playerNo.ToString();
+			else
+				inputExtensionString = TogglesValues.p1controller;
+		}
+		else if (playerNo == 2)
+		{
+			if (TogglesValues.p2controller == "")
+				inputExtensionString = playerNo.ToString();
+			else
+				inputExtensionString = TogglesValues.p2controller;
+		}
 	}
 	
 	private void Update()
@@ -112,7 +129,7 @@ public class PlayerController : MonoBehaviour
 		{
 			if (!animator.GetBool("isAttacking") && !animator.GetBool("isPushing") && !animator.GetBool("isThrowing"))// && !isDashing)
 			{
-				walkInput = new Vector2(Input.GetAxisRaw(walkHorizontalInput + playerNo.ToString()), Input.GetAxisRaw(walkVerticalInput + playerNo.ToString()));
+				walkInput = new Vector2(Input.GetAxisRaw(walkHorizontalInput + inputExtensionString), Input.GetAxisRaw(walkVerticalInput + inputExtensionString));
 
 				if (GameManager.singleGame)
 				{
@@ -178,7 +195,7 @@ public class PlayerController : MonoBehaviour
 				&& !animator.GetBool("isPushing")
 				&& !animator.GetBool("isThrowing")
 				&& !isDashing
-				&& (Input.GetButtonDown(attackInput + playerNo.ToString()) || GameManager.singleGame && Input.GetButtonDown(attackInput + "2")))
+				&& (Input.GetButtonDown(attackInput + inputExtensionString) || GameManager.singleGame && Input.GetButtonDown(attackInput + "2")))
 			{
 				comboKeys += "A";
 

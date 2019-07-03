@@ -2,14 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DestroyEnemies : MonoBehaviour {
+public class DestroyEnemies : MonoBehaviour
+{
 
-	void Start () {
-		
-	}
-	
-	void Update () {
-		if(Input.GetButtonDown("Debug2"))
+	void Update ()
+	{
+		if(Input.GetKeyDown(KeyCode.Backspace) && Input.GetKeyDown(KeyCode.Equals) && Input.GetKeyDown(KeyCode.Minus))
 		{
 			GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
 			

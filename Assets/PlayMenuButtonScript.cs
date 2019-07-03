@@ -114,6 +114,20 @@ public class PlayMenuButtonScript : MonoBehaviour
 				arenaVSButton.GetComponent<SpriteRenderer>().color = selectedColor;
 			}
 		}
+
+		if (TogglesValues.p1controller == "" || Input.GetJoystickNames().Length <= 0)
+		{
+			p1ControlsButton.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Keyboard";
+			p1ControlsButton.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "Keyboard";
+			TogglesValues.p1controller = "";
+		}
+
+		if (TogglesValues.p2controller == "" || Input.GetJoystickNames().Length <= 0)
+		{
+			p2ControlsButton.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Keyboard";
+			p2ControlsButton.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "Keyboard";
+			TogglesValues.p2controller = "";
+		}
 	}
 
 	public void SelectStory()
@@ -183,13 +197,35 @@ public class PlayMenuButtonScript : MonoBehaviour
 
 		if (p1ControlsButton.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text == "Keyboard")
 		{
-			p1ControlsButton.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Controller";
-			p1ControlsButton.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "Controller";
+			if (Input.GetJoystickNames().Length > 1)
+			{
+				p1ControlsButton.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = Input.GetJoystickNames()[1].Substring(0, 10);
+				p1ControlsButton.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = Input.GetJoystickNames()[1].Substring(0, 10);
+				TogglesValues.p1controller = "2Controller";
+
+				if (TogglesValues.p2controller == "2Controller")
+				{
+					TogglesValues.p2controller = "1Controller";
+					p2ControlsButton.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = Input.GetJoystickNames()[0].Substring(0, 10);
+					p2ControlsButton.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = Input.GetJoystickNames()[0].Substring(0, 10);
+				}
+			}
+			else if (Input.GetJoystickNames().Length > 0)
+			{
+				p1ControlsButton.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = Input.GetJoystickNames()[0].Substring(0, 10);
+				p1ControlsButton.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = Input.GetJoystickNames()[0].Substring(0, 10);
+				TogglesValues.p1controller = "1Controller";
+
+				TogglesValues.p2controller = "";
+				p2ControlsButton.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Keyboard";
+				p2ControlsButton.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "Keyboard";
+			}
 		}
 		else
 		{
 			p1ControlsButton.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Keyboard";
 			p1ControlsButton.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "Keyboard";
+			TogglesValues.p1controller = "";
 		}
 	}
 
@@ -202,13 +238,35 @@ public class PlayMenuButtonScript : MonoBehaviour
 
 		if (p2ControlsButton.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text == "Keyboard")
 		{
-			p2ControlsButton.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Controller";
-			p2ControlsButton.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "Controller";
+			if (Input.GetJoystickNames().Length > 1)
+			{
+				p2ControlsButton.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = Input.GetJoystickNames()[1].Substring(0, 10);
+				p2ControlsButton.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = Input.GetJoystickNames()[1].Substring(0, 10);
+				TogglesValues.p2controller = "2Controller";
+
+				if (TogglesValues.p1controller == "2Controller")
+				{
+					TogglesValues.p1controller = "1Controller";
+					p1ControlsButton.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = Input.GetJoystickNames()[0].Substring(0, 10);
+					p1ControlsButton.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = Input.GetJoystickNames()[0].Substring(0, 10);
+				}
+			}
+			else if (Input.GetJoystickNames().Length > 0)
+			{
+				p2ControlsButton.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = Input.GetJoystickNames()[0].Substring(0, 10);
+				p2ControlsButton.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = Input.GetJoystickNames()[0].Substring(0, 10);
+				TogglesValues.p2controller = "1Controller";
+
+				TogglesValues.p1controller = "";
+				p1ControlsButton.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Keyboard";
+				p1ControlsButton.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "Keyboard";
+			}
 		}
 		else
 		{
 			p2ControlsButton.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Keyboard";
 			p2ControlsButton.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "Keyboard";
+			TogglesValues.p2controller = "";
 		}
 	}
 

@@ -5,15 +5,13 @@ using TMPro;
 
 public class DialogueBoxSwitch : MonoBehaviour
 {
-	public GameObject pl1;
-	public GameObject pl2;
 	public GameObject inventoryPl1;
 	public GameObject inventoryPl2;
-    private bool disabledP1 = false;
-    private bool disabledP2 = false;
 
 	public string proceedInput = "Submit";
-	public string proceedInput2= "Jump"; // to allow SPACE or ENTER to proceed
+
+	private GameObject pl1;
+	private GameObject pl2;
 
 	public AudioClip proceedSound;
 
@@ -28,6 +26,9 @@ public class DialogueBoxSwitch : MonoBehaviour
 
 	void Start()
 	{
+		pl1 = GameObject.Find("Player1");
+		pl2 = GameObject.Find("Player2");
+
 		aud = GetComponent<AudioSource>();
 		if (aud == null)
 		{
@@ -45,6 +46,14 @@ public class DialogueBoxSwitch : MonoBehaviour
 		if (aud == null)
 			aud = FindObjectOfType<AudioSource>();
 
+		sprRenderer = GetComponent<SpriteRenderer>();
+		nickFaces = transform.GetChild(2).gameObject;
+		oldManFaces = transform.GetChild(3).gameObject;
+		guardFaces = transform.GetChild(4).gameObject;
+	}
+
+	void Update()
+	{
 		if (GameManager.singleGame)
 		{
 			dialogueText = transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>();
@@ -56,57 +65,46 @@ public class DialogueBoxSwitch : MonoBehaviour
 			dialogueSequence = transform.GetChild(1).gameObject.GetComponent<DialogueSequence>();
 		}
 
-		sprRenderer = GetComponent<SpriteRenderer>();
-		nickFaces = transform.GetChild(2).gameObject;
-		oldManFaces = transform.GetChild(3).gameObject;
-		guardFaces = transform.GetChild(4).gameObject;
-	}
-
-	void Update()
-	{
-
 		if (dialogueText.text == " " || dialogueText.text == "")
 		{
-			sprRenderer.enabled = false;
+			if (sprRenderer.enabled)
+			{
+				sprRenderer.enabled = false;
 
-            if (pl1 && disabledP1)
-            {
-                disabledP1 = false;
-                pl1.GetComponent<PlayerController>().enabled = true;
+				if (pl1)
+					pl1.GetComponent<PlayerController>().enabled = true;
 
-				if (inventoryPl1) inventoryPl1.SetActive(true);
-            }
-            if (pl2 && disabledP2)
-            {
-                disabledP2 = false;
-                pl2.GetComponent<PlayerController>().enabled = true;
+				if (inventoryPl1)
+					inventoryPl1.SetActive(true);
 
-				if (inventoryPl2) inventoryPl2.SetActive(true);
+				if (pl2)
+					pl2.GetComponent<PlayerController>().enabled = true;
+
+				if (inventoryPl2)
+					inventoryPl2.SetActive(true);
 			}
 		}
-		else if (!sprRenderer.enabled)
+		else
 		{
 			sprRenderer.enabled = true;
 
             if (pl1)
-            {
-                disabledP1 = true;
                 pl1.GetComponent<PlayerController>().enabled = false;
 
-				if (inventoryPl1) inventoryPl1.SetActive(false);
-			}
+			if (inventoryPl1)
+				inventoryPl1.SetActive(false);
+
             if (pl2)
-            {
-                disabledP2 = true;
                 pl2.GetComponent<PlayerController>().enabled = false;
 
-				if (inventoryPl2) inventoryPl2.SetActive(false);
-			}
+			if (inventoryPl2)
+				inventoryPl2.SetActive(false);
 
-			checkForDialogueStringTags(dialogueSequence.dialogues[dialogueSequence.dialogueNo]);
+			if(dialogueSequence.dialogueNo >= 0)
+				checkForDialogueStringTags(dialogueSequence.dialogues[dialogueSequence.dialogueNo]);
 		}
 
-		if ((Input.GetButtonDown(proceedInput) || Input.GetButtonDown(proceedInput2))
+		if ((Input.GetButtonDown(proceedInput))
 			&& sprRenderer.enabled)
 		{
 			if (aud != null && TogglesValues.sound)

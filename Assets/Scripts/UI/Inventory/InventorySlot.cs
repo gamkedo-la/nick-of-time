@@ -54,7 +54,7 @@ public class InventorySlot : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Inventory1") && inventoryControlPanel.IsTrading)
+        if (Input.GetButtonDown(TogglesValues.p1controller == "" ? "Inventory1" : "Inventory" + TogglesValues.p1controller) && inventoryControlPanel.IsTrading)
         {
             CancelTrade();
         }              

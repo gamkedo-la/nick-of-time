@@ -21,6 +21,11 @@ public class InventoryUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+		if (gameObject.name == "Player1" && TogglesValues.p1controller != "")
+			inventoryOpen = "Inventory" + TogglesValues.p1controller;
+		if (gameObject.name == "Player2" && TogglesValues.p2controller != "")
+			inventoryOpen = "Inventory" + TogglesValues.p2controller;
+
 		if (associatedPlayer != null)
 		{
 			inventory = associatedPlayer.GetComponent<Inventory>();
@@ -39,8 +44,8 @@ public class InventoryUI : MonoBehaviour
         {
             inventoryUI.SetActive(!inventoryUI.activeSelf);
 
-            firstSelected.Select();
-            firstSelected.OnSelect(null);
+            firstSelected?.Select();
+            firstSelected?.OnSelect(null);
 
             //slots[0].GetComponentInChildren<Button>().Select();
         }

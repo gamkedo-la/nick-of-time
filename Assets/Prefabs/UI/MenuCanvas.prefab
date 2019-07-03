@@ -4809,7 +4809,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Right Shift
+  m_text: LB / RB
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3a13cf1699052b459e0104421c84054, type: 2}
   m_sharedMaterial: {fileID: -2134230250208531588, guid: e3a13cf1699052b459e0104421c84054,
@@ -5227,7 +5227,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 1, y: 0.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5690978540640951625
 CanvasRenderer:
@@ -5265,7 +5265,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Keyboard
+  m_text: Controller
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3a13cf1699052b459e0104421c84054, type: 2}
   m_sharedMaterial: {fileID: -2134230250208531588, guid: e3a13cf1699052b459e0104421c84054,
@@ -5297,9 +5297,9 @@ MonoBehaviour:
   m_fontSize: 0.2
   m_fontSizeBase: 0.2
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 0.02
+  m_fontSizeMax: 0.2
   m_fontStyle: 0
   m_textAlignment: 4098
   m_characterSpacing: 0
@@ -13667,7 +13667,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Right Arrow
+  m_text: D-Pad Right
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3a13cf1699052b459e0104421c84054, type: 2}
   m_sharedMaterial: {fileID: -2134230250208531588, guid: e3a13cf1699052b459e0104421c84054,
@@ -18369,7 +18369,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.012999997, y: -0.013999941}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 1, y: 0.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8833654583395222067
 CanvasRenderer:
@@ -18407,7 +18407,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Keyboard
+  m_text: Controller
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3a13cf1699052b459e0104421c84054, type: 2}
   m_sharedMaterial: {fileID: -2134230250208531588, guid: e3a13cf1699052b459e0104421c84054,
@@ -18439,9 +18439,9 @@ MonoBehaviour:
   m_fontSize: 0.2
   m_fontSizeBase: 0.2
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 0.02
+  m_fontSizeMax: 0.2
   m_fontStyle: 0
   m_textAlignment: 4098
   m_characterSpacing: 0
@@ -18815,7 +18815,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Left Arrow
+  m_text: D-Pad Left
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3a13cf1699052b459e0104421c84054, type: 2}
   m_sharedMaterial: {fileID: -2134230250208531588, guid: e3a13cf1699052b459e0104421c84054,
@@ -19523,7 +19523,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Down Arrow
+  m_text: D-Pad Down
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3a13cf1699052b459e0104421c84054, type: 2}
   m_sharedMaterial: {fileID: -2134230250208531588, guid: e3a13cf1699052b459e0104421c84054,
@@ -26235,7 +26235,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Up Arrow
+  m_text: D-Pad Up
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3a13cf1699052b459e0104421c84054, type: 2}
   m_sharedMaterial: {fileID: -2134230250208531588, guid: e3a13cf1699052b459e0104421c84054,
@@ -26381,7 +26381,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 1, y: 0.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7124782835695899830
 CanvasRenderer:
@@ -26419,7 +26419,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Keyboard
+  m_text: Controller
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3a13cf1699052b459e0104421c84054, type: 2}
   m_sharedMaterial: {fileID: -2134230250208531588, guid: e3a13cf1699052b459e0104421c84054,
@@ -26451,9 +26451,9 @@ MonoBehaviour:
   m_fontSize: 0.2
   m_fontSizeBase: 0.2
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 0.02
+  m_fontSizeMax: 0.2
   m_fontStyle: 0
   m_textAlignment: 4098
   m_characterSpacing: 0
@@ -27782,7 +27782,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.012999997, y: -0.013999941}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 1, y: 0.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4638078511493852508
 CanvasRenderer:
@@ -27820,7 +27820,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Keyboard
+  m_text: Controller
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3a13cf1699052b459e0104421c84054, type: 2}
   m_sharedMaterial: {fileID: -2134230250208531588, guid: e3a13cf1699052b459e0104421c84054,
@@ -27852,9 +27852,9 @@ MonoBehaviour:
   m_fontSize: 0.2
   m_fontSizeBase: 0.2
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 0.02
+  m_fontSizeMax: 0.2
   m_fontStyle: 0
   m_textAlignment: 4098
   m_characterSpacing: 0
@@ -28329,7 +28329,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: /
+  m_text: A / B
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3a13cf1699052b459e0104421c84054, type: 2}
   m_sharedMaterial: {fileID: -2134230250208531588, guid: e3a13cf1699052b459e0104421c84054,
