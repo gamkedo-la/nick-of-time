@@ -25,7 +25,8 @@ public class Portal : MonoBehaviour
 		if (active && player)
 		{
 			// Confirm selection with attackInput
-			if (Input.GetButtonDown(attackInput + (player.name == "Player1" ? "1" : "2")))
+			if ((Input.GetButtonDown(attackInput + (player.name == "Player1" ? "1" : "2")))
+			|| (GameManager.singleGame && Input.GetButtonDown(attackInput + "2")))
 			{
 				MinimapController.instances[0].focus = false;
 				if (player.name == "Player1")
@@ -42,7 +43,11 @@ public class Portal : MonoBehaviour
 
 			// Change selection with horizontalInput
 			float selection = Input.GetAxisRaw(horizontalInput + (player.name == "Player1" ? "1" : "2"));
-			if (Input.GetButtonDown(horizontalInput + (player.name == "Player1" ? "1" : "2")))
+			if (selection == 0f && GameManager.singleGame)
+				selection = Input.GetAxisRaw(horizontalInput + "2");
+
+			if ((Input.GetButtonDown(horizontalInput + (player.name == "Player1" ? "1" : "2")))
+			|| (GameManager.singleGame && Input.GetButtonDown(horizontalInput + "2")))
 			{
 				selectedIndex += (int)Mathf.Sign(selection);
 				if (selectedIndex < 0)
@@ -96,7 +101,16 @@ public class Portal : MonoBehaviour
             else if (activePortals.Count <= 2) //the second exit is the same portal itself
             {
                 TransportPlayer(exits[activePortals[0]]);
-            }
+
+				if (player.name == "Player1")
+				{
+					Subtitles.AddPlayer1Subtitle("Player Teleported!");
+				}
+				else if (player.name == "Player2")
+				{
+					Subtitles.AddPlayer2Subtitle("Player Teleported!");
+				}
+			}
             // otherwise start "selection mode"
             else
             {
@@ -116,12 +130,18 @@ public class Portal : MonoBehaviour
                 playerCamera.playerFocusFactor = 0f;
                 PreviewSelection();
 
-				//Minimap Focus
+				//Minimap Focus and Subtitle
 				MinimapController.instances[0].focus = true;
 				if (player.name == "Player1")
+				{
 					MinimapController.instances[2].focus = true;
+					Subtitles.AddPlayer1Subtitle("Select the Portal");
+				}
 				else if (player.name == "Player2")
+				{
 					MinimapController.instances[1].focus = true;
+					Subtitles.AddPlayer2Subtitle("Select the Portal");
+				}
 			}
         }
     }

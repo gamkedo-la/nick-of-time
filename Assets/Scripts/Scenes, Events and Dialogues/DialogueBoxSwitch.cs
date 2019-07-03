@@ -82,6 +82,8 @@ public class DialogueBoxSwitch : MonoBehaviour
 
 				if (inventoryPl2)
 					inventoryPl2.SetActive(true);
+
+				Subtitles.Enable();
 			}
 		}
 		else
@@ -99,6 +101,8 @@ public class DialogueBoxSwitch : MonoBehaviour
 
 			if (inventoryPl2)
 				inventoryPl2.SetActive(false);
+
+			Subtitles.Disable();
 
 			if(dialogueSequence.dialogueNo >= 0)
 				checkForDialogueStringTags(dialogueSequence.dialogues[dialogueSequence.dialogueNo]);

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6848593466190622244}
   - component: {fileID: 6848593466190622246}
   - component: {fileID: 6848593466190622265}
+  - component: {fileID: -708230767235833490}
   m_Layer: 0
   m_Name: GrandClock
   m_TagString: Untagged
@@ -159,3 +160,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weight: 1
+--- !u!114 &-708230767235833490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6848593466190622243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9efdab2e7c31bd469c4a01837045230, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

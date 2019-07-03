@@ -298,8 +298,8 @@ MonoBehaviour:
   attackSpeedTime: 0.1
   dashSpeed: 7
   dashTime: 0.12
-  pushForce: 500
-  throwSpeed: 4
+  pushForce: 450
+  throwSpeed: 4.5
   dashFXObject: {fileID: 2643976167619289179, guid: d16b468af7e8e1a49a14edc85440334d,
     type: 3}
   attackFXObject: {fileID: 6822276787287973955, guid: d56b00b85024dc248846d64d2fa62c06,
@@ -313,18 +313,18 @@ MonoBehaviour:
   hitComboTextObject: {fileID: 3357830798507337105, guid: 3c40af7a0fbe25348ab2ba7f3841007d,
     type: 3}
   regenerateActionPointsPerSec: 0.2
-  attackActionDeplete: 0.25
-  dashActionDeplete: 0.1
-  pushActionDeplete: 0.05
-  throwActionDeplete: 0.1
-  keyComboMaxTimeGap: 0.2
+  attackActionDeplete: 0.35
+  dashActionDeplete: 0.2
+  pushActionDeplete: 0.1
+  throwActionDeplete: 0.2
+  keyComboMaxTimeGap: 0.18
   walkVerticalInput: Vertical
   walkHorizontalInput: Horizontal
   attackInput: Fire
-  criticalHitChance: 0.12
-  hitComboMaxTime: 0.4
-  criticalHitTimePause: 0.3
-  timeSlowMoTime: 10
+  criticalHitChance: 0.15
+  hitComboMaxTime: 0.5
+  criticalHitTimePause: 0.15
+  timeSlowMoTime: 8
   weaponPossession: {fileID: 1148393954167941654}
   attackSound: {fileID: 8300000, guid: 32ed1d859f4d34a41a11b51400612384, type: 3}
   dashSound: {fileID: 8300000, guid: f8a4e4e3090eccc478baddaf7213dd10, type: 3}

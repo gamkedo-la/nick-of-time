@@ -455,7 +455,7 @@ public class PlayerController : MonoBehaviour
 
 	private void pushOnCollision(Collision2D collision)
 	{
-		if (animator.GetBool("isPushing") == true && collision.gameObject.isStatic == false)
+		if (animator.GetBool("isPushing") == true && collision.gameObject.GetComponent<Pushable>() != null)
 		{
 			if (pushFXObject && nextFXdelay < 0f)
 			{
@@ -497,24 +497,21 @@ public class PlayerController : MonoBehaviour
 
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
-		if(collision.gameObject.layer != LayerMask.NameToLayer("Player") && collision.gameObject.layer != LayerMask.NameToLayer("Enemy")
-		&& collision.gameObject.isStatic == false)
+		if(collision.gameObject.GetComponent<Pushable>() != null)
 			pushPossible = true;
 		pushOnCollision(collision);
 	}
 
 	private void OnCollisionStay2D(Collision2D collision)
 	{
-		if (collision.gameObject.layer != LayerMask.NameToLayer("Player") && collision.gameObject.layer != LayerMask.NameToLayer("Enemy")
-		&& collision.gameObject.isStatic == false)
+		if (collision.gameObject.GetComponent<Pushable>() != null)
 			pushPossible = true;
 		pushOnCollision(collision);
 	}
 
 	private void OnCollisionExit2D(Collision2D collision)
 	{
-		if (collision.gameObject.layer != LayerMask.NameToLayer("Player") && collision.gameObject.layer != LayerMask.NameToLayer("Enemy")
-		&& collision.gameObject.isStatic == false)
+		if (collision.gameObject.GetComponent<Pushable>() != null)
 			pushPossible = false;
 	}
 
@@ -727,7 +724,13 @@ public class PlayerController : MonoBehaviour
 		if(hitComboCount >= 3 && !wasHitCritical)
 			wasHitCritical = Random.Range(0f, 1f) < criticalHitChance * hitComboCount;
 
-		if (wasHitCritical) Subtitles.AddPlayer2Subtitle("Critical Hit! Combo x" + hitComboCount + "!");
+		if (wasHitCritical)
+		{
+			if (playerNo == 1)
+				Subtitles.AddPlayer1Subtitle("Critical Hit! Combo x" + hitComboCount + "!");
+			else
+				Subtitles.AddPlayer2Subtitle("Critical Hit! Combo x" + hitComboCount + "!");
+		}
 
 		return wasHitCritical;
 	}

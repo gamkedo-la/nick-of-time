@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5897151427379911007}
   - component: {fileID: 5897151427379911004}
   - component: {fileID: -2039222464867503556}
+  - component: {fileID: -5308382447864361908}
   m_Layer: 0
   m_Name: BookStack#4
   m_TagString: Untagged
@@ -111,6 +112,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weight: 1
+--- !u!114 &-5308382447864361908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5897151427379910978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9efdab2e7c31bd469c4a01837045230, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5897151427857947188
 GameObject:
   m_ObjectHideFlags: 0

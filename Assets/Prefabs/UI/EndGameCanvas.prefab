@@ -525,6 +525,7 @@ GameObject:
   - component: {fileID: 4595282839914603008}
   - component: {fileID: 4595282839914603015}
   - component: {fileID: 4595282839914603014}
+  - component: {fileID: 8852226611922739023}
   m_Layer: 0
   m_Name: Done (1)
   m_TagString: Untagged
@@ -618,6 +619,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8852226611922739023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4595282839914603011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0c2596eeaefc4042a8c53b34194d12e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeOutObject: {fileID: 0}
+  deathSound: {fileID: 0}
+  sceneName: 
 --- !u!1 &4595282839936147452
 GameObject:
   m_ObjectHideFlags: 0

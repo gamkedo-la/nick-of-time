@@ -26,7 +26,7 @@ Received <color=#00ff00>Dagger</color>
 <color=#ffff00>???</color><br>HELP ME!!! Someone... ANYONE!
 <color=#ff6666>Player 1</color><br>...
  
-<color=#ff6666>Player 1</color><br>It looks like these teleporting killers are gone!
+<color=#ff6666>Player 1</color><br>It looks like those mud monsters are gone!
 <color=#ff6666>Player 1</color><br>Buddy... Owee, <i>buggy</i>... You asked for help?
 <color=#ffbb01>Nick</color><br>I am not <i>buddy</i> or <i>buggy</i>, my name is Nick. Yeah, I was calling for help.
 <color=#ff6666>Player 1</color><br>Oh yeah. Nick. You know, you can stop jumpin' around now. No need to panic.

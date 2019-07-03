@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PushedObject : MonoBehaviour
 {
-	private float minVelocity = 0.5f;
+	private float minVelocity = 1f;
 	private Rigidbody2D rb;
 
     void Start()

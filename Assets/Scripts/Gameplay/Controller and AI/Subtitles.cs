@@ -7,10 +7,10 @@ using TMPro;
 // example: "picked up a potion"
 public class Subtitles : MonoBehaviour
 {
-    public float fadePerFrame = 0.005f;
-	
+	public float fadePerFrame = 0.005f;
+
 	private TextMeshProUGUI[] texts;
-    private float alpha = 1f;
+	private float alpha = 1f;
 
 	static public void AddPlayer1Subtitle(string str)
 	{
@@ -27,6 +27,44 @@ public class Subtitles : MonoBehaviour
 	{
 		p2Subtitles[0].Caption(str);
 		p2Subtitles[1].Caption(str);
+	}
+
+	static public void Enable()
+	{
+		singlePlayerSubtitles?.gameObject?.SetActive(true);
+		if (p1Subtitles != null && p1Subtitles.Length > 0)
+		{
+			if (p1Subtitles.Length > 0 && p1Subtitles[0] != null)
+				p1Subtitles[0].gameObject.SetActive(true);
+			if (p1Subtitles.Length > 1 && p1Subtitles[1] != null)
+				p1Subtitles[1].gameObject.SetActive(true);
+		}
+		if (p2Subtitles != null)
+		{
+			if (p2Subtitles.Length > 0 && p2Subtitles[0] != null)
+				p2Subtitles[0].gameObject.SetActive(true);
+			if (p2Subtitles.Length > 1 && p2Subtitles[1] != null)
+				p2Subtitles[1].gameObject.SetActive(true);
+		}
+	}
+
+	static public void Disable()
+	{
+		singlePlayerSubtitles?.gameObject.SetActive(false);
+		if (p1Subtitles != null && p1Subtitles.Length > 0)
+		{
+			if (p1Subtitles.Length > 0 && p1Subtitles[0] != null)
+				p1Subtitles[0].gameObject.SetActive(false);
+			if (p1Subtitles.Length > 1 && p1Subtitles[1] != null)
+				p1Subtitles[1].gameObject.SetActive(false);
+		}
+		if (p2Subtitles != null && p2Subtitles.Length > 0)
+		{
+			if(p2Subtitles.Length > 0 && p2Subtitles[0] != null)
+				p2Subtitles[0].gameObject.SetActive(false);
+			if(p2Subtitles.Length > 1 && p2Subtitles[1] != null)
+				p2Subtitles[1].gameObject.SetActive(false);
+		}
 	}
 
 	static private Subtitles singlePlayerSubtitles;
@@ -73,7 +111,7 @@ public class Subtitles : MonoBehaviour
 	
     void Update()
     {
-		for (int i = 0; i < transform.childCount; i++)
+		for (int i = 0; i < transform?.childCount; i++)
 		{
 			Color col = texts[i].color;
 			col.a = Mathf.Lerp(col.a, 0f, fadePerFrame);
@@ -83,13 +121,14 @@ public class Subtitles : MonoBehaviour
 
     public void Caption(string str)
 	{
-		for (int n = 0; n < transform.childCount; n++)
+		for (int n = 0; n < transform?.childCount; n++)
 		{
 			texts[n].color -= new Color(0f, 0f, 0f, 0.1f);
 			texts[n].gameObject.transform.localPosition -= new Vector3(0f, 40f, 0f);
+			
 		}
 		
-		for (int i = 0; i < transform.childCount; i++)
+		for (int i = 0; i < transform?.childCount; i++)
 		{
 			if (texts[i].gameObject.transform.localPosition == new Vector3(0f, -80f, 0f))
 			{

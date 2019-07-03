@@ -18,8 +18,8 @@
 <color=#ff6666>Player 1</color><br>But it's locked. I wonder where the key is...
  
 
-<color=#ff6666>Player 1</color><br>Did you see that?
-<color=#6666ff>Player 2</color><br>Yeah. We must get outta here.
+<color=#ff6666>Player 1</color><br>What was THAT?
+<color=#ff6666>Player 1</color><br>I must get outta here.
  
 <color=#ff6666>Player 1</color><br>WHAT? Who opened that door when I have the key?
 <color=#ff6666>Player 1</color><br>Well, whatever. Lets get some bites and escape this dungeon.

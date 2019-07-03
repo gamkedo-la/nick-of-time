@@ -38,7 +38,7 @@ public class AreaBlockObject : MonoBehaviour
 		spRend.color = new Color(spRend.color.r, spRend.color.g, spRend.color.b, state);
 		transform.position = new Vector3(prevPosition.x, prevPosition.y - (maxYOffset * (state-1f)), prevPosition.z);
 
-		state += stateTransition * Time.deltaTime;
+		state += (stateTransition * 3f) * Time.deltaTime;
 
 		if (state < 0f) state = 0f;
 		else if (state > 1f) state = 1f;

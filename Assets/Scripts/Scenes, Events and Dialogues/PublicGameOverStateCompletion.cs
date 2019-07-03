@@ -34,8 +34,11 @@ public class PublicGameOverStateCompletion : MonoBehaviour {
 
 	public void fadeToNext()
 	{
-		fadeOutObject.GetComponent<PublicSceneChangeFunction>().sceneName = sceneName;
-		Instantiate(fadeOutObject);
+		if (sceneName != "")
+		{
+			fadeOutObject.GetComponent<PublicSceneChangeFunction>().sceneName = sceneName;
+			Instantiate(fadeOutObject);
+		}
 	}
 	
 	public void playDeathSound()

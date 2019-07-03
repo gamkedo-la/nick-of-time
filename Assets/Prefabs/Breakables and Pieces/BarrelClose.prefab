@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4390182063763440324}
   - component: {fileID: 4390182063763440326}
   - component: {fileID: 4390182063763440345}
+  - component: {fileID: 6444731331352050064}
   m_Layer: 0
   m_Name: BarrelClose
   m_TagString: Untagged
@@ -159,3 +160,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weight: 1
+--- !u!114 &6444731331352050064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4390182063763440323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9efdab2e7c31bd469c4a01837045230, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
