@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-
+    [HideInInspector]
     public EquipmentManager equipmentManager;
 
     public delegate void OnItemChanged();
