@@ -113,8 +113,9 @@ public class InventorySlot : MonoBehaviour
                 
                 if(item.stackable == false)
                 {
-                    tradePanel.amountToTradeDisplay.text = "";
-                }
+                    //tradePanel.amountToTradeDisplay.text = "";
+                    tradePanel.GetComponentInChildren<TextMeshProUGUI>().enabled = false;
+                }                
 
                 confirmTradeButton.gameObject.SetActive(true);
                 confirmTradeButton.Select();
@@ -124,25 +125,36 @@ public class InventorySlot : MonoBehaviour
     }
 
     public void ConfirmTrade()
-    {      
-        if (item.stackable == false)
+    {
+        if (item != null)
         {
-            inventory.Trade(item, inventory, otherPlayerInventory, 1);
-        }
+            
+            tradePanel.gameObject.SetActive(false);
+            tradePanel.GetComponentInChildren<TextMeshProUGUI>().enabled = true;
 
-        if (item.stackable == true && tradePanel.amountToTrade != 0)
+            thisItemButton.Select();
+            thisItemButton.OnSelect(null);
+
+            if (item.stackable == false)
+            {
+                inventory.Trade(item, inventory, otherPlayerInventory, 1);
+            }
+
+            if (item.stackable == true && tradePanel.amountToTrade != 0)
+            {
+                inventory.Trade(item, inventory, otherPlayerInventory, tradePanel.amountToTrade);
+            }
+
+            tradePanel.amountToTrade = 0;
+            tradePanel.amountToTradeDisplay.text = tradePanel.amountToTrade.ToString();
+
+            inventory.onItemChangedCallback.Invoke();
+        }
+        else
         {
-           inventory.Trade(item, inventory, otherPlayerInventory, tradePanel.amountToTrade);
+            return;
         }
-
-        tradePanel.amountToTrade = 0;
-        tradePanel.amountToTradeDisplay.text = tradePanel.amountToTrade.ToString();
-        tradePanel.gameObject.SetActive(false);
-
-        thisItemButton.Select();
-        thisItemButton.OnSelect(null);
-
-        inventory.onItemChangedCallback.Invoke();
+        
     }
 
     public void CancelTrade()
