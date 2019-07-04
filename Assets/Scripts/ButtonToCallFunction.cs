@@ -14,4 +14,9 @@ public class ButtonToCallFunction : MonoBehaviour
 			onClick.Invoke();
 		}
 	}
+
+	public void OnSelection()
+	{
+		onClick.Invoke();
+	}
 }

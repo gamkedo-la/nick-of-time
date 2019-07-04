@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ButtonToToggle : MonoBehaviour {
-	
+public class ButtonToToggle : MonoBehaviour
+{
+
 	public bool forMusic = true;
 	public bool forSound = false;
 	public bool forSingleWindow = false;
@@ -12,31 +13,33 @@ public class ButtonToToggle : MonoBehaviour {
 	public bool forSubtitles = false;
 
 	public AudioClip clickSound;
-	
+
 	private AudioSource aud = null;
-	
-	void Start () {
+
+	void Start()
+	{
 		aud = GetComponent<AudioSource>();
-		if(aud == null)
+		if (aud == null)
 		{
 			AudioSource[] auds = FindObjectsOfType<AudioSource>();
-			
-			for(int i = 0; i < auds.GetLength(0); i++)
+
+			for (int i = 0; i < auds.GetLength(0); i++)
 			{
-				if(auds[i].gameObject.GetComponent<KeepInBetweenScenes>() != null)
+				if (auds[i].gameObject.GetComponent<KeepInBetweenScenes>() != null)
 				{
 					aud = auds[i];
 					break;
 				}
 			}
 		}
-		if(aud == null)
+		if (aud == null)
 			aud = FindObjectOfType<AudioSource>();
 
 		UpdateState();
 	}
-	
-	void UpdateState () {
+
+	void UpdateState()
+	{
 		if (forMusic)
 		{
 			gameObject.transform.GetChild(0).gameObject.SetActive(TogglesValues.music);
@@ -83,9 +86,10 @@ public class ButtonToToggle : MonoBehaviour {
 			gameObject.transform.GetChild(1).gameObject.SetActive(!TogglesValues.subtitles);
 		}
 	}
-	
-	void OnMouseOver() {
-		if(Input.GetMouseButtonDown(0))
+
+	void OnMouseOver()
+	{
+		if (Input.GetMouseButtonDown(0))
 		{
 			if (aud != null && TogglesValues.sound)
 			{
@@ -124,5 +128,45 @@ public class ButtonToToggle : MonoBehaviour {
 
 			UpdateState();
 		}
+	}
+
+	public void OnSelection()
+	{
+		if (aud != null && TogglesValues.sound)
+		{
+			aud.PlayOneShot(clickSound);
+		}
+
+		if (forMusic)
+		{
+			TogglesValues.music = !TogglesValues.music;
+
+			if (aud.isPlaying && !TogglesValues.music)
+				aud.Stop();
+			else if (TogglesValues.music)
+				aud.gameObject.GetComponent<MusicManager>().changeMusicState("MusicToggle");
+		}
+		else if (forSound)
+		{
+			TogglesValues.sound = !TogglesValues.sound;
+		}
+		else if (forSingleWindow)
+		{
+			TogglesValues.singleWindow = !TogglesValues.singleWindow;
+		}
+		else if (forCoop && !TogglesValues.story)
+		{
+			TogglesValues.coop = !TogglesValues.coop;
+		}
+		else if (forStory)
+		{
+			TogglesValues.story = !TogglesValues.story;
+		}
+		else if (forSubtitles)
+		{
+			TogglesValues.subtitles = !TogglesValues.subtitles;
+		}
+
+		UpdateState();
 	}
 }

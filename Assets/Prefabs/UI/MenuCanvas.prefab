@@ -2835,6 +2835,7 @@ GameObject:
   - component: {fileID: 1235059426}
   - component: {fileID: 1235059428}
   - component: {fileID: 1235059427}
+  - component: {fileID: 3609423444974851572}
   m_Layer: 0
   m_Name: SettingsPanel
   m_TagString: Untagged
@@ -2905,6 +2906,56 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   setState: 0
+--- !u!114 &3609423444974851572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235059425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa2c2631a0bc55a409446c5d3ad18733, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceActivate: 0
+  selection: 0
+  row: 0
+  col: 0
+  gridObjects:
+  - objects:
+    - {fileID: 201502941}
+  - objects:
+    - {fileID: 1336551346}
+  - objects:
+    - {fileID: 1348771233}
+  - objects:
+    - {fileID: 1148182270}
+  - objects:
+    - {fileID: 1718090493}
+  - objects:
+    - {fileID: 313476633}
+  delay: 0.1
+  horizontalInputs:
+  - Horizontal1
+  - Horizontal2
+  - Horizontal1Controller
+  - Horizontal2Controller
+  verticalInputs:
+  - Vertical1
+  - Vertical2
+  - Vertical1Controller
+  - Vertical2Controller
+  selectionInputs:
+  - Fire1
+  - Fire2
+  - Fire1Controller
+  - Fire2Controller
+  - Submit
+  cancelationInputs:
+  - Inventory1
+  - Inventory2
+  - Cancel
 --- !u!1 &1336551346
 GameObject:
   m_ObjectHideFlags: 0
@@ -4930,6 +4981,7 @@ GameObject:
   - component: {fileID: 5654304113142681303}
   - component: {fileID: 1795157725715412963}
   - component: {fileID: 8988140812289489041}
+  - component: {fileID: 1451145231447871960}
   m_Layer: 0
   m_Name: PlayMenu
   m_TagString: Untagged
@@ -5016,6 +5068,60 @@ MonoBehaviour:
   deselectedColor: {r: 0.78431374, g: 0.49019608, b: 0.29411766, a: 0.5882353}
   selectedColor: {r: 1, g: 0.88235295, b: 0.6839622, a: 1}
   clickSound: {fileID: 8300000, guid: 3ac4326bbe10ffb42b9652b3dd6cbbc3, type: 3}
+--- !u!114 &1451145231447871960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335566642813247151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa2c2631a0bc55a409446c5d3ad18733, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceActivate: 0
+  selection: 0
+  row: 0
+  col: 0
+  gridObjects:
+  - objects:
+    - {fileID: 3688988331181112535}
+    - {fileID: 4819598169515859599}
+  - objects:
+    - {fileID: 5583746585485422430}
+    - {fileID: 2042740099683499740}
+    - {fileID: 9089200089384567527}
+  - objects:
+    - {fileID: 1988126990247312502}
+    - {fileID: 1988126989830972582}
+  - objects:
+    - {fileID: 1219578424277186213}
+    - {fileID: 3481296813575917258}
+  - objects:
+    - {fileID: 341864362906537765}
+    - {fileID: 5354560797339486043}
+  delay: 0.1
+  horizontalInputs:
+  - Horizontal1
+  - Horizontal2
+  - Horizontal1Controller
+  - Horizontal2Controller
+  verticalInputs:
+  - Vertical1
+  - Vertical2
+  - Vertical1Controller
+  - Vertical2Controller
+  selectionInputs:
+  - Fire1
+  - Fire2
+  - Fire1Controller
+  - Fire2Controller
+  - Submit
+  cancelationInputs:
+  - Inventory1
+  - Inventory2
+  - Cancel
 --- !u!1 &341864362906537765
 GameObject:
   m_ObjectHideFlags: 0
@@ -12331,6 +12437,7 @@ GameObject:
   - component: {fileID: 412322989264501649}
   - component: {fileID: 2034171405622984576}
   - component: {fileID: 2034171405622984575}
+  - component: {fileID: 7209326308545510526}
   m_Layer: 0
   m_Name: CreditsPanel
   m_TagString: Untagged
@@ -12395,6 +12502,46 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   setState: 0
+--- !u!114 &7209326308545510526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034171405622984574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa2c2631a0bc55a409446c5d3ad18733, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceActivate: 0
+  selection: 0
+  row: 0
+  col: 0
+  gridObjects:
+  - objects:
+    - {fileID: 7133752828455373162}
+  delay: 0.1
+  horizontalInputs:
+  - Horizontal1
+  - Horizontal2
+  - Horizontal1Controller
+  - Horizontal2Controller
+  verticalInputs:
+  - Vertical1
+  - Vertical2
+  - Vertical1Controller
+  - Vertical2Controller
+  selectionInputs:
+  - Fire1
+  - Fire2
+  - Fire1Controller
+  - Fire2Controller
+  - Submit
+  cancelationInputs:
+  - Inventory1
+  - Inventory2
+  - Cancel
 --- !u!1 &2042740099683499740
 GameObject:
   m_ObjectHideFlags: 0
@@ -17363,6 +17510,7 @@ GameObject:
   - component: {fileID: 4996964192486063159}
   - component: {fileID: 6074788458777650246}
   - component: {fileID: 2287426368813500208}
+  - component: {fileID: 5203735929072848974}
   m_Layer: 0
   m_Name: MainMenu
   m_TagString: Untagged
@@ -17425,6 +17573,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   setState: 1
+--- !u!114 &5203735929072848974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3854681622344450636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa2c2631a0bc55a409446c5d3ad18733, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceActivate: 0
+  selection: 0
+  row: 0
+  col: 0
+  gridObjects:
+  - objects:
+    - {fileID: 3821082785395454463}
+  - objects:
+    - {fileID: 1988126989729419766}
+  - objects:
+    - {fileID: 1988126990109356051}
+  - objects:
+    - {fileID: 1988126989832250778}
+  delay: 0.1
+  horizontalInputs:
+  - Horizontal1
+  - Horizontal2
+  - Horizontal1Controller
+  - Horizontal2Controller
+  verticalInputs:
+  - Vertical1
+  - Vertical2
+  - Vertical1Controller
+  - Vertical2Controller
+  selectionInputs:
+  - Fire1
+  - Fire2
+  - Fire1Controller
+  - Fire2Controller
+  - Submit
+  cancelationInputs:
+  - Inventory1
+  - Inventory2
+  - Cancel
 --- !u!1 &3915428548328514837
 GameObject:
   m_ObjectHideFlags: 0
@@ -22682,6 +22876,7 @@ GameObject:
   - component: {fileID: 5619455556373780366}
   - component: {fileID: 8348997894011617657}
   - component: {fileID: 2906867639610395476}
+  - component: {fileID: 7555959194002858483}
   m_Layer: 0
   m_Name: ControlsPanel
   m_TagString: Untagged
@@ -22744,6 +22939,46 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   setState: 0
+--- !u!114 &7555959194002858483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6973807011217208296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa2c2631a0bc55a409446c5d3ad18733, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceActivate: 0
+  selection: 0
+  row: 0
+  col: 0
+  gridObjects:
+  - objects:
+    - {fileID: 5735146822881896050}
+  delay: 0.1
+  horizontalInputs:
+  - Horizontal1
+  - Horizontal2
+  - Horizontal1Controller
+  - Horizontal2Controller
+  verticalInputs:
+  - Vertical1
+  - Vertical2
+  - Vertical1Controller
+  - Vertical2Controller
+  selectionInputs:
+  - Fire1
+  - Fire2
+  - Fire1Controller
+  - Fire2Controller
+  - Submit
+  cancelationInputs:
+  - Inventory1
+  - Inventory2
+  - Cancel
 --- !u!1 &6987202243221982267
 GameObject:
   m_ObjectHideFlags: 0

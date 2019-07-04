@@ -1010,6 +1010,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6120125199286335717}
   - component: {fileID: 6120125199286335716}
+  - component: {fileID: 2819299446020307272}
   m_Layer: 5
   m_Name: PauseState
   m_TagString: Untagged
@@ -1050,6 +1051,50 @@ MonoBehaviour:
   isMusic: 0
   doRepeat: 0
   done: 0
+--- !u!114 &2819299446020307272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6120125199286335738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa2c2631a0bc55a409446c5d3ad18733, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceActivate: 1
+  selection: 0
+  row: 0
+  col: 0
+  gridObjects:
+  - objects:
+    - {fileID: 6120125198633221872}
+  - objects:
+    - {fileID: 6120125198277386780}
+  - objects:
+    - {fileID: 6120125199544868783}
+  delay: 0.1
+  horizontalInputs:
+  - Horizontal1
+  - Horizontal2
+  - Horizontal1Controller
+  - Horizontal2Controller
+  verticalInputs:
+  - Vertical1
+  - Vertical2
+  - Vertical1Controller
+  - Vertical2Controller
+  selectionInputs:
+  - Fire1
+  - Fire2
+  - Fire1Controller
+  - Fire2Controller
+  - Submit
+  cancelationInputs:
+  - Inventory1
+  - Inventory2
+  - Cancel
 --- !u!1 &6120125199370689118
 GameObject:
   m_ObjectHideFlags: 0

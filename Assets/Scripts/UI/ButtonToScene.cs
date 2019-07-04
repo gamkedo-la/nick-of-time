@@ -54,7 +54,25 @@ public class ButtonToScene : MonoBehaviour {
 				
 				if(startTime) Time.timeScale = 1f;
 			}
+		}	
+	}
+
+	public void OnSelection()
+	{
+		if (aud != null && TogglesValues.sound)
+		{
+			aud.PlayOneShot(clickSound);
 		}
-		
+
+		if (sceneName == "quit" || sceneName == "Quit")
+		{
+			Application.Quit();
+		}
+		else if (sceneName != "null")
+		{
+			SceneManager.LoadScene(sceneName);
+
+			if (startTime) Time.timeScale = 1f;
+		}
 	}
 }

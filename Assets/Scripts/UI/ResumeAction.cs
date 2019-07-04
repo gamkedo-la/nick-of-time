@@ -34,4 +34,17 @@ public class ResumeAction : MonoBehaviour {
 			Time.timeScale = 1f;
 		}
 	}
+
+	public void OnSelection()
+	{
+		if (aud != null && TogglesValues.sound)
+		{
+			aud.PlayOneShot(clickSound);
+		}
+
+		pauseTriggerObject.GetComponent<ActivateSingleMode>().paused = false;
+		pauseTriggerObject.GetComponent<ActivateSingleMode>().pauseObject.SetActive(false);
+		gameObject.transform.parent.parent.gameObject.GetComponent<PlaySound>().done = false;
+		Time.timeScale = 1f;
+	}
 }

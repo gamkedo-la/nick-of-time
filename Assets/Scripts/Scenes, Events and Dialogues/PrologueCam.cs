@@ -19,7 +19,10 @@ public class PrologueCam : MonoBehaviour {
 	
 	private AudioSource aud;
 	
-	void Start () {
+	void Start ()
+	{
+		Time.timeScale = 1f;
+
 		aud = GetComponent<AudioSource>();
 		if(aud == null)
 		{
@@ -38,19 +41,23 @@ public class PrologueCam : MonoBehaviour {
 			aud = FindObjectOfType<AudioSource>();
 	}
 	
-	void Update () {
+	void Update ()
+	{
 		
 	}
 	
-	public void enableMadClocks() {
+	public void enableMadClocks()
+	{
 		madClocks.SetActive(true);
 	}
 	
-	public void disableMadClocks() {
+	public void disableMadClocks()
+	{
 		madClocks.SetActive(false);
 	}
 	
-	public void enableTitle() {
+	public void enableTitle()
+	{
 		title.SetActive(true);
 	}
 	

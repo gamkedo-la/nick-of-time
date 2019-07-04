@@ -11,6 +11,8 @@ public class MenuAnimatorState : MonoBehaviour
 		GetComponent<Animator>().SetBool("state", setState);
     }
 
+	public bool getState() { return GetComponent<Animator>().GetBool("state"); }
+
 	public void stateON() { GetComponent<Animator>().SetBool("state", true); }
 
 	public void stateOFF() { GetComponent<Animator>().SetBool("state", false); }

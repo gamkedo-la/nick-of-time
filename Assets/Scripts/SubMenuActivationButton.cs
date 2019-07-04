@@ -59,4 +59,21 @@ public class SubMenuActivationButton : MonoBehaviour
 		}
 
 	}
+
+	public void OnSelection()
+	{
+		if (aud != null && TogglesValues.sound)
+		{
+			aud.PlayOneShot(clickSound);
+		}
+
+		for (int i = 0; i < objectsToDeactivate.GetLength(0); i++)
+			objectsToDeactivate[i].GetComponent<MenuAnimatorState>().stateOFF();
+
+		for (int i = 0; i < objectsToActivate.GetLength(0); i++)
+			objectsToActivate[i].GetComponent<MenuAnimatorState>().stateON();
+
+		if (selfDeactivate)
+			gameObject.GetComponent<MenuAnimatorState>().stateOFF();
+	}
 }
