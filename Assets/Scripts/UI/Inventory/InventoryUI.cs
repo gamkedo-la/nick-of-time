@@ -53,11 +53,11 @@ public class InventoryUI : MonoBehaviour
 		{
 			if (inventoryUI.activeSelf)
 			{
-				GetComponent<PlayerController>().enabled = false;
+				//GetComponent<PlayerController>().enabled = false;
 			}
 			else
 			{
-				GetComponent<PlayerController>().enabled = true;
+				//GetComponent<PlayerController>().enabled = true;
 			}
 		}
     }

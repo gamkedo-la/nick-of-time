@@ -124,9 +124,7 @@ public class InventorySlot : MonoBehaviour
     }
 
     public void ConfirmTrade()
-    {
-        
-
+    {      
         if (item.stackable == false)
         {
             inventory.Trade(item, inventory, otherPlayerInventory, 1);
@@ -134,9 +132,9 @@ public class InventorySlot : MonoBehaviour
 
         if (item.stackable == true && tradePanel.amountToTrade != 0)
         {
-            inventory.Trade(item, inventory, otherPlayerInventory, tradePanel.amountToTrade);
-          
+           inventory.Trade(item, inventory, otherPlayerInventory, tradePanel.amountToTrade);
         }
+
         tradePanel.amountToTrade = 0;
         tradePanel.amountToTradeDisplay.text = tradePanel.amountToTrade.ToString();
         tradePanel.gameObject.SetActive(false);

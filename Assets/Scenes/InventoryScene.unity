@@ -879,7 +879,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalAxis: Horizontal1
   m_VerticalAxis: Vertical1
-  m_SubmitButton: Submit1
+  m_SubmitButton: Submit
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
@@ -11643,17 +11643,17 @@ PrefabInstance:
     - target: {fileID: 3329497469656580619, guid: f34ad73bca23e694585b0119f5a1682a,
         type: 3}
       propertyPath: walkVerticalInput
-      value: Vertical2
+      value: Vertical
       objectReference: {fileID: 0}
     - target: {fileID: 3329497469656580619, guid: f34ad73bca23e694585b0119f5a1682a,
         type: 3}
       propertyPath: walkHorizontalInput
-      value: Horizontal2
+      value: Horizontal
       objectReference: {fileID: 0}
     - target: {fileID: 3329497469656580619, guid: f34ad73bca23e694585b0119f5a1682a,
         type: 3}
       propertyPath: attackInput
-      value: Fire2
+      value: Fire
       objectReference: {fileID: 0}
     - target: {fileID: 3329497469656580619, guid: f34ad73bca23e694585b0119f5a1682a,
         type: 3}
@@ -25496,7 +25496,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalAxis: Horizontal2
   m_VerticalAxis: Vertical2
-  m_SubmitButton: Submit2
+  m_SubmitButton: Submit
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
@@ -25735,7 +25735,7 @@ Light:
   m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 3, y: -11, z: 3, w: 1.5e-44}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -51623,6 +51623,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Inventory Canvas Player 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7002225674640820238, guid: 6146772f02ed9114bb30ec85bc5ca561,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7002225674640820238, guid: 6146772f02ed9114bb30ec85bc5ca561,
+        type: 3}
+      propertyPath: eventSystem
+      value: 
+      objectReference: {fileID: 156075088}
+    - target: {fileID: 1028207722129694294, guid: 6146772f02ed9114bb30ec85bc5ca561,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8867092716864298254, guid: 6146772f02ed9114bb30ec85bc5ca561,
         type: 3}
       propertyPath: increaseTradeAmountButton
@@ -51647,21 +51662,6 @@ PrefabInstance:
         type: 3}
       propertyPath: VerticalAxisDownKey
       value: s
-      objectReference: {fileID: 0}
-    - target: {fileID: 7002225674640820238, guid: 6146772f02ed9114bb30ec85bc5ca561,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7002225674640820238, guid: 6146772f02ed9114bb30ec85bc5ca561,
-        type: 3}
-      propertyPath: eventSystem
-      value: 
-      objectReference: {fileID: 156075088}
-    - target: {fileID: 1028207722129694294, guid: 6146772f02ed9114bb30ec85bc5ca561,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1028207721975600156, guid: 6146772f02ed9114bb30ec85bc5ca561,
         type: 3}
@@ -54056,6 +54056,11 @@ PrefabInstance:
       propertyPath: associatedPlayer
       value: 
       objectReference: {fileID: 53627062}
+    - target: {fileID: 8545718040581560731, guid: ba396c6b7afd56d4d88bf68eb1afa4b9,
+        type: 3}
+      propertyPath: otherPlayer
+      value: 
+      objectReference: {fileID: 74160656}
     - target: {fileID: 6344361633648846637, guid: ba396c6b7afd56d4d88bf68eb1afa4b9,
         type: 3}
       propertyPath: eventSystem
@@ -54101,6 +54106,11 @@ PrefabInstance:
       propertyPath: associatedPlayer
       value: 
       objectReference: {fileID: 53627062}
+    - target: {fileID: 8545718039167956860, guid: ba396c6b7afd56d4d88bf68eb1afa4b9,
+        type: 3}
+      propertyPath: otherPlayer
+      value: 
+      objectReference: {fileID: 74160656}
     - target: {fileID: 6344361634391361994, guid: ba396c6b7afd56d4d88bf68eb1afa4b9,
         type: 3}
       propertyPath: eventSystem
@@ -54146,6 +54156,11 @@ PrefabInstance:
       propertyPath: associatedPlayer
       value: 
       objectReference: {fileID: 53627062}
+    - target: {fileID: 8545718039280968403, guid: ba396c6b7afd56d4d88bf68eb1afa4b9,
+        type: 3}
+      propertyPath: otherPlayer
+      value: 
+      objectReference: {fileID: 74160656}
     - target: {fileID: 6344361634554584165, guid: ba396c6b7afd56d4d88bf68eb1afa4b9,
         type: 3}
       propertyPath: eventSystem
@@ -54191,6 +54206,11 @@ PrefabInstance:
       propertyPath: associatedPlayer
       value: 
       objectReference: {fileID: 53627062}
+    - target: {fileID: 8545718040494861855, guid: ba396c6b7afd56d4d88bf68eb1afa4b9,
+        type: 3}
+      propertyPath: otherPlayer
+      value: 
+      objectReference: {fileID: 74160656}
     - target: {fileID: 6344361633603948713, guid: ba396c6b7afd56d4d88bf68eb1afa4b9,
         type: 3}
       propertyPath: eventSystem
@@ -54236,6 +54256,11 @@ PrefabInstance:
       propertyPath: associatedPlayer
       value: 
       objectReference: {fileID: 53627062}
+    - target: {fileID: 8545718040080254057, guid: ba396c6b7afd56d4d88bf68eb1afa4b9,
+        type: 3}
+      propertyPath: otherPlayer
+      value: 
+      objectReference: {fileID: 74160656}
     - target: {fileID: 2532780551848036257, guid: ba396c6b7afd56d4d88bf68eb1afa4b9,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -54271,6 +54296,11 @@ PrefabInstance:
       propertyPath: associatedPlayer
       value: 
       objectReference: {fileID: 53627062}
+    - target: {fileID: 8545718039497263498, guid: ba396c6b7afd56d4d88bf68eb1afa4b9,
+        type: 3}
+      propertyPath: otherPlayer
+      value: 
+      objectReference: {fileID: 74160656}
     - target: {fileID: 2532780552406707693, guid: ba396c6b7afd56d4d88bf68eb1afa4b9,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -54306,6 +54336,11 @@ PrefabInstance:
       propertyPath: associatedPlayer
       value: 
       objectReference: {fileID: 53627062}
+    - target: {fileID: 8545718040056193990, guid: ba396c6b7afd56d4d88bf68eb1afa4b9,
+        type: 3}
+      propertyPath: otherPlayer
+      value: 
+      objectReference: {fileID: 74160656}
     - target: {fileID: 2532780552959122811, guid: ba396c6b7afd56d4d88bf68eb1afa4b9,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -54341,6 +54376,11 @@ PrefabInstance:
       propertyPath: associatedPlayer
       value: 
       objectReference: {fileID: 53627062}
+    - target: {fileID: 8545718040609624912, guid: ba396c6b7afd56d4d88bf68eb1afa4b9,
+        type: 3}
+      propertyPath: otherPlayer
+      value: 
+      objectReference: {fileID: 74160656}
     - target: {fileID: 3992968994622378876, guid: ba396c6b7afd56d4d88bf68eb1afa4b9,
         type: 3}
       propertyPath: m_textInfo.characterCount
