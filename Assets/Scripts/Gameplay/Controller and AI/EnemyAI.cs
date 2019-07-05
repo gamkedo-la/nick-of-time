@@ -54,7 +54,7 @@ public class EnemyAI : MonoBehaviour
 	
 	private Vector2 walkInput = Vector2.zero;
 
-	//For rotational and procedural AI types
+	//For rotational AI type
 	private bool isSpawned = false;
 	[HideInInspector] public bool isAttacking = false;
 	private float rotationSpeed = 720f;
@@ -64,6 +64,9 @@ public class EnemyAI : MonoBehaviour
 	private float angleAtTargetTime = 1.2f;
 	private float angleAtTargetTimer = 0f;
 	private TrailRenderer trail;
+
+	//for procedural AI type
+	private GameObject pieces;
 
 	void Start () {
 		targetObjects = GameObject.FindGameObjectsWithTag("Player");
@@ -81,8 +84,13 @@ public class EnemyAI : MonoBehaviour
 
 		angleAtTargetTimer = angleAtTargetTime;
 
-		if(type == EnemyAIType.Rotational || type == EnemyAIType.Procedural)
+		if (type == EnemyAIType.Rotational)
 			trail = transform.GetChild(3).gameObject.GetComponent<TrailRenderer>();
+		else if (type == EnemyAIType.Procedural)
+		{
+			pieces = transform.GetChild(5).gameObject;
+			pieces.transform.parent = null;
+		}
 	}
 
 	void Update ()
@@ -272,7 +280,7 @@ public class EnemyAI : MonoBehaviour
 
 							if (followAngle >= 360f)
 								followAngle -= 360f;
-								
+
 							angle = Mathf.Lerp(angle, followAngle, 0.25f);
 							transform.localRotation = Quaternion.Euler(0f, 0f, angle);
 
@@ -321,6 +329,10 @@ public class EnemyAI : MonoBehaviour
 
 					actionTimer -= Time.deltaTime;
 				}
+			}
+			else if (type == EnemyAIType.Procedural)
+			{
+				
 			}
 		}
 	}

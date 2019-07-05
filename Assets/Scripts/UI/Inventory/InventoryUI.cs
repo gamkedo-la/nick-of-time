@@ -9,7 +9,7 @@ public class InventoryUI : MonoBehaviour
 
     public GameObject associatedPlayer;
 
-    public string inventoryOpen = "Inventory1";
+    public string inventoryOpen = "Inventory";
 
     Inventory inventory;
 
@@ -20,11 +20,22 @@ public class InventoryUI : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
-		if (gameObject.name == "Player1" && TogglesValues.p1controller != "")
-			inventoryOpen = "Inventory" + TogglesValues.p1controller;
-		if (gameObject.name == "Player2" && TogglesValues.p2controller != "")
-			inventoryOpen = "Inventory" + TogglesValues.p2controller;
+	{
+		if (gameObject.name == "Player1")
+		{
+			if (TogglesValues.p1controller != "")
+				inventoryOpen += TogglesValues.p1controller;
+			else
+				inventoryOpen += "1";
+		}
+
+		if (gameObject.name == "Player2")
+		{
+			if (TogglesValues.p2controller != "")
+				inventoryOpen += TogglesValues.p2controller;
+			else
+				inventoryOpen += "2";
+		}
 
 		if (associatedPlayer != null)
 		{
@@ -40,7 +51,8 @@ public class InventoryUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown(inventoryOpen))
+        if (Input.GetButtonDown(inventoryOpen)
+		|| (GameManager.singleGame && Input.GetButtonDown("Inventory2")))
         {
             inventoryUI.SetActive(!inventoryUI.activeSelf);
 

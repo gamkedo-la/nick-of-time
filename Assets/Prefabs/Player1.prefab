@@ -436,8 +436,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemsParent: {fileID: 0}
   inventoryUI: {fileID: 0}
-  associatedPlayer: {fileID: 0}
-  inventoryOpen: Inventory1
+  associatedPlayer: {fileID: 1148393954563092511}
+  inventoryOpen: Inventory
   firstSelected: {fileID: 0}
 --- !u!114 &3956037771853261498
 MonoBehaviour:
@@ -454,8 +454,7 @@ MonoBehaviour:
   Player: {fileID: 1148393954563092511}
   equipmentUI: {fileID: 0}
   inventory: {fileID: 0}
-  primaryPotion: 
-  secondaryPotion: 
+  primaryPotion: Fire1
 --- !u!114 &4761011132813936111
 MonoBehaviour:
   m_ObjectHideFlags: 0

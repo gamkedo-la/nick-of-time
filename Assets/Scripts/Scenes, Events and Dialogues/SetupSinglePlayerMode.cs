@@ -41,8 +41,13 @@ public class SetupSinglePlayerMode : MonoBehaviour
 				Destroy(players[i]);
 			}
 		}
+
+		GameObject[] player2OnlyObjects = GameObject.FindGameObjectsWithTag("Player2Only");
+		for (int i = 0; i < player2OnlyObjects.Length; i++)
+			Destroy(player2OnlyObjects[i]);
 		
 		// To make sure GameObject.FindGameObjectsWithTag("Player2Only") includes T0Grp
+		/*
 		GameObject lightingAndBlocks = GameObject.Find("LightingAndBlocks");
 		if (lightingAndBlocks != null)
 		{
@@ -56,5 +61,6 @@ public class SetupSinglePlayerMode : MonoBehaviour
 				}
 			}
 		}
+		*/
 	}
 }

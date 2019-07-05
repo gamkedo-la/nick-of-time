@@ -4,9 +4,7 @@
 public class Equipment : Item
 {
     public EquipmentSlot equipSlot;    
-
-    public int damageModifier;
-
+	
     public int weaponID = -1;
 
     private Inventory inventory;
@@ -28,4 +26,4 @@ public class Equipment : Item
     }
 }
 
-public enum EquipmentSlot { primaryWeapon, primaryPotion}
+public enum EquipmentSlot { primaryWeapon, primaryPotion }

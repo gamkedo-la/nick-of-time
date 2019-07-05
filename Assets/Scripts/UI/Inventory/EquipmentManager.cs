@@ -17,8 +17,6 @@ public class EquipmentManager : MonoBehaviour
     
     [SerializeField]
     private string primaryPotion;
-    [SerializeField]
-    private string secondaryPotion;
 
     Equipment[] currentEquipment;
 

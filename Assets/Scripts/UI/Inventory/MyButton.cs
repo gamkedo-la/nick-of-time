@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 public class MyButton : Button
 {
-    public EventSystem eventSystem;
+    private EventSystem eventSystem;
 
     protected override void Awake()
     {

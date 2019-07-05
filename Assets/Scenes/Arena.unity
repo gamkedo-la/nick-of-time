@@ -19344,11 +19344,6 @@ PrefabInstance:
       propertyPath: exits.Array.data[0]
       value: 
       objectReference: {fileID: 1769501579587250041}
-    - target: {fileID: 3669172650063595965, guid: 50122469d8420e2469c687015b246e98,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1551878311630918007, guid: 50122469d8420e2469c687015b246e98,
         type: 3}
       propertyPath: m_BoundingSphereOverride.w
@@ -19378,6 +19373,11 @@ PrefabInstance:
         type: 3}
       propertyPath: intensity
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3669172650063595965, guid: 50122469d8420e2469c687015b246e98,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50122469d8420e2469c687015b246e98, type: 3}
@@ -24646,7 +24646,10 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3956037771853261498, guid: f34ad73bca23e694585b0119f5a1682a, type: 3}
+    - {fileID: 349174034595558344, guid: f34ad73bca23e694585b0119f5a1682a, type: 3}
+    - {fileID: 4964958246262903997, guid: f34ad73bca23e694585b0119f5a1682a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f34ad73bca23e694585b0119f5a1682a, type: 3}
 --- !u!4 &1207045827 stripped
 Transform:
@@ -26566,11 +26569,6 @@ PrefabInstance:
       propertyPath: exits.Array.data[0]
       value: 
       objectReference: {fileID: 1769501580056586989}
-    - target: {fileID: 3669172650063595965, guid: 50122469d8420e2469c687015b246e98,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1551878311630918007, guid: 50122469d8420e2469c687015b246e98,
         type: 3}
       propertyPath: m_BoundingSphereOverride.w
@@ -26590,6 +26588,11 @@ PrefabInstance:
         type: 3}
       propertyPath: intensity
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3669172650063595965, guid: 50122469d8420e2469c687015b246e98,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50122469d8420e2469c687015b246e98, type: 3}
@@ -55605,15 +55608,15 @@ PrefabInstance:
       propertyPath: normalMaterial
       value: 
       objectReference: {fileID: 2100000, guid: 2b499b674a6af414b85f6cd11a972b3c, type: 2}
-    - target: {fileID: 3329497469656580619, guid: f34ad73bca23e694585b0119f5a1682a,
-        type: 3}
-      propertyPath: dashInput
-      value: Dash2
-      objectReference: {fileID: 0}
     - target: {fileID: 8144935541084721335, guid: f34ad73bca23e694585b0119f5a1682a,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3329497469656580619, guid: f34ad73bca23e694585b0119f5a1682a,
+        type: 3}
+      propertyPath: dashInput
+      value: Dash2
       objectReference: {fileID: 0}
     - target: {fileID: 4797496133314027787, guid: f34ad73bca23e694585b0119f5a1682a,
         type: 3}
@@ -55648,6 +55651,9 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 1148393954563092480, guid: f34ad73bca23e694585b0119f5a1682a, type: 3}
     - {fileID: 0}
+    - {fileID: 3956037771853261498, guid: f34ad73bca23e694585b0119f5a1682a, type: 3}
+    - {fileID: 349174034595558344, guid: f34ad73bca23e694585b0119f5a1682a, type: 3}
+    - {fileID: 4964958246262903997, guid: f34ad73bca23e694585b0119f5a1682a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f34ad73bca23e694585b0119f5a1682a, type: 3}
 --- !u!4 &1717321960 stripped
 Transform:

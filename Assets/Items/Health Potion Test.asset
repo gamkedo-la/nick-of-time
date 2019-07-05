@@ -17,7 +17,6 @@ MonoBehaviour:
   isDefaultItem: 0
   stackable: 1
   equipmentManager: {fileID: 0}
-  equipSlot: 2
-  damageModifier: 0
+  equipSlot: 1
   weaponID: -1
   potionButton: Fire3

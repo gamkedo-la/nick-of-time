@@ -52,7 +52,7 @@ public class MenuControlSystem : MonoBehaviour
 		ColLimit();
 
 		if (selection)
-			gridObjects[row].objects[col].GetComponent<ScaleOnMouseOver>().OnSelection();
+			gridObjects[row].objects[col].GetComponent<ScaleOnMouseOver>()?.OnSelection();
 
 		if (forceActivate || GetComponent<MenuAnimatorState>().getState())
 		{
