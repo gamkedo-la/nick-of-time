@@ -130,7 +130,7 @@ public class InventorySlot : MonoBehaviour
         {
             
             tradePanel.gameObject.SetActive(false);
-            tradePanel.GetComponentInChildren<TextMeshProUGUI>().enabled = true;
+            //tradePanel.GetComponentInChildren<TextMeshProUGUI>().enabled = true;
 
             thisItemButton.Select();
             thisItemButton.OnSelect(null);
@@ -146,7 +146,7 @@ public class InventorySlot : MonoBehaviour
             }
 
             tradePanel.amountToTrade = 0;
-            tradePanel.amountToTradeDisplay.text = tradePanel.amountToTrade.ToString();
+            //tradePanel.amountToTradeDisplay.text = tradePanel.amountToTrade.ToString();
 
             inventory.onItemChangedCallback.Invoke();
         }

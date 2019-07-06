@@ -122,19 +122,6 @@ public class DialogueBoxSwitch : MonoBehaviour
 
 	public void checkForDialogueStringTags(string text)
 	{
-		//0 for Dagger
-		if (text.Contains("<color=#00ff00>Dagger"))
-		{
-			if (pl1) pl1.transform.GetChild(3).GetChild(0).GetChild(0).gameObject.GetComponent<WeaponPossession>().weaponID = 0;
-			if (pl2) pl2.transform.GetChild(3).GetChild(0).GetChild(0).gameObject.GetComponent<WeaponPossession>().weaponID = 0;
-		}
-		//1 for Katana
-		else if (text.Contains("<color=#00ff00>Katana"))
-		{
-			if (pl1) pl1.transform.GetChild(3).GetChild(0).GetChild(0).gameObject.GetComponent<WeaponPossession>().weaponID = 0;
-			if (pl2) pl2.transform.GetChild(3).GetChild(0).GetChild(0).gameObject.GetComponent<WeaponPossession>().weaponID = 0;
-		}
-
 		//Player 1 text color is #ff6666
 		//Player 2 text color is #6666ff
 		//Nick text color is #ffbb00 - #ffbb06

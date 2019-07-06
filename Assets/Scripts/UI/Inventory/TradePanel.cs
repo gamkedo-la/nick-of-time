@@ -5,9 +5,9 @@ using UnityEngine.UI;
 using TMPro;
 public class TradePanel : MonoBehaviour
 {
+	public int amountToTrade = 1;
 
-    public int amountToTrade;
-
+	/*
     [SerializeField]
     public TextMeshProUGUI amountToTradeDisplay;
 
@@ -19,11 +19,12 @@ public class TradePanel : MonoBehaviour
     private Button tradeButton;
     [SerializeField]
     private Button cancelButton;
-
+	
     [SerializeField]
     private string VerticalAxisUpKey;
     [SerializeField]
     private string VerticalAxisDownKey;
+	*/
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +34,7 @@ public class TradePanel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+		/*
         if(Input.GetKeyDown(VerticalAxisUpKey))
         {
             amountToTrade += 1;
@@ -50,5 +52,6 @@ public class TradePanel : MonoBehaviour
             amountToTrade = 0;
             amountToTradeDisplay.text = amountToTrade.ToString();
         }
+		*/
     }
 }
