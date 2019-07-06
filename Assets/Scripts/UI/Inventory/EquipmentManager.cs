@@ -132,14 +132,22 @@ public class EquipmentManager : MonoBehaviour
         if(amountOfPotions > 0)
         {
             inventory.itemsInSlot[indexInInventory] -= 1;
-            equipmentUI.equipmentSlotDisplays[indexInEquipment].numberOfItemsInStack.text = inventory.itemsInSlot[indexInInventory].ToString();                       
+            amountOfPotions = inventory.itemsInSlot[indexInInventory];
+
+            equipmentUI.equipmentSlotDisplays[indexInEquipment].numberOfItemsInStack.text = inventory.itemsInSlot[indexInInventory].ToString();
+
+            if (amountOfPotions == 0)
+            {
+                Debug.Log("Index of Potion is " + indexInInventory);
+                Debug.Log("There are zero potions and this is removed");
+                Unequip(indexInEquipment);
+                inventory.Remove(potion);
+                inventory.itemsInSlot.RemoveAt(indexInInventory);
+
+                inventory.onItemChangedCallback.Invoke();
+            }
         }
-        if(amountOfPotions == 0)
-        {
-            inventory.itemsInSlot.RemoveAt(indexInInventory);
-            inventory.items.Remove(potion); 
-            Unequip(indexInEquipment);
-        }
+        
     }
 
     private void Update()
