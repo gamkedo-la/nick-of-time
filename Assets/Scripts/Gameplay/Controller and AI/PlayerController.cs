@@ -110,7 +110,12 @@ public class PlayerController : MonoBehaviour
 		if (playerNo == 1)
 		{
 			if (TogglesValues.p1controller == "")
-				inputExtensionString = playerNo.ToString();
+			{
+				if (GameManager.singleGame)
+					inputExtensionString = "SinglePlayer";
+				else
+					inputExtensionString = playerNo.ToString();
+			}
 			else
 				inputExtensionString = TogglesValues.p1controller;
 		}
@@ -131,6 +136,7 @@ public class PlayerController : MonoBehaviour
 			{
 				walkInput = new Vector2(Input.GetAxisRaw(walkHorizontalInput + inputExtensionString), Input.GetAxisRaw(walkVerticalInput + inputExtensionString));
 
+				/*
 				if (GameManager.singleGame)
 				{
 					if(walkInput.x == 0f)
@@ -138,6 +144,7 @@ public class PlayerController : MonoBehaviour
 					if(walkInput.y == 0f)
 						walkInput.y = Input.GetAxisRaw(walkVerticalInput + "2");
 				}
+				*/
 
 				if (walkInput.x != 0 && walkInput.y != 0) walkInput /= 1.5f;
 
@@ -195,7 +202,7 @@ public class PlayerController : MonoBehaviour
 				&& !animator.GetBool("isPushing")
 				&& !animator.GetBool("isThrowing")
 				&& !isDashing
-				&& (Input.GetButtonDown(attackInput + inputExtensionString) || GameManager.singleGame && Input.GetButtonDown(attackInput + "2")))
+				&& (Input.GetButtonDown(attackInput + inputExtensionString) /*|| GameManager.singleGame && Input.GetButtonDown(attackInput + "2")*/))
 			{
 				comboKeys += "A";
 
