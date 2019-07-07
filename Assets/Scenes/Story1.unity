@@ -848,7 +848,7 @@ MonoBehaviour:
   item: {fileID: 11400000, guid: 32caf8c624487694fbb02f53cd68622b, type: 2}
   inventory: {fileID: 0}
   amountInStack: 1
-  destroy: 1
+  destroy: 0
 --- !u!1 &53627062 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1148393954563092511, guid: f34ad73bca23e694585b0119f5a1682a,
@@ -19388,7 +19388,7 @@ MonoBehaviour:
   item: {fileID: 11400000, guid: 32caf8c624487694fbb02f53cd68622b, type: 2}
   inventory: {fileID: 0}
   amountInStack: 1
-  destroy: 1
+  destroy: 0
 --- !u!1 &564237105
 GameObject:
   m_ObjectHideFlags: 0

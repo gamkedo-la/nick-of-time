@@ -306,24 +306,6 @@ public class PlayerController : MonoBehaviour
 
 				comboKeys = "";
 			}
-
-			/*
-			if (animator.GetBool("isAttacking")
-				|| isDashing)
-			{
-				if (walkInput == Vector2.zero)
-				{
-					if (sprRenderer.flipX)
-					{
-						walkInput.x = 1f;
-					}
-					else
-					{
-						walkInput.x = -1f;
-					}
-				}
-			}
-			*/
 			
 			//Throw
 			if(!animator.GetBool("isThrowing")
