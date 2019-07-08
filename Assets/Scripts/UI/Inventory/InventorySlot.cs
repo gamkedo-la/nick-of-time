@@ -75,7 +75,15 @@ public class InventorySlot : MonoBehaviour
         int index = inventory.items.IndexOf(newItem);
         numberOfItemsInStack = inventory.itemsInSlot[index];
         numberOfItemsInSlotDisplay.enabled = true;
-        numberOfItemsInSlotDisplay.text = numberOfItemsInStack.ToString();
+
+        if(numberOfItemsInStack <= 1)
+        {
+            numberOfItemsInSlotDisplay.text = "";
+        }
+        else
+        {
+            numberOfItemsInSlotDisplay.text = numberOfItemsInStack.ToString();
+        }
     }
 
     public void ClearSlot() {
