@@ -644,11 +644,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponID: -1
+  defaultDamage: 0.05
+  defaultKnockback: 2
   weapons:
-  - sprite: {fileID: 0}
+  - damage: 0
+    knockback: 0
+    sprite: {fileID: 0}
     position: {x: 0, y: 0}
     colliderOffset: {x: 0, y: 0}
     colliderSize: {x: 0, y: 0}
+    animatedWeapon:
+      animated: 0
+      attackUpPosition: {x: 0, y: 0}
+      attackDownPosition: {x: 0, y: 0}
+      attackLeftPosition: {x: 0, y: 0}
+      attackRightPosition: {x: 0, y: 0}
+      attackUp: []
+      attackDown: []
+      attackLeft: []
+      timePerFrame: 0
+      flipAttackLeft: 0
+      turnOffSingleSpriteRenderer: 0
+  animatedWeaponRenderer: {fileID: 0}
   offsetX: 0.1
 --- !u!212 &116775436
 SpriteRenderer:
@@ -771,6 +788,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.b
       value: 0.27450982
+      objectReference: {fileID: 0}
+    - target: {fileID: 3366794532734391966, guid: 2128f25ab003fc34390f37350cb0f5e6,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2128f25ab003fc34390f37350cb0f5e6, type: 3}
@@ -9729,6 +9751,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1181d984e058186438283f9cd9e44498, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnObjects: []
   triggers:
   - triggerTransform: {fileID: 1593779905}
     checkEnemies: 0
@@ -9739,7 +9762,6 @@ MonoBehaviour:
       disableAfterLeaving: 1
     - obj: {fileID: 1692588210}
       disableAfterLeaving: 0
-    enemySpawnObject: {fileID: 0}
     minimapTilemap: {fileID: 1692588213}
     triggerTimer: 0
     isObjectsActivationDone: 0
@@ -9754,7 +9776,6 @@ MonoBehaviour:
       disableAfterLeaving: 1
     - obj: {fileID: 1442929512}
       disableAfterLeaving: 0
-    enemySpawnObject: {fileID: 0}
     minimapTilemap: {fileID: 1442929515}
     triggerTimer: 0
     isObjectsActivationDone: 0
@@ -9771,7 +9792,6 @@ MonoBehaviour:
       disableAfterLeaving: 0
     - obj: {fileID: 1452107703}
       disableAfterLeaving: 0
-    enemySpawnObject: {fileID: 0}
     minimapTilemap: {fileID: 1452107706}
     triggerTimer: 0
     isObjectsActivationDone: 0
@@ -9786,7 +9806,6 @@ MonoBehaviour:
       disableAfterLeaving: 1
     - obj: {fileID: 2134184483}
       disableAfterLeaving: 0
-    enemySpawnObject: {fileID: 0}
     minimapTilemap: {fileID: 2134184486}
     triggerTimer: 0
     isObjectsActivationDone: 0
@@ -9803,7 +9822,6 @@ MonoBehaviour:
       disableAfterLeaving: 0
     - obj: {fileID: 190664386}
       disableAfterLeaving: 0
-    enemySpawnObject: {fileID: 0}
     minimapTilemap: {fileID: 190664389}
     triggerTimer: 0
     isObjectsActivationDone: 0
@@ -9818,8 +9836,6 @@ MonoBehaviour:
       disableAfterLeaving: 1
     - obj: {fileID: 567073381}
       disableAfterLeaving: 0
-    enemySpawnObject: {fileID: 1896489951412202, guid: 5be2b70a812d64a41ae96ac91778a708,
-      type: 3}
     minimapTilemap: {fileID: 567073384}
     triggerTimer: 0
     isObjectsActivationDone: 0
@@ -9834,8 +9850,6 @@ MonoBehaviour:
       disableAfterLeaving: 1
     - obj: {fileID: 1675073221}
       disableAfterLeaving: 0
-    enemySpawnObject: {fileID: 1896489951412202, guid: 5be2b70a812d64a41ae96ac91778a708,
-      type: 3}
     minimapTilemap: {fileID: 1675073224}
     triggerTimer: 0
     isObjectsActivationDone: 0
@@ -9850,7 +9864,6 @@ MonoBehaviour:
       disableAfterLeaving: 1
     - obj: {fileID: 1796848295}
       disableAfterLeaving: 0
-    enemySpawnObject: {fileID: 0}
     minimapTilemap: {fileID: 1796848298}
     triggerTimer: 0
     isObjectsActivationDone: 0
@@ -9867,8 +9880,6 @@ MonoBehaviour:
       disableAfterLeaving: 1
     - obj: {fileID: 573816792}
       disableAfterLeaving: 0
-    enemySpawnObject: {fileID: 1896489951412202, guid: 5be2b70a812d64a41ae96ac91778a708,
-      type: 3}
     minimapTilemap: {fileID: 573816795}
     triggerTimer: 0
     isObjectsActivationDone: 0
@@ -9883,7 +9894,6 @@ MonoBehaviour:
       disableAfterLeaving: 1
     - obj: {fileID: 946831257}
       disableAfterLeaving: 0
-    enemySpawnObject: {fileID: 0}
     minimapTilemap: {fileID: 946831260}
     triggerTimer: 0
     isObjectsActivationDone: 0
@@ -9898,8 +9908,6 @@ MonoBehaviour:
       disableAfterLeaving: 1
     - obj: {fileID: 1059277943}
       disableAfterLeaving: 0
-    enemySpawnObject: {fileID: 1896489951412202, guid: 5be2b70a812d64a41ae96ac91778a708,
-      type: 3}
     minimapTilemap: {fileID: 1059277946}
     triggerTimer: 0
     isObjectsActivationDone: 0
@@ -9914,8 +9922,6 @@ MonoBehaviour:
       disableAfterLeaving: 1
     - obj: {fileID: 1650993867}
       disableAfterLeaving: 0
-    enemySpawnObject: {fileID: 1896489951412202, guid: 5be2b70a812d64a41ae96ac91778a708,
-      type: 3}
     minimapTilemap: {fileID: 1650993870}
     triggerTimer: 0
     isObjectsActivationDone: 0
@@ -9930,7 +9936,6 @@ MonoBehaviour:
       disableAfterLeaving: 1
     - obj: {fileID: 916339288}
       disableAfterLeaving: 0
-    enemySpawnObject: {fileID: 0}
     minimapTilemap: {fileID: 916339291}
     triggerTimer: 0
     isObjectsActivationDone: 0
@@ -10484,7 +10489,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!114 &469226238
 MonoBehaviour:
@@ -15048,7 +15053,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &697477994
 GameObject:
@@ -15232,19 +15237,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87afb66cc8e462f48a975d17129f1406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hpDamage: 0.02
+  defenseFactor: 1
+  thrownObjectDamage: 0.25
+  breakAttackOnHit: 1
   hitTags:
   - EnemyAttack
-  knockbackValue: 6.4
   knockbackSlowDown: 0.4
+  invulnerabilityDelay: 0
   regenerateHpUpto: 0.4
   regenerateHpPerSecond: 0.0025
   damageSound: {fileID: 8300000, guid: 1df4bd1fa77bc9840b97a6eb60d5cd34, type: 3}
   deathSound: {fileID: 8300000, guid: 07a0b43fe673b9442a331a9ba53c1bbe, type: 3}
+  lootIterations: 0
+  lootChance: 0
+  lootItems: []
   hp: 1
   knockback: {x: 0, y: 0}
+  knockbackSlowDownVector: {x: 0, y: 0}
   HPBarJointCamera: {fileID: 0}
   HPBarSoloCamera: {fileID: 0}
+  HPBarEnemy: {fileID: 0}
+  OnHit:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  hpSlider: {fileID: 0}
 --- !u!82 &697478002
 AudioSource:
   m_ObjectHideFlags: 0
@@ -16373,7 +16391,7 @@ SpriteRenderer:
   m_Size: {x: 0.32, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &822858420
@@ -16388,7 +16406,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &822858421
 BoxCollider2D:
@@ -16947,6 +16965,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   maxYOffset: 0.32
+  enemyStateTransition: 1
+  stateTransition: 0
+  resetPosition: 0
+  prevPosition: {x: 0, y: 0, z: 0}
 --- !u!61 &860229993
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17447,11 +17469,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponID: -1
+  defaultDamage: 0.05
+  defaultKnockback: 2
   weapons:
-  - sprite: {fileID: 0}
+  - damage: 0
+    knockback: 0
+    sprite: {fileID: 0}
     position: {x: 0, y: 0}
     colliderOffset: {x: 0, y: 0}
     colliderSize: {x: 0, y: 0}
+    animatedWeapon:
+      animated: 0
+      attackUpPosition: {x: 0, y: 0}
+      attackDownPosition: {x: 0, y: 0}
+      attackLeftPosition: {x: 0, y: 0}
+      attackRightPosition: {x: 0, y: 0}
+      attackUp: []
+      attackDown: []
+      attackLeft: []
+      timePerFrame: 0
+      flipAttackLeft: 0
+      turnOffSingleSpriteRenderer: 0
+  animatedWeaponRenderer: {fileID: 0}
   offsetX: 0.1
 --- !u!212 &882846901
 SpriteRenderer:
@@ -21709,7 +21748,7 @@ Transform:
   - {fileID: 53439914}
   - {fileID: 1127041646}
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1244708279
 GameObject:
@@ -29491,7 +29530,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1690251646
 GameObject:
@@ -58815,7 +58854,7 @@ Transform:
   - {fileID: 2009672796}
   - {fileID: 1979075813}
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1842104687 stripped
 GameObject:
@@ -66741,19 +66780,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87afb66cc8e462f48a975d17129f1406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hpDamage: 0.02
+  defenseFactor: 1
+  thrownObjectDamage: 0.25
+  breakAttackOnHit: 1
   hitTags:
   - EnemyAttack
-  knockbackValue: 6.4
   knockbackSlowDown: 0.4
+  invulnerabilityDelay: 0
   regenerateHpUpto: 0.4
   regenerateHpPerSecond: 0.0025
   damageSound: {fileID: 8300000, guid: 1df4bd1fa77bc9840b97a6eb60d5cd34, type: 3}
   deathSound: {fileID: 8300000, guid: 07a0b43fe673b9442a331a9ba53c1bbe, type: 3}
+  lootIterations: 0
+  lootChance: 0
+  lootItems: []
   hp: 1
   knockback: {x: 0, y: 0}
+  knockbackSlowDownVector: {x: 0, y: 0}
   HPBarJointCamera: {fileID: 0}
   HPBarSoloCamera: {fileID: 0}
+  HPBarEnemy: {fileID: 0}
+  OnHit:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  hpSlider: {fileID: 0}
 --- !u!114 &2012583765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69309,6 +69361,75 @@ PrefabInstance:
       objectReference: {fileID: 916339290}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47fc17e7ba01dfa4ca48c88ab81f0cc8, type: 3}
+--- !u!1001 &1173158587683370428
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3749443738317165730, guid: 426a2fd916816c54db31d2ee66c3386d,
+        type: 3}
+      propertyPath: m_Name
+      value: GodRaysFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 3749443738317165735, guid: 426a2fd916816c54db31d2ee66c3386d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3749443738317165735, guid: 426a2fd916816c54db31d2ee66c3386d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -9.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3749443738317165735, guid: 426a2fd916816c54db31d2ee66c3386d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 3749443738317165735, guid: 426a2fd916816c54db31d2ee66c3386d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3749443738317165735, guid: 426a2fd916816c54db31d2ee66c3386d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3749443738317165735, guid: 426a2fd916816c54db31d2ee66c3386d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3749443738317165735, guid: 426a2fd916816c54db31d2ee66c3386d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3749443738317165735, guid: 426a2fd916816c54db31d2ee66c3386d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 3749443738317165735, guid: 426a2fd916816c54db31d2ee66c3386d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3749443738317165735, guid: 426a2fd916816c54db31d2ee66c3386d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3749443738317165735, guid: 426a2fd916816c54db31d2ee66c3386d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 426a2fd916816c54db31d2ee66c3386d, type: 3}
 --- !u!1001 &1894696908912173162
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -69433,7 +69554,7 @@ PrefabInstance:
     - target: {fileID: 1427261468021252248, guid: ee0d3e81a27598e4e94f9878bf98685d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 1427261468021252248, guid: ee0d3e81a27598e4e94f9878bf98685d,
         type: 3}
@@ -69552,7 +69673,7 @@ PrefabInstance:
     - target: {fileID: 7567054782840823895, guid: bbb1b096e93f3e14395d012cb3acd39b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7567054782840823895, guid: bbb1b096e93f3e14395d012cb3acd39b,
         type: 3}
@@ -69795,7 +69916,7 @@ PrefabInstance:
     - target: {fileID: 6580512505428737422, guid: fcaa17491981777468783a716b2b360a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 6580512505428737422, guid: fcaa17491981777468783a716b2b360a,
         type: 3}
@@ -69909,7 +70030,7 @@ PrefabInstance:
     - target: {fileID: 5537064423695862268, guid: 5dd81b52208f9264ab6a208f3e35cd8d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 28
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 5537064423695862268, guid: 5dd81b52208f9264ab6a208f3e35cd8d,
         type: 3}
@@ -69983,7 +70104,7 @@ PrefabInstance:
     - target: {fileID: 6053654793638694013, guid: 737acc284181ad4498a5e57563ebd0b0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 6053654793638694013, guid: 737acc284181ad4498a5e57563ebd0b0,
         type: 3}
@@ -70186,7 +70307,7 @@ PrefabInstance:
     - target: {fileID: 6251211592812678059, guid: 2d6109a009d2847449504103001017d6,
         type: 3}
       propertyPath: m_RootOrder
-      value: 27
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 6251211592812678059, guid: 2d6109a009d2847449504103001017d6,
         type: 3}
@@ -70255,7 +70376,7 @@ PrefabInstance:
     - target: {fileID: 6822276787287973958, guid: d56b00b85024dc248846d64d2fa62c06,
         type: 3}
       propertyPath: m_RootOrder
-      value: 26
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 6822276787287973958, guid: d56b00b85024dc248846d64d2fa62c06,
         type: 3}
@@ -70493,7 +70614,7 @@ PrefabInstance:
     - target: {fileID: 8520000503650666269, guid: b05b83d126d927746a8006d97d01ae8b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8520000503650666269, guid: b05b83d126d927746a8006d97d01ae8b,
         type: 3}
@@ -70612,7 +70733,7 @@ PrefabInstance:
     - target: {fileID: 2222405268674253427, guid: 880506fd1ff214948bfc6296d550e5b1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 2222405268674253427, guid: 880506fd1ff214948bfc6296d550e5b1,
         type: 3}
