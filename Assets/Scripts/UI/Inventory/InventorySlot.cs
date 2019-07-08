@@ -57,7 +57,12 @@ public class InventorySlot : MonoBehaviour
         if (Input.GetButtonDown(TogglesValues.p1controller == "" ? "Inventory1" : "Inventory" + TogglesValues.p1controller) && inventoryControlPanel.IsTrading)
         {
             CancelTrade();
-        }              
+        }
+        
+        if(item == null)
+        {
+            numberOfItemsInSlotDisplay.enabled = false;
+        }
     }
 
     public void AddItem(Item newItem)
