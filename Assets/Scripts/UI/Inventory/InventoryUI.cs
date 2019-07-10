@@ -18,6 +18,8 @@ public class InventoryUI : MonoBehaviour
     [SerializeField]
     private Button firstSelected;
 
+	private float prevTimeScale = 1f;
+
     // Start is called before the first frame update
     void Start()
 	{
@@ -55,10 +57,36 @@ public class InventoryUI : MonoBehaviour
 		|| (GameManager.singleGame && Input.GetButtonDown("Inventory2")))
         {
             inventoryUI.SetActive(!inventoryUI.activeSelf);
+			
+			if (GameManager.singleGame)
+				MinimapController.instances[0].focus = inventoryUI.activeSelf;
 
-            firstSelected?.Select();
+			if (associatedPlayer.name == "Player1")
+			{
+				MinimapController.instances[2].focus = inventoryUI.activeSelf;
+				
+				if (!GameManager.singleGame)
+				{
+					MinimapController.instances[0].noLerp = inventoryUI.activeSelf;
+					
+					Vector3 pos = MinimapController.instances[0].transform.localPosition;
+
+					if (MinimapController.instances[0].noLerp)
+						pos.x = Mathf.Abs(pos.x);
+					else
+						pos.x = -Mathf.Abs(pos.x);
+
+					MinimapController.instances[0].transform.localPosition = pos;
+				}
+			}
+			else if (associatedPlayer.name == "Player2")
+			{
+				MinimapController.instances[1].focus = inventoryUI.activeSelf;
+			}
+
+			firstSelected?.Select();
             firstSelected?.OnSelect(null);
-
+			
             //slots[0].GetComponentInChildren<Button>().Select();
         }
 		if (inventoryUI != null)

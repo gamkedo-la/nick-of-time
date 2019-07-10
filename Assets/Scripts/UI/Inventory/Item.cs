@@ -15,6 +15,18 @@ public class Item : ScriptableObject
     {
         //Use the item
         Debug.Log("Using" + name);
+
+		if (name == "Health Potion")
+		{
+			equipmentManager.Player.GetComponent<HitCheck>().hp += 0.25f;
+
+			if (equipmentManager.Player.GetComponent<HitCheck>().hp > 1f)
+				equipmentManager.Player.GetComponent<HitCheck>().hp = 1f;
+		}
+		else if (name == "Stamina Potion")
+		{
+			equipmentManager.Player.GetComponent<PlayerController>().actionPoints = 1f;
+		}
     }
 
     /*public void RemoveFromInventory()

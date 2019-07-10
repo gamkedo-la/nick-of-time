@@ -6877,12 +6877,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91f31064badd4b54fb011885e517dfb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pl1: {fileID: 0}
-  pl2: {fileID: 0}
   inventoryPl1: {fileID: 0}
   inventoryPl2: {fileID: 0}
+  minimap: {fileID: 1358463708}
   proceedInput: Submit
-  proceedInput2: Jump
   proceedSound: {fileID: 8300000, guid: 3ac4326bbe10ffb42b9652b3dd6cbbc3, type: 3}
   dialogueText: {fileID: 0}
   dialogueSequence: {fileID: 0}

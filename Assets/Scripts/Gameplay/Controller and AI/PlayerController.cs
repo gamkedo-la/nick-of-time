@@ -91,6 +91,9 @@ public class PlayerController : MonoBehaviour
 	static private float timeSlowMoTimer = 0f;
 	private float timeSlowMoEffectValue = 0f;
 
+	private float potionAttackButtonPressMinTime = 0.5f;
+	private float potionTimer = 0f;
+
 	private string inputExtensionString = "";
 	
 	private void Start()
@@ -196,60 +199,73 @@ public class PlayerController : MonoBehaviour
 
 			prevWalkState = walkInput == Vector2.zero ? 0 : 1;
 
+			//Potion
+			if (Input.GetButtonDown(attackInput + inputExtensionString))
+			{
+				potionTimer = potionAttackButtonPressMinTime;
+			}
+
 			//Attack
 			if (actionPoints >= attackActionDeplete
 				&& !animator.GetBool("isAttacking")
 				&& !animator.GetBool("isPushing")
 				&& !animator.GetBool("isThrowing")
 				&& !isDashing
-				&& (Input.GetButtonDown(attackInput + inputExtensionString) /*|| GameManager.singleGame && Input.GetButtonDown(attackInput + "2")*/))
+				&& (Input.GetButtonUp(attackInput + inputExtensionString) /*|| GameManager.singleGame && Input.GetButtonDown(attackInput + "2")*/))
 			{
-				comboKeys += "A";
-
-				if (comboKeys != "UA" && comboKeys != "RA" && comboKeys != "DA" && comboKeys != "LA")
+				if (!(potionTimer <= -1499f && potionTimer >= -1501f))
 				{
-					animator.SetBool("isAttacking", true);
-					
-					speed = attackSpeed * (1 + (4 * timeSlowMoEffectValue));
+					comboKeys += "A";
 
-					if (playerNo == 1)
-						Subtitles.AddPlayer1Subtitle("TEST_Player 1 Attacking");
-					else if (playerNo == 2)
-						Subtitles.AddPlayer2Subtitle("TEST_Player 2 Attacking");
-
-					if (animator.GetBool("isWalking"))
-						attackSpeedTimer = attackSpeedTime;
-					else
+					if (comboKeys != "UA" && comboKeys != "RA" && comboKeys != "DA" && comboKeys != "LA")
 					{
-						int dir = animator.GetInteger("direction");
-						if (dir == 0)
+						animator.SetBool("isAttacking", true);
+
+						speed = attackSpeed * (1 + (4 * timeSlowMoEffectValue));
+
+						/*
+						if (playerNo == 1)
+							Subtitles.AddPlayer1Subtitle("TEST_Player 1 Attacking");
+						else if (playerNo == 2)
+							Subtitles.AddPlayer2Subtitle("TEST_Player 2 Attacking");
+						*/
+
+						if (animator.GetBool("isWalking"))
+							attackSpeedTimer = attackSpeedTime;
+						else
 						{
-							walkInput.x = 0;
-							walkInput.y = 1;
+							int dir = animator.GetInteger("direction");
+							if (dir == 0)
+							{
+								walkInput.x = 0;
+								walkInput.y = 1;
+							}
+							else if (dir == 1)
+							{
+								walkInput.x = 1;
+								walkInput.y = 0;
+							}
+							else if (dir == 2)
+							{
+								walkInput.x = 0;
+								walkInput.y = -1;
+							}
+							else if (dir == 3)
+							{
+								walkInput.x = -1;
+								walkInput.y = 0;
+							}
+							attackSpeedTimer = attackSpeedTime / 2f;
 						}
-						else if (dir == 1)
-						{
-							walkInput.x = 1;
-							walkInput.y = 0;
-						}
-						else if (dir == 2)
-						{
-							walkInput.x = 0;
-							walkInput.y = -1;
-						}
-						else if (dir == 3)
-						{
-							walkInput.x = -1;
-							walkInput.y = 0;
-						}
-						attackSpeedTimer = attackSpeedTime / 2f;
+
+						actionPoints -= attackActionDeplete;
+
+						if (aud != null && TogglesValues.sound)
+							aud.PlayOneShot(attackSound);
 					}
-
-					actionPoints -= attackActionDeplete;
-
-					if (aud != null && TogglesValues.sound)
-						aud.PlayOneShot(attackSound);
 				}
+
+				potionTimer = -1000f;
 			}
 
 			//Push
@@ -290,10 +306,12 @@ public class PlayerController : MonoBehaviour
 				dashTimer = dashTime / (1 + (4 * timeSlowMoEffectValue));
 				speed = dashSpeed * (1 + (4 * timeSlowMoEffectValue));
 
+				/*
 				if (playerNo == 1)
 					Subtitles.AddPlayer1Subtitle("TEST_Player 1 Dashing");
 				else if (playerNo == 2)
 					Subtitles.AddPlayer2Subtitle("TEST_Player 2 Dashing");
+				*/
 
 				//animator.SetBool("isWalking", false);
 
@@ -318,10 +336,12 @@ public class PlayerController : MonoBehaviour
 				animator.SetBool("isThrowing", true);
 				speed = attackSpeed * (1 + (4 * timeSlowMoEffectValue));
 
+				/*
 				if (playerNo == 1)
 					Subtitles.AddPlayer1Subtitle("TEST_Player 1 Throwing");
 				else if (playerNo == 2)
 					Subtitles.AddPlayer2Subtitle("TEST_Player 2 Throwing");
+				*/
 
 				attackSpeedTimer = attackSpeedTime / 2f;
 
@@ -393,7 +413,7 @@ public class PlayerController : MonoBehaviour
 
 			if (criticalHitTimePauseTimer <= 0f)
 			{
-				if (Time.timeScale <= 0f)
+				if (Time.timeScale >= 0.05f && Time.timeScale <= 0.1f)
 				{
 					Time.timeScale = 1f;
 				}
@@ -412,6 +432,8 @@ public class PlayerController : MonoBehaviour
 					if (Time.timeScale >= 0.5f && Time.timeScale != 1f)
 					{
 						Time.timeScale = Mathf.Lerp(Time.timeScale, 1f, 0.05f);
+
+						if (Time.timeScale >= 0.98f) Time.timeScale = 1f;
 					}
 
 					if (timeSlowMoEffectValue <= 0f)
@@ -430,8 +452,34 @@ public class PlayerController : MonoBehaviour
 			}
 			else
 			{
-				Time.timeScale = 0f;
+				Time.timeScale = 0.06f;
 				criticalHitTimePauseTimer -= Time.unscaledDeltaTime;
+			}
+
+			if (potionTimer <= 0 && potionTimer > -900f)
+			{
+				if (GetComponent<EquipmentManager>().GetCurrentEquipment()[1] != null)
+				{
+					GetComponent<EquipmentManager>().UsePotion(GetComponent<EquipmentManager>().GetCurrentEquipment()[1]);
+
+					if (playerNo == 1)
+						Subtitles.AddPlayer1Subtitle("Potion Used");
+					else if (playerNo == 2)
+						Subtitles.AddPlayer2Subtitle("Potion Used");
+				}
+				else
+				{
+					if (playerNo == 1)
+						Subtitles.AddPlayer1Subtitle("Potion not equipped");
+					else if (playerNo == 2)
+						Subtitles.AddPlayer2Subtitle("Potion not equipped");
+				}
+
+				potionTimer = -1500f;
+			}
+			else if(potionTimer > 0f && potionTimer > -900f)
+			{
+				potionTimer -= Time.deltaTime;
 			}
 
 			animator.speed = 1f * (1 + (4 * timeSlowMoEffectValue));

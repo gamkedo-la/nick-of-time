@@ -7,6 +7,7 @@ public class DialogueBoxSwitch : MonoBehaviour
 {
 	public GameObject inventoryPl1;
 	public GameObject inventoryPl2;
+	public GameObject minimap;
 
 	public string proceedInput = "Submit";
 
@@ -76,12 +77,15 @@ public class DialogueBoxSwitch : MonoBehaviour
 
 				if (inventoryPl1)
 					inventoryPl1.SetActive(true);
-
+					
 				if (pl2)
 					pl2.GetComponent<PlayerController>().enabled = true;
 
 				if (inventoryPl2)
 					inventoryPl2.SetActive(true);
+
+				if (minimap)
+					minimap.SetActive(true);
 
 				Subtitles.Enable();
 			}
@@ -95,12 +99,15 @@ public class DialogueBoxSwitch : MonoBehaviour
 
 			if (inventoryPl1)
 				inventoryPl1.SetActive(false);
-
-            if (pl2)
+				
+			if (pl2)
                 pl2.GetComponent<PlayerController>().enabled = false;
 
 			if (inventoryPl2)
 				inventoryPl2.SetActive(false);
+
+			if (minimap)
+				minimap.SetActive(false);
 
 			Subtitles.Disable();
 

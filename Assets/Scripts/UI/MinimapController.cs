@@ -6,6 +6,7 @@ public class MinimapController : MonoBehaviour
 {
 	public Camera minimapCam;
 	public bool focus = false;
+	public bool noLerp = false;
 
 	static public MinimapController[] instances = { null, null, null };
 
@@ -44,19 +45,22 @@ public class MinimapController : MonoBehaviour
 		}
 		*/
 
-		if (focus)
+		if (!noLerp)
 		{
-			transform.localPosition = Vector3.Lerp(transform.localPosition, new Vector3(0f, 160f, 0f), 0.1f);
-			transform.localScale = Vector3.Lerp(transform.localScale, new Vector3(2f, 2f, 2f), 0.1f);
-			minimapCam.orthographicSize = Mathf.Lerp(minimapCam.orthographicSize, 13f, 0.1f);
-			minimapBG.color = Color.Lerp(minimapBG.color, new Color(0f, 0f, 0f, 0.25f), 0.1f);
-		}
-		else
-		{
-			transform.localPosition = Vector3.Lerp( transform.localPosition, prevLocalPosition, 0.1f );
-			transform.localScale = Vector3.Lerp( transform.localScale, prevLocalScale, 0.1f );
-			minimapCam.orthographicSize = Mathf.Lerp(minimapCam.orthographicSize, prevOrthoSize, 0.1f );
-			minimapBG.color = Color.Lerp(minimapBG.color, new Color(0f, 0f, 0f, 0.05f), 0.1f);
+			if (focus)
+			{
+				transform.localPosition = Vector3.Lerp(transform.localPosition, new Vector3(0f, 160f, 0f), 0.1f);
+				transform.localScale = Vector3.Lerp(transform.localScale, new Vector3(2f, 2f, 2f), 0.1f);
+				minimapCam.orthographicSize = Mathf.Lerp(minimapCam.orthographicSize, 13f, 0.1f);
+				minimapBG.color = Color.Lerp(minimapBG.color, new Color(0f, 0f, 0f, 0.25f), 0.1f);
+			}
+			else
+			{
+				transform.localPosition = Vector3.Lerp(transform.localPosition, prevLocalPosition, 0.1f);
+				transform.localScale = Vector3.Lerp(transform.localScale, prevLocalScale, 0.1f);
+				minimapCam.orthographicSize = Mathf.Lerp(minimapCam.orthographicSize, prevOrthoSize, 0.1f);
+				minimapBG.color = Color.Lerp(minimapBG.color, new Color(0f, 0f, 0f, 0.05f), 0.1f);
+			}
 		}
 	}
 }

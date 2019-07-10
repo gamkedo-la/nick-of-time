@@ -29,6 +29,11 @@ public class EquipmentManager : MonoBehaviour
 		}
     }
 
+	public Equipment[] GetCurrentEquipment()
+	{
+		return currentEquipment;
+	}
+
     public delegate void OnEquipmentChanged(Equipment newItem, Equipment oldItem);
     public OnEquipmentChanged onEquipmentChanged;
 
@@ -68,12 +73,16 @@ public class EquipmentManager : MonoBehaviour
         {
             onEquipmentChanged.Invoke(newItem, oldItem);
         }
-        weaponPossession.weaponID = newItem.weaponID;
+
+		if(weaponPossession.weaponID <= -1)
+			weaponPossession.weaponID = newItem.weaponID;
+		
         currentEquipment[slotIndex] = newItem;
 
         equipmentUI.equipmentSlotDisplays[slotIndex].equipmentIcon.enabled = true;
         equipmentUI.equipmentSlotDisplays[slotIndex].equipmentIcon.sprite = currentEquipment[slotIndex].icon;
         equipmentUI.equipmentSlotDisplays[slotIndex].itemName.text = currentEquipment[slotIndex].name;
+
         if (newItem.stackable)
         {
             equipmentUI.equipmentSlotDisplays[slotIndex].numberOfItemsInStack.text = inventory.itemsInSlot[index].ToString();
@@ -121,7 +130,7 @@ public class EquipmentManager : MonoBehaviour
         }
     }
 
-    public void UsePotion(string potionButton, Equipment potion)
+    public void UsePotion(Equipment potion)
     {
         int indexInEquipment = System.Array.IndexOf(currentEquipment, potion);      
               
@@ -131,6 +140,7 @@ public class EquipmentManager : MonoBehaviour
         
         if(amountOfPotions > 0)
         {
+			inventory.items[indexInInventory].Use();
             inventory.itemsInSlot[indexInInventory] -= 1;
             amountOfPotions = inventory.itemsInSlot[indexInInventory];
 
@@ -143,8 +153,9 @@ public class EquipmentManager : MonoBehaviour
                 Unequip(indexInEquipment);
                 inventory.Remove(potion);
                 inventory.itemsInSlot.RemoveAt(indexInInventory);
-
-                inventory.onItemChangedCallback.Invoke();
+				equipmentUI.equipmentSlotDisplays[indexInEquipment].numberOfItemsInStack.text = "";
+				
+				inventory.onItemChangedCallback.Invoke();
             }
         }
         
@@ -157,12 +168,13 @@ public class EquipmentManager : MonoBehaviour
             UnequipAll();
         }
 
+		/*
         if (currentEquipment[1] != null && Input.GetButtonDown(primaryPotion))
         {
-            UsePotion(primaryPotion, currentEquipment[1]);
+            UsePotion(currentEquipment[1]);
             inventory.onItemChangedCallback.Invoke();
         }    
-
+		*/
     }
 
 }
