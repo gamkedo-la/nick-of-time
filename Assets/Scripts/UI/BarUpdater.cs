@@ -17,6 +17,13 @@ public class BarUpdater : MonoBehaviour {
 	public float gainPopFactor = 0.1f;
 	public float gainPopDecayFactor = 0.25f;
 
+    // when value is low, the bar flashes on and off
+	[Space]
+	public float flashInterval = 20; // frames per flash on and off
+	public float flashIfHpBelow = 0.25f; // max amount
+	public float flashIfStBelow = 0.25f; // max amount
+
+
 	private Image barFill;
 
 	private HitCheck hitCheck;
@@ -44,7 +51,9 @@ public class BarUpdater : MonoBehaviour {
 	void Update () {
 		if(infoObject != null)
 		{
-            hitPoints = hitCheck.hp;
+			bool flashing = false;
+			
+			hitPoints = hitCheck.hp;
             actionPoints = playerController.actionPoints;
 			
             if (forHp)
@@ -55,6 +64,8 @@ public class BarUpdater : MonoBehaviour {
 					valueDiff = hitPoints - prevValue;
 
 				prevValue = hitPoints;
+
+				flashing = hitPoints < flashIfHpBelow; 
 			}
 			else if(forAction)
 			{                
@@ -68,6 +79,7 @@ public class BarUpdater : MonoBehaviour {
 
 				prevValue = actionPoints;
 
+				flashing = actionPoints < flashIfHpBelow; 
 			}
 			
 			if(Mathf.Abs(playerController.trackVelocity.x) <= trackVelocityThreshold && Mathf.Abs(playerController.trackVelocity.y) <= trackVelocityThreshold)
@@ -79,6 +91,11 @@ public class BarUpdater : MonoBehaviour {
 			transform.localScale = Vector3.Lerp(prevScale,
 				new Vector3(prevScale.x + (valueDiff * gainPop), prevScale.y + (valueDiff * gainPop), prevScale.z + (valueDiff * gainPop)),
 				gainPopFactor);
+
+			if (flashing) {
+				if ((Time.frameCount % flashInterval) > flashInterval/2) // alternate
+					transform.localScale = Vector3.one;
+			}
 
 			valueDiff = Mathf.Lerp(valueDiff, 0f, gainPopDecayFactor);
 		}
