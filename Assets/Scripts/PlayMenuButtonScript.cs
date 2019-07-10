@@ -66,8 +66,10 @@ public class PlayMenuButtonScript : MonoBehaviour
 	
 	public void PlayMenuUpdate()
 	{
+		Debug.Log("PlayMenuUpdate");
 		if (GameManager.singleGame)
 		{
+			Debug.Log("PlayMenuUpdate: SINGLE player game");
 			singleButton.GetComponent<SpriteRenderer>().color = selectedColor;
 			doubleButton.GetComponent<SpriteRenderer>().color = deselectedColor;
 
@@ -77,15 +79,24 @@ public class PlayMenuButtonScript : MonoBehaviour
 		}
 		else
 		{
+			Debug.Log("PlayMenuUpdate: DOUBLE player game");
 			singleButton.GetComponent<SpriteRenderer>().color = deselectedColor;
 			doubleButton.GetComponent<SpriteRenderer>().color = selectedColor;
 
-			defaultStoryArenaButtons.SetActive(false);
-			doublePlayersStoryArenaButtons.SetActive(true);
+			// bugfix: this crashes the unity editor:
+			//defaultStoryArenaButtons.SetActive(false);
+			//doublePlayersStoryArenaButtons.SetActive(true);
+
+			// FIXME: same as a single player above, which may be incorrect?
+			//defaultStoryArenaButtons.SetActive(true);
+			//doublePlayersStoryArenaButtons.SetActive(false);
+
 		}
 
 		if (TogglesValues.story)
 		{
+			Debug.Log("PlayMenuUpdate: story mode ON");
+
 			storyButton1.GetComponent<SpriteRenderer>().color = selectedColor;
 			storyButton2.GetComponent<SpriteRenderer>().color = selectedColor;
 
@@ -96,11 +107,13 @@ public class PlayMenuButtonScript : MonoBehaviour
 		}
 		else
 		{
+			Debug.Log("PlayMenuUpdate: story mode OFF");
 			storyButton1.GetComponent<SpriteRenderer>().color = deselectedColor;
 			storyButton2.GetComponent<SpriteRenderer>().color = deselectedColor;
 			
 			if (TogglesValues.coop)
 			{
+				Debug.Log("PlayMenuUpdate: story mode OFF - coop ON");
 				arenaCoopButton1.GetComponent<SpriteRenderer>().color = selectedColor;
 				arenaCoopButton2.GetComponent<SpriteRenderer>().color = selectedColor;
 
@@ -108,6 +121,7 @@ public class PlayMenuButtonScript : MonoBehaviour
 			}
 			else
 			{
+				Debug.Log("PlayMenuUpdate: story mode OFF - coop OFF");
 				arenaCoopButton1.GetComponent<SpriteRenderer>().color = deselectedColor;
 				arenaCoopButton2.GetComponent<SpriteRenderer>().color = deselectedColor;
 
@@ -179,6 +193,8 @@ public class PlayMenuButtonScript : MonoBehaviour
 
 	public void SelectDouble()
 	{
+		Debug.Log("SelectDouble");
+
 		if (aud != null && TogglesValues.sound)
 		{
 			aud.PlayOneShot(clickSound);
