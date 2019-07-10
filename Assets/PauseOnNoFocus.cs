@@ -8,13 +8,23 @@ public class PauseOnNoFocus : MonoBehaviour
 
 	void OnApplicationPause()
 	{
-		Time.timeScale = 0f;
+		if (ActivateSingleMode.currentInstance != null)
+		{
+			ActivateSingleMode.currentInstance.paused = true;
+			ActivateSingleMode.currentInstance.duelCamToSingleCam();
+		}
 		pauseObject.SetActive(true);
+		Time.timeScale = 0f;
 	}
 
 	void OnApplicationFocus()
 	{
-		Time.timeScale = 0f;
+		if (ActivateSingleMode.currentInstance != null)
+		{
+			ActivateSingleMode.currentInstance.paused = true;
+			ActivateSingleMode.currentInstance.duelCamToSingleCam();
+		}
 		pauseObject.SetActive(true);
+		Time.timeScale = 0f;
 	}
 }

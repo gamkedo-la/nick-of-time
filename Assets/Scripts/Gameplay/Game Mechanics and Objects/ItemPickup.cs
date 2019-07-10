@@ -35,8 +35,6 @@ public class ItemPickup : Interactable
 
         if (wasPickedUp)
         {
-            Debug.Log("was picked up called");
-
 			if (destroy)
 				Destroy(gameObject);
 			else

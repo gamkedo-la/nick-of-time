@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour
 
 	[HideInInspector] public float actionPoints = 1f;
 
-	private int playerNo = -1;
+	[HideInInspector] public int playerNo = -1;
 
 	private float speed = 0f;
 	[HideInInspector] public bool isDashing = false;
@@ -458,9 +458,9 @@ public class PlayerController : MonoBehaviour
 
 			if (potionTimer <= 0 && potionTimer > -900f)
 			{
-				if (GetComponent<EquipmentManager>().GetCurrentEquipment()[1] != null)
+				if (GetComponent<EquipmentManager>()?.GetCurrentEquipment()[1] != null)
 				{
-					GetComponent<EquipmentManager>().UsePotion(GetComponent<EquipmentManager>().GetCurrentEquipment()[1]);
+					GetComponent<EquipmentManager>()?.UsePotion(GetComponent<EquipmentManager>().GetCurrentEquipment()[1]);
 
 					if (playerNo == 1)
 						Subtitles.AddPlayer1Subtitle("Potion Used");

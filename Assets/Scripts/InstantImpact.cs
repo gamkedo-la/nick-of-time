@@ -47,6 +47,9 @@ public class InstantImpact : MonoBehaviour
 				else if (type == ImpactType.Stamina)
 					collision.gameObject.GetComponent<PlayerController>().actionPoints += value;
 
+				if (collision.gameObject.name == "Player1") ArenaScoreSystem.AddPlayer1Score(2);
+				else if (collision.gameObject.name == "Player2") ArenaScoreSystem.AddPlayer2Score(2);
+
 				Destroy(gameObject);
 			}
 			else

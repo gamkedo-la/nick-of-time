@@ -21,6 +21,7 @@ public class PushedObject : MonoBehaviour
 			Destroy(this);
 	}
 
+	/*
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
 		if (rb != null && collision.gameObject.tag != "Player" && collision.gameObject.layer != LayerMask.NameToLayer("PiecesCollision")
@@ -42,4 +43,5 @@ public class PushedObject : MonoBehaviour
 			Destroy(this);
 		}
 	}
+	*/
 }

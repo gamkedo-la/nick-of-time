@@ -22,6 +22,8 @@ public class ActivateSingleMode : MonoBehaviour {
 	public GameObject p2WinObject;
 	
 	[HideInInspector] public bool paused = false;
+
+	static public ActivateSingleMode currentInstance;
 	
 	void singleCamToDuelCam()
 	{
@@ -32,7 +34,7 @@ public class ActivateSingleMode : MonoBehaviour {
 			
 	}
 	
-	void duelCamToSingleCam(bool otherCam = false)
+	public void duelCamToSingleCam(bool otherCam = false)
 	{
 		jointCam.enabled = true;
 			
@@ -46,6 +48,8 @@ public class ActivateSingleMode : MonoBehaviour {
 	}
 
 	void Start () {
+		currentInstance = this;
+
 		if (cam1 != null && cam2 != null)
 			singleCamToDuelCam();
 		else

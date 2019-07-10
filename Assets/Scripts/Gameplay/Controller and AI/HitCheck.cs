@@ -260,6 +260,13 @@ public class HitCheck : MonoBehaviour
 
 				critical = plCont.processCriticalHit();
 				
+				if (plCont.playerNo == 1)
+					ArenaScoreSystem.AddPlayer1Score(5 * (critical ? 2 : 1)
+					* (plCont.hitComboCount == 0 ? 1 : plCont.hitComboCount));
+				else if (plCont.playerNo == 2)
+					ArenaScoreSystem.AddPlayer2Score(5 * (critical ? 2 : 1)
+					* (plCont.hitComboCount == 0 ? 1 : plCont.hitComboCount));
+				
 				if (plCont.weaponPossession.weaponID < 0)
 				{
 					hpDamage = plCont.weaponPossession.defaultDamage
