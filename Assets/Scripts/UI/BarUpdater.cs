@@ -19,9 +19,9 @@ public class BarUpdater : MonoBehaviour {
 
     // when value is low, the bar flashes on and off
 	[Space]
-	public float flashInterval = 20; // frames per flash on and off
+	public float flashInterval = 16; // frames per flash on and off
 	public float flashIfHpBelow = 0.25f; // max amount
-	public float flashIfStBelow = 0.25f; // max amount
+	public float flashIfApBelow = 0.25f; // max amount
 
 
 	private Image barFill;
@@ -79,7 +79,7 @@ public class BarUpdater : MonoBehaviour {
 
 				prevValue = actionPoints;
 
-				flashing = actionPoints < flashIfHpBelow; 
+				flashing = actionPoints < flashIfApBelow; 
 			}
 			
 			if(Mathf.Abs(playerController.trackVelocity.x) <= trackVelocityThreshold && Mathf.Abs(playerController.trackVelocity.y) <= trackVelocityThreshold)
