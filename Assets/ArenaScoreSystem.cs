@@ -55,7 +55,7 @@ public class ArenaScoreSystem : MonoBehaviour
 	
     void Update()
     {
-		scoreText.text = score.ToString();
+		scoreText.text = "Score: " + score.ToString();
 
 		if (this == pl1Score1 || this == pl2Score1)
 		{

@@ -19,9 +19,7 @@ public class Inventory : MonoBehaviour
     {
         equipmentManager = GetComponent<EquipmentManager>();
     }
-
-
-    
+	
     public bool Add(Item item)
     {
         if(item != item.isDefaultItem)
