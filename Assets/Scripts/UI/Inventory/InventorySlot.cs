@@ -141,24 +141,15 @@ public class InventorySlot : MonoBehaviour
     {
         if (item != null)
         {
-            
             tradePanel.gameObject.SetActive(false);
             //tradePanel.GetComponentInChildren<TextMeshProUGUI>().enabled = true;
 
             thisItemButton.Select();
             thisItemButton.OnSelect(null);
+           
+            inventory.Trade(item, inventory, otherPlayerInventory, 1);
 
-            if (item.stackable == false)
-            {
-                inventory.Trade(item, inventory, otherPlayerInventory, 1);
-            }
-
-            if (item.stackable == true && tradePanel.amountToTrade != 0)
-            {
-                inventory.Trade(item, inventory, otherPlayerInventory, tradePanel.amountToTrade);
-            }
-
-            tradePanel.amountToTrade = 0;
+            //tradePanel.amountToTrade = 0;
             //tradePanel.amountToTradeDisplay.text = tradePanel.amountToTrade.ToString();
 
             inventory.onItemChangedCallback.Invoke();
@@ -172,6 +163,7 @@ public class InventorySlot : MonoBehaviour
 
     public void CancelTrade()
     {
+        tradePanel.gameObject.SetActive(false);
         inventoryControlPanel.tradeButton.Select();
         inventoryControlPanel.tradeButton.OnSelect(null);
 
