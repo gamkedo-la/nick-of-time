@@ -31,7 +31,7 @@ public class EquipmentManager : MonoBehaviour
 		return currentEquipment;
 	}
 
-    internal void CheckIfEquiped(Item item)
+    internal void IfPotionIsEquippedUpdateItemCount(Item item)
     {
         int indexInInventory = inventory.items.IndexOf(item);
 
