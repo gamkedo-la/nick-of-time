@@ -129,11 +129,11 @@ public class InventorySlot : MonoBehaviour
                 tradePanel.gameObject.SetActive(true);
                 inventory.onItemChangedCallback.Invoke();
                 
-                if(item.stackable == false)
+               /* if(item.stackable == false)
                 {
                     //tradePanel.amountToTradeDisplay.text = "";
                     tradePanel.GetComponentInChildren<TextMeshProUGUI>().enabled = false;
-                }                
+                }  */              
 
                 confirmTradeButton.gameObject.SetActive(true);
                 confirmTradeButton.Select();

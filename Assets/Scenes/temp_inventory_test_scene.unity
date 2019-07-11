@@ -22418,6 +22418,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SinglePlayerMode
       objectReference: {fileID: 0}
+    - target: {fileID: 1138517928633368, guid: 08e5fbe869b721f46acbf2ab6ca566bb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4762855591925610, guid: 08e5fbe869b721f46acbf2ab6ca566bb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
