@@ -30,6 +30,7 @@ public class ItemPickup : Interactable
 			if (item.stackable)
 			{
 				inventory.AddToStack(item, amountInStack);
+                item.equipmentManager.CheckIfEquiped(item);
 			}
 		}
 

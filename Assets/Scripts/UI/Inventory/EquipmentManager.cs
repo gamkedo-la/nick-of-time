@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class EquipmentManager : MonoBehaviour
 {
@@ -29,6 +30,19 @@ public class EquipmentManager : MonoBehaviour
 	{
 		return currentEquipment;
 	}
+
+    internal void CheckIfEquiped(Item item)
+    {
+        int indexInInventory = inventory.items.IndexOf(item);
+
+        if (currentEquipment[1] == null || currentEquipment[1].name != item.name)
+        {
+            return;
+        }
+
+        equipmentUI.equipmentSlotDisplays[1].numberOfItemsInStack.text = 
+            inventory.itemsInSlot[indexInInventory].ToString();
+    }
 
     public delegate void OnEquipmentChanged(Equipment newItem, Equipment oldItem);
     public OnEquipmentChanged onEquipmentChanged;
