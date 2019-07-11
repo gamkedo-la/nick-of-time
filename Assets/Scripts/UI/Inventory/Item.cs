@@ -27,6 +27,11 @@ public class Item : ScriptableObject
 		{
 			equipmentManager.Player.GetComponent<PlayerController>().actionPoints = 1f;
 		}
+
+        if (name.Contains("Key"))
+        {
+            return;
+        }
     }
 
     /*public void RemoveFromInventory()

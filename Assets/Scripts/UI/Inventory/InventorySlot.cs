@@ -112,6 +112,11 @@ public class InventorySlot : MonoBehaviour
 
         if (item != null)
         {
+            if (item.name.Contains("Key"))
+            {
+                return;
+            }
+
             if(inventoryControlPanel.IsTrading == false && inventoryControlPanel.IsDropping == false)
             {
                 tradePanel.gameObject.SetActive(false);
