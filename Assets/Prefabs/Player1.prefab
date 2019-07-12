@@ -326,10 +326,22 @@ MonoBehaviour:
   criticalHitTimePause: 0.15
   timeSlowMoTime: 8
   weaponPossession: {fileID: 1148393954167941654}
-  attackSound: {fileID: 8300000, guid: 32ed1d859f4d34a41a11b51400612384, type: 3}
-  dashSound: {fileID: 8300000, guid: f8a4e4e3090eccc478baddaf7213dd10, type: 3}
+  weaponSounds:
+  - {fileID: 8300000, guid: 32ed1d859f4d34a41a11b51400612384, type: 3}
+  - {fileID: 8300000, guid: 32ed1d859f4d34a41a11b51400612384, type: 3}
+  - {fileID: 8300000, guid: 90976767ef8b48841986a9b53bd4880e, type: 3}
+  - {fileID: 8300000, guid: 4740a8254233fd7448167045c365dff2, type: 3}
+  - {fileID: 8300000, guid: 90976767ef8b48841986a9b53bd4880e, type: 3}
+  weaponSoundVolumes:
+  - 1
+  - 1
+  - 0.7
+  - 0.4
+  - 0.7
+  dashSound: {fileID: 8300000, guid: 0f246647c1c896742864bfd64a96b8f0, type: 3}
   hitComboCount: 0
   actionPoints: 1
+  playerNo: -1
   isDashing: 0
   trackVelocity: {x: 0, y: 0}
   didAttackHitEnemy: 0

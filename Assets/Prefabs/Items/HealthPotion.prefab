@@ -99,6 +99,7 @@ MonoBehaviour:
   inventory: {fileID: 0}
   amountInStack: 1
   destroy: 1
+  pickupSound: {fileID: 8300000, guid: 57301c11368344945810e462b3d461fb, type: 3}
 --- !u!58 &6402732861654078340
 CircleCollider2D:
   m_ObjectHideFlags: 0

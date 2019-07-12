@@ -13,6 +13,9 @@ public class Portal : MonoBehaviour
     private int selectedIndex = 0;
 
     public GameObject player;
+
+	public AudioClip portalSound;
+
     private string attackInput = "Fire";
     private string horizontalInput = "Horizontal";
 
@@ -20,7 +23,16 @@ public class Portal : MonoBehaviour
     private Transform previousCameraTrack;
     private float previousPlayerFocusFactor;
 
-    private void Update()
+	private AudioSource aud;
+
+	private void Start()
+	{
+		aud = GetComponent<AudioSource>();
+		if (aud == null)
+			aud = FindObjectOfType<AudioSource>();
+	}
+
+	private void Update()
     {
 		if (active && player)
 		{
@@ -33,6 +45,9 @@ public class Portal : MonoBehaviour
 					MinimapController.instances[2].focus = false;
 				else if (player.name == "Player2")
 					MinimapController.instances[1].focus = false;
+					
+				if (aud != null && TogglesValues.sound)
+					aud.PlayOneShot(portalSound);
 
 				TransportPlayer(exits[activePortals[selectedIndex]]);
 				playerCamera.tr = previousCameraTrack;

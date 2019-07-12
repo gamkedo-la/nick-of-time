@@ -51,7 +51,8 @@ public class PlayerController : MonoBehaviour
 	public WeaponPossession weaponPossession;
 
 	[Space]
-	public AudioClip attackSound;
+	public AudioClip[] weaponSounds;
+	public float[] weaponSoundVolumes;
 	public AudioClip dashSound;
 
 	[HideInInspector] public int hitComboCount = 0;
@@ -261,7 +262,7 @@ public class PlayerController : MonoBehaviour
 						actionPoints -= attackActionDeplete;
 
 						if (aud != null && TogglesValues.sound)
-							aud.PlayOneShot(attackSound);
+							aud.PlayOneShot(weaponSounds[weaponPossession.weaponID + 1], weaponSoundVolumes[weaponPossession.weaponID + 1]);
 					}
 				}
 

@@ -10,7 +10,18 @@ public class ItemPickup : Interactable
 
 	public bool destroy = true;
 
-    public override void Interact()
+	public AudioClip pickupSound;
+
+	private AudioSource aud;
+
+	private void Start()
+	{
+		aud = GetComponent<AudioSource>();
+		if (aud == null)
+			aud = FindObjectOfType<AudioSource>();
+	}
+
+	public override void Interact()
     {
         base.Interact();
 
@@ -36,6 +47,9 @@ public class ItemPickup : Interactable
 
         if (wasPickedUp)
         {
+			if (aud != null && TogglesValues.sound)
+				aud.PlayOneShot(pickupSound);
+
 			if (destroy)
 				Destroy(gameObject);
 			else

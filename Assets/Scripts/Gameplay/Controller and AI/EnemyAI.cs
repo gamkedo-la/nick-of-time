@@ -267,7 +267,12 @@ public class EnemyAI : MonoBehaviour
 							GetComponent<BlinkEffect>().Unblink();
 
 							if (targetPosition == Vector3.zero)
+							{
 								targetPosition = targetObjects[targetIndex].transform.position;
+
+								if (aud != null && TogglesValues.sound)
+									aud.PlayOneShot(attackSound);
+							}
 						}
 						else
 						{
