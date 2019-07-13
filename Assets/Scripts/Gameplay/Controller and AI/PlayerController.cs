@@ -81,7 +81,7 @@ public class PlayerController : MonoBehaviour
 
 	private float keyComboTimer = 0f;
 	private string comboKeys = "";
-	private bool pushPossible = false;
+	private GameObject pushPossible = null;
 	
 	private float hitComboTimer = 0f;
 	[HideInInspector] public int didAttackHitEnemy = 0;
@@ -268,7 +268,7 @@ public class PlayerController : MonoBehaviour
 			}
 
 			//Push
-			if (pushPossible
+			if (pushPossible != null
 			&& !animator.GetBool("isPushing")
 			&& !animator.GetBool("isAttacking")
 			&& !animator.GetBool("isThrowing")
@@ -285,7 +285,7 @@ public class PlayerController : MonoBehaviour
 
 				actionPoints -= pushActionDeplete;
 
-				pushPossible = false;
+				pushPossible = null;
 
 				comboKeys = "";
 			}
@@ -541,21 +541,21 @@ public class PlayerController : MonoBehaviour
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
 		if(collision.gameObject.GetComponent<Pushable>() != null)
-			pushPossible = true;
+			pushPossible = collision.gameObject;
 		pushOnCollision(collision);
 	}
 
 	private void OnCollisionStay2D(Collision2D collision)
 	{
 		if (collision.gameObject.GetComponent<Pushable>() != null)
-			pushPossible = true;
+			pushPossible = collision.gameObject;
 		pushOnCollision(collision);
 	}
 
 	private void OnCollisionExit2D(Collision2D collision)
 	{
 		if (collision.gameObject.GetComponent<Pushable>() != null)
-			pushPossible = false;
+			pushPossible = null;
 	}
 
 	void FixedUpdate()
