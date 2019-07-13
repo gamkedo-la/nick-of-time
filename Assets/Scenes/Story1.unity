@@ -849,6 +849,7 @@ MonoBehaviour:
   inventory: {fileID: 0}
   amountInStack: 1
   destroy: 0
+  pickupSound: {fileID: 0}
 --- !u!1 &53627062 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1148393954563092511, guid: f34ad73bca23e694585b0119f5a1682a,
@@ -19601,6 +19602,7 @@ MonoBehaviour:
   inventory: {fileID: 0}
   amountInStack: 1
   destroy: 0
+  pickupSound: {fileID: 0}
 --- !u!1 &564237105
 GameObject:
   m_ObjectHideFlags: 0
@@ -34911,7 +34913,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Did you checked the other room?
+  m_text: Did you check the other room?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3a13cf1699052b459e0104421c84054, type: 2}
   m_sharedMaterial: {fileID: -2134230250208531588, guid: e3a13cf1699052b459e0104421c84054,
@@ -83877,7 +83879,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Did you checked the other room?
+  m_text: Did you check the other room?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3a13cf1699052b459e0104421c84054, type: 2}
   m_sharedMaterial: {fileID: -2134230250208531588, guid: e3a13cf1699052b459e0104421c84054,
