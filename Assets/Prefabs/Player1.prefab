@@ -333,11 +333,11 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4740a8254233fd7448167045c365dff2, type: 3}
   - {fileID: 8300000, guid: 90976767ef8b48841986a9b53bd4880e, type: 3}
   weaponSoundVolumes:
-  - 1
-  - 1
-  - 0.7
-  - 0.4
-  - 0.7
+  - 0.8
+  - 0.8
+  - 0.5
+  - 0.25
+  - 0.5
   dashSound: {fileID: 8300000, guid: 0f246647c1c896742864bfd64a96b8f0, type: 3}
   hitComboCount: 0
   actionPoints: 1
@@ -371,6 +371,8 @@ MonoBehaviour:
   lootIterations: 0
   lootChance: 0
   lootItems: []
+  hitParticle: []
+  criticalParticle: []
   hp: 1
   knockback: {x: 0, y: 0}
   knockbackSlowDownVector: {x: 0, y: 0}

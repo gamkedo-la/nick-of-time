@@ -9,10 +9,16 @@ public class Breakable : MonoBehaviour
 	public GameObject[] pieces;
 	public GameObject[] explosion;
 
+	public AudioClip breakSound;
+
+	private AudioSource aud;
+
 	private bool breakLock = false;
 
 	void Start () {
-		
+		aud = GetComponent<AudioSource>();
+		if (aud == null)
+			aud = FindObjectOfType<AudioSource>();
 	}
 	
 	void Update () {
@@ -27,6 +33,9 @@ public class Breakable : MonoBehaviour
 				Instantiate(pieces[i], transform.position, Quaternion.Euler(0f, 0f, 0f));
 
 			Instantiate(explosion[Random.Range(0, explosion.Length)], transform.position, Quaternion.Euler(0f, 0f, 0f));
+
+			if (aud != null && TogglesValues.sound)
+				aud.PlayOneShot(breakSound);
 
 			if (enablePiecesParticles)
 			{

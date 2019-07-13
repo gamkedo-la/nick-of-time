@@ -162,6 +162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minimapCam: {fileID: 800802134}
   focus: 0
+  noLerp: 0
 --- !u!1 &967466982
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,6 +251,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minimapCam: {fileID: 1800951022}
   focus: 0
+  noLerp: 0
 --- !u!1 &1013171213
 GameObject:
   m_ObjectHideFlags: 0
@@ -422,6 +424,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minimapCam: {fileID: 1567012586}
   focus: 0
+  noLerp: 0
 --- !u!1 &1371677065
 GameObject:
   m_ObjectHideFlags: 0
@@ -1513,6 +1516,9 @@ MonoBehaviour:
   gainPop: 2500
   gainPopFactor: 0.4
   gainPopDecayFactor: 0.15
+  flashInterval: 16
+  flashIfHpBelow: 0.25
+  flashIfApBelow: 0.25
 --- !u!222 &7679670266760127235
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1936,6 +1942,9 @@ MonoBehaviour:
   gainPop: 2500
   gainPopFactor: 0.4
   gainPopDecayFactor: 0.15
+  flashInterval: 16
+  flashIfHpBelow: 0.25
+  flashIfApBelow: 0.25
 --- !u!222 &5662480362182505002
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3676,6 +3685,9 @@ MonoBehaviour:
   gainPop: 2500
   gainPopFactor: 0.4
   gainPopDecayFactor: 0.15
+  flashInterval: 16
+  flashIfHpBelow: 0.25
+  flashIfApBelow: 0.25
 --- !u!222 &2672003944739008734
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4653,6 +4665,9 @@ MonoBehaviour:
   gainPop: 2500
   gainPopFactor: 0.4
   gainPopDecayFactor: 0.15
+  flashInterval: 16
+  flashIfHpBelow: 0.25
+  flashIfApBelow: 0.25
 --- !u!222 &1621918030171753551
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5302,6 +5317,9 @@ MonoBehaviour:
   gainPop: 2500
   gainPopFactor: 0.4
   gainPopDecayFactor: 0.15
+  flashInterval: 16
+  flashIfHpBelow: 0.25
+  flashIfApBelow: 0.25
 --- !u!222 &8375321735081740158
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5487,6 +5505,9 @@ MonoBehaviour:
   gainPop: 2500
   gainPopFactor: 0.4
   gainPopDecayFactor: 0.15
+  flashInterval: 16
+  flashIfHpBelow: 0.25
+  flashIfApBelow: 0.25
 --- !u!222 &4796501614234039000
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6092,6 +6113,9 @@ MonoBehaviour:
   gainPop: 2500
   gainPopFactor: 0.4
   gainPopDecayFactor: 0.15
+  flashInterval: 16
+  flashIfHpBelow: 0.25
+  flashIfApBelow: 0.25
 --- !u!222 &756563250115236573
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6441,6 +6465,9 @@ MonoBehaviour:
   gainPop: 2500
   gainPopFactor: 0.4
   gainPopDecayFactor: 0.15
+  flashInterval: 16
+  flashIfHpBelow: 0.25
+  flashIfApBelow: 0.25
 --- !u!222 &5638677502199385996
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6791,6 +6818,7 @@ GameObject:
   - component: {fileID: 8479785457308306579}
   - component: {fileID: 8479785457308306578}
   - component: {fileID: 8479785457308306589}
+  - component: {fileID: 439543554975650076}
   m_Layer: 13
   m_Name: DialogueBox
   m_TagString: MainCamera
@@ -6884,6 +6912,102 @@ MonoBehaviour:
   proceedSound: {fileID: 8300000, guid: 3ac4326bbe10ffb42b9652b3dd6cbbc3, type: 3}
   dialogueText: {fileID: 0}
   dialogueSequence: {fileID: 0}
+--- !u!82 &439543554975650076
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8479785457308306576}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &8479785457321683617
 GameObject:
   m_ObjectHideFlags: 0

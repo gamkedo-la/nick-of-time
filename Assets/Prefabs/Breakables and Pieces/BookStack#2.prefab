@@ -107,6 +107,7 @@ MonoBehaviour:
   - {fileID: 9162942813699055974, guid: b78980ac9f115c3468872d2cd8b7d03a, type: 3}
   - {fileID: 7326099007733590877, guid: 16b5f078fa55fe0448adfece22e1c614, type: 3}
   - {fileID: 968535544428549441, guid: 1d6855e40b5ad7e4cb346e5c55a5f371, type: 3}
+  breakSound: {fileID: 8300000, guid: d936558a144021c4785d56197cb88c26, type: 3}
 --- !u!114 &-5819881032689484488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -298,6 +299,7 @@ MonoBehaviour:
   pieces:
   - {fileID: 183959485626508399, guid: 3acfa2985955c98468425fe00ad9c41d, type: 3}
   explosion: []
+  breakSound: {fileID: 0}
 --- !u!1 &3191805669158122168
 GameObject:
   m_ObjectHideFlags: 0
@@ -464,6 +466,7 @@ MonoBehaviour:
   pieces:
   - {fileID: 183959485626508399, guid: 3acfa2985955c98468425fe00ad9c41d, type: 3}
   explosion: []
+  breakSound: {fileID: 0}
 --- !u!1 &3191805669587896581
 GameObject:
   m_ObjectHideFlags: 0
@@ -630,3 +633,4 @@ MonoBehaviour:
   pieces:
   - {fileID: 183959485626508399, guid: 3acfa2985955c98468425fe00ad9c41d, type: 3}
   explosion: []
+  breakSound: {fileID: 0}
