@@ -310,6 +310,10 @@ public class HitCheck : MonoBehaviour
 
 	public void die()
 	{
+		if (gameObject.CompareTag("Enemy")
+		&& gameObject.name.Contains("FireSnake"))
+			Destroy(gameObject.GetComponent<EnemyAI>().pieces);
+
 		Destroy(gameObject);
 	}
 }

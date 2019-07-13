@@ -10,6 +10,7 @@ public class ActivateSingleMode : MonoBehaviour {
 	public Camera cam2;
 	
 	public GameObject pauseObject;
+	public GameObject paperViewObject;
 	public string pauseInput = "Cancel";
 	
 	public GameObject dialogueBoxObject;
@@ -104,6 +105,7 @@ public class ActivateSingleMode : MonoBehaviour {
 				paused = false;
 				pauseObject.GetComponent<PlaySound>().done = false;
 				pauseObject.SetActive(false);
+				paperViewObject.SetActive(false);
 				Time.timeScale = 1f;
 			}
 		}

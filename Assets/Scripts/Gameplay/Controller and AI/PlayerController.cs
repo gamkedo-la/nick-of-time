@@ -197,9 +197,7 @@ public class PlayerController : MonoBehaviour
 					animator.SetBool("isWalking", false);
 				}
 			}
-
-			prevWalkState = walkInput == Vector2.zero ? 0 : 1;
-
+			
 			//Potion
 			if (Input.GetButtonDown(attackInput + inputExtensionString))
 			{
@@ -331,8 +329,9 @@ public class PlayerController : MonoBehaviour
 			&& !animator.GetBool("isAttacking")
 			&& !animator.GetBool("isPushing")
 			&& !isDashing
-			&& keyComboTimer <= keyComboMaxTimeGap / 3.5f
-			&& (comboKeys == "UA" || comboKeys == "RA" || comboKeys == "DA" || comboKeys == "LA"))
+			&& (((keyComboTimer <= keyComboMaxTimeGap / 3.8f) && (comboKeys == "UA" || comboKeys == "RA" || comboKeys == "DA" || comboKeys == "LA"))
+			|| ((Input.GetButtonDown(attackInput + inputExtensionString)) && (Input.GetButtonDown(walkHorizontalInput + inputExtensionString) || Input.GetButtonDown(walkVerticalInput + inputExtensionString))))
+			)
 			{
 				animator.SetBool("isThrowing", true);
 				speed = attackSpeed * (1 + (4 * timeSlowMoEffectValue));
@@ -488,6 +487,8 @@ public class PlayerController : MonoBehaviour
 			attackSpeedTimer -= Time.deltaTime;
 			dashTimer -= Time.deltaTime;
 			nextFXdelay -= Time.deltaTime; // don't spam FX every frame
+
+			prevWalkState = walkInput == Vector2.zero ? 0 : 1;
 		}
 	}
 

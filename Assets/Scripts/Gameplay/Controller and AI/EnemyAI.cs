@@ -66,7 +66,7 @@ public class EnemyAI : MonoBehaviour
 	private float angleAtTargetTimer = 0f;
 	private TrailRenderer trail;
 
-	private GameObject pieces;
+	[HideInInspector] public GameObject pieces;
 
 	void Start () {
 		targetObjects = GameObject.FindGameObjectsWithTag("Player");

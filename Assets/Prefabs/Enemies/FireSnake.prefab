@@ -820,7 +820,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetObjects: []
   type: 0
-  damageToPlayer: 0.25
+  damageToPlayer: 0.2
   containsPieces: 1
   walkSpeed: 0.5
   walkMaxDistance: 5
@@ -1060,7 +1060,7 @@ GameObject:
   - component: {fileID: 8003401168049580197}
   m_Layer: 9
   m_Name: BodyPiece (1)
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1167,7 +1167,7 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 0
-  m_Distance: 0.2
+  m_Distance: 0.19
   m_MaxDistanceOnly: 1
 --- !u!58 &8003401168049580190
 CircleCollider2D:
@@ -1197,7 +1197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2541c2dfeef50d4f9d5d99349ebae41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hpDamage: 0.15
+  hpDamage: 0.03
   disableObjectAfterDamage: 0
   destroyScriptAfterDamage: 0
   destroyObjectAfterDamage: 0
@@ -1296,7 +1296,7 @@ GameObject:
   - component: {fileID: 8003401168049580196}
   m_Layer: 9
   m_Name: BodyPiece (2)
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1433,7 +1433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2541c2dfeef50d4f9d5d99349ebae41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hpDamage: 0.15
+  hpDamage: 0.03
   disableObjectAfterDamage: 0
   destroyScriptAfterDamage: 0
   destroyObjectAfterDamage: 0
@@ -1870,7 +1870,7 @@ GameObject:
   - component: {fileID: 8003401168049580194}
   m_Layer: 9
   m_Name: BodyPiece (4)
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2007,7 +2007,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2541c2dfeef50d4f9d5d99349ebae41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hpDamage: 0.15
+  hpDamage: 0.03
   disableObjectAfterDamage: 0
   destroyScriptAfterDamage: 0
   destroyObjectAfterDamage: 0
@@ -2206,7 +2206,7 @@ GameObject:
   - component: {fileID: 8003401168049580191}
   m_Layer: 9
   m_Name: TailPiece
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2343,7 +2343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2541c2dfeef50d4f9d5d99349ebae41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hpDamage: 0.15
+  hpDamage: 0.03
   disableObjectAfterDamage: 0
   destroyScriptAfterDamage: 0
   destroyObjectAfterDamage: 0
@@ -2363,7 +2363,7 @@ GameObject:
   - component: {fileID: 8003401168049580195}
   m_Layer: 9
   m_Name: BodyPiece (3)
-  m_TagString: Untagged
+  m_TagString: EnemyAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2500,7 +2500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2541c2dfeef50d4f9d5d99349ebae41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hpDamage: 0.15
+  hpDamage: 0.03
   disableObjectAfterDamage: 0
   destroyScriptAfterDamage: 0
   destroyObjectAfterDamage: 0

@@ -5,26 +5,33 @@ using UnityEngine;
 public class PauseOnNoFocus : MonoBehaviour
 {
 	public GameObject pauseObject;
+	public GameObject paperViewObject;
 
 	void OnApplicationPause()
 	{
-		if (ActivateSingleMode.currentInstance != null)
+		if (!paperViewObject.activeSelf)
 		{
-			ActivateSingleMode.currentInstance.paused = true;
-			ActivateSingleMode.currentInstance.duelCamToSingleCam();
+			if (ActivateSingleMode.currentInstance != null)
+			{
+				ActivateSingleMode.currentInstance.paused = true;
+				ActivateSingleMode.currentInstance.duelCamToSingleCam();
+			}
+			pauseObject.SetActive(true);
+			Time.timeScale = 0f;
 		}
-		pauseObject.SetActive(true);
-		Time.timeScale = 0f;
 	}
 
 	void OnApplicationFocus()
 	{
-		if (ActivateSingleMode.currentInstance != null)
+		if (!paperViewObject.activeSelf)
 		{
-			ActivateSingleMode.currentInstance.paused = true;
-			ActivateSingleMode.currentInstance.duelCamToSingleCam();
+			if (ActivateSingleMode.currentInstance != null)
+			{
+				ActivateSingleMode.currentInstance.paused = true;
+				ActivateSingleMode.currentInstance.duelCamToSingleCam();
+			}
+			pauseObject.SetActive(true);
+			Time.timeScale = 0f;
 		}
-		pauseObject.SetActive(true);
-		Time.timeScale = 0f;
 	}
 }
