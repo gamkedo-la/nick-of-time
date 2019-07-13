@@ -116,7 +116,7 @@ public class HitCheck : MonoBehaviour
 				Mathf.RoundToInt(hpDamage * 100f).ToString(), critical ? Color.yellow : Color.white,
 				critical ? 2f : 1f, critical ? 2f : 1f);
 
-			if (hitParticle != null || hitParticle.Length <= 0)
+			if (hitParticle != null && hitParticle.Length > 0)
 			{
 				Instantiate(
 						critical ? criticalParticle[Random.Range(0, criticalParticle.Length)]

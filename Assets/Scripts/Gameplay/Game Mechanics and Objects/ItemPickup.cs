@@ -53,7 +53,12 @@ public class ItemPickup : Interactable
 			if (destroy)
 				Destroy(gameObject);
 			else
+			{
+				SpriteRenderer sprRend = GetComponent<SpriteRenderer>();
+				if (sprRend != null) Destroy(sprRend);
+
 				Destroy(this);
+			}
         }
     }
 

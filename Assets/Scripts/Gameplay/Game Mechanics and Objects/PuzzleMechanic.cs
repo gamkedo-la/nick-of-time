@@ -43,6 +43,7 @@ public class PuzzleMechanic : MonoBehaviour
 	[Header("Extra")]
 	[SerializeField] private float rebound = 0f;
 	[SerializeField] private float weightRequired = 1f;
+	[SerializeField] private AudioClip stateChangeSound;
 
 	[HideInInspector] public bool refresh = false;
 
@@ -54,11 +55,17 @@ public class PuzzleMechanic : MonoBehaviour
 
 	private SpriteRenderer spRend;
 
+	private AudioSource aud;
+
 	void Start()
     {
 		spRend = gameObject.GetComponent<SpriteRenderer>();
 		prevState = !state;
-    }
+
+		aud = GetComponent<AudioSource>();
+		if (aud == null)
+			aud = FindObjectOfType<AudioSource>();
+	}
 	
     void Update()
     {
@@ -189,6 +196,9 @@ public class PuzzleMechanic : MonoBehaviour
 				state = true;
 
 				triggered = weightRequired;
+
+				if (aud != null && stateChangeSound != null && TogglesValues.sound)
+					aud.PlayOneShot(stateChangeSound, state ? 1f : 0.5f);
 			}
 		}
 		else if (type == MechanicType.Switch)
@@ -202,6 +212,9 @@ public class PuzzleMechanic : MonoBehaviour
 					state = !state;
 
 					triggered = weightRequired;
+
+					if (aud != null && stateChangeSound != null && TogglesValues.sound)
+						aud.PlayOneShot(stateChangeSound, state ? 1f : 0.5f);
 				}
 			}
 		}
@@ -217,6 +230,9 @@ public class PuzzleMechanic : MonoBehaviour
 					collision.gameObject.tag = "Untagged";
 
 				triggered = weightRequired;
+
+				if (aud != null && stateChangeSound != null && TogglesValues.sound)
+					aud.PlayOneShot(stateChangeSound, state ? 1f : 0.5f);
 			}
 		}
 		else if (type == MechanicType.Pressure_Plate)
@@ -227,7 +243,12 @@ public class PuzzleMechanic : MonoBehaviour
 			{
 				triggered += weightMech.weight;
 
+				bool prevState = state;
 				state = triggered >= weightRequired;
+
+				if(state != prevState)
+					if (aud != null && stateChangeSound != null && TogglesValues.sound)
+						aud.PlayOneShot(stateChangeSound, state ? 1f : 0.5f);
 			}
 		}
 		else
@@ -243,7 +264,12 @@ public class PuzzleMechanic : MonoBehaviour
 			if (collision.gameObject.name.Contains("Player"))
 			{
 				if (rebound <= 0f)
+				{
 					state = false;
+
+					if (aud != null && stateChangeSound != null && TogglesValues.sound)
+						aud.PlayOneShot(stateChangeSound, state ? 1f : 0.5f);
+				}
 
 				triggered = 0f;
 			}
@@ -257,7 +283,14 @@ public class PuzzleMechanic : MonoBehaviour
 				triggered -= weightMech.weight;
 
 				if (rebound <= 0f)
+				{
+					prevState = state;
 					state = triggered >= weightRequired;
+
+					if(prevState != state)
+						if (aud != null && stateChangeSound != null && TogglesValues.sound)
+							aud.PlayOneShot(stateChangeSound, state ? 1f : 0.5f);
+				}
 			}
 		}
 		else

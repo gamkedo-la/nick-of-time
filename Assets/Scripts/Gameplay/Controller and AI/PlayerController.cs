@@ -331,7 +331,7 @@ public class PlayerController : MonoBehaviour
 			&& !animator.GetBool("isAttacking")
 			&& !animator.GetBool("isPushing")
 			&& !isDashing
-			&& keyComboTimer <= keyComboMaxTimeGap / 4f
+			&& keyComboTimer <= keyComboMaxTimeGap / 3.5f
 			&& (comboKeys == "UA" || comboKeys == "RA" || comboKeys == "DA" || comboKeys == "LA"))
 			{
 				animator.SetBool("isThrowing", true);
