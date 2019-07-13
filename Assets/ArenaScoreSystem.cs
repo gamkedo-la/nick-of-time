@@ -22,16 +22,25 @@ public class ArenaScoreSystem : MonoBehaviour
 
 	static public void AddPlayer1Score(int sc)
 	{
-		pl1Score1.score += sc;
-		pl1Score1.weaponScore += sc;
+		if (pl1Score1 != null)
+		{
+			pl1Score1.score += sc;
+			pl1Score1.weaponScore += sc;
+		}
 	}
 
 	static public void AddPlayer2Score(int sc)
 	{
-		pl2Score1.score += sc;
-		pl2Score1.weaponScore += sc;
-		pl2Score2.score = pl2Score1.score;
-		pl2Score2.weaponScore = pl2Score1.score;
+		if (pl2Score1 != null)
+		{
+			pl2Score1.score += sc;
+			pl2Score1.weaponScore += sc;
+		}
+		if (pl1Score2 != null)
+		{
+			pl2Score2.score = pl2Score1.score;
+			pl2Score2.weaponScore = pl2Score1.score;
+		}
 	}
 
 	void Start()

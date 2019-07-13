@@ -9,12 +9,13 @@ public class EnemyAI : MonoBehaviour
 	public enum EnemyAIType
 	{
 		Animated,
-		Rotational,
-		Procedural
+		Rotational
 	};
-
+	
 	public EnemyAIType type = EnemyAIType.Animated;
 	public float damageToPlayer = 0.1f;
+
+	public bool containsPieces = false;
 
 	[Space]
 	public float walkSpeed = 1f;
@@ -65,7 +66,6 @@ public class EnemyAI : MonoBehaviour
 	private float angleAtTargetTimer = 0f;
 	private TrailRenderer trail;
 
-	//for procedural AI type
 	private GameObject pieces;
 
 	void Start () {
@@ -86,10 +86,12 @@ public class EnemyAI : MonoBehaviour
 
 		if (type == EnemyAIType.Rotational)
 			trail = transform.GetChild(3).gameObject.GetComponent<TrailRenderer>();
-		else if (type == EnemyAIType.Procedural)
+		
+		if (containsPieces)
 		{
 			pieces = transform.GetChild(5).gameObject;
 			pieces.transform.parent = null;
+			pieces.transform.position = transform.position;
 		}
 	}
 
@@ -134,13 +136,23 @@ public class EnemyAI : MonoBehaviour
 				)
 				{
 					if (targetObjects[targetIndex].transform.position.x + 0.36f < rigidbody.transform.position.x)
+					{
 						walkInput.x = -1f;
+						sprRenderer.flipX = true;
+					}
 					if (targetObjects[targetIndex].transform.position.y + 0.04f < rigidbody.transform.position.y)
+					{
 						walkInput.y = -1f;
+					}
 					if (targetObjects[targetIndex].transform.position.x - 0.36f > rigidbody.transform.position.x)
+					{
 						walkInput.x = 1f;
+						sprRenderer.flipX = false;
+					}
 					if (targetObjects[targetIndex].transform.position.y - 0.04f > rigidbody.transform.position.y)
+					{
 						walkInput.y = 1f;
+					}
 
 					if (walkTimer <= -walkTime)
 						walkTimer = Random.Range(walkMinDelay, walkMaxDelay);
@@ -335,10 +347,6 @@ public class EnemyAI : MonoBehaviour
 					actionTimer -= Time.deltaTime;
 				}
 			}
-			else if (type == EnemyAIType.Procedural)
-			{
-				
-			}
 		}
 	}
 
@@ -390,6 +398,8 @@ public class EnemyAI : MonoBehaviour
 		animator.SetBool("isSpawned", true);
 
 		gameObject.layer = LayerMask.NameToLayer("Enemy");
+
+		if (pieces != null) pieces.SetActive(true);
 	}
 
 	public void stopAttacking() {
