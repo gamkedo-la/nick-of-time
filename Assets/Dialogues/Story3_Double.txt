@@ -1,0 +1,60 @@
+59
+<color=#ff6666>Player 1</color><br>Ahhh...my head.
+<color=#66ff66>Player 2</color><br>These portals are quite a pain!
+<color=#ff6666>Player 1</color><br>Where are nick and the guard?
+<color=#66ff66>Player 2</color><br>Do you think old man is behind it?
+<color=#ff6666>Player 1</color><br>Huh?
+<color=#66ff66>Player 2</color><br>I... I mean... who else could have opened that door?
+<color=#ff6666>Player 1</color><br>Anyway, what is this odd place?
+<color=#66ff66>Player 2</color><br>Every other place is odd ever since we are stuck here.
+<color=#ff6666>Player 1</color><br>...sigh... yeah.
+ 
+<color=#66ff66>Player 2</color><br>Hey look, the old man!
+<color=#ff6666>Player 1</color><br>He... hey! Old man!
+ 
+<color=#ff6666>Player 1</color><br>Now, that... is weird.
+<color=#66ff66>Player 2</color><br>I wonder why he is here.
+ 
+<color=#ff6666>Player 1</color><br>Ohhh, is there some invisible wall?
+<color=#66ff66>Player 2</color><br>Hmm, it seems like the two sides are mirror images of each other.
+<color=#66ff66>Player 2</color><br>...which means that we might get some clue on the other side.
+<color=#ff6666>Player 1</color><br>Like some kinda pattern to solve it? Right?
+<color=#66ff66>Player 2</color><br>Yeah.
+ 
+<color=#ffff03>Old Man</color><br>You shouldn't have left me there.
+<color=#ffff03>Old Man</color><br>Now, you are about to face some serious problems.
+<color=#ffff04>Old Man</color><br>Your death... is near!
+ 
+<color=#ffbb05>Nick</color><br>...
+<color=#ff6666>Player 1</color><br>Nick, RUN! He is out of himself.
+<color=#66ff66>Player 2</color><br>Look at him. He is all devil now!
+<color=#ff6666>Player 1</color><br>That vision and all of these creepy things.
+<color=#66ff66>Player 2</color><br>It's him. Alright! Let's fight.
+<color=#ff6666>Player 1</color><br>ha...HAHA...
+<color=#ffbb02>Nick</color<br>Why are you laughing?
+<color=#ff6666>Player 1</color><br>Don't you think it is WEIRD?
+<color=#66ff66>Player 2</color><br>Yeah, someone sure loves to fool us.
+<color=#ff6666>Player 1</color><br>No, it's not that. Someone sure loves to PLAY with us.
+ 
+<color=#ff6666>Player 1</color><br>IT WAS YOU, NICK!
+<color=#ffbb04>Nick</color<br>...
+<color=#66ff66>Player 2</color><br>Before you created the portal...
+<color=#66ff66>Player 2</color><br>The guard told us the truth.
+<color=#ff6666>Player 1</color><br>Hah, he told us the truth in the NICK OF TIME.
+<color=#ffbb03>Nick</color<br>...I only wanted...
+<color=#ff6666>Player 1</color><br>Stop it, Nick. You can't fool us anymore.
+<color=#66ff66>Player 2</color><br>...and stop puppeting the old man.
+<color=#ff6666>Player 1</color><br>You planned to keep us stuck with you here...
+<color=#ff6666>Player 1</color>So, that you can toy with us forever haaaan!!!??
+<color=#ffbb03>Nick</color<br>...to play with someone.
+<color=#ffbb01>Nick</color<br>But... It doesn't matter anymore.
+<color=#ffbb00>Nick</color<br>So, let us play.
+<color=#ffbb06>Nick</color<br>FOR REAL!
+<color=#ffbb06>Nick</color<br>HAHAHAHAHA!!!
+ 
+<color=#ff6666>Player 1</color><br>Finally.
+<color=#66ff66>Player 2</color><br>Yeah. Bye bye, Nick dungeon.
+<color=#ff6666>Player 1</color><br>You did a great job, bro.
+<color=#66ff66>Player 2</color><br>You too were nothing less.
+<color=#00ff00>THE END</color>
+ 

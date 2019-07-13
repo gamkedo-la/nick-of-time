@@ -67643,7 +67643,7 @@ PrefabInstance:
     - target: {fileID: 1894696908122255597, guid: 00c830c5b9efec64987b7ae803d9b489,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.756002
+      value: -0.59600204
       objectReference: {fileID: 0}
     - target: {fileID: 1894696908122255597, guid: 00c830c5b9efec64987b7ae803d9b489,
         type: 3}
@@ -71221,7 +71221,7 @@ PrefabInstance:
     - target: {fileID: 1894696908122255597, guid: 00c830c5b9efec64987b7ae803d9b489,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.600005
+      value: -4.4400053
       objectReference: {fileID: 0}
     - target: {fileID: 1894696908122255597, guid: 00c830c5b9efec64987b7ae803d9b489,
         type: 3}
@@ -78150,7 +78150,7 @@ GameObject:
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &742573953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78175,7 +78175,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 742573952}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.357, y: -1.471, z: 0}
+  m_LocalPosition: {x: 9.049, y: -24.649, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1116207828}
@@ -85111,7 +85111,7 @@ GameObject:
   - component: {fileID: 946610961}
   - component: {fileID: 946610960}
   m_Layer: 0
-  m_Name: 2_HungrySlenderGuard
+  m_Name: 2_OldManGoingAndBlock
   m_TagString: Untagged
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -85125,7 +85125,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 946610957}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.357, y: -4.902, z: 0}
+  m_LocalPosition: {x: 9.02, y: -13.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 722951779}
@@ -86190,7 +86190,7 @@ GameObject:
   m_Component:
   - component: {fileID: 978959100}
   m_Layer: 0
-  m_Name: 4_YouGotKeyButOpenedDoor
+  m_Name: 4_PreBossBattle
   m_TagString: Untagged
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -86204,7 +86204,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 978959099}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.332, y: -4.383, z: 0}
+  m_LocalPosition: {x: 8.99, y: -1.16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1116207828}
@@ -87121,7 +87121,7 @@ GameObject:
   - component: {fileID: 1000434197}
   - component: {fileID: 1000434196}
   m_Layer: 0
-  m_Name: 3_LockedKitchenDoor
+  m_Name: 3_InvisibleWall
   m_TagString: Untagged
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -87135,7 +87135,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000434194}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.081, y: -4.778, z: 0}
+  m_LocalPosition: {x: 3.76, y: -13.54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 571040194}
@@ -102698,7 +102698,7 @@ PrefabInstance:
     - target: {fileID: 1894696908122255597, guid: 00c830c5b9efec64987b7ae803d9b489,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.756002
+      value: -0.59600204
       objectReference: {fileID: 0}
     - target: {fileID: 1894696908122255597, guid: 00c830c5b9efec64987b7ae803d9b489,
         type: 3}
@@ -115549,7 +115549,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1450753318}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.411, y: -5.26, z: 0}
+  m_LocalPosition: {x: 8.96, y: -2.34, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1116207828}
@@ -119687,7 +119687,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1584086144}
   m_Layer: 0
-  m_Name: 5_NickEating
+  m_Name: 5_PostBossBattle
   m_TagString: Untagged
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -119701,7 +119701,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1584086143}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.74, y: -1.89, z: 0}
+  m_LocalPosition: {x: 8.94, y: -1.72, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1116207828}
@@ -140723,6 +140723,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -24.864
+      objectReference: {fileID: 0}
+    - target: {fileID: 8479785458059321904, guid: ed0fc656d5f7d0840ba8795c183865a3,
+        type: 3}
+      propertyPath: file
+      value: Assets/Dialogues/Story3_Single.txt
+      objectReference: {fileID: 0}
+    - target: {fileID: 8479785458915248941, guid: ed0fc656d5f7d0840ba8795c183865a3,
+        type: 3}
+      propertyPath: file
+      value: Assets/Dialogues/Story3_Double.txt
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed0fc656d5f7d0840ba8795c183865a3, type: 3}
