@@ -3694,6 +3694,7 @@ Transform:
   - {fileID: 404106356}
   - {fileID: 1842104688}
   - {fileID: 1339664618}
+  - {fileID: 1778714779}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3710,6 +3711,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseObject: {fileID: 1842104687}
+  paperViewObject: {fileID: 1778714780}
 --- !u!1 &161993342
 GameObject:
   m_ObjectHideFlags: 0
@@ -17255,6 +17257,7 @@ MonoBehaviour:
   cam1: {fileID: 126225837}
   cam2: {fileID: 501965150}
   pauseObject: {fileID: 1842104687}
+  paperViewObject: {fileID: 1778714780}
   pauseInput: Cancel
   dialogueBoxObject: {fileID: 1433272885}
   loseObject: {fileID: 36308672}
@@ -69767,6 +69770,142 @@ Transform:
   m_Father: {fileID: 173072868}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1778714778
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 151859005}
+    m_Modifications:
+    - target: {fileID: 4468091490354810387, guid: 53cb9c31e0ed5f848bf56d4b8f3c7091,
+        type: 3}
+      propertyPath: m_Name
+      value: NickBackstoryPaperView
+      objectReference: {fileID: 0}
+    - target: {fileID: 4468091490354810387, guid: 53cb9c31e0ed5f848bf56d4b8f3c7091,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4468091490354810399, guid: 53cb9c31e0ed5f848bf56d4b8f3c7091,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4468091490354810399, guid: 53cb9c31e0ed5f848bf56d4b8f3c7091,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4468091490354810399, guid: 53cb9c31e0ed5f848bf56d4b8f3c7091,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4468091490354810399, guid: 53cb9c31e0ed5f848bf56d4b8f3c7091,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4468091490354810399, guid: 53cb9c31e0ed5f848bf56d4b8f3c7091,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4468091490354810399, guid: 53cb9c31e0ed5f848bf56d4b8f3c7091,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4468091490354810399, guid: 53cb9c31e0ed5f848bf56d4b8f3c7091,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4468091490354810399, guid: 53cb9c31e0ed5f848bf56d4b8f3c7091,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4468091490354810399, guid: 53cb9c31e0ed5f848bf56d4b8f3c7091,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4468091490354810399, guid: 53cb9c31e0ed5f848bf56d4b8f3c7091,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4468091490354810399, guid: 53cb9c31e0ed5f848bf56d4b8f3c7091,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4468091490354810399, guid: 53cb9c31e0ed5f848bf56d4b8f3c7091,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4468091490354810399, guid: 53cb9c31e0ed5f848bf56d4b8f3c7091,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4468091490354810399, guid: 53cb9c31e0ed5f848bf56d4b8f3c7091,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4468091490354810399, guid: 53cb9c31e0ed5f848bf56d4b8f3c7091,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4468091490354810399, guid: 53cb9c31e0ed5f848bf56d4b8f3c7091,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4468091490354810399, guid: 53cb9c31e0ed5f848bf56d4b8f3c7091,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4468091490354810399, guid: 53cb9c31e0ed5f848bf56d4b8f3c7091,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4468091490354810399, guid: 53cb9c31e0ed5f848bf56d4b8f3c7091,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4468091490354810399, guid: 53cb9c31e0ed5f848bf56d4b8f3c7091,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4468091490354810399, guid: 53cb9c31e0ed5f848bf56d4b8f3c7091,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 53cb9c31e0ed5f848bf56d4b8f3c7091, type: 3}
+--- !u!224 &1778714779 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4468091490354810399, guid: 53cb9c31e0ed5f848bf56d4b8f3c7091,
+    type: 3}
+  m_PrefabInstance: {fileID: 1778714778}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1778714780 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4468091490354810387, guid: 53cb9c31e0ed5f848bf56d4b8f3c7091,
+    type: 3}
+  m_PrefabInstance: {fileID: 1778714778}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1786595158
 GameObject:
   m_ObjectHideFlags: 0
@@ -75871,6 +76010,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1877827728}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1877827730 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3696183574308080550, guid: 57775ecda9d51694f959646954ef4c58,
+    type: 3}
+  m_PrefabInstance: {fileID: 1877827728}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1877827731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877827730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26943d22bbe43bb4ea161c408b8e39d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  story: "My dad read books everyday. He read books and I listen to him.\r\n\r\nTick,
+    tick, tick. A lovely noise that both of us loves so much.\r\n\r\nWhen the bell
+    rings, my father always leaves the house and he used to say to me that if you
+    read books, I will bring you a new clock.\r"
 --- !u!1001 &1886510604
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -85993,6 +86154,27 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2063079931}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2063079933 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3191805667946548574, guid: 6a9e005d8f86cab4a9a16dccb5d26ff3,
+    type: 3}
+  m_PrefabInstance: {fileID: 2063079931}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2063079934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063079933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26943d22bbe43bb4ea161c408b8e39d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  story: "One day, It was raining so hard. I kept waiting for my father.\r\n\r\nBut
+    he didn't return.\r\n\r\nI was feeling lonely.\r\n\r\nThe water was dripping from
+    the stone roof. I made my friends out of mud and slept with them."
 --- !u!1 &2064490722
 GameObject:
   m_ObjectHideFlags: 0

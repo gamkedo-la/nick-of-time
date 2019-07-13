@@ -3637,7 +3637,6 @@ GameObject:
   - component: {fileID: 6678780736995918098}
   - component: {fileID: 2672003944739008734}
   - component: {fileID: 6959470532295018294}
-  - component: {fileID: 7758168109612491578}
   - component: {fileID: 1083199480}
   m_Layer: 11
   m_Name: HPBar1 Fill
@@ -3725,21 +3724,6 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
---- !u!114 &7758168109612491578
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4131678305329548234}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 414c560f28729a44e995422b73adcef9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  keepShaking: 0
-  delay: 0.01
-  intensity: 1
 --- !u!114 &1083199480
 MonoBehaviour:
   m_ObjectHideFlags: 0

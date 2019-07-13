@@ -28,6 +28,7 @@ public class HitCheck : MonoBehaviour
 	[Space]
 	public AudioClip damageSound;
 	public AudioClip deathSound;
+	public AudioClip lowHpSound;
 
 	[Space]
 	public int lootIterations = 0;
@@ -144,7 +145,7 @@ public class HitCheck : MonoBehaviour
 					{
 						if (Random.Range(0f, 1f) >= lootChance)
 						{
-							Instantiate(lootItems[Random.Range(0, lootItems.Length)], transform.position, Quaternion.Euler(0f,0f,0f));
+							Instantiate(lootItems[Random.Range(0, lootItems.Length)], transform.position, Quaternion.Euler(0f, 0f, 0f));
 						}
 					}
 				}
@@ -155,7 +156,7 @@ public class HitCheck : MonoBehaviour
 				GetComponent<Animator>().SetBool("isDying", true);
 
 				Destroy(GetComponent<Collider2D>());
-				if(hpSlider) Destroy(hpSlider.gameObject.transform.parent.gameObject);
+				if (hpSlider) Destroy(hpSlider.gameObject.transform.parent.gameObject);
 			}
 			else
 			{
@@ -176,6 +177,12 @@ public class HitCheck : MonoBehaviour
 		else if (hp > maxHp)
 		{
 			hp -= Time.deltaTime / 10f;
+		}
+
+		if (hp < 0.25f && lowHpSound != null)
+		{
+			if (aud != null && TogglesValues.sound && !aud.isPlaying)
+				aud.PlayOneShot(lowHpSound);
 		}
 
 	}

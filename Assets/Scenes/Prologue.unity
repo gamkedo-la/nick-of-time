@@ -2913,7 +2913,7 @@ MonoBehaviour:
   singlePlay_setup: {fileID: 1138517928633368, guid: 08e5fbe869b721f46acbf2ab6ca566bb,
     type: 3}
   clip1: {fileID: 8300000, guid: 9cf73a3893a3ad444aa550533a432a0b, type: 3}
-  clip2: {fileID: 8300000, guid: 115392b58054ff34e894830b0d928ffb, type: 3}
+  clip2: {fileID: 8300000, guid: 51d0aad993750664193eec70ae025e2e, type: 3}
   door: {fileID: 8300000, guid: 380540520af4fd94ebe16f104b1e2294, type: 3}
   sceneName: Story1
 --- !u!124 &1321272802

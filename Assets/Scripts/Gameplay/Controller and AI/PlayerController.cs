@@ -458,9 +458,13 @@ public class PlayerController : MonoBehaviour
 
 			if (potionTimer <= 0 && potionTimer > -900f)
 			{
-				if (GetComponent<EquipmentManager>()?.GetCurrentEquipment()[1] != null)
+				EquipmentManager eqMan = GetComponent<EquipmentManager>();
+				if (eqMan != null
+					&& eqMan.GetCurrentEquipment() != null
+					&& eqMan.GetCurrentEquipment().Length > 1
+					&& eqMan.GetCurrentEquipment()[1] != null)
 				{
-					GetComponent<EquipmentManager>()?.UsePotion(GetComponent<EquipmentManager>().GetCurrentEquipment()[1]);
+					eqMan.UsePotion(GetComponent<EquipmentManager>().GetCurrentEquipment()[1]);
 
 					if (playerNo == 1)
 						Subtitles.AddPlayer1Subtitle("Potion Used");

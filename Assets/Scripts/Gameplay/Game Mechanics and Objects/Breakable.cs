@@ -32,7 +32,8 @@ public class Breakable : MonoBehaviour
 			for (int i = 0; i < pieces.GetLength(0); i++)
 				Instantiate(pieces[i], transform.position, Quaternion.Euler(0f, 0f, 0f));
 
-			Instantiate(explosion[Random.Range(0, explosion.Length)], transform.position, Quaternion.Euler(0f, 0f, 0f));
+			if(explosion != null && explosion.Length > 0)
+				Instantiate(explosion[Random.Range(0, explosion.Length)], transform.position, Quaternion.Euler(0f, 0f, 0f));
 
 			if (aud != null && TogglesValues.sound)
 				aud.PlayOneShot(breakSound);

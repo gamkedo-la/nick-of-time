@@ -77,7 +77,7 @@ public class WeaponPossession : MonoBehaviour {
 				collider.offset = Vector2.zero;
 				collider.size = new Vector2(0.03f, 0.03f);
 				transform.localPosition = new Vector2(-0.0744f, -0.045f);
-				animatedWeaponRenderer.sprite = null;
+				if (animatedWeaponRenderer) animatedWeaponRenderer.sprite = null;
 			}
 			else
 			{
@@ -85,7 +85,7 @@ public class WeaponPossession : MonoBehaviour {
 				collider.offset = weapons[weaponID].colliderOffset;
 				collider.size = weapons[weaponID].colliderSize;
 				transform.localPosition = weapons[weaponID].position;
-				animatedWeaponRenderer.sprite = null;
+				if(animatedWeaponRenderer) animatedWeaponRenderer.sprite = null;
 			}
 			
 			prevWeaponID = weaponID;

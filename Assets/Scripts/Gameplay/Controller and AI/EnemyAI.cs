@@ -178,8 +178,8 @@ public class EnemyAI : MonoBehaviour
 					{
 						animator.SetBool("isAttacking", true);
 
-						if (aud != null && TogglesValues.sound)
-							aud.PlayOneShot(attackSound);
+						//if (aud != null && TogglesValues.sound)
+						//	aud.PlayOneShot(attackSound);
 
 						actionTimer = Random.Range(actionMinDelay, actionMaxDelay);
 					}
@@ -402,7 +402,8 @@ public class EnemyAI : MonoBehaviour
 		if (pieces != null) pieces.SetActive(true);
 	}
 
-	public void stopAttacking() {
+	public void stopAttacking()
+	{
 		if (animator)
 			animator.SetBool("isAttacking", false);
 		else
@@ -414,6 +415,12 @@ public class EnemyAI : MonoBehaviour
 		}
 		
 		actionTimer = Random.Range(actionMinDelay, actionMaxDelay);
+	}
+
+	public void playAttackSound()
+	{
+		if (aud != null && TogglesValues.sound)
+			aud.PlayOneShot(attackSound);
 	}
 }
 

@@ -71,7 +71,7 @@ public class PrologueCam : MonoBehaviour {
 	{
 		if (aud != null && TogglesValues.music && clip2 != null)
 		{
-			aud.PlayOneShot(clip2);
+			aud.PlayOneShot(clip2, 0.7f);
 			aud.pitch = 1.385f;
 		}
 	}
