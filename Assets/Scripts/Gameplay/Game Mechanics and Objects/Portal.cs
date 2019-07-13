@@ -23,6 +23,8 @@ public class Portal : MonoBehaviour
     private Transform previousCameraTrack;
     private float previousPlayerFocusFactor;
 
+	private PlayerController playerController = null;
+
 	private AudioSource aud;
 
 	private void Start()
@@ -34,6 +36,9 @@ public class Portal : MonoBehaviour
 
 	private void Update()
     {
+		if (playerController)
+			playerController.enabled = false;
+
 		if (active && player)
 		{
 			// Confirm selection with attackInput
@@ -133,7 +138,7 @@ public class Portal : MonoBehaviour
                 selectedIndex = 0;
 
                 // Store inputs and disable player controller
-                PlayerController playerController = player.GetComponent<PlayerController>();
+                playerController = player.GetComponent<PlayerController>();
                 attackInput = playerController.attackInput;
                 horizontalInput = playerController.walkHorizontalInput;
                 playerController.enabled = false;
@@ -168,7 +173,8 @@ public class Portal : MonoBehaviour
         yield return new WaitForEndOfFrame();
         if (player)
         {
-            player.GetComponent<PlayerController>().enabled = true;
+            playerController.enabled = true;
+			playerController = null;
             player = null;
         }
     }

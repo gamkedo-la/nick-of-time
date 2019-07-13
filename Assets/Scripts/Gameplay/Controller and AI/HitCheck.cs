@@ -33,11 +33,13 @@ public class HitCheck : MonoBehaviour
 	public int lootIterations = 0;
 	public float lootChance = 0f;
 	public GameObject[] lootItems = null;
+	public GameObject[] hitParticle;
+	public GameObject[] criticalParticle;
 
 	[HideInInspector] public float hp = 1f;
 	[HideInInspector] public Vector2 knockback = Vector2.zero;
 	[HideInInspector] public Vector2 knockbackSlowDownVector = Vector2.zero;
-
+	
 	private bool isHit = false;
 	private float hpDamage = 0f;
 	private int hitDirection = 0;
@@ -46,7 +48,8 @@ public class HitCheck : MonoBehaviour
 	private float knockbackValue = 0f;
 
 	private AudioSource aud = null;
-
+	
+	[Space]
     [SerializeField]
     private GameObject HPBarJointCamera;
     [SerializeField]
@@ -112,6 +115,14 @@ public class HitCheck : MonoBehaviour
 			FloatingTextService.Instance.ShowFloatingTextStandard(transform.position,
 				Mathf.RoundToInt(hpDamage * 100f).ToString(), critical ? Color.yellow : Color.white,
 				critical ? 2f : 1f, critical ? 2f : 1f);
+
+			if (hitParticle != null || hitParticle.Length <= 0)
+			{
+				Instantiate(
+						critical ? criticalParticle[Random.Range(0, criticalParticle.Length)]
+						: hitParticle[Random.Range(0, hitParticle.Length)],
+					transform.position, Quaternion.Euler(0f, 0f, 0f));
+			}
 			
 			critical = false;
 		}

@@ -7,6 +7,7 @@ public class Breakable : MonoBehaviour
 	public bool doDestroy = true;
 	public bool enablePiecesParticles = false; //if the object contains children that are supposed to spread/burst out when attacking
 	public GameObject[] pieces;
+	public GameObject[] explosion;
 
 	private bool breakLock = false;
 
@@ -23,7 +24,9 @@ public class Breakable : MonoBehaviour
 		if (!breakLock)
 		{
 			for (int i = 0; i < pieces.GetLength(0); i++)
-				Instantiate(pieces[i], transform.position, Quaternion.Euler(0f, 0f, Random.Range(0f, 360f)));
+				Instantiate(pieces[i], transform.position, Quaternion.Euler(0f, 0f, 0f));
+
+			Instantiate(explosion[Random.Range(0, explosion.Length)], transform.position, Quaternion.Euler(0f, 0f, 0f));
 
 			if (enablePiecesParticles)
 			{

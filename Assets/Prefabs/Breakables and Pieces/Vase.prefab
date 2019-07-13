@@ -148,6 +148,13 @@ MonoBehaviour:
   enablePiecesParticles: 0
   pieces:
   - {fileID: 7776639920224201417, guid: 432663538ede2f44a81d48ac22bcbe86, type: 3}
+  explosion:
+  - {fileID: 6860946910144220793, guid: f26aeeb076778834e928e4078066ec9f, type: 3}
+  - {fileID: 6702961542748640324, guid: 79a039ce3b1584549ace5530d6e194f6, type: 3}
+  - {fileID: 2787309605469899447, guid: 1fc690213a40448428014e6aae2c379f, type: 3}
+  - {fileID: 9162942813699055974, guid: b78980ac9f115c3468872d2cd8b7d03a, type: 3}
+  - {fileID: 7326099007733590877, guid: 16b5f078fa55fe0448adfece22e1c614, type: 3}
+  - {fileID: 968535544428549441, guid: 1d6855e40b5ad7e4cb346e5c55a5f371, type: 3}
 --- !u!114 &5031509972038383348
 MonoBehaviour:
   m_ObjectHideFlags: 0
