@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EventSetup : MonoBehaviour {
-	
+public class EventSetup : MonoBehaviour
+{
 	public GameObject fadeInObject;
 	
 	public GameObject pl1;
@@ -138,7 +138,6 @@ public class EventSetup : MonoBehaviour {
 					pl2Done = true;
 				}
 			}
-		
 		}
 		else if(delay <= 0f)
 		{
