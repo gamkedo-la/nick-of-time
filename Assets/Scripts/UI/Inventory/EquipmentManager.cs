@@ -3,61 +3,61 @@ using UnityEngine;
 
 public class EquipmentManager : MonoBehaviour
 {
-    public GameObject Player;
-    //public GameObject inventoryUI;
-    //public GameObject equippedItems;
-    public EquipmentUI equipmentUI;
+	public GameObject Player;
+	//public GameObject inventoryUI;
+	//public GameObject equippedItems;
+	public EquipmentUI equipmentUI;
 
-    private WeaponPossession weaponPossession;
-    
-    public Inventory inventory;
-    
-    [SerializeField]
-    private string primaryPotion;
+	private WeaponPossession weaponPossession;
 
-    Equipment[] currentEquipment;
+	public Inventory inventory;
 
-    private void Awake()
-    {
+	[SerializeField]
+	private string primaryPotion;
+
+	Equipment[] currentEquipment;
+
+	private void Awake()
+	{
 		//instance = this;
 		if (Player)
 		{
 			weaponPossession = Player.GetComponentInChildren<WeaponPossession>();
 		}
-    }
+	}
 
 	public Equipment[] GetCurrentEquipment()
 	{
 		return currentEquipment;
 	}
 
-    internal void IfPotionIsEquippedUpdateItemCount(Item item)
-    {
-        int indexInInventory = inventory.items.IndexOf(item);
+	internal void IfPotionIsEquippedUpdateItemCount(Item item)
+	{
+		int indexInInventory = inventory.items.IndexOf(item);
 
-        if (currentEquipment[1] == null || currentEquipment[1].name != item.name)
-        {
-            return;
-        }
+		if (currentEquipment[1] == null || currentEquipment[1].name != item.name)
+		{
+			return;
+		}
 
-        equipmentUI.equipmentSlotDisplays[1].numberOfItemsInStack.text = 
-            inventory.itemsInSlot[indexInInventory].ToString();
-    }
+		equipmentUI.equipmentSlotDisplays[1].numberOfItemsInStack.text =
+			inventory.itemsInSlot[indexInInventory].ToString();
+	}
 
-    public delegate void OnEquipmentChanged(Equipment newItem, Equipment oldItem);
-    public OnEquipmentChanged onEquipmentChanged;
+	public delegate void OnEquipmentChanged(Equipment newItem, Equipment oldItem);
+	public OnEquipmentChanged onEquipmentChanged;
 
-    private void Start()
-    {
-        int numberOfSlots = System.Enum.GetNames(typeof(EquipmentSlot)).Length;
-        currentEquipment = new Equipment[numberOfSlots];
-        inventory = GetComponent<Inventory>();        
+	private void Start()
+	{
+		int numberOfSlots = System.Enum.GetNames(typeof(EquipmentSlot)).Length;
+		currentEquipment = new Equipment[numberOfSlots];
+		inventory = GetComponent<Inventory>();
 
-        for (int i = 0; i < currentEquipment.Length; i++)
-        {
-            equipmentUI.equipmentSlotDisplays[i].equipmentIcon.enabled = false;
-        }
-    }
+		for (int i = 0; i < currentEquipment.Length; i++)
+		{
+			equipmentUI.equipmentSlotDisplays[i].equipmentIcon.enabled = false;
+		}
+	}
 
 	public bool IfNoWeaponEquip(Equipment item)
 	{
@@ -68,6 +68,11 @@ public class EquipmentManager : MonoBehaviour
 		}
 
 		return false;
+	}
+
+	public bool IsItemEquipped(Equipment item)
+	{
+		return currentEquipment[(int)item.equipSlot] == item;
 	}
 
     public void Equip(Equipment newItem) 
@@ -95,7 +100,8 @@ public class EquipmentManager : MonoBehaviour
             onEquipmentChanged.Invoke(newItem, oldItem);
         }
 		
-		weaponPossession.weaponID = newItem.weaponID;
+		if(newItem.weaponID > -1)
+			weaponPossession.weaponID = newItem.weaponID;
 		
         currentEquipment[slotIndex] = newItem;
 

@@ -26,7 +26,7 @@ public class NickBossScript : MonoBehaviour
 	
     void Update()
     {
-		if (timer <= 0f && enemies.Count < maxSpawn)
+		if (timer <= 0f && enemies.Count < maxSpawn && totalSpawns > 0)
 		{
 			enemies.Add(Instantiate(enemyObjects[Random.Range(0, enemyObjects.Length)], enemySpawnPoints[Random.Range(0, enemySpawnPoints.Length)].position, Quaternion.Euler(0f, 0f, 0f)));
 			totalSpawns--;

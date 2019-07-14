@@ -8,6 +8,7 @@ public class StoryFinisher : MonoBehaviour
 	private GameObject player2;
 
 	public GameObject otherStoryFinisherObject;
+	public bool forceComplete = false;
 
 	void Start()
     {
@@ -24,6 +25,8 @@ public class StoryFinisher : MonoBehaviour
 	public void FinishStory()
 	{
 		LevelManager.triggerCount--;
+
+		if (forceComplete) LevelManager.triggerCount = 0;
 
 		player1.transform.position = new Vector3(transform.position.x + 0.16f, transform.position.y, player1.transform.position.z);
 		player1.GetComponent<PlayerController>().enabled = false;

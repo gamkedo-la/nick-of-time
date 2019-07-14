@@ -94,8 +94,9 @@ public class PlayerController : MonoBehaviour
 	static private float timeSlowMoTimer = 0f;
 	private float timeSlowMoEffectValue = 0f;
 
-	private float potionAttackButtonPressMinTime = 0.5f;
+	private float potionAttackButtonPressMinTime = 0.6f;
 	private float potionTimer = 0f;
+	private bool potionUsed = false;
 
 	private string inputExtensionString = "";
 	
@@ -205,6 +206,40 @@ public class PlayerController : MonoBehaviour
 			{
 				potionTimer = potionAttackButtonPressMinTime;
 			}
+			if (Input.GetButtonUp(attackInput + inputExtensionString))
+			{
+				potionTimer = -1000f;
+			}
+			if (potionTimer <= 0 && potionTimer > -900f)
+			{
+				EquipmentManager eqMan = GetComponent<EquipmentManager>();
+				if (eqMan != null
+					&& eqMan.GetCurrentEquipment() != null
+					&& eqMan.GetCurrentEquipment().Length > 1
+					&& eqMan.GetCurrentEquipment()[1] != null)
+				{
+					eqMan.UsePotion(GetComponent<EquipmentManager>().GetCurrentEquipment()[1]);
+
+					if (playerNo == 1)
+						Subtitles.AddPlayer1Subtitle("Potion Used");
+					else if (playerNo == 2)
+						Subtitles.AddPlayer2Subtitle("Potion Used");
+				}
+				else
+				{
+					if (playerNo == 1)
+						Subtitles.AddPlayer1Subtitle("Potion not equipped");
+					else if (playerNo == 2)
+						Subtitles.AddPlayer2Subtitle("Potion not equipped");
+				}
+
+				potionTimer = -1000f;
+				potionUsed = true;
+			}
+			else if (potionTimer > 0f && potionTimer > -900f)
+			{
+				potionTimer -= Time.deltaTime;
+			}
 
 			//Attack
 			if (actionPoints >= attackActionDeplete
@@ -214,7 +249,7 @@ public class PlayerController : MonoBehaviour
 				&& !isDashing
 				&& (Input.GetButtonUp(attackInput + inputExtensionString) /*|| GameManager.singleGame && Input.GetButtonDown(attackInput + "2")*/))
 			{
-				if (!(potionTimer <= -1499f && potionTimer >= -1501f))
+				if (!potionUsed)
 				{
 					comboKeys += "A";
 
@@ -266,7 +301,7 @@ public class PlayerController : MonoBehaviour
 					}
 				}
 
-				potionTimer = -1000f;
+				potionUsed = false;
 			}
 
 			//Push
@@ -444,37 +479,7 @@ public class PlayerController : MonoBehaviour
 				Time.timeScale = 0.06f;
 				criticalHitTimePauseTimer -= Time.unscaledDeltaTime;
 			}
-
-			if (potionTimer <= 0 && potionTimer > -900f)
-			{
-				EquipmentManager eqMan = GetComponent<EquipmentManager>();
-				if (eqMan != null
-					&& eqMan.GetCurrentEquipment() != null
-					&& eqMan.GetCurrentEquipment().Length > 1
-					&& eqMan.GetCurrentEquipment()[1] != null)
-				{
-					eqMan.UsePotion(GetComponent<EquipmentManager>().GetCurrentEquipment()[1]);
-
-					if (playerNo == 1)
-						Subtitles.AddPlayer1Subtitle("Potion Used");
-					else if (playerNo == 2)
-						Subtitles.AddPlayer2Subtitle("Potion Used");
-				}
-				else
-				{
-					if (playerNo == 1)
-						Subtitles.AddPlayer1Subtitle("Potion not equipped");
-					else if (playerNo == 2)
-						Subtitles.AddPlayer2Subtitle("Potion not equipped");
-				}
-
-				potionTimer = -1500f;
-			}
-			else if(potionTimer > 0f && potionTimer > -900f)
-			{
-				potionTimer -= Time.deltaTime;
-			}
-
+			
 			animator.speed = 1f * (1 + (4 * timeSlowMoEffectValue));
 
 			attackSpeedTimer -= Time.deltaTime;

@@ -15,7 +15,9 @@ public class Equipment : Item
         
         inventory = equipmentManager.inventory;
         int index = inventory.items.IndexOf(this);
-        equipmentManager.Equip(this);
+		
+		if(!equipmentManager.IsItemEquipped(this))
+			equipmentManager.Equip(this);
         
         if(weaponID >= 0)
         {
