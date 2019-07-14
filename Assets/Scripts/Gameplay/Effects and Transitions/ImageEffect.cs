@@ -50,7 +50,8 @@ public class ImageEffect : MonoBehaviour
 	{
 		for (int i = 0; i < 3; i++)
 		{
-			instances[i].materialIndex = v;
+			if(instances != null && instances[i] != null)
+				instances[i].materialIndex = v;
 		}
 	}
 
@@ -58,7 +59,8 @@ public class ImageEffect : MonoBehaviour
 	{
 		for (int i = 0; i < 3; i++)
 		{
-			instances[i].value = v;
+			if (instances != null && instances[i] != null)
+				instances[i].value = v;
 		}
 	}
 }

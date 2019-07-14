@@ -46,6 +46,8 @@ public class PlayerController : MonoBehaviour
 
 	[Space]
 	public float timeSlowMoTime = 10f;
+	public AudioClip slowMoSound;
+	public AudioClip slowMoToNormalSound;
 
 	[Space]
 	public WeaponPossession weaponPossession;
@@ -415,6 +417,9 @@ public class PlayerController : MonoBehaviour
 				{
 					if (Time.timeScale >= 0.5f && Time.timeScale != 1f)
 					{
+						if (Time.timeScale <= 0.505f && aud != null && TogglesValues.sound)
+							aud.PlayOneShot(slowMoToNormalSound);
+
 						Time.timeScale = Mathf.Lerp(Time.timeScale, 1f, 0.05f);
 
 						if (Time.timeScale >= 0.98f) Time.timeScale = 1f;
@@ -704,6 +709,9 @@ public class PlayerController : MonoBehaviour
 					if (weaponPossession.weaponID == 2) //Time Whip
 					{
 						timeSlowMoTimer = timeSlowMoTime;
+
+						if (aud != null && TogglesValues.sound)
+							aud.PlayOneShot(slowMoSound);
 
 						lastHitComboTextObject.transform.GetChild(0).GetChild(0).gameObject.GetComponent<TextMeshPro>().text = "slow mo!";
 						lastHitComboTextObject.transform.GetChild(0).GetChild(1).gameObject.GetComponent<TextMeshPro>().text = "slow mo!";

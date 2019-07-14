@@ -59,6 +59,17 @@ public class EquipmentManager : MonoBehaviour
         }
     }
 
+	public bool IfNoWeaponEquip(Equipment item)
+	{
+		if (weaponPossession.weaponID <= -1 && item.weaponID > -1)
+		{
+			Equip(item);
+			return true;
+		}
+
+		return false;
+	}
+
     public void Equip(Equipment newItem) 
     {
 		if(Player.name == "Player1")
@@ -83,9 +94,8 @@ public class EquipmentManager : MonoBehaviour
         {
             onEquipmentChanged.Invoke(newItem, oldItem);
         }
-
-		if(weaponPossession.weaponID <= -1)
-			weaponPossession.weaponID = newItem.weaponID;
+		
+		weaponPossession.weaponID = newItem.weaponID;
 		
         currentEquipment[slotIndex] = newItem;
 

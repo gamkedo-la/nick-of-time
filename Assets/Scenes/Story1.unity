@@ -14480,6 +14480,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3281084629755066678, guid: 6146772f02ed9114bb30ec85bc5ca561,
+        type: 3}
+      propertyPath: infoObject
+      value: 
+      objectReference: {fileID: 53627062}
+    - target: {fileID: 9163880003782119978, guid: 6146772f02ed9114bb30ec85bc5ca561,
+        type: 3}
+      propertyPath: infoObject
+      value: 
+      objectReference: {fileID: 53627062}
     - target: {fileID: 1028207721975600152, guid: 6146772f02ed9114bb30ec85bc5ca561,
         type: 3}
       propertyPath: m_Name
@@ -15513,7 +15523,7 @@ PrefabInstance:
     - target: {fileID: 1028207722129694295, guid: 6146772f02ed9114bb30ec85bc5ca561,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -94.29999
+      value: -94.299805
       objectReference: {fileID: 0}
     - target: {fileID: 1028207722129694295, guid: 6146772f02ed9114bb30ec85bc5ca561,
         type: 3}
@@ -15528,7 +15538,7 @@ PrefabInstance:
     - target: {fileID: 1028207722315539313, guid: 6146772f02ed9114bb30ec85bc5ca561,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -32.60001
+      value: -32.59961
       objectReference: {fileID: 0}
     - target: {fileID: 1028207722315539313, guid: 6146772f02ed9114bb30ec85bc5ca561,
         type: 3}
@@ -15543,7 +15553,12 @@ PrefabInstance:
     - target: {fileID: 1028207721239623199, guid: 6146772f02ed9114bb30ec85bc5ca561,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -30
+      value: -40
+      objectReference: {fileID: 0}
+    - target: {fileID: 2881906457221729096, guid: 6146772f02ed9114bb30ec85bc5ca561,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 3233056174988872931, guid: 6146772f02ed9114bb30ec85bc5ca561,
         type: 3}
@@ -19702,6 +19717,7 @@ GameObject:
   - component: {fileID: 560173391}
   - component: {fileID: 560173393}
   - component: {fileID: 560173392}
+  - component: {fileID: 560173394}
   m_Layer: 0
   m_Name: daggerWeapon (1)
   m_TagString: Untagged
@@ -19757,6 +19773,18 @@ MonoBehaviour:
   amountInStack: 1
   destroy: 0
   pickupSound: {fileID: 0}
+--- !u!114 &560173394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560173390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a05776f49837edf4d982d6ed4b2a8c88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &564237105
 GameObject:
   m_ObjectHideFlags: 0
@@ -31402,6 +31430,8 @@ MonoBehaviour:
   dialogueNo: 38
   objectToActivate: {fileID: 1366416009}
   selfDeactivate: 1
+  animator: 0
+  collider: 0
 --- !u!224 &1339664618 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4595282839147247256, guid: 39e15d1014de6aa44b2b9ad40c3cd01b,
@@ -40621,6 +40651,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3281084629755066678, guid: 6146772f02ed9114bb30ec85bc5ca561,
+        type: 3}
+      propertyPath: infoObject
+      value: 
+      objectReference: {fileID: 74160656}
+    - target: {fileID: 9163880003782119978, guid: 6146772f02ed9114bb30ec85bc5ca561,
+        type: 3}
+      propertyPath: infoObject
+      value: 
+      objectReference: {fileID: 74160656}
     - target: {fileID: 1028207721975600152, guid: 6146772f02ed9114bb30ec85bc5ca561,
         type: 3}
       propertyPath: m_Name
@@ -41645,6 +41685,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1028207722129694295, guid: 6146772f02ed9114bb30ec85bc5ca561,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 94.299805
+      objectReference: {fileID: 0}
+    - target: {fileID: 1028207722315539313, guid: 6146772f02ed9114bb30ec85bc5ca561,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 32.59961
       objectReference: {fileID: 0}
     - target: {fileID: 3233056174988872931, guid: 6146772f02ed9114bb30ec85bc5ca561,
         type: 3}

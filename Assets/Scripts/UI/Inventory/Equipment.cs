@@ -17,7 +17,7 @@ public class Equipment : Item
         int index = inventory.items.IndexOf(this);
         equipmentManager.Equip(this);
         
-        if(weaponID == 0 || weaponID == 1)
+        if(weaponID >= 0)
         {
             equipmentManager.inventory.itemsInSlot.RemoveAt(index);
             equipmentManager.inventory.Remove(this);            

@@ -325,6 +325,8 @@ MonoBehaviour:
   hitComboMaxTime: 0.5
   criticalHitTimePause: 0.15
   timeSlowMoTime: 8
+  slowMoSound: {fileID: 8300000, guid: 6573b0309dc64844f8bfabf13fce3a26, type: 3}
+  slowMoToNormalSound: {fileID: 8300000, guid: ed9ad694342a6704d897c7a7b3d99917, type: 3}
   weaponPossession: {fileID: 1148393954167941654}
   weaponSounds:
   - {fileID: 8300000, guid: 32ed1d859f4d34a41a11b51400612384, type: 3}

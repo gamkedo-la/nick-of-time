@@ -38,10 +38,15 @@ public class ItemPickup : Interactable
 		{
 			wasPickedUp = inventory.Add(item);
 
-			if (item.stackable)
+			if (item.name.Contains("Dagger") || item.name.Contains("Katana")
+			|| item.name.Contains("Spear") || item.name.Contains("Whip")) //basically any weapon
+			{
+				item.equipmentManager.IfNoWeaponEquip((Equipment)item);
+			}
+			else if (item.stackable)
 			{
 				inventory.AddToStack(item, amountInStack);
-                item.equipmentManager.IfPotionIsEquippedUpdateItemCount(item);
+				item.equipmentManager.IfPotionIsEquippedUpdateItemCount(item);
 			}
 		}
 

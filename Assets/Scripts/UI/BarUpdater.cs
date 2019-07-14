@@ -47,7 +47,13 @@ public class BarUpdater : MonoBehaviour {
 		prevPos = transform.parent.localPosition;
 		prevScale = transform.localScale;
     }
-	
+
+	private void Start()
+	{
+		prevPos = transform.parent.localPosition;
+		prevScale = transform.localScale;
+	}
+
 	void Update () {
 		if(infoObject != null)
 		{
