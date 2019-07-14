@@ -109,7 +109,6 @@ public class InventorySlot : MonoBehaviour
 
     public void UseItem()
     {
-
         if (item != null)
         {
             if (item.name.Contains("Key"))
@@ -138,7 +137,9 @@ public class InventorySlot : MonoBehaviour
                 confirmTradeButton.gameObject.SetActive(true);
                 confirmTradeButton.Select();
                 confirmTradeButton.OnSelect(null);
-            }          
+            }
+
+			inventory.playInventoryUISound();
         }
     }
 
@@ -171,6 +172,5 @@ public class InventorySlot : MonoBehaviour
         tradePanel.gameObject.SetActive(false);
         inventoryControlPanel.tradeButton.Select();
         inventoryControlPanel.tradeButton.OnSelect(null);
-
     }
 }

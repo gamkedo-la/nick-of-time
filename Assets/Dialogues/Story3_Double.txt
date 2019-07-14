@@ -1,7 +1,7 @@
 59
 <color=#ff6666>Player 1</color><br>Ahhh...my head.
 <color=#66ff66>Player 2</color><br>These portals are quite a pain!
-<color=#ff6666>Player 1</color><br>Where are nick and the guard?
+<color=#ff6666>Player 1</color><br>Where are Nick and the guard?
 <color=#66ff66>Player 2</color><br>Do you think old man is behind it?
 <color=#ff6666>Player 1</color><br>Huh?
 <color=#66ff66>Player 2</color><br>I... I mean... who else could have opened that door?
@@ -11,7 +11,6 @@
  
 <color=#66ff66>Player 2</color><br>Hey look, the old man!
 <color=#ff6666>Player 1</color><br>He... hey! Old man!
- 
 <color=#ff6666>Player 1</color><br>Now, that... is weird.
 <color=#66ff66>Player 2</color><br>I wonder why he is here.
  

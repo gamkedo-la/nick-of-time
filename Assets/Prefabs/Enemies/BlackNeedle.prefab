@@ -1326,6 +1326,7 @@ MonoBehaviour:
   regenerateHpPerSecond: 0
   damageSound: {fileID: 8300000, guid: 2c1ede618bad6d542852d35fa9e4e375, type: 3}
   deathSound: {fileID: 8300000, guid: 2c1ede618bad6d542852d35fa9e4e375, type: 3}
+  lowHpSound: {fileID: 0}
   lootIterations: 5
   lootChance: 0.25
   lootItems:
@@ -1387,12 +1388,13 @@ MonoBehaviour:
   walkMaxDelay: 0
   attackSpeed: 5
   attackMaxDistance: 2.6
-  attackSound: {fileID: 8300000, guid: 32ed1d859f4d34a41a11b51400612384, type: 3}
+  attackSound: {fileID: 8300000, guid: e86b7639291c5d942bc1030167f28a3a, type: 3}
   actionMinDelay: 2
   actionMaxDelay: 4
   noActionFactor: 0
   attackCollider: {fileID: 8304214167245977039}
   isAttacking: 0
+  pieces: {fileID: 0}
 --- !u!114 &3034426722330271154
 MonoBehaviour:
   m_ObjectHideFlags: 0

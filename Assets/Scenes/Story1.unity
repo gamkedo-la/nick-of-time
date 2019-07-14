@@ -11858,7 +11858,7 @@ PrefabInstance:
     - target: {fileID: 630626826510934736, guid: 978716ee1f412d44b9b94e207cbb81e4,
         type: 3}
       propertyPath: amountInStack
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 630626826510934736, guid: 978716ee1f412d44b9b94e207cbb81e4,
         type: 3}
@@ -16124,7 +16124,7 @@ MonoBehaviour:
   updateOnStateChange: []
   rebound: 0.5
   weightRequired: 1
-  stateChangeSound: {fileID: 0}
+  stateChangeSound: {fileID: 8300000, guid: f04c14e9895c1cd45be6bb0f9c5be96c, type: 3}
   refresh: 0
 --- !u!212 &378602187
 SpriteRenderer:
@@ -18492,7 +18492,7 @@ MonoBehaviour:
   updateOnStateChange: []
   rebound: 0
   weightRequired: 1
-  stateChangeSound: {fileID: 0}
+  stateChangeSound: {fileID: 8300000, guid: f04c14e9895c1cd45be6bb0f9c5be96c, type: 3}
   refresh: 0
 --- !u!212 &504567608
 SpriteRenderer:
@@ -26841,7 +26841,7 @@ MonoBehaviour:
   updateOnStateChange: []
   rebound: 0
   weightRequired: 2
-  stateChangeSound: {fileID: 0}
+  stateChangeSound: {fileID: 8300000, guid: 31c618c4364502a479c48d00b1a046c5, type: 3}
   refresh: 0
 --- !u!212 &1072189367
 SpriteRenderer:
@@ -34371,7 +34371,7 @@ MonoBehaviour:
   updateOnStateChange: []
   rebound: 0
   weightRequired: 1
-  stateChangeSound: {fileID: 0}
+  stateChangeSound: {fileID: 8300000, guid: f04c14e9895c1cd45be6bb0f9c5be96c, type: 3}
   refresh: 0
 --- !u!212 &1459261551
 SpriteRenderer:
@@ -83301,7 +83301,7 @@ MonoBehaviour:
   updateOnStateChange: []
   rebound: 0.5
   weightRequired: 1
-  stateChangeSound: {fileID: 0}
+  stateChangeSound: {fileID: 8300000, guid: f04c14e9895c1cd45be6bb0f9c5be96c, type: 3}
   refresh: 0
 --- !u!212 &1982066854
 SpriteRenderer:

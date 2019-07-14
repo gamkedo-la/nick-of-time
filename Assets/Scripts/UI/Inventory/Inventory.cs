@@ -15,7 +15,24 @@ public class Inventory : MonoBehaviour
     public List<Item> items = new List<Item>();
     public List<int> itemsInSlot = new List<int>();
 
-    public void Awake()
+	public AudioClip UISound;
+
+	private AudioSource aud;
+
+	public void Start()
+	{
+		aud = GetComponent<AudioSource>();
+		if (aud == null)
+			aud = FindObjectOfType<AudioSource>();
+	}
+
+	public void playInventoryUISound()
+	{
+		if (aud != null && TogglesValues.sound)
+			aud.PlayOneShot(UISound);
+	}
+
+	public void Awake()
     {
         equipmentManager = GetComponent<EquipmentManager>();
     }
@@ -118,6 +135,9 @@ public class Inventory : MonoBehaviour
                 givingInventory.itemsInSlot.RemoveAt(index);
             }
         }
+
+		playInventoryUISound();
+
         onItemChangedCallback.Invoke();
     }
 }

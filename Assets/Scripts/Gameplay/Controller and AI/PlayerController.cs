@@ -304,16 +304,7 @@ public class PlayerController : MonoBehaviour
 				isDashing = true;
 				dashTimer = dashTime / (1 + (4 * timeSlowMoEffectValue));
 				speed = dashSpeed * (1 + (4 * timeSlowMoEffectValue));
-
-				/*
-				if (playerNo == 1)
-					Subtitles.AddPlayer1Subtitle("TEST_Player 1 Dashing");
-				else if (playerNo == 2)
-					Subtitles.AddPlayer2Subtitle("TEST_Player 2 Dashing");
-				*/
-
-				//animator.SetBool("isWalking", false);
-
+				
 				gameObject.layer = 10;
 
 				actionPoints -= dashActionDeplete;
@@ -335,14 +326,7 @@ public class PlayerController : MonoBehaviour
 			{
 				animator.SetBool("isThrowing", true);
 				speed = attackSpeed * (1 + (4 * timeSlowMoEffectValue));
-
-				/*
-				if (playerNo == 1)
-					Subtitles.AddPlayer1Subtitle("TEST_Player 1 Throwing");
-				else if (playerNo == 2)
-					Subtitles.AddPlayer2Subtitle("TEST_Player 2 Throwing");
-				*/
-
+				
 				attackSpeedTimer = attackSpeedTime / 2f;
 
 				actionPoints -= throwActionDeplete;

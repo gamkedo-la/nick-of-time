@@ -17,17 +17,45 @@ public class AreaBlockObject : MonoBehaviour
 	public bool resetPosition;
 	public Vector3 prevPosition;
 
+	[Space]
+	public AudioClip openSound;
+	public AudioClip closeSound;
+
+	private float prevStateTransition;
+
 	private BoxCollider2D coll;
 	private SpriteRenderer spRend;
+
+	private AudioSource aud;
 
     void Start()
     {
 		coll = gameObject.GetComponent<BoxCollider2D>();
 		spRend = gameObject.GetComponent<SpriteRenderer>();
-    }
+
+		aud = GetComponent<AudioSource>();
+		if (aud == null)
+			aud = FindObjectOfType<AudioSource>();
+
+		prevStateTransition = stateTransition;
+	}
 	
     void Update()
     {
+		if (prevStateTransition != stateTransition)
+		{
+			if (stateTransition > 0.5f)
+			{
+				if (aud != null && TogglesValues.sound)
+					aud.PlayOneShot(closeSound);
+			}
+			else if (stateTransition < -0.5f)
+			{
+				if (aud != null && TogglesValues.sound)
+					aud.PlayOneShot(openSound);
+			}
+		}
+
 		if (resetPosition)
 		{
 			prevPosition = gameObject.transform.position;
@@ -45,5 +73,7 @@ public class AreaBlockObject : MonoBehaviour
 
 		if(enemyStateTransition)
 			stateTransition = GameObject.FindGameObjectWithTag("Enemy") == null ? -1f : 1f;
-    }
+
+		prevStateTransition = stateTransition;
+	}
 }

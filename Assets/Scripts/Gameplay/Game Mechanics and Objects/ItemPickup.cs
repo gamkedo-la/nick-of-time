@@ -47,7 +47,7 @@ public class ItemPickup : Interactable
 
         if (wasPickedUp)
         {
-			if (aud != null && TogglesValues.sound)
+			if (pickupSound != null && aud != null && TogglesValues.sound)
 				aud.PlayOneShot(pickupSound);
 
 			if (destroy)

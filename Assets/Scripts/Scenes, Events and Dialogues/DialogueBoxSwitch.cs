@@ -130,7 +130,7 @@ public class DialogueBoxSwitch : MonoBehaviour
 	public void checkForDialogueStringTags(string text)
 	{
 		//Player 1 text color is #ff6666
-		//Player 2 text color is #6666ff
+		//Player 2 text color is #66ff66
 		//Nick text color is #ffbb00 - #ffbb06
 		//Other NPCs color is #ffff00 - #ffff05
 

@@ -437,6 +437,7 @@ MonoBehaviour:
   space: 8
   items: []
   itemsInSlot: 
+  UISound: {fileID: 8300000, guid: f04c14e9895c1cd45be6bb0f9c5be96c, type: 3}
 --- !u!114 &349174034595558344
 MonoBehaviour:
   m_ObjectHideFlags: 0

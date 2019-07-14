@@ -51,9 +51,6 @@ public class Portal : MonoBehaviour
 				else if (player.name == "Player2")
 					MinimapController.instances[1].focus = false;
 					
-				if (aud != null && TogglesValues.sound)
-					aud.PlayOneShot(portalSound);
-
 				TransportPlayer(exits[activePortals[selectedIndex]]);
 				playerCamera.tr = previousCameraTrack;
 				playerCamera.playerFocusFactor = previousPlayerFocusFactor;
@@ -201,7 +198,10 @@ public class Portal : MonoBehaviour
     {
         exit.active = false;
         player.transform.position = exit.transform.position;
-    }
+
+		if (aud != null && TogglesValues.sound)
+			aud.PlayOneShot(portalSound);
+	}
 
     private LerpToTransform FindPlayerCamera()
     {

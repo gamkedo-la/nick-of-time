@@ -9,24 +9,32 @@ public class Subtitles : MonoBehaviour
 {
 	public float fadePerFrame = 0.005f;
 
+	static private float noSubtitlesDelay = 1.5f;
+
 	private TextMeshProUGUI[] texts;
 	private float alpha = 1f;
 
 	static public void AddPlayer1Subtitle(string str)
 	{
-		if (GameManager.singleGame)
-			singlePlayerSubtitles.Caption(str);
-		else
+		if (noSubtitlesDelay <= 0f)
 		{
-			p1Subtitles[0].Caption(str);
-			p1Subtitles[1].Caption(str);
+			if (GameManager.singleGame)
+				singlePlayerSubtitles.Caption(str);
+			else
+			{
+				p1Subtitles[0].Caption(str);
+				p1Subtitles[1].Caption(str);
+			}
 		}
 	}
 
 	static public void AddPlayer2Subtitle(string str)
 	{
-		p2Subtitles[0].Caption(str);
-		p2Subtitles[1].Caption(str);
+		if (noSubtitlesDelay <= 0f)
+		{
+			p2Subtitles[0].Caption(str);
+			p2Subtitles[1].Caption(str);
+		}
 	}
 
 	static public void Enable()
@@ -117,6 +125,8 @@ public class Subtitles : MonoBehaviour
 			col.a = Mathf.Lerp(col.a, 0f, fadePerFrame);
 			texts[i].color = col;
 		}
+
+		noSubtitlesDelay -= Time.deltaTime;
     }
 
     public void Caption(string str)
