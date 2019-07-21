@@ -23093,7 +23093,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: "<color=#00ffff><b>Bilal A. Cheema:</b></color> Lead, core gameplay functionality,
     storyline, level design, most art (including environment assets), player sprite,
-    lighting, graphics outlines, spit screen support, font selection, movement indicator,
+    lighting, graphics outlines, split screen support, font selection, movement indicator,
     katana weapon, main enemies code and art, minimap, weapon throwing, breakable
     objects, hit combos, main menu functionality, boss art, score system\n\n<color=#00ffff><b>Brian
     Nielsen:</b></color> Inventory UI and related functionality, player health and
@@ -23181,13 +23181,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 2510873912091447051}
-    characterCount: 1404
+    characterCount: 0
     spriteCount: 0
-    spaceCount: 196
-    wordCount: 185
+    spaceCount: 0
+    wordCount: 0
     linkCount: 0
-    lineCount: 30
-    pageCount: 1
+    lineCount: 0
+    pageCount: 0
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
